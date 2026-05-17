@@ -1,158 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<title>Golf Caddie - Simple Golf Scorecard for iPhone & Apple Watch</title>
+  <title>Golf Caddie - Simple Golf Scorekeeper & Score Tracker</title>
 
-<meta name="description" content="Golf Caddie is the simplest golf scorecard app for iPhone and Apple Watch. Track strokes, putts, penalties, and sync automatically between devices. Quick Start rounds, clean design, and no clutter.">
+  <meta name="description" content="Golf Caddie is a simple, fast golf scorekeeper and score tracker for iPhone and Apple Watch. Track strokes, putts, and penalties with a clean, no-clutter scorecard. One-time purchase for Watch support.">
 
-<meta name="keywords" content="golf scorecard app, golf app apple watch, simple golf scorecard, golf strokes tracker, golf caddie app, golf score tracker, golf watch app, golf strokes app">
+  <link rel="canonical" href="https://carlos231.github.io/apps/golf-caddie/" />
 
-<style>
+  <style>
+    /* GLOBAL BACKGROUND — gradient + embedded noise */
     body {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        color: #222;
-        background: #fafafa;
-        line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      color: #1a1a1a;
+      line-height: 1.6;
+
+      background:
+        linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%),
+        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGBgAAAABQABDQottAAAAABJRU5ErkJggg==");
+      background-size: auto, 200px;
     }
+
     header {
-        text-align: center;
-        padding: 60px 20px 40px;
+      padding: 80px 20px 60px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
     }
-    header h1 {
-        font-size: 42px;
-        margin-bottom: 10px;
+
+    h1 {
+      font-size: 42px;
+      margin-bottom: 20px;
+      font-weight: 700;
     }
-    header p {
-        font-size: 20px;
-        color: #555;
-        max-width: 600px;
-        margin: 0 auto;
+
+    h2 {
+      font-size: 28px;
+      margin-top: 60px;
+      margin-bottom: 20px;
+      font-weight: 600;
+      text-align: center;
     }
-    .cta {
-        margin-top: 30px;
+
+    p {
+      max-width: 700px;
+      margin: 0 auto 20px;
+      font-size: 20px;
     }
-    .cta a {
-        background: #2ecc71;
-        color: white;
-        padding: 14px 26px;
-        border-radius: 10px;
-        font-size: 18px;
-        text-decoration: none;
-        display: inline-block;
-    }
+
     .section {
-        padding: 60px 20px;
-        max-width: 900px;
-        margin: 0 auto;
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: 0 auto;
     }
-    .section h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        text-align: center;
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      margin-top: 40px;
     }
-    .features {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    }
+
     .feature {
-        background: white;
-        padding: 24px;
-        border-radius: 12px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      background: rgba(255, 255, 255, 0.7);
+      backdrop-filter: blur(6px);
+      padding: 25px;
+      border-radius: 12px;
+      font-size: 18px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
     }
-    .feature h3 {
-        margin-top: 0;
-        font-size: 22px;
+
+    .cta {
+      margin-top: 30px;
+      font-size: 22px;
+      font-weight: 600;
     }
+
+    a {
+      color: #007aff;
+      text-decoration: none;
+    }
+
+    /* SCREENSHOTS */
+    .screenshot-row {
+      display: flex;
+      justify-content: center;
+      gap: 25px;
+      flex-wrap: wrap;
+      margin-top: 30px;
+    }
+
+    .screenshot {
+      width: 260px;
+      border-radius: 22px;
+      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+    }
+
+    .screenshot.watch {
+      width: 180px;
+      border-radius: 28px;
+    }
+
+    /* FAQ */
+    .faq-item {
+      margin-bottom: 25px;
+      max-width: 700px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .faq-item h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
     footer {
-        text-align: center;
-        padding: 40px;
-        color: #777;
-        font-size: 14px;
+      text-align: center;
+      padding: 60px 20px;
+      font-size: 14px;
+      color: #666;
     }
-</style>
+  </style>
 </head>
 
 <body>
 
 <header>
-    <h1>Golf Caddie</h1>
-    <p>The simplest golf scorecard for iPhone and Apple Watch.  
-       Track strokes, putts, and penalties with zero clutter — just play.</p>
-
-    <div class="cta">
-        <a href="https://apps.apple.com/us/app/golf-caddie-simple-scorecard/id6760603837">Download on the App Store</a>
-    </div>
+  <h1>Golf Caddie - Simple Golf Scorekeeper & Score Tracker</h1>
+  <p>The clean, fast way to track your golf rounds on iPhone and Apple Watch. No accounts, no ads, no clutter — just simple scoring.</p>
+  <p class="cta"><a href="https://apps.apple.com/">Download on the App Store</a></p>
 </header>
 
-<section class="section">
-    <h2>Why Golfers Love Golf Caddie</h2>
+<div class="section">
+  <h2>Why Golfers Love Golf Caddie</h2>
+  <div class="feature-grid">
+    <div class="feature"><strong>Simple Scorekeeper</strong><br>Track strokes, putts, and penalties with one tap.</div>
+    <div class="feature"><strong>Clean Scorecard</strong><br>See your round at a glance with zero clutter.</div>
+    <div class="feature"><strong>Apple Watch Support</strong><br>Score every hole from your wrist. One-time purchase.</div>
+    <div class="feature"><strong>Quick Start</strong><br>Open the app and start scoring instantly.</div>
+    <div class="feature"><strong>Custom Pars</strong><br>Set par for any course — 9 or 18 holes.</div>
+    <div class="feature"><strong>No Subscriptions</strong><br>Pay once for Watch support. That’s it.</div>
+  </div>
+</div>
 
-    <div class="features">
+<div class="section">
+  <h2>iPhone Screenshots</h2>
+  <div class="screenshot-row">
+    <img class="screenshot" src="images/iphone1.png" alt="Golf Caddie scorecard">
+    <img class="screenshot" src="images/iphone2.png" alt="Golf Caddie scoring screen">
+    <img class="screenshot" src="images/iphone3.png" alt="Golf Caddie round summary">
+  </div>
 
-        <div class="feature">
-            <h3>Simple, Clean Score Tracking</h3>
-            <p>No ads, no distractions, no complicated menus.  
-               Just strokes, putts, penalties, and your score vs. par.</p>
-        </div>
+  <h2>Apple Watch Screenshots</h2>
+  <div class="screenshot-row">
+    <img class="screenshot watch" src="images/watch1.png" alt="Golf Caddie Apple Watch scoring">
+    <img class="screenshot watch" src="images/watch2.png" alt="Golf Caddie Watch hole view">
+  </div>
+</div>
 
-        <div class="feature">
-            <h3>Apple Watch Support</h3>
-            <p>Track your round right from your wrist.  
-               Swipe between holes, update scores instantly, and sync automatically.</p>
-        </div>
+<div class="section">
+  <h2>FAQ</h2>
 
-        <div class="feature">
-            <h3>Quick Start Rounds</h3>
-            <p>Start a round instantly with all Par 4s — perfect for casual play or practice sessions.</p>
-        </div>
+  <div class="faq-item">
+    <h3>Does Golf Caddie work on Apple Watch?</h3>
+    <p>Yes — you can track strokes, putts, and penalties directly from your wrist.</p>
+  </div>
 
-        <div class="feature">
-            <h3>Automatic Sync</h3>
-            <p>Your iPhone and Apple Watch stay in sync as you play.  
-               The most recent update always wins.</p>
-        </div>
+  <div class="faq-item">
+    <h3>Do I need an account?</h3>
+    <p>No accounts, no sign-in, no data collection.</p>
+  </div>
 
-        <div class="feature">
-            <h3>Customize Pars</h3>
-            <p>Adjust par for each hole directly from the scorecard.  
-               Make the round match any course.</p>
-        </div>
+  <div class="faq-item">
+    <h3>Is there a subscription?</h3>
+    <p>No. Apple Watch support is a one-time purchase.</p>
+  </div>
 
-        <div class="feature">
-            <h3>Round History</h3>
-            <p>View past rounds, rename them, copy them, or delete them with simple swipe actions.</p>
-        </div>
+  <div class="faq-item">
+    <h3>Does it track score vs par?</h3>
+    <p>Yes — including golf terms like Birdie, Bogey, and Eagle.</p>
+  </div>
+</div>
 
-    </div>
-</section>
-
-<section class="section">
-    <h2>Frequently Asked Questions</h2>
-
-    <h3>Does the app sync between iPhone and Apple Watch?</h3>
-    <p>Yes — your devices stay in sync automatically as you play.</p>
-
-    <h3>Is the Apple Watch included?</h3>
-    <p>Yes, with Golf Caddie Pro. A free trial is included for new users.</p>
-
-    <h3>Can I edit scores later?</h3>
-    <p>Absolutely. You can edit any hole at any time.</p>
-
-    <h3>Does the app track GPS or distances?</h3>
-    <p>No — Golf Caddie is intentionally simple.  
-       No GPS, no maps, no battery drain.</p>
-</section>
+<div class="section">
+  <h2>Privacy</h2>
+  <p>We collect no personal data. View the full privacy policy:</p>
+  <p><a href="/apps/golf-caddie/privacy/">Privacy Policy</a></p>
+</div>
 
 <footer>
-    <p>© 2026 Golf Caddie — Built for golfers who want simplicity.</p>
-    <p><a href="https://carlos231.github.io/apps/golf-caddie/privacy">Privacy Policy</a></p>
+  <p>© 2026 Golf Caddie</p>
 </footer>
 
 </body>

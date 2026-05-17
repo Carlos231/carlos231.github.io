@@ -1,0 +1,22 @@
+# OS-specific files
+*.DS_Store
+Thumbs.db
+
+# Editor-specific (VS Code, Sublime, etc.)
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Dependency and build folders (if using NPM/Sass)
+node_modules/
+.sass-cache/
+dist/
+build/
+
+# Sensitive data
+.env
+secrets.txt
+
+# Log files
+*.log
