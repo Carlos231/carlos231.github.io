@@ -5,17 +5,42 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="google-site-verification" content="tt8MztqRTA7JNExN5C-OkSgCF6DtNu08fd3Fp6Fr2cM" />
 <title>Carlos Apps — Simple, Privacy‑Focused iOS Apps</title>
+<meta name="description" content="Simple, privacy-friendly apps for iPhone and Apple Watch. No subscriptions, no tracking, no clutter.">
+<link rel="canonical" href="https://carlos231.github.io/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>📱</text></svg>">
 
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://carlos231.github.io/">
+<meta property="og:title" content="Carlos Apps — Simple, Privacy‑Focused iOS Apps">
+<meta property="og:description" content="Simple, privacy-friendly apps for iPhone and Apple Watch. No subscriptions, no tracking, no clutter.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Carlos Apps — Simple, Privacy‑Focused iOS Apps">
+<meta name="twitter:description" content="Simple, privacy-friendly apps for iPhone and Apple Watch. No subscriptions, no tracking, no clutter.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=DM+Sans:wght@400;500&display=swap" rel="stylesheet">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Carlos Apps",
+  "url": "https://carlos231.github.io/",
+  "description": "Simple, privacy-friendly apps for iPhone and Apple Watch."
+}
+</script>
 
 <style>
     body { font-family: 'DM Sans', sans-serif; background: #fafaf8; color: #1a1a1a; padding: 60px 24px; }
     .container { max-width: 700px; margin: 0 auto; }
     h1 { font-family: 'DM Serif Display', serif; font-size: 40px; margin-bottom: 12px; }
     .subtitle { color: #6b7280; margin-bottom: 40px; }
-    .app-card { display: flex; justify-content: space-between; padding: 20px 24px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: inherit; margin-bottom: 16px; }
-    .app-card:hover { border-color: #2d6a4f; transform: translateY(-1px); }
-    .arrow { color: #2d6a4f; font-size: 20px; }
+    .app-card { display: flex; justify-content: space-between; align-items: center; padding: 20px 24px; background: white; border: 1px solid #e5e7eb; border-radius: 12px; text-decoration: none; color: inherit; margin-bottom: 16px; transition: border-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease; }
+    .app-card:hover { border-color: #2d6a4f; transform: translateY(-1px); box-shadow: 0 4px 16px rgba(0,0,0,0.08); }
+    .app-card h2 { font-size: 18px; margin: 0 0 4px; }
+    .app-card p { margin: 0; color: #6b7280; font-size: 14px; }
+    .arrow { color: #2d6a4f; font-size: 20px; flex-shrink: 0; }
 </style>
 </head>
 
@@ -29,7 +54,7 @@
             <h2>Golf Caddie — Score Tracker</h2>
             <p>iOS & Apple Watch</p>
         </div>
-        <span class="arrow">→</span>
+        <span class="arrow" aria-hidden="true">→</span>
     </a>
 </div>
 </body>

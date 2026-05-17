@@ -5,24 +5,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <title>Golf Caddie - Simple Golf Scorekeeper & Score Tracker</title>
-
   <meta name="description" content="Golf Caddie is a simple, fast golf scorekeeper and score tracker for iPhone and Apple Watch. Track strokes, putts, and penalties with a clean, no-clutter scorecard. One-time purchase for Watch support.">
-
   <link rel="canonical" href="https://carlos231.github.io/apps/golf-caddie/" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛳</text></svg>">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://carlos231.github.io/apps/golf-caddie/">
+  <meta property="og:title" content="Golf Caddie - Simple Golf Scorekeeper & Score Tracker">
+  <meta property="og:description" content="Simple, fast golf scorekeeper for iPhone and Apple Watch. No accounts, no ads, no clutter — just simple scoring.">
+  <meta property="og:image" content="https://carlos231.github.io/apps/golf-caddie/images/iphone1.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Golf Caddie - Simple Golf Scorekeeper & Score Tracker">
+  <meta name="twitter:description" content="Simple, fast golf scorekeeper for iPhone and Apple Watch. No accounts, no ads, no clutter.">
+  <meta name="twitter:image" content="https://carlos231.github.io/apps/golf-caddie/images/iphone1.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Golf Caddie - Score Tracker",
+    "operatingSystem": "iOS",
+    "applicationCategory": "SportsApplication",
+    "description": "Simple, fast golf scorekeeper and score tracker for iPhone and Apple Watch. Track strokes, putts, and penalties with a clean, no-clutter scorecard.",
+    "url": "https://carlos231.github.io/apps/golf-caddie/",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    }
+  }
+  </script>
 
   <style>
-    /* GLOBAL BACKGROUND — gradient + embedded noise */
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
       margin: 0;
       padding: 0;
       color: #1a1a1a;
       line-height: 1.6;
-
-      background:
-        linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%),
-        url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVQIW2NkYGBgAAAABQABDQottAAAAABJRU5ErkJggg==");
-      background-size: auto, 200px;
+      background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%);
     }
 
     header {
@@ -68,6 +89,7 @@
     .feature {
       background: rgba(255, 255, 255, 0.7);
       backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
       padding: 25px;
       border-radius: 12px;
       font-size: 18px;
@@ -85,7 +107,6 @@
       text-decoration: none;
     }
 
-    /* SCREENSHOTS */
     .screenshot-row {
       display: flex;
       justify-content: center;
@@ -96,16 +117,18 @@
 
     .screenshot {
       width: 260px;
+      height: 563px;
       border-radius: 22px;
       box-shadow: 0 6px 24px rgba(0,0,0,0.12);
+      object-fit: cover;
     }
 
     .screenshot.watch {
       width: 180px;
+      height: auto;
       border-radius: 28px;
     }
 
-    /* FAQ */
     .faq-item {
       margin-bottom: 25px;
       max-width: 700px;
@@ -132,7 +155,7 @@
 <header>
   <h1>Golf Caddie - Simple Golf Scorekeeper & Score Tracker</h1>
   <p>The clean, fast way to track your golf rounds on iPhone and Apple Watch. No accounts, no ads, no clutter — just simple scoring.</p>
-  <p class="cta"><a href="https://apps.apple.com/">Download on the App Store</a></p>
+  <p class="cta"><a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">Download on the App Store</a></p>
 </header>
 
 <div class="section">
@@ -143,22 +166,23 @@
     <div class="feature"><strong>Apple Watch Support</strong><br>Score every hole from your wrist. One-time purchase.</div>
     <div class="feature"><strong>Quick Start</strong><br>Open the app and start scoring instantly.</div>
     <div class="feature"><strong>Custom Pars</strong><br>Set par for any course — 9 or 18 holes.</div>
-    <div class="feature"><strong>No Subscriptions</strong><br>Pay once for Watch support. That’s it.</div>
+    <div class="feature"><strong>No Subscriptions</strong><br>Pay once for Watch support. That's it.</div>
   </div>
 </div>
 
 <div class="section">
   <h2>iPhone Screenshots</h2>
   <div class="screenshot-row">
-    <img class="screenshot" src="images/iphone1.png" alt="Golf Caddie scorecard">
-    <img class="screenshot" src="images/iphone2.png" alt="Golf Caddie scoring screen">
-    <img class="screenshot" src="images/iphone3.png" alt="Golf Caddie round summary">
+    <img class="screenshot" src="images/iphone1.png" alt="Golf Caddie scorecard" width="1284" height="2778">
+    <img class="screenshot" src="images/iphone2.png" alt="Golf Caddie scoring screen" width="1284" height="2778" loading="lazy">
+    <img class="screenshot" src="images/iphone3.png" alt="Golf Caddie round summary" width="1284" height="2778" loading="lazy">
+    <img class="screenshot" src="images/iphone4.png" alt="Golf Caddie hole detail" width="1284" height="2778" loading="lazy">
   </div>
 
   <h2>Apple Watch Screenshots</h2>
   <div class="screenshot-row">
-    <img class="screenshot watch" src="images/watch1.png" alt="Golf Caddie Apple Watch scoring">
-    <img class="screenshot watch" src="images/watch2.png" alt="Golf Caddie Watch hole view">
+    <img class="screenshot watch" src="images/watch1.png" alt="Golf Caddie Apple Watch scoring" width="226" height="385" loading="lazy">
+    <img class="screenshot watch" src="images/watch2.png" alt="Golf Caddie Watch hole view" width="416" height="496" loading="lazy">
   </div>
 </div>
 
