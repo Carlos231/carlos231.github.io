@@ -102,6 +102,51 @@
       font-weight: 600;
     }
 
+    .header-actions {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .btn-primary {
+      display: inline-block;
+      background: #007aff;
+      color: white;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 14px 32px;
+      border-radius: 12px;
+      text-decoration: none;
+      transition: background 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-primary:hover {
+      background: #0062cc;
+      color: white;
+      transform: translateY(-1px);
+    }
+
+    .btn-secondary {
+      display: inline-block;
+      background: transparent;
+      color: #007aff;
+      font-size: 15px;
+      font-weight: 500;
+      padding: 11px 28px;
+      border-radius: 12px;
+      border: 1.5px solid #007aff;
+      text-decoration: none;
+      transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: #007aff;
+      color: white;
+      transform: translateY(-1px);
+    }
+
     a {
       color: #007aff;
       text-decoration: none;
@@ -220,7 +265,10 @@
 <header>
   <h1>Golf Caddie - Simple Golf Scorekeeper & Score Tracker</h1>
   <p>The clean, fast way to track your golf rounds on iPhone and Apple Watch. No accounts, no ads, no clutter — just simple scoring.</p>
-  <p class="cta"><a href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">Download on the App Store</a></p>
+  <div class="header-actions">
+    <a class="btn-primary" href="https://apps.apple.com/" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+    <a class="btn-secondary" href="mailto:carlosbuilds@icloud.com?subject=Golf%20Caddie%20Beta%20Access%20Request">Request Beta Access</a>
+  </div>
 </header>
 
 <div class="section">

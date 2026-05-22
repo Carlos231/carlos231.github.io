@@ -1,0 +1,83 @@
+#!/usr/bin/env bash
+# To activate: git config core.hooksPath .githooks
+
+set -euo pipefail
+
+PASS=true
+STAGED=$(git diff --cached --name-only --diff-filter=ACM)
+
+red()    { printf "\033[31m%s\033[0m\n" "$*"; }
+yellow() { printf "\033[33m%s\033[0m\n" "$*"; }
+green()  { printf "\033[32m%s\033[0m\n" "$*"; }
+
+# 1. No .DS_Store files
+if echo "$STAGED" | grep -q '\.DS_Store'; then
+    red "✖  .DS_Store file(s) staged — remove before committing."
+    PASS=false
+fi
+
+# 2. No merge conflict markers
+while IFS= read -r f; do
+    [ -f "$f" ] || continue
+    if grep -qE '^(<{7}|={7}|>{7})' "$f"; then
+        red "✖  Merge conflict markers in: $f"
+        PASS=false
+    fi
+done <<< "$STAGED"
+
+# 3. HTML files must have <!DOCTYPE html>
+while IFS= read -r f; do
+    [[ "$f" == *.html ]] || continue
+    [ -f "$f" ] || continue
+    if ! grep -qi '<!DOCTYPE html>' "$f"; then
+        red "✖  Missing <!DOCTYPE html> in: $f"
+        PASS=false
+    fi
+done <<< "$STAGED"
+
+# 4. sitemap.xml must be well-formed XML
+if echo "$STAGED" | grep -q 'sitemap\.xml'; then
+    if command -v xmllint &>/dev/null; then
+        if ! xmllint --noout sitemap.xml 2>/dev/null; then
+            red "✖  sitemap.xml is not valid XML."
+            PASS=false
+        fi
+    fi
+fi
+
+# 5. No hardcoded localhost URLs
+while IFS= read -r f; do
+    [ -f "$f" ] || continue
+    if grep -qE 'https?://localhost' "$f"; then
+        red "✖  Hardcoded localhost URL in: $f"
+        PASS=false
+    fi
+done <<< "$STAGED"
+
+# 6. Warn about images over 1 MB
+while IFS= read -r f; do
+    [[ "$f" =~ \.(png|jpg|jpeg|gif|webp)$ ]] || continue
+    [ -f "$f" ] || continue
+    size=$(wc -c < "$f")
+    if [ "$size" -gt 1048576 ]; then
+        kb=$((size / 1024))
+        yellow "⚠  Large image (${kb} KB): $f — consider optimizing."
+    fi
+done <<< "$STAGED"
+
+# 7. Warn about placeholder App Store URL
+while IFS= read -r f; do
+    [[ "$f" == *.html ]] || continue
+    [ -f "$f" ] || continue
+    if grep -q 'href="https://apps.apple.com/"' "$f"; then
+        yellow "⚠  Placeholder App Store URL in: $f — update to the real app link."
+    fi
+done <<< "$STAGED"
+
+if [ "$PASS" = false ]; then
+    red "\nPre-commit checks failed. Fix the errors above and try again."
+    exit 1
+fi
+
+green "✔  Pre-commit checks passed."
+exit 0
