@@ -1,0 +1,26 @@
+# Link check for the built site (_site).
+# root_dir and the live-domain remap need the runner's absolute path, so
+# .github/workflows/seo-checks.yml passes them on the command line.
+
+# /apps/golf-caddie/privacy is served from privacy.html on GitHub Pages.
+fallback_extensions = ["html"]
+# Directory links must resolve to an index.html, like GitHub Pages.
+index_files = ["index.html"]
+# Check #anchors (e.g. /apps/golf-caddie/#faq) exist.
+include_fragments = "anchor-only"
+
+max_retries = 2
+timeout = 20
+max_concurrency = 8
+no_progress = true
+
+# 429 = rate limited, not broken.
+accept = ["200..=299", "429"]
+
+exclude = [
+  # Preconnect hints point at bare hosts that return 404 by design.
+  '^https://fonts\.googleapis\.com/?$',
+  '^https://fonts\.gstatic\.com/?$',
+  # App Store blocks or rate-limits CI runners; checked by hand instead.
+  '^https://apps\.apple\.com/',
+]
