@@ -34,9 +34,11 @@ defaults:
 
 # Working files that must never be published.
 exclude:
+  - CLAUDE.md
   - skills-lock.json
   - content-backlog.md
   - social/
+  - marketing/
   - README.md
   - Gemfile
   - Gemfile.lock
