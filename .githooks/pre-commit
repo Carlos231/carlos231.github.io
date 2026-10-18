@@ -25,9 +25,10 @@ while IFS= read -r f; do
     fi
 done <<< "$STAGED"
 
-# 3. HTML files must have <!DOCTYPE html>
+# 3. HTML files must have <!DOCTYPE html> (except includes and verification files)
 while IFS= read -r f; do
     [[ "$f" == *.html ]] || continue
+    [[ "$f" == _includes/* || "$(basename "$f")" == google*.html ]] && continue
     [ -f "$f" ] || continue
     if ! grep -qi '<!DOCTYPE html>' "$f"; then
         red "✖  Missing <!DOCTYPE html> in: $f"
@@ -74,8 +75,76 @@ while IFS= read -r f; do
     fi
 done <<< "$STAGED"
 
+# 8. Working files must stay unpublished (listed under exclude: in _config.yml)
+for item in CLAUDE.md CONTRIBUTING.md content-backlog.md social/ marketing/ skills-lock.json lighthouserc.json lychee.toml; do
+    if ! grep -qE "^[[:space:]]*-[[:space:]]+${item//./\\.}[[:space:]]*$" _config.yml; then
+        red "✖  _config.yml exclude is missing \"$item\" — it would be published."
+        PASS=false
+    fi
+done
+
+# 9. IndexNow key file must stay in the repo
+if ! git ls-files --cached | grep -qE '^[0-9a-f]{32}\.txt$'; then
+    red "✖  IndexNow key file (<32 hex chars>.txt at the repo root) is missing."
+    PASS=false
+fi
+
+# 10. _data/golf_caddie.yml and JSON configs must parse
+if command -v ruby &>/dev/null; then
+    if ! ruby -ryaml -e 'YAML.load_file(ARGV[0])' _data/golf_caddie.yml 2>/dev/null; then
+        red "✖  _data/golf_caddie.yml is not valid YAML."
+        PASS=false
+    fi
+    if [ -f lighthouserc.json ] && ! ruby -rjson -e 'JSON.parse(File.read(ARGV[0]))' lighthouserc.json 2>/dev/null; then
+        red "✖  lighthouserc.json is not valid JSON."
+        PASS=false
+    fi
+fi
+
+# 11. Guides: required front matter, and flag hardcoded app facts
+while IFS= read -r f; do
+    [[ "$f" == apps/golf-caddie/guides/*.md ]] || continue
+    [[ "$(basename "$f")" == _* ]] && continue
+    [ -f "$f" ] || continue
+    for key in title description permalink date last_modified_at; do
+        if ! grep -qE "^${key}:[[:space:]]*[^[:space:]\"']" "$f" && ! grep -qE "^${key}:[[:space:]]*[\"'][^\"']" "$f"; then
+            red "✖  $f: front matter \"$key\" is missing or empty."
+            PASS=false
+        fi
+    done
+    if ! grep -qE '^answer:' "$f"; then
+        red "✖  $f: front matter \"answer\" (40–60 word intro) is missing."
+        PASS=false
+    fi
+    if ! grep -qE '^permalink:[[:space:]]*["'"'"']?/apps/golf-caddie/guides/[a-z0-9-]+/["'"'"']?[[:space:]]*$' "$f"; then
+        red "✖  $f: permalink must look like /apps/golf-caddie/guides/<slug>/"
+        PASS=false
+    fi
+    if grep -qE 'YYYY|<slug>' "$f"; then
+        red "✖  $f: template placeholders (YYYY or <slug>) left in."
+        PASS=false
+    fi
+    hits=$(grep -nE '\$[0-9]+\.[0-9]{2}|6760603837|pt=128660093|iOS [0-9]+\.[0-9]' "$f" || true)
+    if [ -n "$hits" ]; then
+        yellow "⚠  $f hardcodes app facts. In the body, use {{ site.data.golf_caddie... }} instead:"
+        echo "$hits" | sed 's/^/     /'
+    fi
+done <<< "$STAGED"
+
+# 12. Release reminder when facts or pages change
+if echo "$STAGED" | grep -qE '^(_data/golf_caddie\.yml|llms\.txt|apps/golf-caddie/.*\.(html|md))$'; then
+    live=$(curl -s --max-time 5 'https://itunes.apple.com/lookup?id=6760603837&country=us' || true)
+    version=$(printf '%s' "$live" | sed -nE 's/.*"version":"([^"]+)".*/\1/p')
+    if [ -n "$version" ]; then
+        yellow "ℹ  Live App Store version: $version. Only describe features that are in this version."
+    else
+        yellow "ℹ  Couldn't reach the App Store. Check the live version before describing new features."
+    fi
+fi
+
 if [ "$PASS" = false ]; then
-    red "\nPre-commit checks failed. Fix the errors above and try again."
+    echo
+    red "Pre-commit checks failed. Fix the errors above and try again."
     exit 1
 fi
 

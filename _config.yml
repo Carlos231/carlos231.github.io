@@ -36,6 +36,7 @@ defaults:
 # Working files that must never be published.
 exclude:
   - CLAUDE.md
+  - CONTRIBUTING.md
   - skills-lock.json
   - content-backlog.md
   - social/

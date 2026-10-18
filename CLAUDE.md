@@ -16,6 +16,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Don't merge to `main` before the matching app release ships. Never push to `main`; push feature branches only, and only when asked.
 
 ## Working style
+- Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`).
 - Commits: one concise single-line message per logical change. Commit only when asked.
 - When reporting changes, summarize each file and link it. Don't paste full file contents into chat. Files themselves must always be complete (no "..." placeholders).
 - Show before → after for any existing page copy you rewrite, before rewriting it.
@@ -24,7 +25,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 
 ## Unpublished working files
 These must never be published. Keep them in `exclude:` in `_config.yml` (dot-folders like `.agents/`, `.claude/`, `.github/` are excluded by Jekyll automatically):
-- `CLAUDE.md`
+- `CLAUDE.md`, `CONTRIBUTING.md`
 - `content-backlog.md`
 - `social/`
 - `marketing/`
