@@ -13,9 +13,9 @@ Why now: Search Console can only index what's live. Unreleased v1.5.3 features (
 2. Commit the pending changes on `seo-setup` (see CONTRIBUTING.md), then push: `git push origin seo-setup`
 3. On GitHub, open a pull request **seo-setup → main** and merge it.
 4. Do **After every merge** (below).
-5. Search Console, once:
-   - **Sitemaps** → submit `https://carlos231.github.io/sitemap.xml`
-   - **URL Inspection** → request indexing for `/`, `/apps/golf-caddie/`, and `/apps/golf-caddie/privacy`
+5. Search Console:
+   - **Sitemaps** → submit `https://carlos231.github.io/sitemap.xml`. **Once, ever.** Google re-reads it on its own, and new guides are added to it automatically.
+   - **URL Inspection** → request indexing for `/`, `/apps/golf-caddie/`, `/apps/golf-caddie/privacy`, and the first guide. This speeds up the first crawl.
 6. If the **IndexNow** workflow didn't start on its own after the deploy: Actions → IndexNow → **Run workflow** on `main` (submits every URL in the sitemap).
 
 ## This week (one-time, about 30 minutes)
@@ -29,7 +29,7 @@ Why now: Search Console can only index what's live. Unreleased v1.5.3 features (
 
 - [ ] GitHub → **Actions**: `pages build and deployment` ✓, then `SEO checks` ✓ (lychee must pass; Lighthouse scores are in the run summary), then `IndexNow` ✓ (log says 200 or 202).
 - [ ] Open the changed page on your phone: layout, download button, pricing table.
-- [ ] New or changed page: Search Console → URL Inspection → **Request indexing**.
+- [ ] Optional: new or changed page → Search Console → URL Inspection → **Request indexing**. Worth the minute while the site is new (first few months). Later, skip it: the sitemap, the automatic Guides list on the app page, and IndexNow (Bing and others) get new pages found without you.
 - [ ] New or changed schema: run the page through the [Rich Results Test](https://search.google.com/test/rich-results). "No aggregateRating" warnings are expected; we never add ratings.
 - [ ] Local copy: `git switch main && git pull`
 
@@ -41,7 +41,7 @@ The commit hook says "v1.5.3 is live on the App Store" once it's time.
    - In `_data/golf_caddie.yml`: set `app_version: "1.5.3"` and `upcoming_version: ""`
    - Commit `Show v1.5.3 features: CSV export and copy options`
 2. Pull request → merge → **After every merge**.
-3. Request indexing for `/apps/golf-caddie/` and `/apps/golf-caddie/privacy`.
+3. Optional: request indexing for `/apps/golf-caddie/` and `/apps/golf-caddie/privacy`.
 4. Later cleanup (any time): remove the `{% unless upcoming == "1.5.3" %}` wrappers. The release-update skill does this.
 
 ## Every future app release

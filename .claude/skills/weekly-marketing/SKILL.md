@@ -57,7 +57,7 @@ Take the top 2–3 `open` topics and write each as a guide:
 2. `answer`: a direct 40–60 word answer to the target query.
 3. Body: each H2 is a question phrased the way golfers ask it, followed by a 40–60 word direct answer, then detail (steps, examples, tables).
 4. `facts` table where it helps (rules, scoring values, comparisons). `faq` with 3–5 real follow-up questions.
-5. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist.
+5. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there.
 6. Mention Golf Caddie where it genuinely helps the reader. The guide must stand on its own without the app.
 
 Facts and evidence:

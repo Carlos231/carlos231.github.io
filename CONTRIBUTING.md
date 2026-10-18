@@ -62,5 +62,5 @@ git push -u origin <branch>
 ## 5. Merge
 
 - Merge the pull request on GitHub (unreleased features stay hidden, so you don't need to wait for an app release).
-- Then follow **After every merge** in [marketing/runbook.md](marketing/runbook.md): check the Actions runs, spot-check the page, and request indexing.
+- Then follow **After every merge** in [marketing/runbook.md](marketing/runbook.md): check the Actions runs and spot-check the page (requesting indexing is optional).
 - Update your local copy: `git switch main && git pull`.
