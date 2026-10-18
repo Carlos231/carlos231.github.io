@@ -17,11 +17,20 @@ Turn Golf Caddie release notes into accurate website updates. The site must desc
 ## Before you start
 
 1. Read `CLAUDE.md`, `CONTRIBUTING.md`, and `.agents/product-marketing.md` (voice, words to use and avoid).
-2. Read `_data/golf_caddie.yml`. Its `app_version` is the version the site currently describes; the release notes are the diff from there.
-3. Check what's live: `curl -s 'https://itunes.apple.com/lookup?id=6760603837&country=us'` and read `version` and `currentVersionReleaseDate`.
-   - **Release is live:** the work can merge to `main` after review.
-   - **Release isn't live yet:** do the work on a branch named `release/v<version>` (create it from the current branch only if the user agrees) and say clearly that it must not merge until the App Store shows this version.
-4. Check `git status` and the current branch. Never work on `main`.
+2. Read `_data/golf_caddie.yml`. `app_version` is the live version the site shows; `upcoming_version` is a release that's prepared but hidden ("" if none). The release notes are the diff from `app_version`.
+3. Check what's live: `curl -s 'https://itunes.apple.com/lookup?id=6760603837&country=us'` and read `version` and `currentVersionReleaseDate`. Then pick the mode:
+   - **Pre-release mode** (the version isn't live yet): add the new content **hidden**. Set `upcoming_version: "<version>"`, give every new or changed feature entry `since: "<version>"`, and wrap new page copy in `{% unless upcoming == "<version>" %}…{% endunless %}`. If wording changes, keep the old wording in `{% if upcoming == "<version>" %}old{% else %}new{% endif %}`. This can merge to `main` right away.
+   - **Release mode** (the version is live): if the content was prepared earlier, do the **release-day flip** (Step 0 below). Otherwise make the changes visible directly.
+4. Check `git status` and the current branch. Work on `release/v<version>` (create it from `main` with the user's OK). Never work on `main`.
+
+## Step 0: Release-day flip (when content was prepared in pre-release mode)
+
+1. In `_data/golf_caddie.yml`: set `app_version: "<version>"` and `upcoming_version: ""`.
+2. Remove the gates for that version: delete the `{% unless upcoming == "<version>" %}` / `{% endunless %}` lines and the old-wording branches of `{% if upcoming == "<version>" %}…{% else %}…{% endif %}`, keeping the new copy. Remove `since: "<version>"` from data entries. Search with `grep -rn 'upcoming == "<version>"' .` and `grep -n 'since: "<version>"' _data/golf_caddie.yml`.
+3. Set `last_modified_at` to today on pages whose visible content changed (Step 5), then verify and report (Steps 6–7). Commit message: `Show v<version> features: <headline changes>`.
+4. If the user only wants the quick flip, step 1 alone is enough. Tell them the gates can be cleaned up later.
+
+Skip Steps 1–4 below for a flip-only release.
 
 ## Step 1: Sort the release notes
 
@@ -46,7 +55,7 @@ Never add numbers, claims, or comparisons that aren't in the notes or the existi
 ## Step 2: Update the data file
 
 Edit `_data/golf_caddie.yml`:
-- `app_version`: the release version.
+- `app_version`: the release version (release mode only; in pre-release mode set `upcoming_version` instead).
 - `features`: add, edit, or remove entries. Each has `name` (short label used in the pricing table and schema), `tier` (`free` or `pro`), and `detail` (one plain sentence used in `llms.txt`). Keep list order: free features first, then Pro.
 - `pricing` / `min_ios`: only if the notes change them.
 
@@ -89,7 +98,7 @@ Copy rules:
 
 Reply with:
 
-1. **Release gating:** live version vs. the version the site now describes, and whether the branch can merge.
+1. **Release gating:** live version, `app_version`, and `upcoming_version` after your changes. Say which content is hidden until release day, or confirm the flip is done.
 2. **Changes by file:** one line per file with a link (what changed, which release note drove it). Don't paste full files.
 3. **Copy changes:** a before → after table for rewritten sentences, plus new copy listed separately.
 4. **Questions / not done:** anything you didn't change because the notes were unclear, and outdated screenshots.

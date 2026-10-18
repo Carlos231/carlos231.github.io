@@ -15,11 +15,9 @@ Budget: aim to finish in one session. Quality beats volume. If only one page mee
 
 1. Read `CLAUDE.md`, `CONTRIBUTING.md`, `.agents/product-marketing.md` (voice, objections, Learnings), and `_data/golf_caddie.yml` (the only source for app facts).
 2. Read `content-backlog.md`, the existing guides in `apps/golf-caddie/guides/`, and the latest `social/week-NN.md`, so you don't duplicate topics or posts.
-3. Pick the branch base:
-   - If `main` has `_layouts/guide.html`, branch from `main`.
-   - Otherwise branch from `seo-setup` (the setup hasn't merged yet) and target the PR at `seo-setup`.
+3. Pick the branch base: `main` (pull it first). If `main` doesn't have `_layouts/guide.html` yet, the SEO setup hasn't merged: stop and point the user to "Merge day" in `marketing/runbook.md`.
 4. Create the branch `weekly/YYYY-MM-DD` (the run date). Never work on `main`.
-5. Check the live App Store version (`https://itunes.apple.com/lookup?id=6760603837&country=us`). Only write about features in that version. If `_data/golf_caddie.yml` `app_version` is newer, don't mention the unreleased features.
+5. Check the live App Store version (`https://itunes.apple.com/lookup?id=6760603837&country=us`). Only write about features in that version. Features with `since:` equal to `_data/golf_caddie.yml` `upcoming_version` are unreleased: don't mention them in guides or social posts. If the live version equals `upcoming_version`, tell the user the release-day flip is due (release-update skill).
 
 ## Step 1: Review the latest SEO checks
 

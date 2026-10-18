@@ -10,7 +10,7 @@ Search potential is a judgment call (no paid keyword tools). Re-score once Searc
 
 | Priority | Topic | Target query | Intent | Angle (what we add) | Score | Status | Page |
 |---|---|---|---|---|---|---|---|
-| 1 | Apple Watch golf scorecard without GPS | apple watch golf scorecard without gps | Commercial | Why some golfers skip GPS (battery, signal, speed) and what scoring from the wrist looks like, with honest trade-offs vs GPS apps | 8.1 | open | /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/ |
+| 1 | Apple Watch golf scorecard without GPS | apple watch golf scorecard without gps | Commercial | Why some golfers skip GPS (battery, signal, speed) and what scoring from the wrist looks like, with honest trade-offs vs GPS apps | 8.1 | drafted | /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/ |
 | 2 | How to keep score in golf | how to keep score in golf | Informational | A scorecard walkthrough of one real hole (strokes, putts, penalties, score vs par) that beginners can follow on paper or in an app | 7.8 | open | /apps/golf-caddie/guides/how-to-keep-score-in-golf/ |
 | 3 | Best simple golf scorecard apps for Apple Watch (2026) | best golf scorecard app for apple watch | Commercial | Criteria-based roundup of scoring-first apps tested hands-on: names the big apps first, says honestly what each does well, and includes indie no-GPS options | 7.7 | open | /apps/golf-caddie/guides/best-simple-golf-scorecard-apps-apple-watch/ |
 | 4 | Golf scorecard app with no account | golf scorecard app no account | Commercial | What sign-up-free means in practice (where rounds are stored, backup, export, privacy) and how to check any app before downloading | 7.5 | open | /apps/golf-caddie/guides/golf-scorecard-app-no-account/ |

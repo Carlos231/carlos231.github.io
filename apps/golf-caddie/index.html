@@ -4,9 +4,9 @@ html_title: "Golf Caddie - Simple Scorecard | Apple Watch & Siri Golf Score"
 description: "Simple golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription. Score with a tap, Siri, or the Lock Screen. Pro is a one-time $2.99."
 last_modified_at: 2026-10-18
 ---
-{%- assign gc = site.data.golf_caddie -%}
-{%- assign free_features = gc.features | where: "tier", "free" | map: "name" -%}
-{%- assign pro_features = gc.features | where: "tier", "pro" | map: "name" -%}
+{%- include golf-caddie-vars.html -%}
+{%- assign free_features = live_features | where: "tier", "free" | map: "name" -%}
+{%- assign pro_features = live_features | where: "tier", "pro" | map: "name" -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,7 +43,7 @@ last_modified_at: 2026-10-18
     },
     "isAccessibleForFree": true,
     "featureList": [
-      {%- for f in gc.features %}
+      {%- for f in live_features %}
       {% if f.tier == "free" %}{{ f.name | append: " (free)" | jsonify }}{% elsif f.tier == "pro" %}{{ f.name | append: " (Pro)" | jsonify }}{% else %}{{ f.name | jsonify }}{% endif %}{% unless forloop.last %},{% endunless %}
       {%- endfor %}
     ],
@@ -468,7 +468,7 @@ last_modified_at: 2026-10-18
     <div class="feature"><strong>Club Distances</strong><br>Set your yardages once and check them mid-round on iPhone or Apple Watch.</div>
     <div class="feature"><strong>Apple Health</strong><br>Log rounds as a Golf workout, with optional live heart rate and calories on your Watch.</div>
     <div class="feature"><strong>Your Game Stats</strong><br>Scoring averages and trends across your rounds, right on the home screen.</div>
-    <div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>
+    {% unless upcoming == "1.5.3" %}<div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>{% endunless %}
     <div class="feature"><strong>Free {{ gc.pricing.trial_days }}-Day Trial</strong><br>Try Pro free — no credit card required. Unlock forever for just ${{ gc.pricing.pro_price }}.</div>
   </div>
 </div>
@@ -527,7 +527,7 @@ last_modified_at: 2026-10-18
       </tr>
     </thead>
     <tbody>
-      {%- for f in gc.features %}
+      {%- for f in live_features %}
       {%- if f.tier == "free" or f.tier == "pro" %}
       <tr><th scope="row">{{ f.name }}</th><td>{% if f.tier == "free" %}Yes{% else %}{{ gc.pricing.trial_days }}-day trial{% endif %}</td><td>Yes</td></tr>
       {%- endif %}
@@ -541,7 +541,7 @@ last_modified_at: 2026-10-18
   <h2>Frequently asked questions</h2>
   <div class="faq">
     <h3>Is Golf Caddie free?</h3>
-    <p>Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, CSV export, and club distances. Scoring on Apple Watch, Siri, and the Lock Screen Live Activity are part of Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase after a {{ gc.pricing.trial_days }}-day free trial.</p>
+    <p>Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, {% unless upcoming == "1.5.3" %}CSV export, {% endunless %}and club distances. Scoring on Apple Watch, Siri, and the Lock Screen Live Activity are part of Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase after a {{ gc.pricing.trial_days }}-day free trial.</p>
 
     <h3>Is there a subscription?</h3>
     <p>No. Pro is a single ${{ gc.pricing.pro_price }} in-app purchase that unlocks forever. The {{ gc.pricing.trial_days }}-day trial doesn't need a credit card, and nothing renews automatically.</p>
@@ -601,8 +601,12 @@ last_modified_at: 2026-10-18
         <li>Sort rounds by <strong>date</strong> or <strong>course name</strong> using the menu at the top.</li>
         <li>Swipe <strong>right</strong> to show the <strong>Copy</strong> and <strong>Rename</strong> buttons.</li>
         <li>Swipe <strong>left</strong> to show the <strong>Delete</strong> button.</li>
+        {%- if upcoming == "1.5.3" %}
+        <li>Copying creates a new round with the same setup.</li>
+        {%- else %}
         <li>Copying creates a new round with the same holes and pars — a Back 9 round copies as a Back 9.</li>
         <li>Copying an 18-hole round lets you choose <strong>18 Holes</strong>, <strong>Front 9</strong>, or <strong>Back 9</strong>.</li>
+        {%- endif %}
         <li>Deleting always shows a confirmation first.</li>
       </ul>
     </div>
@@ -774,6 +778,7 @@ last_modified_at: 2026-10-18
       </ul>
     </div>
 
+    {% unless upcoming == "1.5.3" %}
     <div class="help-card">
       <div class="help-card-header">
         <span class="help-card-icon" aria-hidden="true">📤</span>
@@ -786,6 +791,7 @@ last_modified_at: 2026-10-18
         <li>Free for everyone — no Pro needed. The file only goes where you send it.</li>
       </ul>
     </div>
+    {% endunless %}
 
   </div>
 

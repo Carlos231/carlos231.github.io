@@ -1,0 +1,11 @@
+{%- comment -%}
+  Shared variables for pages that show app facts.
+  gc:            site.data.golf_caddie
+  upcoming:      the unreleased version ("" when nothing is pending)
+  live_features: features minus those added in the unreleased version
+  Wrap unreleased page copy in {% unless upcoming == "<version>" %} ... {% endunless %}.
+{%- endcomment -%}
+{%- assign gc = site.data.golf_caddie -%}
+{%- assign upcoming = gc.upcoming_version | default: "" -%}
+{%- assign upcoming_key = upcoming | default: "none" -%}
+{%- assign live_features = gc.features | where_exp: "f", "f.since != upcoming_key" -%}

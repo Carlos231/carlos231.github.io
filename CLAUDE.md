@@ -4,6 +4,8 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 
 ## Before any marketing task
 - Read `.agents/product-marketing.md` first (positioning, voice, objections, learnings).
+- `marketing/runbook.md` is the owner's schedule (what to do and when). Keep it current when a process changes.
+- `content-backlog.md` is the prioritized topic list.
 
 ## Facts
 - Never invent facts, features, reviews, ratings, testimonials, or stats. If a fact isn't in a source, ask.
@@ -12,8 +14,9 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Keep the App Store campaign link exactly as it is in the data file (`pt=128660093&ct=Website`). Don't change the token or the case of `ct`.
 
 ## Release gating
-- Never advertise a feature that isn't live on the App Store. Check the live version first: `https://itunes.apple.com/lookup?id=6760603837&country=us`.
-- Don't merge to `main` before the matching app release ships. Never push to `main`; push feature branches only, and only when asked.
+- Never show a feature that isn't live on the App Store. Check the live version first: `https://itunes.apple.com/lookup?id=6760603837&country=us`.
+- Unreleased features stay hidden behind `upcoming_version` in `_data/golf_caddie.yml`: tag data features with `since: "<version>"` and wrap page copy in `{% unless upcoming == "<version>" %}`. With that in place, `main` can merge before the release. Release day is a one-line flip (see `marketing/runbook.md`).
+- Never push to `main`; push feature branches only, and only when asked. The user merges.
 
 ## Working style
 - Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`).

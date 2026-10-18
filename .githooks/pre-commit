@@ -136,8 +136,13 @@ if echo "$STAGED" | grep -qE '^(_data/golf_caddie\.yml|llms\.txt|apps/golf-caddi
     live=$(curl -s --max-time 5 'https://itunes.apple.com/lookup?id=6760603837&country=us' || true)
     version=$(printf '%s' "$live" | sed -nE 's/.*"version":"([^"]+)".*/\1/p')
     site_version=$(sed -nE 's/^app_version:[[:space:]]*"?([^"[:space:]]+)"?.*/\1/p' _data/golf_caddie.yml)
-    if [ -n "$version" ] && [ -n "$site_version" ] && [ "$version" != "$site_version" ]; then
-        yellow "ℹ  Site describes v$site_version but the App Store has v$version. Don't merge to main until v$site_version is live."
+    upcoming=$(sed -nE 's/^upcoming_version:[[:space:]]*"?([^"[:space:]]*)"?.*/\1/p' _data/golf_caddie.yml)
+    if [ -n "$version" ] && [ -n "$upcoming" ] && [ "$version" = "$upcoming" ]; then
+        yellow "ℹ  v$upcoming is live on the App Store. Release-day flip: set app_version to \"$upcoming\" and upcoming_version to \"\" in _data/golf_caddie.yml."
+    elif [ -n "$version" ] && [ -n "$site_version" ] && [ "$version" != "$site_version" ]; then
+        yellow "ℹ  _data app_version is v$site_version but the App Store has v$version. Run the release-update skill."
+    elif [ -n "$upcoming" ]; then
+        yellow "ℹ  Live App Store version: $version. v$upcoming content stays hidden until release day (upcoming_version)."
     elif [ -n "$version" ]; then
         yellow "ℹ  Live App Store version: $version. Only describe features that are in this version."
     else

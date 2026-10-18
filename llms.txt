@@ -3,7 +3,7 @@ layout: null
 permalink: /llms.txt
 sitemap: false
 ---
-{%- assign gc = site.data.golf_caddie -%}
+{%- include golf-caddie-vars.html -%}
 # {{ gc.name }}
 
 > {{ gc.short_name }} is a minimalist golf scorecard app for iPhone and Apple Watch. It has no account, no GPS, and no subscription. You score each hole with a tap, with Siri, or from the Lock Screen. The core app is free with unlimited rounds; {{ gc.short_name }} Pro is a one-time ${{ gc.pricing.pro_price }} purchase.
@@ -22,13 +22,13 @@ sitemap: false
 - Data: rounds are stored in the user's own iCloud account. The developer collects no personal data, analytics, or crash reports
 
 ## Free features
-{% for f in gc.features %}{% if f.tier == "free" %}
+{% for f in live_features %}{% if f.tier == "free" %}
 - {{ f.name }}: {{ f.detail }}{% endif %}{% endfor %}
 
 ## Pro features (one-time ${{ gc.pricing.pro_price }})
-{% for f in gc.features %}{% if f.tier == "pro" %}
+{% for f in live_features %}{% if f.tier == "pro" %}
 - {{ f.name }}: {{ f.detail }}{% endif %}{% endfor %}
-{%- assign other = gc.features | where: "tier", "unconfirmed" %}
+{%- assign other = live_features | where: "tier", "unconfirmed" %}
 {%- if other.size > 0 %}
 
 ## Other features
