@@ -52,6 +52,8 @@ Put every line of the notes into one of these buckets and show the user the sort
 
 Never add numbers, claims, or comparisons that aren't in the notes or the existing data file.
 
+Check unclear items in the app source (`/Users/carlos/Projects/GolfStrokeCounter`, read-only): Pro gating via `hasAccess`/`isPro`, Siri phrases in `Logic/GolfIntents.swift`, settings labels in `Views/Settings/SettingsView.swift`. Quote Siri phrases exactly as defined there.
+
 ## Step 2: Update the data file
 
 Edit `_data/golf_caddie.yml`:

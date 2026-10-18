@@ -11,6 +11,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Never invent facts, features, reviews, ratings, testimonials, or stats. If a fact isn't in a source, ask.
 - The single source of truth for app facts (IDs, URLs, prices, requirements, free/Pro features) is `_data/golf_caddie.yml`. Pages, schema, and `llms.txt` render from it; don't hardcode these values.
 - Never add `aggregateRating` or review markup to schema.
+- The app's source code is at `/Users/carlos/Projects/GolfStrokeCounter` (read-only). Verify free/Pro gating (`StoreKitManager.hasAccess`), Siri phrases (`Logic/GolfIntents.swift`), and settings wording there before stating them.
 - Keep the App Store campaign link exactly as it is in the data file (`pt=128660093&ct=Website`). Don't change the token or the case of `ct`.
 
 ## Release gating
