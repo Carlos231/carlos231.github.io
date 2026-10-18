@@ -17,7 +17,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 
 ## Working style
 - Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`).
-- Commits: one concise single-line message per logical change. Commit only when asked.
+- Commits: one concise single-line message per logical change. Commit only when asked. Running the `weekly-marketing` skill counts as asking to commit and push its `weekly/` branch and open a PR (never merge).
 - When reporting changes, summarize each file and link it. Don't paste full file contents into chat. Files themselves must always be complete (no "..." placeholders).
 - Show before → after for any existing page copy you rewrite, before rewriting it.
 - No mass-generated pages. Every page must be genuinely useful to a golfer.

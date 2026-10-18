@@ -6,6 +6,9 @@
 name: Golf Caddie - Simple Scorecard
 short_name: Golf Caddie
 app_id: "6760603837"
+# App version this site describes. Must be live on the App Store before main
+# is merged. Updated by the release-update skill.
+app_version: "1.5.3"
 developer: Carlos Lopez-Molina
 support_email: carlosbuilds@icloud.com
 category: Sports

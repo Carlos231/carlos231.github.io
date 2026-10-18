@@ -135,7 +135,10 @@ done <<< "$STAGED"
 if echo "$STAGED" | grep -qE '^(_data/golf_caddie\.yml|llms\.txt|apps/golf-caddie/.*\.(html|md))$'; then
     live=$(curl -s --max-time 5 'https://itunes.apple.com/lookup?id=6760603837&country=us' || true)
     version=$(printf '%s' "$live" | sed -nE 's/.*"version":"([^"]+)".*/\1/p')
-    if [ -n "$version" ]; then
+    site_version=$(sed -nE 's/^app_version:[[:space:]]*"?([^"[:space:]]+)"?.*/\1/p' _data/golf_caddie.yml)
+    if [ -n "$version" ] && [ -n "$site_version" ] && [ "$version" != "$site_version" ]; then
+        yellow "ℹ  Site describes v$site_version but the App Store has v$version. Don't merge to main until v$site_version is live."
+    elif [ -n "$version" ]; then
         yellow "ℹ  Live App Store version: $version. Only describe features that are in this version."
     else
         yellow "ℹ  Couldn't reach the App Store. Check the live version before describing new features."
