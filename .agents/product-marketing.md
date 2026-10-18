@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v3
+**Document version:** v4
 **Last updated:** 2026-10-18
 
 ## Product Overview
@@ -55,7 +55,8 @@ Not applicable (single-user B2C purchase).
 
 ## Competitive Landscape
 *Competitor facts below are unverified positioning notes. Verify each on the competitor's own site and date it before using it in public copy (Phase 4).*
-**Direct:** Arccos, Golfshot, 18Birdies. Full-featured golf apps with GPS, course maps, and stats. Fall short for this audience because they're heavier than needed: account sign-up, GPS-first design, and premium tiers on subscription.
+**Direct (full-featured):** Arccos, Golfshot, 18Birdies, TheGrint. Full-featured golf apps with GPS, course maps, and stats. Fall short for this audience because they're heavier than needed: account sign-up, GPS-first design, and premium tiers on subscription. (Research notes, unverified, 2026-10-18: Golfshot lists Apple Watch scoring as a Pro feature; Arccos membership cited at ~$199.99/yr; 18Birdies Premium cited at $79.99–$99.99/yr. Verify on each vendor's site before using.)
+**Direct (indie, scoring-first):** SwipeScore (free, $4.99 one-time upgrade, Apple Watch companion, no GPS), Memo Score ($0.99, Watch scorecard), GolfRSS (free, iPhone + Watch). Same niche and similar pricing model, so "no subscription" and "no GPS" alone don't set us apart from these. (From App Store listings and developer descriptions, 2026-10-18; verify before naming them in public copy.)
 **Secondary:** Apple Watch golf GPS apps, built-in scorecards in course booking apps. Fall short because scoring is secondary to rangefinding or booking.
 **Indirect:** Paper scorecard, Notes app, a tally counter. Fall short because they're slow, error-prone, and don't track putts, penalties, or trends.
 
@@ -69,6 +70,7 @@ Not applicable (single-user B2C purchase).
 **How we do it differently:** Scoring is the whole product. Everything else (stats, club distances, Health, export) supports the scorecard and stays out of the way.
 **Why that's better:** Faster scoring, less phone time, no recurring cost, works without signal.
 **Why customers choose us:** It's the simplest way to keep score, and Pro costs less than one month of most golf app subscriptions. *(Verify competitor pricing before publishing this comparison.)*
+**What's actually distinctive (vs indie scorecards too):** the combination of no account + Apple Watch scoring + Siri voice scoring + Lock Screen Live Activity, all syncing, plus free CSV export and Apple Health. Lead with the combination, not with "no subscription" alone. Never claim to be the only no-subscription or no-GPS scorecard.
 
 ## Objections
 | Objection | Response |
@@ -141,10 +143,12 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-10-18 | Don't claim uniqueness on "no subscription" or "no GPS"; lead with the Watch + Siri + Live Activity + no-account combination | Phase 4 research found SwipeScore, Memo Score, GolfRSS in the same niche | All copy, comparison pages, social | active |
 | 2026-10-18 | Keep the existing App Store provider token (`pt=128660093`) and campaign `ct=Website` on every download button | Owner decision; changing case or token splits App Analytics data | Website, all pages | active |
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v4 (2026-10-18) — Competitive Landscape: added TheGrint and indie scoring-first apps (SwipeScore, Memo Score, GolfRSS) from Phase 4 research; Differentiation now leads with the feature combination; new Learning on uniqueness claims.
 - v3 (2026-10-18) — Facts: owner confirmed Apple Health is free and $2.99 is the US price (equivalent local price elsewhere).
 - v2 (2026-10-18) — Product Overview, Facts, and Glossary: owner confirmed stats, sharing, CSV export, and Watch club distances are free; Pro gates Apple Watch scoring, not the whole Watch app.
 - v1 (2026-10-18) — Initial context.
