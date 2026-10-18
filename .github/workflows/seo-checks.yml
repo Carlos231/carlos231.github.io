@@ -1,0 +1,80 @@
+name: SEO checks
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: "0 14 * * 1" # Mondays 14:00 UTC
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: seo-checks-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      # Same builder GitHub Pages uses, so we test exactly what gets deployed.
+      - name: Build site
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: ./
+          destination: ./_site
+
+      # Report only until we have a baseline: never fails the job.
+      - name: Lighthouse CI (report only)
+        continue-on-error: true
+        run: |
+          npx --yes @lhci/cli@0.15.1 collect
+          npx --yes @lhci/cli@0.15.1 upload --target=filesystem --outputDir=./lhci-report
+
+      - name: Lighthouse summary
+        if: always() && hashFiles('lhci-report/manifest.json') != ''
+        run: |
+          python3 - <<'EOF' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          from urllib.parse import urlparse
+
+          def pct(v):
+              return "n/a" if v is None else str(round(v * 100))
+
+          print("## Lighthouse (mobile, report only)\n")
+          print("| Page | Performance | Accessibility | Best practices | SEO |")
+          print("|---|---|---|---|---|")
+          for r in json.load(open("lhci-report/manifest.json")):
+              if not r.get("isRepresentativeRun"):
+                  continue
+              s = r["summary"]
+              print(f"| `{urlparse(r['url']).path}` | {pct(s.get('performance'))} | "
+                    f"{pct(s.get('accessibility'))} | {pct(s.get('best-practices'))} | {pct(s.get('seo'))} |")
+          print("\nFull HTML reports are in the `lighthouse-reports` artifact.")
+          EOF
+
+      - name: Upload Lighthouse reports
+        if: always() && hashFiles('lhci-report/manifest.json') != ''
+        uses: actions/upload-artifact@v4
+        with:
+          name: lighthouse-reports
+          path: lhci-report/
+          retention-days: 14
+
+      # Fails the job on broken links. Live-domain URLs (canonical, og:url)
+      # are remapped to the local build so a just-pushed page isn't reported
+      # as broken before Pages finishes deploying.
+      - name: Link check (lychee)
+        uses: lycheeverse/lychee-action@v2.9.0
+        with:
+          lycheeVersion: v0.24.2
+          args: >-
+            --config lychee.toml
+            --root-dir ${{ github.workspace }}/_site
+            --remap '^https://carlos231\.github\.io/(.*)$ file://${{ github.workspace }}/_site/$1'
+            ./_site
+          fail: true

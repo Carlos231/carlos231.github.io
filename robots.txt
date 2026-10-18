@@ -1,4 +1,18 @@
 User-agent: *
 Allow: /
 
+# AI crawlers, listed explicitly so the policy is unambiguous.
+# Search and citation crawlers
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+# Model training and grounding crawlers
+User-agent: GPTBot
+User-agent: ClaudeBot
+User-agent: Google-Extended
+Allow: /
+
 Sitemap: https://carlos231.github.io/sitemap.xml

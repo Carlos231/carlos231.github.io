@@ -1,0 +1,50 @@
+title: Carlos Apps
+description: Simple, privacy-friendly apps for iPhone and Apple Watch. No subscriptions, no tracking, no clutter.
+url: https://carlos231.github.io
+baseurl: ""
+lang: en_US
+author: Carlos Lopez-Molina
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# App facts (IDs, URLs, price, features) live in _data/golf_caddie.yml.
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      image: /assets/golf-caddie-social.png
+  # Guides: guide layout, and Article JSON-LD from jekyll-seo-tag.
+  - scope:
+      path: apps/golf-caddie/guides
+    values:
+      layout: guide
+      seo:
+        type: Article
+  # Redirect stub and Search Console verification file stay out of the sitemap.
+  - scope:
+      path: privacy
+    values:
+      sitemap: false
+  - scope:
+      path: apps/golf-caddie/google1a7801dc7219ce43.html
+    values:
+      sitemap: false
+
+# Working files that must never be published.
+exclude:
+  - CLAUDE.md
+  - CONTRIBUTING.md
+  - skills-lock.json
+  - content-backlog.md
+  - social/
+  - marketing/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/
+  - lighthouserc.json
+  - lychee.toml

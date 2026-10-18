@@ -1,0 +1,115 @@
+name: IndexNow
+
+# Runs after GitHub Pages finishes deploying main, and pings IndexNow
+# (Bing, Yandex, Seznam, Naver, ...) with the URLs whose source changed.
+# Run manually to submit every URL in the sitemap.
+on:
+  workflow_run:
+    workflows: ["pages build and deployment"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+env:
+  SITE: https://carlos231.github.io
+  INDEXNOW_KEY: 305d6e064dde2291b2514a6ca5c7d4c7
+
+jobs:
+  ping:
+    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
+          fetch-depth: 0
+
+      - name: Find files changed since the previous deploy
+        if: github.event_name == 'workflow_run'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
+          WORKFLOW_ID: ${{ github.event.workflow_run.workflow_id }}
+        run: |
+          prev=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "$WORKFLOW_ID" \
+            --branch main --status success --limit 10 --json headSha \
+            --jq "[.[].headSha | select(. != \"$HEAD_SHA\")][0] // empty")
+          if [ -z "$prev" ] || ! git cat-file -e "$prev^{commit}" 2>/dev/null; then
+            prev="$HEAD_SHA~1"
+          fi
+          echo "Diffing $prev..$HEAD_SHA"
+          git diff --name-only --diff-filter=AM "$prev" "$HEAD_SHA" | tee changed.txt
+
+      - name: Submit to IndexNow
+        env:
+          ALL_URLS: ${{ github.event_name == 'workflow_dispatch' }}
+          CACHE_BUST: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          python3 - <<'EOF'
+          import json, os, re, sys, urllib.error, urllib.request
+          from urllib.parse import urlparse
+
+          site, key = os.environ["SITE"], os.environ["INDEXNOW_KEY"]
+          key_location = f"{site}/{key}.txt"
+
+          def get(url):
+              with urllib.request.urlopen(url, timeout=30) as r:
+                  return r.read().decode()
+
+          # The key file must be live, or IndexNow rejects the request.
+          if get(f"{key_location}?v={os.environ['CACHE_BUST']}").strip() != key:
+              sys.exit(f"Key file at {key_location} doesn't match INDEXNOW_KEY")
+
+          # Only submit URLs that are in the deployed sitemap (indexable pages).
+          sitemap = get(f"{site}/sitemap.xml?v={os.environ['CACHE_BUST']}")
+          indexable = set(re.findall(r"<loc>(.*?)</loc>", sitemap))
+
+          def url_for(path):
+              text = open(path, encoding="utf-8", errors="ignore").read()
+              fm = re.match(r"---\s*\n(.*?)\n---", text, re.S)
+              m = fm and re.search(r"^permalink:\s*[\"']?([^\"'\n]+)", fm.group(1), re.M)
+              if m:
+                  return site + m.group(1).strip()
+              url = "/" + path
+              url = re.sub(r"index\.(html|md)$", "", url)
+              return site + re.sub(r"\.md$", ".html", url)
+
+          if os.environ["ALL_URLS"] == "true":
+              urls = sorted(indexable)
+          else:
+              changed = open("changed.txt").read().split()
+              site_wide = any(f == "_config.yml" or f.startswith(("_includes/", "_layouts/", "_data/"))
+                              for f in changed)
+              if site_wide:
+                  urls = sorted(indexable)
+              else:
+                  pages = [f for f in changed
+                           if f.endswith((".html", ".md"))
+                           and not any(p.startswith((".", "_")) for p in f.split("/"))]
+                  urls = sorted({url_for(f) for f in pages} & indexable)
+
+          if not urls:
+              print("No indexable URLs changed; nothing to submit.")
+              sys.exit(0)
+
+          print("Submitting:\n  " + "\n  ".join(urls))
+          body = json.dumps({
+              "host": urlparse(site).hostname,
+              "key": key,
+              "keyLocation": key_location,
+              "urlList": urls,
+          }).encode()
+          req = urllib.request.Request(
+              "https://api.indexnow.org/indexnow", data=body,
+              headers={"Content-Type": "application/json; charset=utf-8"})
+          try:
+              with urllib.request.urlopen(req, timeout=30) as r:
+                  print(f"IndexNow responded {r.status}")
+          except urllib.error.HTTPError as e:
+              sys.exit(f"IndexNow responded {e.code}: {e.read().decode()[:500]}")
+          EOF

@@ -1,0 +1,77 @@
+# Single source of truth for Golf Caddie facts.
+# Pages, schema, and llms.txt render from this file (site.data.golf_caddie).
+# Only list what is live on the App Store. Check before editing:
+# https://itunes.apple.com/lookup?id=6760603837&country=us
+
+name: Golf Caddie - Simple Scorecard
+short_name: Golf Caddie
+app_id: "6760603837"
+# Live App Store version the site describes publicly.
+app_version: "1.5.2"
+# Next release, not live yet. Features with `since: <this version>` and page
+# copy wrapped in `{% unless upcoming == "<this version>" %}` stay hidden
+# while this is set (see _includes/golf-caddie-vars.html).
+# Release day: set app_version to this value and change this to "".
+upcoming_version: "1.5.3"
+developer: Carlos Lopez-Molina
+support_email: carlosbuilds@icloud.com
+category: Sports
+min_ios: "17.6"
+
+urls:
+  page: /apps/golf-caddie/
+  privacy: /apps/golf-caddie/privacy
+  # Campaign link for every download button. Keep pt and ct exactly as is
+  # (ct is case-sensitive in App Analytics).
+  download: https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Website&mt=8
+  # Clean links for schema and llms.txt (no campaign tracking).
+  app_store: https://apps.apple.com/us/app/golf-caddie-simple-scorecard/id6760603837
+  install: https://apps.apple.com/app/id6760603837
+
+pricing:
+  currency: USD
+  pro_price: "2.99"     # US price; one-time in-app purchase, not a subscription
+  price_note: US price. Other countries pay the equivalent App Store price in local currency.
+  trial_days: 14        # no credit card required
+
+# tier: free | pro | unconfirmed
+#   free/pro features appear in the pricing table, schema featureList, and llms.txt.
+#   unconfirmed features are left out of the pricing table and carry no tier label.
+# name: short label (pricing table row, schema featureList)
+# detail: one plain sentence for llms.txt
+# since: (optional) app version that adds it; hidden while it equals upcoming_version
+features:
+  - name: Unlimited rounds on iPhone
+    tier: free
+    detail: Score as many rounds as you like on iPhone, free.
+  - name: Strokes, putts, penalties, score vs par
+    tier: free
+    detail: Track strokes, putts, and penalties per hole, with score vs par (eagle, birdie, par, bogey).
+  - name: Front 9, Back 9, 18 holes, custom pars
+    tier: free
+    detail: Quick Start a Front 9, Back 9, or 18-hole round in seconds, and set par for any hole.
+  - name: Share scorecard image
+    tier: free
+    detail: Share a traditional scorecard image with golf marks.
+  - name: Scoring stats and trends
+    tier: free
+    detail: See scoring averages and trends across your rounds.
+  - name: CSV export
+    tier: free
+    since: "1.5.3"
+    detail: Export every round as a CSV spreadsheet.
+  - name: Club distances on iPhone and Apple Watch
+    tier: free
+    detail: Keep a club distances cheat sheet on iPhone and Apple Watch.
+  - name: Apple Watch scoring
+    tier: pro
+    detail: Score strokes, putts, and penalties from your wrist, in sync with your iPhone.
+  - name: Siri voice scoring
+    tier: pro
+    detail: Score hands-free with Siri, e.g. "Add a stroke in Golf Caddie" or "What's my round score in Golf Caddie?"
+  - name: Lock Screen Live Activity
+    tier: pro
+    detail: Score from the Lock Screen and Dynamic Island without unlocking your phone.
+  - name: Apple Health golf workouts
+    tier: free
+    detail: Log rounds as a Golf workout in Apple Health, with optional live heart rate and calories on Apple Watch.
