@@ -14,7 +14,7 @@ answer: >-
 
 faq:
   - q: "Will a scorecard app drain my Apple Watch battery?"
-    a: "A scorecard-only app is lighter than a GPS app because it doesn't track your location. Golf Caddie doesn't run GPS at all. If you turn on its optional Apple Health **Full Session**, the Watch runs a live workout for heart rate and calories, which will use more battery than scoring alone."
+    a: "A scorecard-only app is lighter than a GPS app because it doesn't track your location. Golf Caddie doesn't run GPS at all. Its optional Apple Health setting has two modes: **Save Summary** logs the round when you end it, with no battery impact, while **Full Session** runs a live Watch workout for heart rate and calories, which uses the most battery."
   - q: "Do I need my iPhone on the course?"
     a: "Keep your iPhone in your bag or cart. With Golf Caddie, the Watch and iPhone score the same round and sync over Bluetooth as you play. With Pro, the round also shows on your iPhone Lock Screen."
   - q: "Can I use a rangefinder or GPS watch alongside it?"
@@ -39,9 +39,9 @@ cta_heading: "Score your next round from your wrist"
 | GPS | None. You enter scores yourself. |
 | Account | None. Rounds live in your iCloud account. |
 | Works without cell signal | Yes |
-| Apple Watch scoring | Pro: one-time ${{ gc.pricing.pro_price }} (US price), {{ gc.pricing.trial_days }}-day free trial, no credit card |
+| Apple Watch app (scoring and club distances) | Pro: one-time ${{ gc.pricing.pro_price }} (US price), {{ gc.pricing.trial_days }}-day free trial, no credit card |
 | Siri and Lock Screen scoring | Pro, same one-time unlock |
-| Club distances on the Watch | Free |
+| Club distances on iPhone | Free |
 | iPhone scorecard | Free, unlimited rounds |
 | Requires | iPhone with iOS {{ gc.min_ios }} or later; Apple Watch optional |
 
@@ -70,7 +70,7 @@ There are simple ways to get yardages without GPS on your wrist:
 
 - **Course markers.** Most courses mark 100, 150, and 200 yards with posts, plates, or sprinkler heads.
 - **A laser rangefinder.** It measures to the flag itself and works alongside any scorecard app.
-- **Know your own distances.** Golf Caddie keeps a club distances cheat sheet on the iPhone and Apple Watch (free), so once you know the yardage, you know the club.
+- **Know your own distances.** Golf Caddie keeps a club distances cheat sheet on the iPhone (free) and on the Apple Watch (Pro), so once you know the yardage, you know the club.
 
 ## How do you score a hole on your Apple Watch?
 
@@ -92,9 +92,9 @@ Yes. Scoring doesn't need the internet: there's no course data to download and n
 
 ## How much does it cost to score golf on an Apple Watch?
 
-It depends on the app. Many GPS golf apps put Watch features in a yearly subscription. Golf Caddie's iPhone scorecard is free with unlimited rounds, and Apple Watch scoring is part of Pro, a one-time ${{ gc.pricing.pro_price }} (US price) after a {{ gc.pricing.trial_days }}-day free trial. There's no subscription and no credit card for the trial.
+It depends on the app. Many GPS golf apps put Watch features in a yearly subscription. Golf Caddie's iPhone scorecard is free with unlimited rounds, and the Apple Watch app is part of Pro, a one-time ${{ gc.pricing.pro_price }} (US price) after a {{ gc.pricing.trial_days }}-day free trial. There's no subscription and no credit card for the trial.
 
-Pro also includes Siri voice scoring and the Lock Screen Live Activity. See [what's free and what's Pro]({{ gc.urls.page }}#pricing).
+{{ gc.pricing.trial_note }} Pro also includes Siri voice scoring and the Lock Screen Live Activity. See [what's free and what's Pro]({{ gc.urls.page }}#pricing).
 
 ## Is a scorecard-only app right for you?
 

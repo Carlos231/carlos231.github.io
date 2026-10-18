@@ -204,7 +204,7 @@
   <main>
     <article>
       <h1>{{ page.title }}</h1>
-      <p class="byline">By {{ gc.developer }}, maker of {{ gc.short_name }}{% if updated %} · Updated <time datetime="{{ updated | date: '%Y-%m-%d' }}">{{ updated | date: "%B %-d, %Y" }}</time>{% endif %}</p>
+      <p class="byline">By {{ gc.developer }}, {{ gc.developer_bio }} and makes {{ gc.short_name }}{% if updated %} · Updated <time datetime="{{ updated | date: '%Y-%m-%d' }}">{{ updated | date: "%B %-d, %Y" }}</time>{% endif %}</p>
 
       {%- if page.answer %}
 
@@ -241,7 +241,7 @@
 
     <section class="cta">
       <h2>{{ page.cta_heading | default: "Keep score the simple way" }}</h2>
-      <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription. Apple Watch scoring, Siri, and Live Activity are a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
+      <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription. The Apple Watch app, Siri, and Live Activity are a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
       <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
       <p class="note">{{ gc.pricing.price_note }}</p>
     </section>

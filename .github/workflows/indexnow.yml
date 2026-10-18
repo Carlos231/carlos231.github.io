@@ -1,18 +1,22 @@
 name: IndexNow
 
-# Runs after GitHub Pages finishes deploying main, and pings IndexNow
-# (Bing, Yandex, Seznam, Naver, ...) with the URLs whose source changed.
-# Run manually to submit every URL in the sitemap.
+# On every push to main: waits until GitHub Pages has deployed that commit,
+# then pings IndexNow (Bing, Yandex, Seznam, Naver, ...) with the URLs whose
+# source changed in the push. Run manually to submit every URL in the sitemap.
+# (GitHub's built-in "pages build and deployment" run can't trigger other
+# workflows, so this listens for the push and polls the Pages deployment.)
 on:
-  workflow_run:
-    workflows: ["pages build and deployment"]
-    types: [completed]
+  push:
     branches: [main]
   workflow_dispatch:
 
 permissions:
   contents: read
-  actions: read
+  deployments: read
+
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
 
 env:
   SITE: https://carlos231.github.io
@@ -20,35 +24,54 @@ env:
 
 jobs:
   ping:
-    if: github.event_name == 'workflow_dispatch' || github.event.workflow_run.conclusion == 'success'
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.workflow_run.head_sha || github.sha }}
           fetch-depth: 0
 
-      - name: Find files changed since the previous deploy
-        if: github.event_name == 'workflow_run'
+      - name: Find files changed in this push
+        if: github.event_name == 'push'
+        env:
+          BEFORE: ${{ github.event.before }}
+        run: |
+          prev="$BEFORE"
+          if [ -z "$prev" ] || [ "$prev" = "0000000000000000000000000000000000000000" ] \
+             || ! git cat-file -e "$prev^{commit}" 2>/dev/null; then
+            prev="$GITHUB_SHA~1"
+          fi
+          echo "Diffing $prev..$GITHUB_SHA"
+          git diff --name-only --diff-filter=AM "$prev" "$GITHUB_SHA" | tee changed.txt
+
+      - name: Wait for the GitHub Pages deploy of this commit
+        if: github.event_name == 'push'
         env:
           GH_TOKEN: ${{ github.token }}
-          HEAD_SHA: ${{ github.event.workflow_run.head_sha }}
-          WORKFLOW_ID: ${{ github.event.workflow_run.workflow_id }}
         run: |
-          prev=$(gh run list --repo "$GITHUB_REPOSITORY" --workflow "$WORKFLOW_ID" \
-            --branch main --status success --limit 10 --json headSha \
-            --jq "[.[].headSha | select(. != \"$HEAD_SHA\")][0] // empty")
-          if [ -z "$prev" ] || ! git cat-file -e "$prev^{commit}" 2>/dev/null; then
-            prev="$HEAD_SHA~1"
-          fi
-          echo "Diffing $prev..$HEAD_SHA"
-          git diff --name-only --diff-filter=AM "$prev" "$HEAD_SHA" | tee changed.txt
+          for i in $(seq 1 40); do  # 40 x 15 s = 10 minutes
+            id=$(gh api "repos/$GITHUB_REPOSITORY/deployments?sha=$GITHUB_SHA&environment=github-pages&per_page=1" --jq '.[0].id // empty')
+            if [ -n "$id" ]; then
+              # Statuses are listed newest first.
+              state=$(gh api "repos/$GITHUB_REPOSITORY/deployments/$id/statuses?per_page=1" --jq '.[0].state // empty')
+              echo "Pages deployment $id: ${state:-pending}"
+              case "$state" in
+                # inactive = a newer deploy replaced it, so this commit is live too.
+                success|inactive) exit 0 ;;
+                failure|error) echo "Pages deploy ended as $state; not pinging IndexNow."; exit 1 ;;
+              esac
+            else
+              echo "Waiting for the Pages deployment to start..."
+            fi
+            sleep 15
+          done
+          echo "Timed out waiting for the Pages deploy."
+          exit 1
 
       - name: Submit to IndexNow
         env:
           ALL_URLS: ${{ github.event_name == 'workflow_dispatch' }}
-          CACHE_BUST: ${{ github.event.workflow_run.head_sha || github.sha }}
+          CACHE_BUST: ${{ github.sha }}
         run: |
           python3 - <<'EOF'
           import json, os, re, sys, urllib.error, urllib.request

@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v4
+**Document version:** v5
 **Last updated:** 2026-10-18
 
 ## Product Overview
@@ -8,7 +8,7 @@
 **What it does:** Golf Caddie tracks strokes, putts, and penalties hole by hole and shows your score vs par as you play. You can score with a tap on iPhone, from your wrist on Apple Watch, by voice with Siri, or from the Lock Screen with a Live Activity. Rounds stay in your own iCloud account.
 **Product category:** Golf scorecard app / golf score tracker (App Store: Sports, secondary Health & Fitness).
 **Product type:** Consumer iOS + watchOS app.
-**Business model:** Free download with unlimited rounds on iPhone, including stats, scorecard sharing, CSV export, and club distances on iPhone and Apple Watch. Golf Caddie Pro is a one-time $2.99 in-app purchase that unlocks Apple Watch scoring, Siri, and Live Activity. 14-day free Pro trial, no credit card required. No subscription, no ads.
+**Business model:** Free download with unlimited rounds on iPhone, including stats, scorecard sharing, CSV export, club distances, and Apple Health workouts. Golf Caddie Pro is a one-time $2.99 in-app purchase that unlocks the Apple Watch app (scoring and club distances), Siri, and Live Activity. 14-day free Pro trial, no credit card required. No subscription, no ads.
 
 **Facts (keep in sync with the site and App Store):**
 | Fact | Value |
@@ -17,9 +17,12 @@
 | App Store ID | 6760603837 |
 | Developer | Carlos Lopez-Molina (independent) |
 | Requirements | iOS 17.6 or later; Apple Watch optional |
-| Free tier | Unlimited rounds, stats, scorecard sharing, CSV export, club distances on iPhone and Apple Watch, Apple Health golf workouts (confirmed by owner 2026-10-18) |
-| Pro ($2.99 once) | Apple Watch scoring, Siri, Live Activity (confirmed by owner 2026-10-18) |
+| Free tier | Unlimited rounds (no limit in code), stats, scorecard sharing, CSV export (v1.5.3), club distances on iPhone, Apple Health "Save Summary" workouts (verified in app source 2026-10-18) |
+| Pro ($2.99 once) | The whole Apple Watch app (scoring, club distances, live Health workout), Siri (8 shortcuts), Lock Screen/Dynamic Island Live Activity. Without Pro the Watch shows "Trial Ended · Unlock Watch on your iPhone" (verified in app source 2026-10-18) |
 | Pricing by country | $2.99 is the US price; other countries pay the equivalent App Store price in local currency |
+| Trial | 14 days (`GolfShared.trialDays`), started in-app, stored in iCloud; no App Store purchase, so no card |
+| Siri phrases (exact) | "Start a quick round in Golf Caddie" (18 holes; "Start a front 9 holes / back 9 holes round in Golf Caddie"), "Add a stroke / Add a putt / Add a penalty in Golf Caddie", "Next hole in Golf Caddie", "What hole am I on in Golf Caddie", "What is my score / round score in Golf Caddie", "What is my hole score in Golf Caddie" |
+| App source | `/Users/carlos/Projects/GolfStrokeCounter` (Siri: `Logic/GolfIntents.swift`; Pro gating: `StoreKitManager.hasAccess`) |
 | Download link (website) | `https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Website&mt=8` |
 | Support | carlosbuilds@icloud.com |
 | Website | https://carlos231.github.io/apps/golf-caddie/ |
@@ -87,17 +90,25 @@ Not applicable (single-user B2C purchase).
 **Habit:** Existing round history in another app; habit of paper scorecards.
 **Anxiety:** Losing stats history; whether a "simple" app is enough.
 
+## App Store Listing
+*Owner-provided 2026-10-18 (v1.5.3 metadata; live v1.5.2 has the same text minus the export line).*
+**Title:** Golf Caddie - Simple Scorecard
+**Subtitle:** Score Tracker for Apple Watch
+**Keywords (92/100 bytes):** stroke,counter,scorekeeper,putt,par,birdie,offline,easy,shot,stats,round,card,keeper,18,siri
+**Promotional text:** Keep your head in the game, not your phone. One tap to log a stroke, nothing else in the way. No account, no GPS.
+**Description key lines:** "No account. No GPS. No social feed. Just open and play." / "the scorecard for golfers who'd rather watch their ball than their phone" / "Share a classic scorecard, with circles for birdies and squares for bogeys" / "PRO: $2.99 ONCE, YOURS TO KEEP" / "Try Pro free for 14 days. Nothing to cancel. When the trial ends, everything free stays free." / "Made by a solo developer who plays. Your feedback shapes every update."
+
 ## Customer Language
 **How they describe the problem:**
 - *None collected yet. Add verbatim phrases from App Store reviews, support emails, and Reddit threads as they come in. Do not invent quotes.*
 **How they describe us:**
 - *None collected yet.*
-**Words to use:** simple, scorecard, keep score, strokes, putts, penalties, score vs par, from your wrist, hands-free, Lock Screen, one-time, no subscription, no account, no GPS, open and play
+**Words to use:** simple, scorecard, keep score, strokes, putts, penalties, score vs par, from your wrist, hands-free, Lock Screen, one-time, no subscription, no account, no GPS, open and play, head in the game, yours to keep, nothing to cancel, solo developer who plays
 **Words to avoid:** "platform," "AI-powered," "revolutionary," "ultimate," "best" (unless sourced), anything that implies GPS or handicap features the app doesn't have
 **Glossary:**
 | Term | Meaning |
 |------|---------|
-| Pro | One-time $2.99 unlock for Apple Watch scoring, Siri, and Live Activity |
+| Pro | One-time $2.99 unlock for the Apple Watch app, Siri, and Live Activity |
 | Quick Start | Instant round with all holes set to par 4 (Front 9, Back 9, or 18) |
 | Live Activity | Lock Screen / Dynamic Island scoring widget |
 | Score vs par | Running total relative to par (e.g., +5) |
@@ -143,11 +154,13 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-10-18 | Verify feature gating and Siri phrases in the app source before stating them; memory and the listing disagreed (Watch club distances, Siri count/phrasing) | Code showed the whole Watch app is Pro and 8 shortcuts with "What is" phrasing | Site copy, guides, social, data file | active |
 | 2026-10-18 | Don't claim uniqueness on "no subscription" or "no GPS"; lead with the Watch + Siri + Live Activity + no-account combination | Phase 4 research found SwipeScore, Memo Score, GolfRSS in the same niche | All copy, comparison pages, social | active |
 | 2026-10-18 | Keep the existing App Store provider token (`pt=128660093`) and campaign `ct=Website` on every download button | Owner decision; changing case or token splits App Analytics data | Website, all pages | active |
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v5 (2026-10-18) — Facts corrected from app source (Watch app incl. club distances is Pro; Health Save Summary free; 8 Siri shortcuts with exact phrases; trial mechanics); added App Store Listing section and listing phrases to Customer Language.
 - v4 (2026-10-18) — Competitive Landscape: added TheGrint and indie scoring-first apps (SwipeScore, Memo Score, GolfRSS) from Phase 4 research; Differentiation now leads with the feature combination; new Learning on uniqueness claims.
 - v3 (2026-10-18) — Facts: owner confirmed Apple Health is free and $2.99 is the US price (equivalent local price elsewhere).
 - v2 (2026-10-18) — Product Overview, Facts, and Glossary: owner confirmed stats, sharing, CSV export, and Watch club distances are free; Pro gates Apple Watch scoring, not the whole Watch app.

@@ -14,6 +14,7 @@ app_version: "1.5.2"
 # Release day: set app_version to this value and change this to "".
 upcoming_version: "1.5.3"
 developer: Carlos Lopez-Molina
+developer_bio: a solo developer who plays golf  # App Store: "Made by a solo developer who plays."
 support_email: carlosbuilds@icloud.com
 category: Sports
 min_ios: "17.6"
@@ -32,7 +33,8 @@ pricing:
   currency: USD
   pro_price: "2.99"     # US price; one-time in-app purchase, not a subscription
   price_note: US price. Other countries pay the equivalent App Store price in local currency.
-  trial_days: 14        # no credit card required
+  trial_days: 14        # no credit card required (trial is local, no App Store purchase)
+  trial_note: Nothing to cancel. When the trial ends, everything free stays free.
 
 # tier: free | pro | unconfirmed
 #   free/pro features appear in the pricing table, schema featureList, and llms.txt.
@@ -52,7 +54,7 @@ features:
     detail: Quick Start a Front 9, Back 9, or 18-hole round in seconds, and set par for any hole.
   - name: Share scorecard image
     tier: free
-    detail: Share a traditional scorecard image with golf marks.
+    detail: Share a classic scorecard image, with circles for birdies and squares for bogeys.
   - name: Scoring stats and trends
     tier: free
     detail: See scoring averages and trends across your rounds.
@@ -60,18 +62,18 @@ features:
     tier: free
     since: "1.5.3"
     detail: Export every round as a CSV spreadsheet.
-  - name: Club distances on iPhone and Apple Watch
+  - name: Club distances on iPhone
     tier: free
-    detail: Keep a club distances cheat sheet on iPhone and Apple Watch.
-  - name: Apple Watch scoring
+    detail: Keep a club distances cheat sheet on iPhone, one tap from the scorecard.
+  - name: Apple Health golf workouts
+    tier: free
+    detail: Save each round to Apple Health as a Golf workout when you end it. Live heart rate and calories during the round need the Apple Watch app (Pro).
+  - name: Apple Watch app (scoring and club distances)
     tier: pro
-    detail: Score strokes, putts, and penalties from your wrist, in sync with your iPhone.
+    detail: Score strokes, putts, and penalties from your wrist and check your club distances, in sync with your iPhone.
   - name: Siri voice scoring
     tier: pro
-    detail: Score hands-free with Siri, e.g. "Add a stroke in Golf Caddie" or "What's my round score in Golf Caddie?"
+    detail: 8 Siri shortcuts on iPhone and Apple Watch, e.g. "Add a stroke in Golf Caddie" or "What is my round score in Golf Caddie?"
   - name: Lock Screen Live Activity
     tier: pro
     detail: Score from the Lock Screen and Dynamic Island without unlocking your phone.
-  - name: Apple Health golf workouts
-    tier: free
-    detail: Log rounds as a Golf workout in Apple Health, with optional live heart rate and calories on Apple Watch.

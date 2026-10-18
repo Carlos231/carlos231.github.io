@@ -105,16 +105,16 @@ Working file, never published. Promotes the guide [Apple Watch golf scorecard wi
 > "Add a putt in Golf Caddie." Siri updates your scorecard, Watch and Lock Screen without opening the app. Pro is a one-time $2.99 in the US after a 14-day free trial, with no card needed for the trial. All the Siri commands: https://carlos231.github.io/apps/golf-caddie/
 
 **Threads** (topic: Golf)
-> You can score a whole round without touching anything. Say "Add a stroke in Golf Caddie" while you walk to the ball. Siri updates the scorecard, the Watch and the Lock Screen in the background. You can also ask "What's my round score in Golf Caddie?" and hear your total against par. Siri scoring is part of Pro, a one-time $2.99 (US) after a 14-day free trial. Full command list on the app page, link in replies.
+> You can score a whole round without touching anything. Say "Add a stroke in Golf Caddie" while you walk to the ball. Siri updates the scorecard, the Watch and the Lock Screen in the background. You can also ask "What is my round score in Golf Caddie?" and hear your total against par. Siri scoring is part of Pro, a one-time $2.99 (US) after a 14-day free trial. Full command list on the app page, link in replies.
 
 **Instagram / TikTok caption**
-> Keeping score without touching your phone or watch. Say "Add a stroke in Golf Caddie" or "What's my round score in Golf Caddie?" and Siri handles it in the background, synced to your Watch and Lock Screen. Siri scoring is part of Golf Caddie Pro, a one-time $2.99 in the US after a 14-day free trial. Link in bio.
+> Keeping score without touching your phone or watch. Say "Add a stroke in Golf Caddie" or "What is my round score in Golf Caddie?" and Siri handles it in the background, synced to your Watch and Lock Screen. Siri scoring is part of Golf Caddie Pro, a one-time $2.99 in the US after a 14-day free trial. Link in bio.
 >
 > #golf #siri #applewatch #golfapp
 
 **Video hook**
 - **First 3 seconds:** walking up the fairway, raising the wrist. Spoken: "Hey Siri, add a stroke in Golf Caddie." On-screen text: "Scoring golf with my voice".
-- **Outline (20 s):** voice command → watch updates → on the green: "add a putt" → "What's my round score?" with Siri's reply audible → text: "Link in bio".
+- **Outline (20 s):** voice command → watch updates → on the green: "add a putt" → "What is my round score?" with Siri's reply audible → text: "Link in bio".
 
 ---
 
