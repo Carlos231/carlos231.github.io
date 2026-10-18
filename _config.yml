@@ -9,19 +9,20 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-# Single source of truth for App Store details used across pages.
-golf_caddie:
-  app_id: "6760603837"
-  app_store_url: https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Website&mt=8
-  app_store_page: https://apps.apple.com/us/app/golf-caddie-simple-scorecard/id6760603837
-  pro_price: "2.99"
-  min_ios: "17.6"
+# App facts (IDs, URLs, price, features) live in _data/golf_caddie.yml.
 
 defaults:
   - scope:
       path: ""
     values:
       image: /assets/golf-caddie-social.png
+  # Guides: guide layout, and Article JSON-LD from jekyll-seo-tag.
+  - scope:
+      path: apps/golf-caddie/guides
+    values:
+      layout: guide
+      seo:
+        type: Article
   # Redirect stub and Search Console verification file stay out of the sitemap.
   - scope:
       path: privacy

@@ -1,37 +1,47 @@
-# Golf Caddie - Simple Scorecard
+---
+layout: null
+permalink: /llms.txt
+sitemap: false
+---
+{%- assign gc = site.data.golf_caddie -%}
+# {{ gc.name }}
 
-> Golf Caddie is a minimalist golf scorecard app for iPhone and Apple Watch. It has no account, no GPS, and no subscription. You score each hole with a tap, with Siri, or from the Lock Screen. The core app is free with unlimited rounds; Golf Caddie Pro is a one-time $2.99 purchase.
+> {{ gc.short_name }} is a minimalist golf scorecard app for iPhone and Apple Watch. It has no account, no GPS, and no subscription. You score each hole with a tap, with Siri, or from the Lock Screen. The core app is free with unlimited rounds; {{ gc.short_name }} Pro is a one-time ${{ gc.pricing.pro_price }} purchase.
 
-Golf Caddie is made by an independent developer, Carlos Lopez-Molina. It is built for casual golfers who want fast, simple scoring without GPS rangefinders, swing analysis, or social feeds. It is a lightweight alternative to full-featured golf apps such as Arccos, Golfshot, and 18Birdies.
+{{ gc.short_name }} is made by an independent developer, {{ gc.developer }}. It is built for casual golfers who want fast, simple scoring without GPS rangefinders, swing analysis, or social feeds. It is a lightweight alternative to full-featured golf apps such as Arccos, Golfshot, and 18Birdies.
 
 ## Key facts
 
-- Platforms: iPhone (iOS 17.6 or later) and Apple Watch
-- App Store ID: 6760603837
-- Category: Sports
-- Price: Free download with unlimited rounds, stats, scorecard sharing, CSV export, and club distances (iPhone and Apple Watch)
-- Golf Caddie Pro: one-time $2.99 in-app purchase, no subscription. Unlocks Apple Watch scoring, Siri voice scoring, and the Lock Screen Live Activity
-- Free trial: 14 days of Pro, no credit card required
+- Platforms: iPhone (iOS {{ gc.min_ios }} or later) and Apple Watch
+- App Store ID: {{ gc.app_id }}
+- Category: {{ gc.category }}
+- Price: Free download with unlimited rounds
+- {{ gc.short_name }} Pro: one-time ${{ gc.pricing.pro_price }} in-app purchase, no subscription ({{ gc.pricing.price_note }})
+- Free trial: {{ gc.pricing.trial_days }} days of Pro, no credit card required
 - No account or sign-up. No GPS and no course database, so it works on any course, even without signal
 - Data: rounds are stored in the user's own iCloud account. The developer collects no personal data, analytics, or crash reports
 
-## What it does
+## Free features
+{% for f in gc.features %}{% if f.tier == "free" %}
+- {{ f.name }}: {{ f.detail }}{% endif %}{% endfor %}
 
-- Tracks strokes, putts, and penalties per hole, with score vs par (eagle, birdie, par, bogey)
-- Quick Start rounds: Front 9, Back 9, or 18 holes in seconds; custom par for any hole
-- Share a traditional scorecard image with golf marks (free)
-- Club distances cheat sheet on iPhone and Apple Watch (free)
-- Scoring averages and trends across rounds (free)
-- Apple Health: log rounds as a Golf workout, with optional live heart rate and calories on Apple Watch
-- Export every round as a CSV spreadsheet (free)
-- Siri commands include "Add a stroke in Golf Caddie", "Next hole in Golf Caddie", and "What's my round score in Golf Caddie?" (Pro)
+## Pro features (one-time ${{ gc.pricing.pro_price }})
+{% for f in gc.features %}{% if f.tier == "pro" %}
+- {{ f.name }}: {{ f.detail }}{% endif %}{% endfor %}
+{%- assign other = gc.features | where: "tier", "unconfirmed" %}
+{%- if other.size > 0 %}
+
+## Other features
+{% for f in other %}
+- {{ f.name }}: {{ f.detail }}{% endfor %}
+{%- endif %}
 
 ## Pages
 
-- [Golf Caddie product page](https://carlos231.github.io/apps/golf-caddie/): features, pricing, FAQ, Siri commands, and help
-- [Privacy policy](https://carlos231.github.io/apps/golf-caddie/privacy): what data the app does and does not collect
-- [App Store listing](https://apps.apple.com/us/app/golf-caddie-simple-scorecard/id6760603837)
+- [{{ gc.short_name }} product page]({{ site.url }}{{ gc.urls.page }}): features, pricing, FAQ, Siri commands, and help
+- [Privacy policy]({{ site.url }}{{ gc.urls.privacy }}): what data the app does and does not collect
+- [App Store listing]({{ gc.urls.app_store }})
 
 ## Contact
 
-- Support: carlosbuilds@icloud.com
+- Support: {{ gc.support_email }}

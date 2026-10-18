@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v2
+**Document version:** v3
 **Last updated:** 2026-10-18
 
 ## Product Overview
@@ -17,8 +17,9 @@
 | App Store ID | 6760603837 |
 | Developer | Carlos Lopez-Molina (independent) |
 | Requirements | iOS 17.6 or later; Apple Watch optional |
-| Free tier | Unlimited rounds, stats, scorecard sharing, CSV export, club distances on iPhone and Apple Watch (confirmed by owner 2026-10-18) |
+| Free tier | Unlimited rounds, stats, scorecard sharing, CSV export, club distances on iPhone and Apple Watch, Apple Health golf workouts (confirmed by owner 2026-10-18) |
 | Pro ($2.99 once) | Apple Watch scoring, Siri, Live Activity (confirmed by owner 2026-10-18) |
+| Pricing by country | $2.99 is the US price; other countries pay the equivalent App Store price in local currency |
 | Download link (website) | `https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Website&mt=8` |
 | Support | carlosbuilds@icloud.com |
 | Website | https://carlos231.github.io/apps/golf-caddie/ |
@@ -144,5 +145,6 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v3 (2026-10-18) — Facts: owner confirmed Apple Health is free and $2.99 is the US price (equivalent local price elsewhere).
 - v2 (2026-10-18) — Product Overview, Facts, and Glossary: owner confirmed stats, sharing, CSV export, and Watch club distances are free; Pro gates Apple Watch scoring, not the whole Watch app.
 - v1 (2026-10-18) — Initial context.

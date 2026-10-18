@@ -4,6 +4,9 @@ html_title: "Golf Caddie - Simple Scorecard | Apple Watch & Siri Golf Score"
 description: "Simple golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription. Score with a tap, Siri, or the Lock Screen. Pro is a one-time $2.99."
 last_modified_at: 2026-10-18
 ---
+{%- assign gc = site.data.golf_caddie -%}
+{%- assign free_features = gc.features | where: "tier", "free" | map: "name" -%}
+{%- assign pro_features = gc.features | where: "tier", "pro" | map: "name" -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,15 +15,18 @@ last_modified_at: 2026-10-18
 
   {% include head-meta.html %}
 
+  {%- capture free_offer -%}Free download. Includes: {{ free_features | join: "; " }}.{%- endcapture -%}
+  {%- capture pro_offer -%}One-time in-app purchase, not a subscription. Unlocks: {{ pro_features | join: "; " }}. {{ gc.pricing.trial_days }}-day free trial, no credit card required.{%- endcapture %}
+
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
-    "@id": "{{ site.url }}/apps/golf-caddie/#app",
-    "name": "Golf Caddie - Simple Scorecard",
-    "alternateName": "Golf Caddie",
-    "description": "A minimalist golf scorecard for iPhone and Apple Watch. Track strokes, putts, and penalties with no account, no GPS, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ site.golf_caddie.pro_price }} purchase.",
-    "url": "{{ site.url }}/apps/golf-caddie/",
+    "@id": "{{ site.url }}{{ gc.urls.page }}#app",
+    "name": {{ gc.name | jsonify }},
+    "alternateName": {{ gc.short_name | jsonify }},
+    "description": "A minimalist golf scorecard for iPhone and Apple Watch. Track strokes, putts, and penalties with no account, no GPS, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase.",
+    "url": "{{ site.url }}{{ gc.urls.page }}",
     "image": "{{ site.url }}/assets/golf-caddie-icon-512.png",
     "screenshot": [
       "{{ site.url }}/apps/golf-caddie/images/04-just-golf.png",
@@ -28,44 +34,35 @@ last_modified_at: 2026-10-18
       "{{ site.url }}/apps/golf-caddie/images/02-siri-watch.png"
     ],
     "applicationCategory": "SportsApplication",
-    "operatingSystem": "iOS {{ site.golf_caddie.min_ios }} or later, watchOS",
-    "installUrl": "https://apps.apple.com/app/id{{ site.golf_caddie.app_id }}",
-    "sameAs": "{{ site.golf_caddie.app_store_page }}",
+    "operatingSystem": "iOS {{ gc.min_ios }} or later, watchOS",
+    "installUrl": {{ gc.urls.install | jsonify }},
+    "sameAs": {{ gc.urls.app_store | jsonify }},
     "author": {
       "@type": "Person",
-      "name": "{{ site.author }}"
+      "name": {{ gc.developer | jsonify }}
     },
     "isAccessibleForFree": true,
     "featureList": [
-      "Track strokes, putts, and penalties per hole",
-      "Score vs par with eagle, birdie, par, and bogey",
-      "Front 9, Back 9, or 18-hole Quick Start rounds",
-      "Custom par for any hole",
-      "Share a traditional scorecard image (free)",
-      "Club distances on iPhone and Apple Watch (free)",
-      "Apple Health golf workouts",
-      "Scoring averages and trends (free)",
-      "CSV export of every round (free)",
-      "Apple Watch scoring (Pro)",
-      "Siri voice scoring (Pro)",
-      "Lock Screen and Dynamic Island Live Activity (Pro)"
+      {%- for f in gc.features %}
+      {% if f.tier == "free" %}{{ f.name | append: " (free)" | jsonify }}{% elsif f.tier == "pro" %}{{ f.name | append: " (Pro)" | jsonify }}{% else %}{{ f.name | jsonify }}{% endif %}{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
     ],
     "offers": [
       {
         "@type": "Offer",
         "name": "Golf Caddie (free download)",
-        "description": "Full iPhone scorecard with unlimited rounds, stats, scorecard sharing, CSV export, and club distances on iPhone and Apple Watch.",
+        "description": {{ free_offer | jsonify }},
         "price": "0",
-        "priceCurrency": "USD",
-        "url": "https://apps.apple.com/app/id{{ site.golf_caddie.app_id }}"
+        "priceCurrency": {{ gc.pricing.currency | jsonify }},
+        "url": {{ gc.urls.install | jsonify }}
       },
       {
         "@type": "Offer",
         "name": "Golf Caddie Pro (one-time in-app purchase)",
-        "description": "Unlocks Apple Watch scoring, Siri, and Live Activity forever. 14-day free trial, no credit card required. Not a subscription.",
-        "price": "{{ site.golf_caddie.pro_price }}",
-        "priceCurrency": "USD",
-        "url": "https://apps.apple.com/app/id{{ site.golf_caddie.app_id }}"
+        "description": {{ pro_offer | jsonify }},
+        "price": {{ gc.pricing.pro_price | jsonify }},
+        "priceCurrency": {{ gc.pricing.currency | jsonify }},
+        "url": {{ gc.urls.install | jsonify }}
       }
     ]
   }
@@ -392,6 +389,13 @@ last_modified_at: 2026-10-18
       color: #374151;
     }
 
+    .pricing-note {
+      font-size: 13px;
+      color: #6b7280;
+      text-align: center;
+      margin-top: 12px;
+    }
+
     .faq {
       max-width: 760px;
       margin: 0 auto;
@@ -442,7 +446,7 @@ last_modified_at: 2026-10-18
   <p>The simplest way to track your golf round on iPhone, Apple Watch, or with just your voice.</p>
   <p style="font-size:16px; color:#6b7280; margin-top:-8px;">No account. No GPS. No social feed. Just open and play.</p>
   <div class="header-actions">
-    <a class="btn-primary" href="{{ site.golf_caddie.app_store_url }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+    <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
     <a class="btn-secondary" href="mailto:carlosbuilds@icloud.com?subject=Golf%20Caddie%20Beta%20Access%20Request&body=Hi%2C%0A%0AI%27d%20love%20to%20join%20the%20Golf%20Caddie%20beta.%20Here%27s%20a%20bit%20about%20me%3A%0A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0AHow%20often%20I%20golf%3A%20%28e.g.%20weekly%2C%20a%20few%20times%20a%20month%29%0AAnything%20specific%20I%27d%20like%20to%20test%3A%0A%0AThanks%21">Request Beta Access</a>
   </div>
 </header>
@@ -465,7 +469,7 @@ last_modified_at: 2026-10-18
     <div class="feature"><strong>Apple Health</strong><br>Log rounds as a Golf workout, with optional live heart rate and calories on your Watch.</div>
     <div class="feature"><strong>Your Game Stats</strong><br>Scoring averages and trends across your rounds, right on the home screen.</div>
     <div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>
-    <div class="feature"><strong>Free 14-Day Trial</strong><br>Try Pro free — no credit card required. Unlock forever for just $2.99.</div>
+    <div class="feature"><strong>Free {{ gc.pricing.trial_days }}-Day Trial</strong><br>Try Pro free — no credit card required. Unlock forever for just ${{ gc.pricing.pro_price }}.</div>
   </div>
 </div>
 
@@ -512,39 +516,35 @@ last_modified_at: 2026-10-18
 </div>
 
 <div class="section" id="pricing">
-  <h2>Pricing: free, with a one-time ${{ site.golf_caddie.pro_price }} Pro unlock</h2>
-  <p class="pricing-intro">Golf Caddie is free to download with unlimited rounds. Golf Caddie Pro adds Apple Watch scoring, Siri, and Live Activity for a one-time ${{ site.golf_caddie.pro_price }}. Every new user gets a 14-day Pro trial with no credit card required. There is no subscription.</p>
+  <h2>Pricing: free, with a one-time ${{ gc.pricing.pro_price }} Pro unlock</h2>
+  <p class="pricing-intro">Golf Caddie is free to download with unlimited rounds. Golf Caddie Pro adds Apple Watch scoring, Siri, and Live Activity for a one-time ${{ gc.pricing.pro_price }}. Every new user gets a {{ gc.pricing.trial_days }}-day Pro trial with no credit card required. There is no subscription.</p>
   <table class="pricing-table">
     <thead>
       <tr>
         <th scope="col">Feature</th>
         <th scope="col">Free</th>
-        <th scope="col">Pro (${{ site.golf_caddie.pro_price }} once)</th>
+        <th scope="col">Pro (${{ gc.pricing.pro_price }} once)</th>
       </tr>
     </thead>
     <tbody>
-      <tr><th scope="row">Unlimited rounds on iPhone</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Strokes, putts, penalties, score vs par</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Front 9, Back 9, 18 holes, custom pars</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Share scorecard image</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Scoring stats and trends</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">CSV export</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Club distances on iPhone and Apple Watch</th><td>Yes</td><td>Yes</td></tr>
-      <tr><th scope="row">Apple Watch scoring</th><td>14-day trial</td><td>Yes</td></tr>
-      <tr><th scope="row">Siri voice scoring</th><td>14-day trial</td><td>Yes</td></tr>
-      <tr><th scope="row">Lock Screen Live Activity</th><td>14-day trial</td><td>Yes</td></tr>
+      {%- for f in gc.features %}
+      {%- if f.tier == "free" or f.tier == "pro" %}
+      <tr><th scope="row">{{ f.name }}</th><td>{% if f.tier == "free" %}Yes{% else %}{{ gc.pricing.trial_days }}-day trial{% endif %}</td><td>Yes</td></tr>
+      {%- endif %}
+      {%- endfor %}
     </tbody>
   </table>
+  <p class="pricing-note">{{ gc.pricing.price_note }}</p>
 </div>
 
 <div class="section" id="faq">
   <h2>Frequently asked questions</h2>
   <div class="faq">
     <h3>Is Golf Caddie free?</h3>
-    <p>Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, CSV export, and club distances. Scoring on Apple Watch, Siri, and the Lock Screen Live Activity are part of Golf Caddie Pro, a one-time ${{ site.golf_caddie.pro_price }} purchase after a 14-day free trial.</p>
+    <p>Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, CSV export, and club distances. Scoring on Apple Watch, Siri, and the Lock Screen Live Activity are part of Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase after a {{ gc.pricing.trial_days }}-day free trial.</p>
 
     <h3>Is there a subscription?</h3>
-    <p>No. Pro is a single ${{ site.golf_caddie.pro_price }} in-app purchase that unlocks forever. The 14-day trial doesn't need a credit card, and nothing renews automatically.</p>
+    <p>No. Pro is a single ${{ gc.pricing.pro_price }} in-app purchase that unlocks forever. The {{ gc.pricing.trial_days }}-day trial doesn't need a credit card, and nothing renews automatically.</p>
 
     <h3>Does Golf Caddie need GPS or a signal?</h3>
     <p>No. Golf Caddie doesn't use GPS or a course database. You enter strokes, putts, and penalties yourself, so it works on any course, even with no signal, and it's light on battery.</p>
@@ -556,7 +556,7 @@ last_modified_at: 2026-10-18
     <p>Yes, with Pro. The Watch app scores strokes, putts, and penalties and stays in sync with your iPhone and Live Activity as you play. Your club distances are on the Watch for free.</p>
 
     <h3>What do I need to use it?</h3>
-    <p>An iPhone running iOS {{ site.golf_caddie.min_ios }} or later. An Apple Watch is optional. Golf Caddie is only available on iPhone and Apple Watch.</p>
+    <p>An iPhone running iOS {{ gc.min_ios }} or later. An Apple Watch is optional. Golf Caddie is only available on iPhone and Apple Watch.</p>
   </div>
 </div>
 
@@ -715,9 +715,9 @@ last_modified_at: 2026-10-18
       </div>
       <ul>
         <li>Apple Watch, Siri, and Live Activity are part of Golf Caddie Pro.</li>
-        <li>On first launch you'll see a welcome sheet — tap <strong>Start</strong> to begin your <strong>free 14-day trial</strong>, no credit card required.</li>
+        <li>On first launch you'll see a welcome sheet — tap <strong>Start</strong> to begin your <strong>free {{ gc.pricing.trial_days }}-day trial</strong>, no credit card required.</li>
         <li>If you're not ready, tap <strong>Not Now</strong> — you can start it anytime from the home screen banner, and you'll be re-offered after a week.</li>
-        <li>After the trial, unlock Pro forever for a <strong>one-time $2.99</strong>. No subscription, ever.</li>
+        <li>After the trial, unlock Pro forever for a <strong>one-time ${{ gc.pricing.pro_price }}</strong>. No subscription, ever.</li>
         <li>Restore purchases anytime from Settings.</li>
       </ul>
     </div>
@@ -803,15 +803,15 @@ last_modified_at: 2026-10-18
 
 <div class="section final-cta">
   <h2>Start scoring your next round</h2>
-  <p>Free on the App Store. Try Pro free for 14 days, then keep it for a one-time ${{ site.golf_caddie.pro_price }}.</p>
-  <a class="btn-primary" href="{{ site.golf_caddie.app_store_url }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+  <p>Free on the App Store. Try Pro free for {{ gc.pricing.trial_days }} days, then keep it for a one-time ${{ gc.pricing.pro_price }}.</p>
+  <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
 </div>
 
 </main>
 
 <footer>
   <nav aria-label="Footer">
-    <a href="/">Carlos Apps</a> · <a href="/apps/golf-caddie/privacy">Privacy Policy</a> · <a href="mailto:carlosbuilds@icloud.com">Support</a> · <a href="{{ site.golf_caddie.app_store_url }}" target="_blank" rel="noopener noreferrer">App Store</a>
+    <a href="/">Carlos Apps</a> · <a href="/apps/golf-caddie/privacy">Privacy Policy</a> · <a href="mailto:carlosbuilds@icloud.com">Support</a> · <a href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">App Store</a>
   </nav>
   <p>© 2026 Golf Caddie</p>
 </footer>
