@@ -6,7 +6,7 @@
 
   <title>Golf Caddie - Simple Scorecard | Apple Watch & Siri Golf Score</title>
   <meta name="description" content="The simplest way to track your golf round on iPhone, Apple Watch, or with just your voice. Score from your Lock Screen with Live Activity, keep club distances on hand, and track your stats. Free 14-day Pro trial. Apple Watch & Siri for a one-time $2.99 — no subscription, ever.">
-  <meta name="keywords" content="keeper,stroke,counter,putt,tracker,round,par,scoring,shots,free,easy,tally,digital,log,siri,apple watch,golf scorecard,live activity,lock screen,club distances,apple health,golf stats">
+  <meta name="keywords" content="keeper,stroke,counter,putt,tracker,round,par,scoring,shots,free,easy,tally,digital,log,siri,apple watch,golf scorecard,live activity,lock screen,club distances,apple health,golf stats,csv export,export golf scores">
   <link rel="canonical" href="https://carlos231.github.io/apps/golf-caddie/" />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>⛳</text></svg>">
 
@@ -354,6 +354,7 @@
     <div class="feature"><strong>Club Distances</strong><br>Set your yardages once and check them mid-round on iPhone or Apple Watch.</div>
     <div class="feature"><strong>Apple Health</strong><br>Log rounds as a Golf workout, with optional live heart rate and calories on your Watch.</div>
     <div class="feature"><strong>Your Game Stats</strong><br>Scoring averages and trends across your rounds, right on the home screen.</div>
+    <div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>
     <div class="feature"><strong>Free 14-Day Trial</strong><br>Try Pro free — no credit card required. Unlock forever for just $2.99.</div>
   </div>
 </div>
@@ -441,7 +442,8 @@
         <li>Sort rounds by <strong>date</strong> or <strong>course name</strong> using the menu at the top.</li>
         <li>Swipe <strong>right</strong> to show the <strong>Copy</strong> and <strong>Rename</strong> buttons.</li>
         <li>Swipe <strong>left</strong> to show the <strong>Delete</strong> button.</li>
-        <li>Copying creates a new round with the same setup.</li>
+        <li>Copying creates a new round with the same holes and pars — a Back 9 round copies as a Back 9.</li>
+        <li>Copying an 18-hole round lets you choose <strong>18 Holes</strong>, <strong>Front 9</strong>, or <strong>Back 9</strong>.</li>
         <li>Deleting always shows a confirmation first.</li>
       </ul>
     </div>
@@ -610,6 +612,19 @@
       <ul>
         <li>The Rounds tab shows your scoring averages and trends over time.</li>
         <li>Updates automatically as you finish more rounds — no setup needed.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon">📤</span>
+        <h3 class="help-card-title">Exporting Your Rounds</h3>
+      </div>
+      <ul>
+        <li>Go to <strong>Settings → Your Data → Export Rounds (CSV)</strong> and choose where to send it — Files, Mail, AirDrop, or another app.</li>
+        <li>The spreadsheet has one row per hole: date, start and end time, course, Front 9 / Back 9 / 18 Holes, par, strokes, putts, penalties, and score vs par.</li>
+        <li>Open it in <strong>Numbers</strong>, <strong>Excel</strong>, or <strong>Google Sheets</strong>, or give it to an AI assistant and ask how to improve your game.</li>
+        <li>Free for everyone — no Pro needed. The file only goes where you send it.</li>
       </ul>
     </div>
 
