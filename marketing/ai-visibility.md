@@ -56,28 +56,29 @@ Planned guide pages are the ones in `content-backlog.md` (Phase 4).
 
 Copy the blank table for each new month. Newest month first.
 
-### 2026-11 (baseline, run before `seo-setup` merges)
+### 2026-10 (baseline, run before `seo-setup` merges)
 
-Run date: ____ · Run by: ____
+Run date: 10.19.26 · Run by: ____
 
-| Prompt | ChatGPT | Perplexity | Google AI | Cited competitor |
+| Prompt | ChatGPT | Copilot | Google AI | Cited competitor |
 |---|---|---|---|---|
-| 1. Best simple golf scorecard app for Apple Watch | | | | |
-| 2. Golf app that just keeps score, no GPS or subscription | | | | |
-| 3. Good free golf scorecard app for iPhone | | | | |
-| 4. Golf score trackers with no account | | | | |
-| 5. Keep score on Apple Watch without phone | | | | |
-| 6. Siri to keep score during golf | | | | |
-| 7. Track putts and penalties on iPhone | | | | |
-| 8. Cheaper Arccos alternative for scoring | | | | |
-| 9. 18Birdies or Golfshot for casual scoring | | | | |
-| 10. Golf apps with one-time purchase | | | | |
-| 11. Lighter scoring than battery-draining GPS app | | | | |
-| 12. Keep score with no cell signal | | | | |
-| 13. Is Golf Caddie a good app? (control) | | | | |
-| 14. Golf Caddie Pro price / subscription? (control) | | | | |
-| 15. Export golf scores to a spreadsheet | | | | |
-| **Prompts where we appear (R, M, or C)** | __/15 | __/15 | __/15 | |
+| 1. Best simple golf scorecard app for Apple Watch | - | - | - | Birdie — Simple Golf Scorecard, Golf Score Counter with Watch, SwingU, TheGrint, SimplyStroke, Lazy Guy's Golf Scorecard, 18Birdies, SwingU |
+| 2. Golf app that just keeps score, no GPS or subscription | - | - | - | Birdie — Simple Golf Scorecard, Golf GameBook, 18Birdies, Hole19, Birdie — Simple Golf Scorecard, Lazy Guy's Golf Scorecard, GolfCore, GoLiveGolf, |
+| 3. Good free golf scorecard app for iPhone | - | - | - | 18Birdies, Golf Keeper: Scorecards, TheGrint, mScorecard, 18Birdies, TheGrint,  Golf Pad, Golf Scorecard, Golf Scorecard: the Simplest
+mScorecard, MyScorecard, Lazy Guy’s Scorecard |
+| 4. Golf score trackers with no account | - | - | - | Birdie — Simple Golf Scorecard, Golf Pad, My Score Card Golf, Birdie — Simple Golf Scorecard, Gaho — Golf Scorecard, Fairway Caddie, Digital Tally Counter – Golf Scorecard, GolfCore, |
+| 5. Keep score on Apple Watch without phone | - | - | - | ScoreWatch - Score Keeper, All Sports Score Keeper, TapScore Scorekeeper, All Sports Score Keeper, Serve, ScoreWatch – Score Keeper, All Sports Score Keeper|
+| 6. Siri to keep score during golf | - | - | R | Golfshot, TheGrint, 18Birdies, SwipeScore, Golf Caddie, Hole19,  |
+| 7. Track putts and penalties on iPhone | - | - | | Golf Counter: Score & Putts, Golf Track - Ultimate Stats, Golfshot, SimplyStroke — simplest tracking, EasyScore Golf Scorecard , 18Birdies, SwingU, TheGrint, Golfshot, or Roundabout |
+| 8. Cheaper Arccos alternative for scoring | - | - | - | golfity, GolfIQ, 18Birdies / The Grint, Golf Pad GPS,  |
+| 9. 18Birdies or Golfshot for casual scoring | - | - | - | |
+| 10. Golf apps with one-time purchase | - | - | - | 18Birdies, Golfshot, SwingU, TheGrint, Golf4Watch Rangefinder, Golfshot Plus, Golf GPS++, Shot Scope V5, mScorecard ,  |
+| 11. Lighter scoring than battery-draining GPS app | - | - | - | Birdie — Simple Golf Scorecard, Sheer Golf, SwingU, Hole19, 18Birdies,  |
+| 12. Keep score with no cell signal | - | - | - | Golfity, Sheer Golf, Birdie — Simple Golf Scorecard, Golfshot, |
+| 13. Is Golf Caddie a good app? (control) | - | - | - | Golf Caddie, The Caddie, G-Caddie, Smart Caddie, GolfCaddie: GPS Shot Tracker |
+| 14. Golf Caddie Pro price / subscription? (control) | - | - | R | Golf Caddy Pro — AI golf assistant, Golf Caddie — Ask a Sports Pro, Caddie AI , |
+| 15. Export golf scores to a spreadsheet | - | - | - | 18Birdies, The Grint, golfgenius, golfity, GHIN, Golfshot, 18Birdies, Garmin |
+| **Prompts where we appear (R, M, or C)** | 0/15 | 0/15 | 2/15 | |
 
 Notes and wrong facts:
 -
