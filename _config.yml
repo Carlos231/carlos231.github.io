@@ -23,13 +23,9 @@ defaults:
       layout: guide
       seo:
         type: Article
-  # Redirect stub and Search Console verification file stay out of the sitemap.
+  # The old /privacy/ redirect stub stays out of the sitemap.
   - scope:
       path: privacy
-    values:
-      sitemap: false
-  - scope:
-      path: apps/golf-caddie/google1a7801dc7219ce43.html
     values:
       sitemap: false
 

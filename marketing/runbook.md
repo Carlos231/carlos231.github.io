@@ -33,16 +33,13 @@ Why now: Search Console can only index what's live. Unreleased v1.5.3 features (
 - [ ] New or changed schema: run the page through the [Rich Results Test](https://search.google.com/test/rich-results). "No aggregateRating" warnings are expected; we never add ratings.
 - [ ] Local copy: `git switch main && git pull`
 
-## Release day: v1.5.3 (when the App Store shows 1.5.3)
+## Release day (when the App Store shows a version the site prepared)
 
-The commit hook says "v1.5.3 is live on the App Store" once it's time.
+The commit hook says "v<version> is live on the App Store" once it's time. Last done: v1.5.3 on 2026-10-19.
 
-1. **"v1.5.3 is live, run release-update"**. Or by hand on a new branch:
-   - In `_data/golf_caddie.yml`: set `app_version: "1.5.3"` and `upcoming_version: ""`
-   - Commit `Show v1.5.3 features: CSV export and copy options`
+1. **"v<version> is live, run release-update"**. It flips `_data/golf_caddie.yml` (`app_version` = the new version, `upcoming_version` = ""), removes the hidden-content wrappers, and updates `last_modified_at`. Or, for a quick flip by hand, change just those two values on a new branch.
 2. Pull request → merge → **After every merge**.
-3. Optional: request indexing for `/apps/golf-caddie/` and `/apps/golf-caddie/privacy`.
-4. Later cleanup (any time): remove the `{% unless upcoming == "1.5.3" %}` wrappers. The release-update skill does this.
+3. Optional: request indexing for `/apps/golf-caddie/` and any other page that changed.
 
 ## Every future app release
 
