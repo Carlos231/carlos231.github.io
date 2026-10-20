@@ -7,12 +7,12 @@ name: Golf Caddie - Simple Scorecard
 short_name: Golf Caddie
 app_id: "6760603837"
 # Live App Store version the site describes publicly.
-app_version: "1.5.2"
+app_version: "1.5.3"
 # Next release, not live yet. Features with `since: <this version>` and page
 # copy wrapped in `{% unless upcoming == "<this version>" %}` stay hidden
 # while this is set (see _includes/golf-caddie-vars.html).
 # Release day: set app_version to this value and change this to "".
-upcoming_version: "1.5.3"
+upcoming_version: ""
 developer: Carlos Lopez-Molina
 developer_bio: a solo developer who plays golf  # App Store: "Made by a solo developer who plays."
 support_email: carlosbuilds@icloud.com
@@ -60,7 +60,6 @@ features:
     detail: See scoring averages and trends across your rounds.
   - name: CSV export
     tier: free
-    since: "1.5.3"
     detail: Export every round as a CSV spreadsheet.
   - name: Club distances on iPhone
     tier: free
