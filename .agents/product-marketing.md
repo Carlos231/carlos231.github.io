@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v5
+**Document version:** v6
 **Last updated:** 2026-10-18
 
 ## Product Overview
@@ -160,6 +160,7 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v6 (2026-10-19) — v1.5.3 live on the App Store (CSV export, copy options, Back 9 copy fix); site flipped from hidden to visible.
 - v5 (2026-10-18) — Facts corrected from app source (Watch app incl. club distances is Pro; Health Save Summary free; 8 Siri shortcuts with exact phrases; trial mechanics); added App Store Listing section and listing phrases to Customer Language.
 - v4 (2026-10-18) — Competitive Landscape: added TheGrint and indie scoring-first apps (SwipeScore, Memo Score, GolfRSS) from Phase 4 research; Differentiation now leads with the feature combination; new Learning on uniqueness claims.
 - v3 (2026-10-18) — Facts: owner confirmed Apple Health is free and $2.99 is the US price (equivalent local price elsewhere).

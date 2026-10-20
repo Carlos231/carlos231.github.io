@@ -8,7 +8,7 @@ Working file, never published. Promotes the guide [Apple Watch golf scorecard wi
 - **App page link:** https://carlos231.github.io/apps/golf-caddie/
 - **Bio link** (Instagram/TikTok): set it to the guide for this week.
 - Prices below are typed, not pulled from the data file. If the price changes, update them before posting.
-- Facts used: only what's on the app page and in `_data/golf_caddie.yml` (v1.5.2 features). Nothing about CSV export until v1.5.3 is live.
+- Facts used: only what's on the app page and in `_data/golf_caddie.yml`. Written against v1.5.2; v1.5.3 (CSV export, copy options) went live 2026-10-19 and can be mentioned in later weeks.
 - Before posting, swap in a real moment from your own rounds wherever one fits. Specific beats generic.
 
 ---
