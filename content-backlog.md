@@ -4,22 +4,28 @@ Working file, never published (excluded in `_config.yml`). Maintained by the `we
 Scoring (content-strategy skill), each 1–10: customer impact ×0.4, content-market fit ×0.3, search potential ×0.2, resources ×0.1.
 Search potential is a judgment call (no paid keyword tools). Re-score once Search Console has impressions data.
 
-**Last updated:** 2026-10-18
+**Last updated:** 2026-10-19
 
 ## Backlog
 
 | Priority | Topic | Target query | Intent | Angle (what we add) | Score | Status | Page |
 |---|---|---|---|---|---|---|---|
-| 1 | Apple Watch golf scorecard without GPS | apple watch golf scorecard without gps | Commercial | Why some golfers skip GPS (battery, signal, speed) and what scoring from the wrist looks like, with honest trade-offs vs GPS apps | 8.1 | drafted | /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/ |
-| 2 | How to keep score in golf | how to keep score in golf | Informational | A scorecard walkthrough of one real hole (strokes, putts, penalties, score vs par) that beginners can follow on paper or in an app | 7.8 | open | /apps/golf-caddie/guides/how-to-keep-score-in-golf/ |
-| 3 | Best simple golf scorecard apps for Apple Watch (2026) | best golf scorecard app for apple watch | Commercial | Criteria-based roundup of scoring-first apps tested hands-on: names the big apps first, says honestly what each does well, and includes indie no-GPS options | 7.7 | open | /apps/golf-caddie/guides/best-simple-golf-scorecard-apps-apple-watch/ |
-| 4 | Golf scorecard app with no account | golf scorecard app no account | Commercial | What sign-up-free means in practice (where rounds are stored, backup, export, privacy) and how to check any app before downloading | 7.5 | open | /apps/golf-caddie/guides/golf-scorecard-app-no-account/ |
-| 5 | How to track putts | how to track putts in golf | Informational | What counts as a putt (fringe, chips with putter), putts per round and per GIR benchmarks from cited sources, and a simple per-hole tracking routine | 7.1 | open | /apps/golf-caddie/guides/how-to-track-putts/ |
+| 1 | Apple Watch golf scorecard without GPS | apple watch golf scorecard without gps | Commercial | Why some golfers skip GPS (battery, signal, speed) and what scoring from the wrist looks like, with honest trade-offs vs GPS apps | 8.1 | published | /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/ |
+| 2 | How to keep score in golf | how to keep score in golf | Informational | A scorecard walkthrough of one real hole (strokes, putts, penalties, score vs par) that beginners can follow on paper or in an app | 7.8 | drafted | /apps/golf-caddie/guides/how-to-keep-score-in-golf/ |
+| 3 | Best simple golf scorecard apps for Apple Watch (2026) | best golf scorecard app for apple watch | Commercial | Criteria-based roundup of scoring-first apps tested hands-on: names the big apps first, says honestly what each does well, and includes indie no-GPS options | 7.7 | waiting (owner hands-on testing) | /apps/golf-caddie/guides/best-simple-golf-scorecard-apps-apple-watch/ |
+| 4 | Golf scorecard app with no account | golf scorecard app no account | Commercial | What sign-up-free means in practice (where rounds are stored, backup, export, privacy) and how to check any app before downloading | 7.5 | drafted | /apps/golf-caddie/guides/golf-scorecard-app-no-account/ |
+| 5 | How to track putts | how to track putts in golf | Informational | What counts as a putt (fringe, chips with putter), putts per round and per GIR benchmarks from cited sources, and a simple per-hole tracking routine | 7.1 | drafted | /apps/golf-caddie/guides/how-to-track-putts/ |
 | 6 | Golf Caddie vs Golfshot | golfshot alternative | Comparison | For golfers who mainly want to score on Apple Watch: what Golfshot's free tier vs Pro covers today, side by side with a one-time $2.99 option | 6.8 | open | /apps/golf-caddie/guides/golf-caddie-vs-golfshot/ |
 | 7 | How a golf handicap is calculated | how is golf handicap calculated | Informational | A worked World Handicap System example with real numbers (score differential, best 8 of 20, caps), sourced from the USGA Rules of Handicapping | 6.3 | open | /apps/golf-caddie/guides/how-golf-handicap-is-calculated/ |
 | 8 | Golf Caddie vs Arccos | arccos alternative without subscription | Comparison | Arccos is a sensor-and-subscription system and Golf Caddie is a scorecard. Who needs which, with total first-year cost compared honestly | 6.1 | open | /apps/golf-caddie/guides/golf-caddie-vs-arccos/ |
 | 9 | Golf Caddie vs 18Birdies | 18birdies alternative | Comparison | 18Birdies' free tier is generous (GPS, scorecard, handicap). Golf Caddie is the pick only if you want no account, no GPS, and wrist or Siri scoring | 6.1 | open | /apps/golf-caddie/guides/golf-caddie-vs-18birdies/ |
 | 10 | Stableford scoring explained | stableford scoring explained | Informational | Points table, handicap strokes by stroke index, and a worked 18-hole example converted from an ordinary stroke-play scorecard | 5.9 | open | /apps/golf-caddie/guides/stableford-scoring-explained/ |
+| 11 | How to find your club distances | how far should i hit each golf club | Informational | A routine to measure your own carry distances (range vs course, typical shot, not your best one) and a simple table to fill in, instead of generic distance charts | 7.2 | open | /apps/golf-caddie/guides/how-to-find-your-club-distances/ |
+| 12 | Keep score in golf with Siri | can siri keep score in golf | Commercial | The exact Siri phrases that work on iPhone and Apple Watch (from the app's source), what Siri says back, and when voice beats tapping | 7.1 | open | /apps/golf-caddie/guides/keep-score-in-golf-with-siri/ |
+| 13 | Export golf scores to a spreadsheet and analyze them with AI | export golf scores to excel | Informational | A column-by-column guide to the CSV export plus example questions to ask an AI assistant about your rounds | 7.0 | open | /apps/golf-caddie/guides/export-golf-scores-spreadsheet/ |
+| 14 | Apple Watch battery for 18 holes of golf | apple watch battery golf round | Informational | Which settings actually drain the Watch during a round (GPS apps, workout sessions, Health modes, Low Power Mode), with no invented percentages | 6.5 | open | /apps/golf-caddie/guides/apple-watch-battery-golf-round/ |
+
+**Next up (open topics by score):** 11, 12, 13, 6, 14, 7, 8, 9, 10. #3 goes first once the owner has tested the apps.
 
 ## Topic details
 
@@ -87,6 +93,29 @@ Target query first, then related queries the page should also answer (AI search 
 - **Score:** impact 5, fit 5 (Golf Caddie records strokes; it doesn't score Stableford. Explain how to convert by hand), search 8, resources 8.
 - **Evidence:** standard points (0 for double bogey or worse, 1 bogey, 2 par, 3 birdie, 4 eagle, 5 albatross); about 36 points means playing to handicap. Cite the Rules of Golf (Stableford is in Rule 21.1).
 
+### 11. How to find your club distances
+- **Related queries:** golf club distance chart; how far should i hit my 7 iron; average club distances.
+- **Information gain:** top results are generic charts of "average" distances. Ours teaches golfers to measure their own typical carry (on the range and on the course) and record it. Only include average-distance numbers if a primary source can be cited.
+- **Score:** impact 7, fit 7, search 8, resources 7.
+- **Product tie-in:** Club distances on iPhone (free) and Apple Watch (Pro); 14 standard clubs pre-seeded.
+
+### 12. Keep score in golf with Siri
+- **Related queries:** siri golf score; hands-free golf scorecard; apple watch siri golf.
+- **Information gain:** no current page lists Siri phrases that actually work for golf scoring. Quote them exactly from `Logic/GolfIntents.swift` (8 shortcuts).
+- **Score:** impact 6, fit 10, search 4, resources 9.
+- **AI visibility prompt:** #6.
+
+### 13. Export golf scores to a spreadsheet and analyze them with AI
+- **Related queries:** golf stats spreadsheet; analyze golf rounds chatgpt; golf scorecard to excel.
+- **Information gain:** a column-by-column explanation of a real export and specific questions to ask an AI ("Which holes cost me the most strokes vs par?"). No made-up results.
+- **Score:** impact 6, fit 9, search 5, resources 9.
+- **AI visibility prompt:** #15. Feature live since v1.5.3.
+
+### 14. Apple Watch battery for 18 holes of golf
+- **Related queries:** golf app drains apple watch battery; apple watch low power mode golf.
+- **Information gain:** a settings-by-settings explanation using the app's own wording (Save Summary "no battery impact"; Full Session "the most impact on battery life") plus Apple's documented Low Power Mode behavior. Cite Apple Support for any Watch battery claims; no invented percentages.
+- **Score:** impact 6, fit 8, search 5, resources 7.
+
 ## Topic clusters and internal links
 
 - **Scoring on iPhone and Apple Watch** (product, commercial): #1 without GPS, #4 no account, #3 best apps. Links to the app page and to each other.
@@ -98,4 +127,4 @@ Target query first, then related queries the page should also answer (AI search 
 
 | Topic | Page | Published |
 |---|---|---|
-| | | |
+| Apple Watch golf scorecard without GPS | /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/ | 2026-10-18 |
