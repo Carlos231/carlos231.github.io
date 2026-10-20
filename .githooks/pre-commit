@@ -83,9 +83,13 @@ for item in CLAUDE.md CONTRIBUTING.md content-backlog.md social/ marketing/ skil
     fi
 done
 
-# 9. IndexNow key file must stay in the repo
+# 9. Verification files must stay in the repo (IndexNow key, Bing Webmaster Tools)
 if ! git ls-files --cached | grep -qE '^[0-9a-f]{32}\.txt$'; then
     red "✖  IndexNow key file (<32 hex chars>.txt at the repo root) is missing."
+    PASS=false
+fi
+if ! git ls-files --cached | grep -qx 'BingSiteAuth.xml'; then
+    red "✖  BingSiteAuth.xml (Bing Webmaster Tools verification) is missing from the repo root."
     PASS=false
 fi
 

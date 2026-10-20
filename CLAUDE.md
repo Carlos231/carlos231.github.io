@@ -39,3 +39,4 @@ These must never be published. Keep them in `exclude:` in `_config.yml` (dot-fol
 ## Checks
 - `.github/workflows/seo-checks.yml`: Lighthouse (report only) + lychee link check on push to `main` and weekly.
 - `.github/workflows/indexnow.yml`: pings IndexNow after each Pages deploy. The key file `305d6e064dde2291b2514a6ca5c7d4c7.txt` must stay published.
+- `BingSiteAuth.xml` (repo root) verifies the site in Bing Webmaster Tools and must stay published. The home page's `google-site-verification` meta tag does the same for Google Search Console; keep it in `index.html`.
