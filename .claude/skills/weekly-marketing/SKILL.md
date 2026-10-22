@@ -34,7 +34,7 @@ Then:
 
 Use the **content-strategy** skill (and the **competitors** skill for any "vs" or "alternatives" topic).
 
-- Keep **at least 10 open topics**. Mark topics that shipped as `published` with their URL, and keep the table sorted by priority.
+- Keep **at least 10 open topics**. Mark topics that shipped as `published` with their URL, and keep the table in the order set by the **Order rule** at the top of `content-backlog.md` (customer-facing Commercial/Comparison topics first, then informational; published rows at the bottom). New topics go into their group by score.
 - If `content-backlog.md` doesn't exist yet, create it with the table below.
 - Each topic needs a target query, search intent, a one-line angle, and a priority score (content-strategy weights: customer impact 40%, content-market fit 30%, search potential 20%, resources 10%).
 - Take ideas from: `marketing/ai-visibility.md` prompts where we're absent, Lighthouse/lychee issues, objections and Learnings in the product-marketing doc, and questions golfers really ask (search `site:reddit.com` threads in r/golf and r/AppleWatch).

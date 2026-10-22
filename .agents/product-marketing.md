@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v6
+**Document version:** v7
 **Last updated:** 2026-10-18
 
 ## Product Overview
@@ -154,12 +154,14 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-10-22 | Publish customer-facing pages (people choosing an app: no subscription, battery, Siri, comparisons) before informational guides | Owner decision: the first four guides were mostly informational; downloads come from buyer-intent pages | content-backlog.md order, weekly-marketing runs | active |
 | 2026-10-18 | Verify feature gating and Siri phrases in the app source before stating them; memory and the listing disagreed (Watch club distances, Siri count/phrasing) | Code showed the whole Watch app is Pro and 8 shortcuts with "What is" phrasing | Site copy, guides, social, data file | active |
 | 2026-10-18 | Don't claim uniqueness on "no subscription" or "no GPS"; lead with the Watch + Siri + Live Activity + no-account combination | Phase 4 research found SwipeScore, Memo Score, GolfRSS in the same niche | All copy, comparison pages, social | active |
 | 2026-10-18 | Keep the existing App Store provider token (`pt=128660093`) and campaign `ct=Website` on every download button | Owner decision; changing case or token splits App Analytics data | Website, all pages | active |
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v7 (2026-10-22) — Learnings: customer-facing topics before informational (owner decision).
 - v6 (2026-10-19) — v1.5.3 live on the App Store (CSV export, copy options, Back 9 copy fix); site flipped from hidden to visible.
 - v5 (2026-10-18) — Facts corrected from app source (Watch app incl. club distances is Pro; Health Save Summary free; 8 Siri shortcuts with exact phrases; trial mechanics); added App Store Listing section and listing phrases to Customer Language.
 - v4 (2026-10-18) — Competitive Landscape: added TheGrint and indie scoring-first apps (SwipeScore, Memo Score, GolfRSS) from Phase 4 research; Differentiation now leads with the feature combination; new Learning on uniqueness claims.
