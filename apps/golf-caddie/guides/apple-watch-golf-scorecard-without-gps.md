@@ -94,7 +94,7 @@ Yes. Scoring doesn't need the internet: there's no course data to download and n
 
 It depends on the app. Many GPS golf apps put Watch features in a yearly subscription. Golf Caddie's iPhone scorecard is free with unlimited rounds, and the Apple Watch app is part of Pro, a one-time ${{ gc.pricing.pro_price }} (US price) after a {{ gc.pricing.trial_days }}-day free trial. There's no subscription and no credit card for the trial.
 
-{{ gc.pricing.trial_note }} Pro also includes Siri voice scoring and the Lock Screen Live Activity. See [what's free and what's Pro]({{ gc.urls.page }}#pricing).
+{{ gc.pricing.trial_note }} Pro also includes Siri voice scoring and the Lock Screen Live Activity. See [what's free and what's Pro]({{ gc.urls.page }}#pricing), or read [why there's no subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/).
 
 ## Is a scorecard-only app right for you?
 

@@ -23,6 +23,8 @@ faq:
     a: "No. Pro is a one-time App Store purchase tied to your Apple ID. On a new iPhone or Apple Watch, tap Restore Purchase in Golf Caddie's Settings."
 
 related:
+  - title: "Golf scorecard app without a subscription"
+    url: /apps/golf-caddie/guides/golf-scorecard-app-without-subscription/
   - title: "Apple Watch golf scorecard without GPS"
     url: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
   - title: "Golf Caddie privacy policy"

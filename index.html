@@ -1,7 +1,8 @@
 ---
 title: "Carlos Apps — Simple, Privacy‑Focused iOS Apps"
-description: "Simple, privacy-friendly apps for iPhone and Apple Watch. No subscriptions, no tracking, no clutter."
+description: "Golf Caddie: a simple golf scorecard for iPhone and Apple Watch. Free, with no account and no GPS; Pro is one-time. Plus guides to keeping score in golf."
 ---
+{%- include golf-caddie-vars.html -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,6 +26,17 @@ description: "Simple, privacy-friendly apps for iPhone and Apple Watch. No subsc
     .app-card h2 { font-size: 18px; margin: 0 0 4px; }
     .app-card p { margin: 0; color: #6b7280; font-size: 14px; }
     .arrow { color: #2d6a4f; font-size: 20px; flex-shrink: 0; }
+    .intro { font-size: 17px; line-height: 1.6; margin: 24px 0 8px; }
+    .maker { color: #6b7280; font-size: 15px; margin: 0 0 20px; }
+    .download { display: inline-block; background: #2d6a4f; color: white; font-weight: 500; padding: 12px 24px; border-radius: 10px; text-decoration: none; }
+    .download:hover { background: #24573f; }
+    .guides { margin-top: 48px; }
+    .guides h2 { font-family: 'DM Serif Display', serif; font-size: 26px; margin-bottom: 16px; }
+    .guides ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    .guides li { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px 20px; }
+    .guides a { color: #2d6a4f; font-weight: 500; text-decoration: none; }
+    .guides a:hover { text-decoration: underline; }
+    .guides span { display: block; color: #6b7280; font-size: 14px; margin-top: 4px; }
 </style>
 </head>
 
@@ -40,6 +52,22 @@ description: "Simple, privacy-friendly apps for iPhone and Apple Watch. No subsc
         </div>
         <span class="arrow" aria-hidden="true">→</span>
     </a>
+
+    <p class="intro">{{ gc.short_name }} is a simple golf scorecard for iPhone and Apple Watch. It's free to use, with no account and no GPS, and Pro is a one-time ${{ gc.pricing.pro_price }} unlock (US price).</p>
+    <p class="maker">Made by {{ gc.developer }}, {{ gc.developer_bio }}.</p>
+    <a class="download" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+{%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | sort: "date" | reverse %}
+{%- if guides.size > 0 %}
+
+    <section class="guides">
+        <h2>Golf guides</h2>
+        <ul>
+            {%- for g in guides %}
+            <li><a href="{{ g.url }}">{{ g.title | escape }}</a><span>{{ g.description | escape }}</span></li>
+            {%- endfor %}
+        </ul>
+    </section>
+{%- endif %}
 </main>
 </body>
 </html>
