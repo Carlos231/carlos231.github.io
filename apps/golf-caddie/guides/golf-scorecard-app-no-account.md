@@ -4,7 +4,7 @@ html_title: "Golf Scorecard App With No Account | Golf Caddie"
 description: "Want a golf scorecard app with no sign-up? Where your scores are stored without an account, what happens when you switch phones, and how to check any app first."
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-no-account/
 date: 2026-10-19
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-27
 
 answer: >-
   Yes, some golf scorecard apps work without an account. Golf Caddie has no
@@ -23,6 +23,8 @@ faq:
     a: "No. Pro is a one-time App Store purchase tied to your Apple ID. On a new iPhone or Apple Watch, tap Restore Purchase in Golf Caddie's Settings."
 
 related:
+  - title: "Golf scorecard app without a subscription"
+    url: /apps/golf-caddie/guides/golf-scorecard-app-without-subscription/
   - title: "Apple Watch golf scorecard without GPS"
     url: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
   - title: "Golf Caddie privacy policy"
@@ -45,6 +47,8 @@ cta_heading: "Open it and play. No sign-up."
 
 Yes. Scorecard-first apps can work without sign-up because they don't need a server: your scores stay on your devices and in your own cloud storage. {{ gc.short_name }} is one of them. You open it, start a round, and score. There's no email, password, or profile to set up.
 
+{% include screenshot.html file="05-quick-start" alt="Golf Caddie Quick Start sheet on iPhone with buttons for 18 Holes, Front 9, and Back 9, with no sign-in screen" caption="No sign-up screen: open Golf Caddie and start a round with Quick Start." %}
+
 Apps that do require an account usually need it for a reason, so it's worth knowing what those reasons are before deciding whether you need one.
 
 ## Why do most golf apps ask you to sign up?
@@ -60,6 +64,8 @@ An account can be worth it if you want:
 ## Where are your scores stored without an account?
 
 In {{ gc.short_name }}, rounds are stored in your own private iCloud database using Apple's CloudKit, the iCloud storage service built for apps. The developer can't see them. iCloud also keeps your iPhone and Apple Watch in sync and makes your rounds available on a new iPhone signed in to the same Apple ID.
+
+{% include screenshot.html file="06-your-game" alt="Golf Caddie home screen with Your Game stats (rounds, average score, best) and a list of saved rounds" caption="Your rounds and stats live in your own iCloud account. No feed, no followers." %}
 
 That's the trade-off without a company account: your data lives with Apple, in your iCloud account, instead of on the app maker's servers. For most golfers that's simpler and more private. Details are in the [privacy policy](/apps/golf-caddie/privacy).
 

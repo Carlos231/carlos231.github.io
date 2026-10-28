@@ -4,7 +4,7 @@ html_title: "How to Track Putts in Golf | Golf Caddie"
 description: "How to track putts in golf: what counts as a putt, the fringe question, what to record on each hole, and how to read your putting numbers to find lost strokes."
 permalink: /apps/golf-caddie/guides/how-to-track-putts/
 date: 2026-10-19
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-27
 
 answer: >-
   To track putts, count every stroke you make once your ball is on the putting
@@ -66,6 +66,8 @@ A simple routine:
 
 Look at putts on greens you hit in regulation and count your three-putts. Putts per round alone mixes putting with chipping: a good chip leaves a one-putt, which flatters your total. Putts on greens hit in regulation measure putting more fairly. Three-putts show where strokes leak.
 
+{% include screenshot.html file="03-share" alt="A Golf Caddie scorecard with a putts row under each nine and 28 total putts for the round" caption="The putts row on a shared scorecard: per hole, per nine, and for the round." %}
+
 After a few rounds, ask:
 
 - **Are most three-putts from long first putts?** Practice lag putting, so long putts finish close.
@@ -77,6 +79,8 @@ Compare yourself with your own past rounds, not with tour averages. The trend ov
 ## How do you track putts in {{ gc.short_name }}?
 
 Tap + under putts each time you putt on a hole. {{ gc.short_name }} adds putts to strokes and penalties for the hole score and shows your total putts in the round summary. Once a hole has putts, strokes lock so a stray tap can't change them. To edit strokes, set putts back to zero first.
+
+{% include screenshot.html file="04-just-golf" alt="Golf Caddie hole screen with a Putts counter between Strokes and Penalties" caption="Putts have their own counter, so the app can total them for you." %}
 
 More ways to log putts:
 

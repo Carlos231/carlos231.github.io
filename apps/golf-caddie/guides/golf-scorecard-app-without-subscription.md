@@ -4,7 +4,7 @@ html_title: "Golf Scorecard App Without a Subscription | Golf Caddie"
 description: "Looking for a golf scorecard app without a subscription? One-time purchase vs subscription, what's free in Golf Caddie, and how to check any app before you buy."
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-without-subscription/
 date: 2026-10-22
-last_modified_at: 2026-10-22
+last_modified_at: 2026-10-27
 
 answer: >-
   Yes. Golf Caddie is a golf scorecard app with no subscription: the iPhone
@@ -62,6 +62,8 @@ Free trials are worth a close look. Many subscription trials turn into a paid su
 
 Everything you need to keep score on iPhone is free, with unlimited rounds: strokes, putts, penalties, score vs par, custom pars, stats, sharing, and more. Pro adds the ways to score without your phone in hand: the Apple Watch app, Siri voice scoring, and the Lock Screen Live Activity. It's a one-time ${{ gc.pricing.pro_price }} (US price).
 
+{% include screenshot.html file="09-price" alt="Golf Caddie Pro price card reading 2.99 dollars, Once. Not monthly., with a 14-day Pro trial and no credit card" caption="Pro is a one-time purchase (US price shown), not a subscription." %}
+
 **Free:**
 {% for f in live_features %}{% if f.tier == "free" %}
 - {{ f.name }}{% endif %}{% endfor %}
@@ -92,5 +94,7 @@ It helps to be honest about what you'd actually use. Our guide to [keeping score
 ## What happens when the {{ gc.short_name }} free trial ends?
 
 Nothing you have to act on. When the {{ gc.pricing.trial_days }}-day trial ends, Pro features lock and everything free keeps working: your iPhone scorecard, your rounds, and your stats. On Apple Watch you'll see "Trial Ended" with a prompt to unlock on your iPhone. You only pay if you choose to buy Pro.
+
+{% include screenshot.html file="06-your-game" alt="Golf Caddie home screen with a banner reading Pro Trial, 13 days left, Unlock forever for 2.99 dollars" caption="During the trial, a banner shows the days left. Nothing renews when it ends." %}
 
 If you decide later, Pro is the same one-time ${{ gc.pricing.pro_price }} (US price), and it unlocks on your iPhone and Apple Watch together. You never need an account for any of it; see [golf scorecard app with no account](/apps/golf-caddie/guides/golf-scorecard-app-no-account/).
