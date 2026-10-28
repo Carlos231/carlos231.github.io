@@ -69,6 +69,18 @@ In {{ gc.short_name }}, rounds are stored in your own private iCloud database us
 
 That's the trade-off without a company account: your data lives with Apple, in your iCloud account, instead of on the app maker's servers. For most golfers that's simpler and more private. Details are in the [privacy policy](/apps/golf-caddie/privacy).
 
+## How do you move your rounds to a new iPhone?
+
+Sign in to the new iPhone with the same Apple ID and iCloud, then install {{ gc.short_name }}. Your rounds come back from your iCloud account, and your trial status follows you because it's stored in iCloud too. If you bought Pro, tap Restore Purchase in the app's Settings. There's no {{ gc.short_name }} login to remember.
+
+Step by step:
+
+1. **Before you switch (optional):** export a backup in Settings → Your Data → Export Rounds (CSV), and save it to Files or email it to yourself.
+2. **On the new iPhone:** sign in with the same Apple ID, make sure iCloud is on, and install {{ gc.short_name }} from the App Store.
+3. **Give it a moment:** rounds sync from iCloud in the background; new or large histories can take a little while to appear.
+4. **Pro:** open Settings in {{ gc.short_name }} and tap **Restore Purchase**. Pro is tied to your Apple ID, so you don't pay again.
+5. **Apple Watch:** install {{ gc.short_name }} on the watch. Pro access comes over from your iPhone.
+
 ## How can you check an app's privacy before you download it?
 
 Scroll to "App Privacy" on the app's App Store page before you download it. Apple requires every app to show what data it collects, in four labels: Data Used to Track You, Data Linked to You, Data Not Linked to You, and Data Not Collected. "Data Not Collected" means the developer says the app collects no data at all.

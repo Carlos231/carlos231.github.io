@@ -75,7 +75,7 @@ As in the app, strokes on a hole lock once you've added a putt, so a stray "add 
 
 ## How do you check your score with Siri?
 
-Ask "What is my round score in {{ gc.short_name }}" for your total and where you stand against par, or "What is my hole score in {{ gc.short_name }}" for the current hole in golf terms like birdie or bogey. "What hole am I on in {{ gc.short_name }}" reads back the hole, its par, and what you've scored on it.
+Ask "What is my round score in {{ gc.short_name }}" for your total and where you stand against par, or "What is my hole score in {{ gc.short_name }}" for the current hole in golf terms like [birdie or bogey](/apps/golf-caddie/guides/how-to-keep-score-in-golf/#what-do-birdie-par-and-bogey-mean). "What hole am I on in {{ gc.short_name }}" reads back the hole, its par, and what you've scored on it.
 
 Example replies, in the format the app uses:
 
@@ -87,7 +87,7 @@ Example replies, in the format the app uses:
 
 Yes. The same commands work on Apple Watch, and your iPhone, Watch, and Lock Screen Live Activity stay in sync, so a stroke added by voice on your wrist shows up everywhere. Use Siri on the Watch the way you normally do. The {{ gc.short_name }} Watch app is part of Pro, like Siri scoring.
 
-Siri works in the background on both devices, so you don't need to open {{ gc.short_name }} or look at a screen to add a stroke. For the full Watch setup, see [Apple Watch golf scorecard without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).
+Siri works in the background on both devices, so you don't need to open {{ gc.short_name }} or look at a screen to add a stroke. For the full Watch setup, see [Apple Watch golf scorecard without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/), and to make your watch last the round, [Apple Watch battery for 18 holes](/apps/golf-caddie/guides/apple-watch-battery-golf-round/).
 
 ## When is voice faster than tapping?
 
