@@ -74,6 +74,8 @@ Apple also notes that other notifications may be delayed and emergency alerts ma
 
 {{ gc.short_name }} never uses location, so the main choice is its Apple Health setting. Its Workout Tracking setting (on your iPhone) has three options: Off, Save Summary, and Full Session. Save Summary logs the round as a Golf workout when you end it, with no battery impact. Full Session runs a live Watch workout and uses the most battery.
 
+{% include screenshot.html file="08-watch-battery" alt="Golf Caddie Quick Start on Apple Watch with buttons for 18 Holes, Front 9, and Back 9, under the caption Lasts your whole round" caption="Golf Caddie on Apple Watch never uses location, so scoring stays light on battery." %}
+
 | Workout Tracking setting | What it does | Battery |
 |---|---|---|
 | Off | Scoring only | Lowest |

@@ -4,7 +4,7 @@ html_title: "How to Keep Score in Golf (With Examples) | Golf Caddie"
 description: "How to keep score in golf: what counts as a stroke, how penalty strokes work, how to fill in a scorecard, and what birdie, par, and bogey mean, with examples."
 permalink: /apps/golf-caddie/guides/how-to-keep-score-in-golf/
 date: 2026-10-19
-last_modified_at: 2026-10-19
+last_modified_at: 2026-10-27
 
 answer: >-
   To keep score in golf, count every stroke you make on a hole, add any penalty
@@ -90,6 +90,8 @@ On hole 3, the drive out of bounds is still a stroke, the re-teed drive is anoth
 
 Par is the number of strokes a skilled player is expected to need on a hole, usually 3, 4, or 5. Each stroke under par has a name: birdie is one under, eagle two under. Strokes over par are bogeys: one over is a bogey, two over a double bogey. The table at the top lists them all.
 
+{% include screenshot.html file="03-share" alt="A shared Golf Caddie scorecard for 18 holes at Pebble Beach with circles around birdie scores and squares around bogeys, totals 81 and 10 over par" caption="A traditional scorecard: circles mark birdies, squares mark bogeys." %}
+
 A hole in one is an ace, whatever the par. On a par 3 it's also an eagle; on a par 4 it's an albatross.
 
 ## How do you track your score against par during a round?
@@ -101,5 +103,7 @@ In the example above, the round so far is 14 strokes on holes with a total par o
 ## Can you keep score in an app instead of on paper?
 
 Yes. A scorecard app does the adding for you and shows your score against par after every hole. In {{ gc.short_name }}, you tap + for strokes, putts, and penalties on each hole; the app totals them the same way as the worked example above: strokes plus putts plus penalties. It's free on iPhone with unlimited rounds.
+
+{% include screenshot.html file="04-just-golf" alt="Golf Caddie on iPhone showing hole 6, par 3, with strokes, putts, and penalties counters and the round total with score vs par" caption="Golf Caddie on iPhone: strokes, putts, and penalties per hole, totaled for you." %}
 
 When you finish, you can share a classic scorecard image, with circles for birdies and squares for bogeys. With Pro you can also score from your Apple Watch, by voice with Siri, or from the iPhone Lock Screen. See [how {{ gc.short_name }} works]({{ gc.urls.page }}) or [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).

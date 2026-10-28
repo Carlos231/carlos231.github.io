@@ -1,0 +1,12 @@
+{%- comment -%}
+  App screenshot for guide pages.
+  Usage: {% include screenshot.html file="04-just-golf" alt="…" caption="…" %}
+  Add watch=true for Apple Watch screenshots (302 x 360). Files live in /apps/golf-caddie/images/.
+{%- endcomment -%}
+{%- if include.watch -%}{%- assign shot_w = 302 -%}{%- assign shot_h = 360 -%}{%- else -%}{%- assign shot_w = 296 -%}{%- assign shot_h = 640 -%}{%- endif -%}
+<figure class="screenshot{% if include.watch %} screenshot-watch{% endif %}">
+  <img src="/apps/golf-caddie/images/{{ include.file }}.webp" alt="{{ include.alt | escape }}" width="{{ shot_w }}" height="{{ shot_h }}" loading="lazy">
+  {%- if include.caption %}
+  <figcaption>{{ include.caption }}</figcaption>
+  {%- endif %}
+</figure>

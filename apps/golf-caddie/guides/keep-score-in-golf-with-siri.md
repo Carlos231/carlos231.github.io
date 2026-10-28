@@ -50,6 +50,8 @@ cta_heading: "Score your next round hands-free"
 
 Yes, with a scorecard app that supports Siri. {{ gc.short_name }} has 8 Siri commands that start rounds, add strokes, putts, and penalties, move to the next hole, and tell you your score. They work on iPhone and Apple Watch without opening the app. Siri scoring is part of {{ gc.short_name }} Pro, and it's included in the free trial.
 
+{% include screenshot.html file="02-siri-watch" alt="Siri on iPhone showing the request Add a stroke in Golf Caddie, with the Golf Caddie Apple Watch scorecard for hole 6 alongside" caption="Say “Add a stroke in Golf Caddie” and the scorecard updates on your iPhone and Apple Watch." %}
+
 Every command needs "in {{ gc.short_name }}" at the end, so Siri knows which app to use. The table above lists each phrase exactly as the app understands it, with the variations it also accepts.
 
 ## How do you start a round with Siri?
