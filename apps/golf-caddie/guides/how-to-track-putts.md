@@ -76,6 +76,37 @@ After a few rounds, ask:
 
 Compare yourself with your own past rounds, not with tour averages. The trend over several rounds tells you more than any single number.
 
+## What does a putting record look like? A worked example
+
+Here's an example 18-hole putting record (made-up numbers, for illustration). It shows 34 putts, which looks ordinary. Split by greens in regulation, it tells a clearer story: 17 putts on 7 greens hit (about 2.4 per green), but only 17 putts on 11 greens missed, because chips left short putts.
+
+| Hole | Green in regulation | Putts | First putt |
+|---|---|---|---|
+| 1 | Yes | 2 | 25 ft |
+| 2 | No | 1 | 6 ft |
+| 3 | Yes | 3 | 40 ft |
+| 4 | No | 2 | 15 ft |
+| 5 | No | 1 | 4 ft |
+| 6 | Yes | 2 | 18 ft |
+| 7 | No | 2 | 12 ft |
+| 8 | Yes | 3 | 35 ft |
+| 9 | No | 1 | 5 ft |
+| 10 | No | 2 | 20 ft |
+| 11 | Yes | 2 | 22 ft |
+| 12 | No | 1 | 3 ft |
+| 13 | No | 2 | 10 ft |
+| 14 | Yes | 3 | 45 ft |
+| 15 | No | 1 | 8 ft |
+| 16 | Yes | 2 | 30 ft |
+| 17 | No | 2 | 14 ft |
+| 18 | No | 2 | 9 ft |
+
+What this example card says:
+
+- **Three-putts:** 3 (holes 3, 8, and 14), and every one started 35 feet or more away. The fix is lag putting from distance, not short putts.
+- **One-putts:** 5, all after missed greens and all from 8 feet or less. The short game is saving strokes.
+- **Putts on greens hit:** 17 in 7 greens. That's the number to watch improve as lag putting gets better.
+
 ## How do you track putts in {{ gc.short_name }}?
 
 Tap + under putts each time you putt on a hole. {{ gc.short_name }} adds putts to strokes and penalties for the hole score and shows your total putts in the round summary. Once a hole has putts, strokes lock so a stray tap can't change them. To edit strokes, set putts back to zero first.
@@ -86,6 +117,6 @@ More ways to log putts:
 
 - **The share card** shows putts for every hole and the round total.
 - **Export your rounds:** the spreadsheet has putts for every hole, so you can see trends across rounds in Numbers, Excel, or Google Sheets.
-- **With Pro:** add putts from your Apple Watch, from the iPhone Lock Screen, or say "Add a putt in {{ gc.short_name }}" to Siri.
+- **With Pro:** add putts from your Apple Watch, from the iPhone Lock Screen, or say "Add a putt in {{ gc.short_name }}" to [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
 {{ gc.short_name }} doesn't record first-putt distance or greens in regulation, so jot those on the card (or in your notes) if you want them. New to scoring? Start with [how to keep score in golf](/apps/golf-caddie/guides/how-to-keep-score-in-golf/).

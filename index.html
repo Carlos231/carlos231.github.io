@@ -1,5 +1,5 @@
 ---
-title: "Carlos Apps — Simple, Privacy‑Focused iOS Apps"
+title: "Golf Caddie Scorecard & Golf Guides | Carlos Apps"
 description: "Golf Caddie: a simple golf scorecard for iPhone and Apple Watch. Free, with no account and no GPS; Pro is one-time. Plus guides to keeping score in golf."
 ---
 {%- include golf-caddie-vars.html -%}
@@ -53,7 +53,7 @@ description: "Golf Caddie: a simple golf scorecard for iPhone and Apple Watch. F
         <span class="arrow" aria-hidden="true">→</span>
     </a>
 
-    <p class="intro">{{ gc.short_name }} is a simple golf scorecard for iPhone and Apple Watch. It's free to use, with no account and no GPS, and Pro is a one-time ${{ gc.pricing.pro_price }} unlock (US price).</p>
+    <p class="intro">{{ gc.short_name }} is a simple golf scorecard for iPhone and Apple Watch. It's free to use, with <a href="/apps/golf-caddie/guides/golf-scorecard-app-no-account/">no account</a> and <a href="/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/">no GPS</a>, and Pro is a one-time ${{ gc.pricing.pro_price }} unlock (US price).</p>
     <p class="maker">Made by {{ gc.developer }}, {{ gc.developer_bio }}.</p>
     <a class="download" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
 {%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | sort: "date" | reverse %}

@@ -57,7 +57,7 @@ Most golfers skip GPS for battery, speed, or simplicity. A GPS app tracks your l
 
 Common reasons:
 
-- **Battery.** Tracking your location for a whole round uses battery. Golf Caddie [doesn't run GPS]({{ gc.urls.page }}#faq), so scoring stays light.
+- **Battery.** Tracking your location for a whole round uses battery. Golf Caddie [doesn't run GPS]({{ gc.urls.page }}#faq), so scoring stays light. More in [Apple Watch battery for 18 holes](/apps/golf-caddie/guides/apple-watch-battery-golf-round/).
 - **No signal or no course map.** A scorecard-only app works the same on a municipal nine, a course abroad, or a field with no reception.
 - **Fewer taps, less phone time.** You add a stroke and move on. Nothing else on the screen competes for your attention.
 - **Privacy.** No location history and, with Golf Caddie, no account.
@@ -88,7 +88,7 @@ A round in Golf Caddie, step by step:
 4. **Check your clubs.** Your club distances are in the totals row on the Watch.
 5. **Finish.** End the round on the last hole (on the Watch, the page after it). The iPhone has the full scorecard and a shareable card view.
 
-With Pro you can also score with your voice ("Add a putt in Golf Caddie") or from the iPhone Lock Screen without unlocking. See the full list of [Siri commands]({{ gc.urls.page }}).
+With Pro you can also score with your voice ("Add a putt in Golf Caddie") or from the iPhone Lock Screen without unlocking. See every phrase in [keep score in golf with Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
 ## Does a scorecard-only app work without cell signal?
 
