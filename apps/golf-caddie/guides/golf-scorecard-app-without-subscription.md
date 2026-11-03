@@ -48,7 +48,7 @@ cta_heading: "Free to start. Pro is yours to keep."
 
 Yes. Several scorecard-first apps sell a one-time upgrade instead of a subscription, and {{ gc.short_name }} is one of them. The iPhone scorecard is free with unlimited rounds. Pro, which adds Apple Watch scoring, Siri, and the Lock Screen Live Activity, is a single ${{ gc.pricing.pro_price }} purchase (US price). You pay once and keep it.
 
-Many golf GPS apps sell their premium features as a subscription, often monthly or yearly. That model makes sense when the app keeps delivering a service, like course maps or shot analysis. A scorecard doesn't need one: once it's on your phone, it works.
+Many golf GPS apps sell their premium features as a subscription, often monthly or yearly. That model makes sense when the app keeps delivering a service, like course maps or shot analysis. A scorecard doesn't need one: once it's on your phone, it works. For real examples with prices checked in November 2026, see [{{ gc.short_name }} vs TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/) and [{{ gc.short_name }} vs 18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/).
 
 ## What's the difference between a one-time purchase and a subscription?
 
