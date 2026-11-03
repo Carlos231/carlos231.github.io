@@ -102,7 +102,7 @@ It depends on the app. Many GPS golf apps put Watch features in a yearly subscri
 
 ## Is a scorecard-only app right for you?
 
-A scorecard-only app is right for you if the number at the end of the round matters more than yardages on your wrist. Choose a GPS app or sensor system if you rely on distances to pick clubs or want shot-by-shot stats. Plenty of golfers pair a scorecard app with a rangefinder to get both.
+A scorecard-only app is right for you if the number at the end of the round matters more than yardages on your wrist. Choose a GPS app or sensor system if you rely on distances to pick clubs or want shot-by-shot stats. Plenty of golfers pair a scorecard app with a rangefinder to get both. To see two popular GPS apps side by side with {{ gc.short_name }}, read [{{ gc.short_name }} vs TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/) and [{{ gc.short_name }} vs 18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/).
 
 | You want… | Best fit |
 |---|---|

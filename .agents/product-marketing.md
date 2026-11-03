@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v7
-**Last updated:** 2026-10-18
+**Document version:** v8
+**Last updated:** 2026-11-02
 
 ## Product Overview
 **One-liner:** The simple golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription.
@@ -58,7 +58,7 @@ Not applicable (single-user B2C purchase).
 
 ## Competitive Landscape
 *Competitor facts below are unverified positioning notes. Verify each on the competitor's own site and date it before using it in public copy (Phase 4).*
-**Direct (full-featured):** Arccos, Golfshot, 18Birdies, TheGrint. Full-featured golf apps with GPS, course maps, and stats. Fall short for this audience because they're heavier than needed: account sign-up, GPS-first design, and premium tiers on subscription. (Research notes, unverified, 2026-10-18: Golfshot lists Apple Watch scoring as a Pro feature; Arccos membership cited at ~$199.99/yr; 18Birdies Premium cited at $79.99–$99.99/yr. Verify on each vendor's site before using.)
+**Direct (full-featured):** Arccos, Golfshot, 18Birdies, TheGrint. Full-featured golf apps with GPS, course maps, and stats. Fall short for this audience because they're heavier than needed: account sign-up, GPS-first design, and premium tiers on subscription. **Verified on official sites 2026-11-02 (US):** TheGrint Pro $59.99/yr, 7-day trial; phone scoring free, "on the watch, any score tracking requires Pro"; GPS free on 40,000+ courses; US Handicap ID linked or bought in-app. 18Birdies Premium $99.99/yr or $19.99/mo (7-day trial), $7.99/wk; free tier includes GPS, handicap tracking, multi-player scoring, and Apple Watch scoring. Golfshot Pro $79.99/yr (Champions $99.99); its own pages conflict on whether Apple Watch scoring is free (App Store listing says Pro, Oct 2026 blog says free): unresolved. Arccos still unverified (~$199.99/yr cited). Account requirements weren't stated on any of these pages, so don't claim them.
 **Direct (indie, scoring-first):** SwipeScore (free, $4.99 one-time upgrade, Apple Watch companion, no GPS), Memo Score ($0.99, Watch scorecard), GolfRSS (free, iPhone + Watch). Same niche and similar pricing model, so "no subscription" and "no GPS" alone don't set us apart from these. (From App Store listings and developer descriptions, 2026-10-18; verify before naming them in public copy.)
 **Secondary:** Apple Watch golf GPS apps, built-in scorecards in course booking apps. Fall short because scoring is secondary to rangefinding or booking.
 **Indirect:** Paper scorecard, Notes app, a tally counter. Fall short because they're slow, error-prone, and don't track putts, penalties, or trends.
@@ -161,6 +161,7 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v8 (2026-11-02) — Competitive Landscape: TheGrint, 18Birdies, and Golfshot facts verified on official sites for the comparison guides; Golfshot watch-scoring tier flagged as conflicting.
 - v7 (2026-10-22) — Learnings: customer-facing topics before informational (owner decision).
 - v6 (2026-10-19) — v1.5.3 live on the App Store (CSV export, copy options, Back 9 copy fix); site flipped from hidden to visible.
 - v5 (2026-10-18) — Facts corrected from app source (Watch app incl. club distances is Pro; Health Save Summary free; 8 Siri shortcuts with exact phrases; trial mechanics); added App Store Listing section and listing phrases to Customer Language.
