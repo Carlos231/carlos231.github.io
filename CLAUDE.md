@@ -11,7 +11,9 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Never invent facts, features, reviews, ratings, testimonials, or stats. If a fact isn't in a source, ask.
 - The single source of truth for app facts (IDs, URLs, prices, requirements, free/Pro features) is `_data/golf_caddie.yml`. Pages, schema, and `llms.txt` render from it; don't hardcode these values.
 - Never add `aggregateRating` or review markup to schema.
-- The app's source code is at `/Users/carlos/Projects/GolfStrokeCounter` (read-only). Verify free/Pro gating (`StoreKitManager.hasAccess`), Siri phrases (`Logic/GolfIntents.swift`), and settings wording there before stating them.
+- The app's source code is at `/Users/carlos/Projects/GolfStrokeCounter` (read-only). Check app facts in its `README.md` and `REQUIREMENTS.md` first. Open the source only when the docs are silent or conflict with the data file (e.g. the README lists Apple Health under Pro, but Save Summary workouts are free per the source, checked 2026-10-18).
+- Battery: state it only as the developer's first-hand experience. Golf Caddie lasts all 18 holes on the owner's Apple Watch SE (owner-confirmed 2026-11-08), and it runs no GPS. You may add that the SE has the shortest rated battery of Apple's current watches (SE 3 up to 18 hours, Series 12 up to 24, Ultra 4 up to 50, per apple.com/watch/battery, checked 2026-11-08), so newer Series and Ultra models have more to spare. Don't say it lasts longer on every watch: older models and worn batteries can do worse. No battery percentages or lab-style claims.
+- Positioning: lead with why the app exists (a watch scorecard that lasts the round, with no social feed, GPS, AI, subscription, or complicated tracking). Details and the founder story are in `.agents/product-marketing.md`.
 - Keep the App Store campaign link exactly as it is in the data file (`pt=128660093&ct=Website`). Don't change the token or the case of `ct`.
 
 ## Release gating
@@ -20,6 +22,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Never push to `main`; push feature branches only, and only when asked. The user merges.
 
 ## Working style
+- Format every page with the `seo-audit` skill's on-page rules: title 50–60 characters with the query first and brand last (`.claude/skills/seo-audit/references/title-tags.md`), meta description 150–160 characters with the query and a reason to click, one H1, query in the first 100 words, and one page per query (keyword map in `content-backlog.md`).
 - Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`).
 - Commits: one concise single-line message per logical change. Commit only when asked. Running the `weekly-marketing` skill counts as asking to commit and push its `weekly/` branch and open a PR (never merge).
 - When reporting changes, summarize each file and link it. Don't paste full file contents into chat. Files themselves must always be complete (no "..." placeholders).

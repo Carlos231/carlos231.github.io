@@ -57,8 +57,10 @@ Take the top 2–3 `open` topics and write each as a guide:
 2. `answer`: a direct 40–60 word answer to the target query.
 3. Body: each H2 is a question phrased the way golfers ask it, followed by a 40–60 word direct answer, then detail (steps, examples, tables).
 4. `facts` table where it helps (rules, scoring values, comparisons). `faq` with 3–5 real follow-up questions.
-5. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there.
-6. Mention Golf Caddie where it genuinely helps the reader. The guide must stand on its own without the app.
+5. SEO format (seo-audit skill, on-page rules): `html_title` 50–60 characters, query first and brand last (see `.claude/skills/seo-audit/references/title-tags.md`); `description` includes the query and a reason to click; query in the first 100 words; no target query that another page already owns (keyword map in `content-backlog.md`).
+6. Positioning: tie the page back to why Golf Caddie exists where it fits (watch scorecard that lasts all 18 holes; no social feed, GPS, AI, subscription, or complicated tracking), and put `{% include download-cta.html %}` after the first section.
+7. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there.
+8. Mention Golf Caddie where it genuinely helps the reader. The guide must stand on its own without the app.
 
 Facts and evidence:
 - App facts come only from `_data/golf_caddie.yml`. In the body, use `{{ site.data.golf_caddie.pricing.pro_price }}` and similar variables instead of typing values. Front matter can't use variables, so keep prices out of `answer` and `faq` where you can.

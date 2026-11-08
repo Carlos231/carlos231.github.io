@@ -1,8 +1,8 @@
 ---
 title: "Golf Caddie - Simple Scorecard"
-html_title: "Golf Caddie - Simple Scorecard | Apple Watch & Siri Golf Score"
-description: "Simple golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription. Score with a tap, Siri, or the Lock Screen. Pro is a one-time $2.99."
-last_modified_at: 2026-10-19
+html_title: "Simple Golf Scorecard App for Apple Watch | Golf Caddie"
+description: "Simple golf scorecard app for iPhone and Apple Watch, built to last all 18 holes. No GPS, social feed, AI, or subscription. Free to download; Pro is one-time."
+last_modified_at: 2026-11-08
 ---
 {%- include golf-caddie-vars.html -%}
 {%- assign free_features = live_features | where: "tier", "free" | map: "name" -%}
@@ -25,7 +25,7 @@ last_modified_at: 2026-10-19
     "@id": "{{ site.url }}{{ gc.urls.page }}#app",
     "name": {{ gc.name | jsonify }},
     "alternateName": {{ gc.short_name | jsonify }},
-    "description": "A minimalist golf scorecard for iPhone and Apple Watch. Track strokes, putts, and penalties with no account, no GPS, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase.",
+    "description": "A simple golf scorecard for iPhone and Apple Watch, built to last a full round on the watch. Track strokes, putts, and penalties with no account, no GPS, no social feed, no AI features, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase.",
     "url": "{{ site.url }}{{ gc.urls.page }}",
     "image": "{{ site.url }}/assets/golf-caddie-icon-512.png",
     "screenshot": [
@@ -472,8 +472,8 @@ last_modified_at: 2026-10-19
 
 <header>
   <h1>Golf Caddie - Simple Scorecard</h1>
-  <p>Keep your head in the game, not your phone. The simplest way to track your golf round on iPhone, Apple Watch, or with just your voice.</p>
-  <p style="font-size:16px; color:#6b7280; margin-top:-8px;">No account. No GPS. No social feed. Just open and play.</p>
+  <p>Keep your head in the game, not your phone. A simple golf scorecard light enough to last all 18 holes on Apple Watch. Score on iPhone, from your wrist, or with just your voice.</p>
+  <p style="font-size:16px; color:#6b7280; margin-top:-8px;">No account. No GPS. No social feed. No AI. No subscription. Just open and play.</p>
   <div class="header-actions">
     <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
     <a class="btn-secondary" href="mailto:carlosbuilds@icloud.com?subject=Golf%20Caddie%20Beta%20Access%20Request&body=Hi%2C%0A%0AI%27d%20love%20to%20join%20the%20Golf%20Caddie%20beta.%20Here%27s%20a%20bit%20about%20me%3A%0A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0AHow%20often%20I%20golf%3A%20%28e.g.%20weekly%2C%20a%20few%20times%20a%20month%29%0AAnything%20specific%20I%27d%20like%20to%20test%3A%0A%0AThanks%21">Request Beta Access</a>
@@ -481,6 +481,12 @@ last_modified_at: 2026-10-19
 </header>
 
 <main>
+
+<div class="section" id="why">
+  <h2>Why I built Golf Caddie</h2>
+  <p>Some big golf apps include Apple Watch scoring for free, but my Apple Watch SE never made it through a full round with them. I also didn't want GPS maps, a social feed, AI features, a subscription, or a complicated scorecard. So I built Golf Caddie to do one thing: let me tap my score and get back to golf. On that same SE, it lasts all 18 holes. The SE has the shortest rated battery life of Apple's current watches, so a newer Series or Ultra has even more to spare.</p>
+  <p style="font-size:15px; color:#6b7280;">{{ gc.developer }}, {{ gc.developer_bio }} and makes {{ gc.short_name }}</p>
+</div>
 
 <div class="section">
   <h2>A simple golf scorecard for iPhone and Apple Watch</h2>
@@ -491,7 +497,7 @@ last_modified_at: 2026-10-19
     <div class="feature"><strong>Custom Pars</strong><br>Set par for any course layout, any hole.</div>
     <div class="feature"><strong>Front 9 / Back 9</strong><br>Play just the front or back nine. Holes, par, and score all adjust automatically.</div>
     <div class="feature"><strong>Share Scorecard</strong><br>Share a classic scorecard image, with circles for birdies and squares for bogeys.</div>
-    <div class="feature"><strong>Apple Watch</strong><span class="pro-badge">Pro</span><br>Lightweight scoring from your wrist. Won't drain your battery.</div>
+    <div class="feature"><strong>Apple Watch</strong><span class="pro-badge">Pro</span><br>Lightweight scoring from your wrist, with no GPS running. Built to last all 18 holes.</div>
     <div class="feature"><strong>Siri</strong><span class="pro-badge">Pro</span><br>Add strokes, advance holes, and check your score hands-free.</div>
     <div class="feature"><strong>Live Activity</strong><span class="pro-badge">Pro</span><br>Score from the Lock Screen and Dynamic Island — no need to unlock your phone.</div>
     <div class="feature"><strong>Club Distances</strong><br>Set your yardages once and check them mid-round on iPhone or Apple Watch.</div>

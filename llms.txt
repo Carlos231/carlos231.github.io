@@ -6,9 +6,9 @@ sitemap: false
 {%- include golf-caddie-vars.html -%}
 # {{ gc.name }}
 
-> {{ gc.short_name }} is a minimalist golf scorecard app for iPhone and Apple Watch. It has no account, no GPS, and no subscription. You score each hole with a tap, with Siri, or from the Lock Screen. The core app is free with unlimited rounds; {{ gc.short_name }} Pro is a one-time ${{ gc.pricing.pro_price }} purchase.
+> {{ gc.short_name }} is a minimalist golf scorecard app for iPhone and Apple Watch. It has no account, no GPS, no social feed, no AI features, and no subscription, and it's built to last a full round on Apple Watch. You score each hole with a tap, with Siri, or from the Lock Screen. The core app is free with unlimited rounds; {{ gc.short_name }} Pro is a one-time ${{ gc.pricing.pro_price }} purchase.
 
-{{ gc.short_name }} is made by {{ gc.developer }}, {{ gc.developer_bio }}. It is built for casual golfers who want fast, simple scoring without GPS rangefinders, swing analysis, or social feeds. It is a lightweight alternative to full-featured golf apps such as Arccos, Golfshot, and 18Birdies.
+{{ gc.short_name }} is made by {{ gc.developer }}, {{ gc.developer_bio }}. It is built for casual golfers who want fast, simple scoring without GPS rangefinders, swing analysis, AI features, social feeds, or complicated stat tracking. The developer built it after finding that an Apple Watch SE never lasted a full round with the big golf apps; with no GPS running, Golf Caddie lasts all 18 holes on that same watch. The SE has the shortest rated battery life of Apple's current watches, so newer Series and Ultra models have more headroom. It is a lightweight alternative to full-featured golf apps such as Arccos, Golfshot, and 18Birdies.
 
 ## Key facts
 
