@@ -1,159 +1,159 @@
-# Social week 05: what golf apps cost, Arccos, and your own club distances
+# Social week 05: pay once, keep score, know your yardages
 
-Working file, never published. Promotes the three guides drafted 2026-11-08: golf app prices compared, Golf Caddie vs Arccos, and how to find your club distances.
+Working file, never published. Promotes the three guides drafted 2026-11-08 (golf app prices, Golf Caddie vs Arccos, how to find your club distances). Five posts end on Golf Caddie as the next step (free on iPhone, Pro is one payment). Tuesday and Friday are pure tips: per the social skill, most posts should give value, and the guides they link carry a download button near the top.
 
-**Post this once the weekly PR is merged and the new guides are live.** One post a day, Monday to Sunday. It's mid-November, so the end of the season is a fair hook for the price posts (renewals) and the club distance posts (a winter range project).
+**Post this once the weekly PR is merged and the new guides are live.** One post a day, Monday to Sunday. It's mid-November, so the end of the season is the hook: subscriptions renewing over winter, and a winter range project for yardages.
 
 - **Prices guide:** https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
 - **Arccos guide:** https://carlos231.github.io/apps/golf-caddie/guides/golf-caddie-vs-arccos/
 - **Club distances guide:** https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
-- **Bio link** (Instagram/TikTok): switch it to the guide each post promotes.
+- **Bio link** (Instagram/TikTok): switch it to the guide each post promotes. Each guide has a download button near the top.
 - **X length:** X counts any link as 23 characters, so every X post here fits in 280.
-- Facts used: competitor prices from each app's own pricing page and US App Store listing, checked 2026-11-08 (US prices). Rules facts from the R&A's Rule 4.3. Golf Caddie facts from `_data/golf_caddie.yml`. Don't tag or reply-guy the competitors. If a price changes before you post, update the post or skip it.
+- Facts used: competitor prices from each app's own pricing page and US App Store listing, checked 2026-11-08 (US prices). Rules facts from the R&A's Rule 4.3. Golf Caddie facts from `_data/golf_caddie.yml` ($2.99 is the US price). Don't tag or reply-guy the competitors. If a price changes before you post, update the post or skip it.
 
 ---
 
-## Monday: what golf apps actually cost this year
+## Monday: what your golf app costs vs paying once
 
-**Angle:** the prices guide's headline table. Golfers rarely see the yearly prices side by side.
+**Angle:** the prices guide's headline. Yearly prices next to a one-time $2.99.
 
 **X**
-> I checked what the big golf apps charge this month (US): TheGrint Pro $59.99 a year, Golfshot Pro $79.99, 18Birdies Premium $99.99, Arccos $199.99 after the first year. All have free tiers or included time. Side by side: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
+> Golf app prices this month (US): TheGrint Pro $59.99 a year, Golfshot Pro $79.99, 18Birdies Premium $99.99, Arccos $199.99 after year one. I make Golf Caddie: free scorecard on iPhone, and Apple Watch scoring is $2.99 once. The full table: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
 
 **Threads** (topic: Golf)
-> I put the golf app prices in one table, straight from each app's own pricing page this week. US yearly: TheGrint Pro $59.99, Golfshot Pro $79.99, 18Birdies Premium $99.99, and Arccos $199.99 after the year that comes with its hardware. The free tiers differ a lot, and for many golfers they're enough. I also added three-season totals. Link in replies.
+> I put golf app prices in one table, straight from each app's pricing page this week. US yearly: TheGrint Pro $59.99, Golfshot Pro $79.99, 18Birdies Premium $99.99, Arccos $199.99 after the first year. My app, Golf Caddie, is a free scorecard on iPhone, and the Apple Watch app, Siri, and Lock Screen scoring are $2.99 once. Nothing renews. Table in replies.
 
 **Instagram / TikTok caption**
-> How much do golf apps cost in 2026? I checked each app's own pricing page this week. US yearly prices: TheGrint Pro $59.99, Golfshot Pro $79.99, 18Birdies Premium $99.99. Arccos is $199.99 a year after the first year, which comes with its sensors. Over three seasons that adds up to anywhere from about $180 to $650. The free versions are better than most people think, so check what you actually use before paying. Full table in bio.
+> What does your golf app cost you every year? I checked this week (US): TheGrint Pro $59.99, Golfshot Pro $79.99, 18Birdies Premium $99.99, Arccos $199.99 after the first year. Over three seasons that's $180 to $650. I built Golf Caddie for golfers who just want their score: free on iPhone with unlimited rounds, and Apple Watch scoring is $2.99 once. Full price table in bio.
 >
-> #golf #golfapp #golftips #applewatch
+> #golf #golfapp #applewatch #golftips
 
 **Video hook**
-- **First 3 seconds:** your phone in the golf bag pocket, then pulled out. Spoken: "What are you paying for your golf app?" On-screen text: "Golf app prices, side by side".
-- **Outline (20 s):** four quick price cards (TheGrint, Golfshot, 18Birdies, Arccos) → "three seasons: $180 to $650" → "the free tiers are good" → text: "Full table in bio".
+- **First 3 seconds:** your phone showing Settings → Subscriptions. Spoken: "What are you paying for your golf app?" On-screen text: "$59.99 to $199.99 a year".
+- **Outline (20 s):** four quick price cards → "three seasons: $180 to $650" → cut to tapping a stroke on your watch in Golf Caddie → text: "$2.99 once. Link in bio".
 
 ---
 
 ## Tuesday: don't write down your best 7 iron
 
-**Angle:** the club distances guide's worked example. Everyone remembers their best shot.
+**Angle:** the club distances guide's worked example. A pure tip, no app pitch (social skill: most posts give value; the guide's download box does the selling).
 
 **X**
-> Your 7 iron number shouldn't be the one you flushed once. Hit 10, drop the 2 longest and 2 shortest, and average the rest. Play to your best one and you'll be short most of the day. The full routine: https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
+> Your 7 iron number shouldn't be the one you flushed once. Hit 10, drop the 2 longest and 2 shortest, average the rest. Play to your best one and you'll be short all day. The full routine: https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
 
 **Threads** (topic: Golf)
-> Quick range project for the off-season: hit 10 balls with one club, ignore the 2 longest and the 2 shortest, and average the middle 6. That's your number. In my example the shots went from 118 to 149, and the number to write down was 135. The 149 is the one everybody remembers, and playing to it leaves you short most of the time. Guide in replies.
+> Off-season range project: hit 10 balls with one club, ignore the 2 longest and 2 shortest, and average the middle 6. In my example the shots went from 118 to 149, and the number to write down was 135. The 149 is the one everyone remembers, and playing to it leaves you short most of the time. Full routine and a fill-in yardage table in replies.
 
 **Instagram / TikTok caption**
-> How far do you really hit your 7 iron? Not your best one. Your typical one. Hit 10 balls, drop the 2 longest and 2 shortest, and average the middle 6. That's the number to play to. In my example, the best shot went 149 and the number that went on the card was 135. Play to 149 and you're in the front bunker all afternoon. Full routine and a fill-in yardage table in bio.
+> How far do you really hit your 7 iron? Not your best one. Your typical one. Hit 10 balls, drop the 2 longest and 2 shortest, and average the middle 6. In my example the best shot went 149 and the number for the card was 135. Play to 149 and you're in the front bunker all afternoon. Routine and fill-in yardage table in bio.
 >
 > #golf #golftips #golfpractice #drivingrange
 
 **Video hook**
 - **First 3 seconds:** a 7 iron at the range, ball on the mat. Spoken: "Your 7 iron number is probably wrong." On-screen text: "Your best shot isn't your number".
-- **Outline (25 s):** hit a few balls, show 10 carries written on your phone → cross out the 2 longest and 2 shortest → "average the middle 6: 135" → text: "Full routine in bio".
+- **Outline (25 s):** hit a few balls, show 10 carries in your notes → cross out the 2 longest and 2 shortest → "135" → hit one more to that number → text: "Routine in bio".
 
 ---
 
-## Wednesday: when Arccos is worth it
+## Wednesday: keep score without a $199.99 membership
 
-**Angle:** the honest framing of the Arccos guide. Say who should buy it.
+**Angle:** the Arccos guide, for golfers searching for a cheaper way to keep score.
 
 **X**
-> If you want every shot tracked and Strokes Gained by part of your game, Arccos is built for that. It's hardware plus $199.99 a year after the first (US). If you just want your score, a scorecard is enough. I compared them honestly: https://carlos231.github.io/apps/golf-caddie/guides/golf-caddie-vs-arccos/
+> Looked at Arccos and balked at the price? Hardware from $249.99, then $199.99 a year (US). If you mainly want your score, Golf Caddie is free on iPhone, with no sensors and no account. Apple Watch scoring is $2.99 once: https://carlos231.github.io/apps/golf-caddie/guides/golf-caddie-vs-arccos/
 
 **Threads** (topic: Golf)
-> I make a scorecard app, and I just wrote a page saying who should buy Arccos instead. If you want every shot tracked automatically, Strokes Gained across driving, approach, short game, and putting, and club distances measured for you, that's what Arccos does. It costs hardware ($249.99 and up) with the first year included, then $199.99 a year in the US. If you only want your score, you don't need any of it. Link in replies.
+> Arccos is impressive if you want every shot tracked. It's also hardware from $249.99 and then $199.99 a year in the US. If what you actually want is your score, your putts, and your trend over a season, you don't need sensors on your clubs. That's why I built Golf Caddie: a free scorecard on iPhone, with Apple Watch, Siri, and Lock Screen scoring for $2.99 once. Comparison in replies.
 
 **Instagram / TikTok caption**
-> Arccos or a simple scorecard? Depends what you want from your round. Arccos tracks every shot with sensors or a pocket wearable, measures your club distances, and shows where you gain or lose strokes. As of this month that's $249.99 to $349.99 for the hardware with the first year included, then $199.99 a year (US). If you'd use that data to practice, it's worth a look. If you just want an accurate score, a scorecard app does the job. Comparison in bio.
+> Want to keep score without sensors or a membership? Arccos costs $249.99 to $349.99 for hardware, then $199.99 a year (US, this month). That buys shot tracking, which is great if you'll use it. If you just want your score, Golf Caddie is a free scorecard on iPhone with no account. Score from your Apple Watch, by voice, or from the Lock Screen with Pro, $2.99 once. Comparison in bio.
 >
-> #golf #golfapp #arccos #golftips
+> #golf #golfapp #applewatch #golftips
 
 **Video hook**
-- **First 3 seconds:** you on the tee, holding your phone up. Spoken: "Do you need $650 of shot tracking?" On-screen text: "Arccos vs a scorecard".
-- **Outline (25 s):** "Want Strokes Gained? Arccos." → "Want measured club distances? Arccos." → "Just want your score?" → tap a stroke on your watch → text: "Who needs which: link in bio".
+- **First 3 seconds:** you on the tee, holding up your phone. Spoken: "Do you need $650 of gear to keep score?" On-screen text: "Arccos vs a $2.99 scorecard".
+- **Outline (25 s):** "three seasons of Arccos: about $650" → "three seasons of Golf Caddie Pro: $2.99" → tap a stroke on your watch → say "Add a putt in Golf Caddie" → text: "Comparison in bio".
 
 ---
 
-## Thursday: check your golf app renewal before winter
+## Thursday: your golf app renews in January
 
-**Angle:** the prices guide's monthly vs yearly table, timed for the end of the season.
+**Angle:** the prices guide's "pay once" section, timed for the end of the season.
 
 **X**
-> Season winding down? Check when your golf app renews. A monthly plan beats yearly if you play 5 months or fewer: 18Birdies is $19.99 a month vs $99.99 a year (US). The break-even table: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
+> Clubs going in the garage? Your yearly golf app subscription still renews. Check Settings, your name, Subscriptions. Golf Caddie never shows up there: the scorecard is free and Pro is $2.99 once. Prices compared: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
 
 **Threads** (topic: Golf)
-> If your golf season is ending, now's a good time to look at Settings, your name, Subscriptions on your iPhone. Yearly golf app plans renew whether you play in January or not. I did the math for seasonal golfers: with 18Birdies and Golfshot, a monthly plan is cheaper if you play 5 months or fewer a year. Put a reminder in your calendar to cancel when the season ends. Table in replies.
+> End of season check: open Settings, tap your name, then Subscriptions, and see which golf app renews while you're not playing. Yearly plans charge whether you tee it up in January or not. I built Golf Caddie so there's nothing to renew: the iPhone scorecard is free, and Pro is a one-time $2.99. The trial starts in the app, so there's nothing to cancel either. Price table in replies.
 
 **Instagram / TikTok caption**
-> End of season reminder: check when your golf app renews. On iPhone it's Settings, tap your name, then Subscriptions. If you only play part of the year, a monthly plan can cost less than yearly. 18Birdies Premium is $19.99 a month or $99.99 a year in the US, so 5 months or fewer is cheaper monthly. Golfshot works out the same. Just remember to cancel when you put the clubs away. Full table in bio.
+> End of season reminder: your golf app subscription doesn't know it's winter. On iPhone, check Settings, tap your name, then Subscriptions. If you only want to keep score, you don't need a yearly plan. Golf Caddie is free on iPhone with unlimited rounds, and Pro (Apple Watch, Siri, Lock Screen) is $2.99 once. Nothing renews, nothing to cancel. Price comparison in bio.
 >
 > #golf #golfapp #golfseason #golftips
 
 **Video hook**
-- **First 3 seconds:** clubs going into the garage or closet. Spoken: "Putting the clubs away? Check this first." On-screen text: "Your golf app still renews".
-- **Outline (20 s):** screen recording of Settings → your name → Subscriptions → "monthly beats yearly if you play 5 months or fewer" → text: "Break-even table in bio".
+- **First 3 seconds:** clubs going into the garage. Spoken: "Putting the clubs away? Check this first." On-screen text: "Your golf app still renews".
+- **Outline (20 s):** screen recording of Settings → your name → Subscriptions → "yearly plans renew in winter too" → Golf Caddie's "$2.99, Once" price card → text: "Pay once. Link in bio".
 
 ---
 
-## Friday: yes, you can check your yardage card in a tournament
+## Friday: yes, you can check your yardages in a tournament
 
-**Angle:** the Rules section of the club distances guide. A question golfers argue about.
+**Angle:** the Rules section of the club distances guide. A pure tip on a question golfers argue about, no app pitch.
 
 **X**
 > Can you look at your club yardages during a competition round? Yes. Rule 4.3a allows info gathered before the round. What you can't do is work out new club advice from today's shots mid-round. Details: https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
 
 **Threads** (topic: Golf)
-> Settled a small argument this week: you can check your own yardage card during a round played under the Rules. Rule 4.3a allows information gathered before the round, like your club distances from earlier rounds. You can also note distances during the round to use later. What's not allowed is working out club advice from today's shots while you're still playing. Rule link and the full guide in replies.
+> Settled a small argument this week: you can check your own yardages during a round played under the Rules. Rule 4.3a allows information gathered before the round, like your club distances from earlier rounds. You can also note distances during the round to use later. What's not allowed is working out club advice from today's shots mid-round. Rule link and guide in replies.
 
 **Instagram / TikTok caption**
-> Is it legal to look at your yardage card in a tournament? Yes. Under Rule 4.3a of the Rules of Golf, you can use information gathered before the round, like your own club distances. You can also write down distances during the round for later. The one thing to avoid: deciding "my 7 iron is flying long today, so take an 8" from this round's shots. Save that for after. Full guide in bio.
+> Is it legal to look at your yardages in a tournament? Yes. Under Rule 4.3a, you can use information gathered before the round, like your own club distances. The one thing to avoid: "my 7 iron is flying long today, so take an 8," worked out from this round's shots. Save that for after the round. Full guide in bio.
 >
-> #golf #golfrules #golftips #golfcourse
+> #golf #golfrules #golftips #applewatch
 
 **Video hook**
-- **First 3 seconds:** you pull a yardage card from your back pocket on the fairway. Spoken: "Is this even legal in a tournament?" On-screen text: "Rule 4.3a says…"
-- **Outline (20 s):** "Yardages from before the round: allowed" → "Noting distances for later: allowed" → "Working out new club advice mid-round: not allowed" → text: "Guide in bio".
+- **First 3 seconds:** you glance at your watch on the fairway. Spoken: "Is this even legal in a tournament?" On-screen text: "Rule 4.3a says…"
+- **Outline (20 s):** "Yardages from before the round: allowed" → "New club advice from today's shots: not allowed" → "Noting distances for later: allowed" → text: "Guide in bio".
 
 ---
 
-## Saturday: which golf apps score on Apple Watch for free
+## Saturday: score from your wrist without a yearly fee
 
-**Angle:** the prices guide's Apple Watch column. Honest that a competitor's free tier includes it.
+**Angle:** the prices guide's Apple Watch section. The paywall in many apps is on the watch.
 
 **X**
-> Which golf apps let you keep score on Apple Watch for free? Of the ones I checked (US, Nov 2026): 18Birdies' listing says yes. TheGrint and Golfshot put watch scoring in their paid tiers. Mine is a one-time unlock. The table: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
+> In a lot of golf apps, the paywall is on the watch. TheGrint: watch scoring needs Pro, $59.99 a year (US). In Golf Caddie, the Apple Watch app is part of Pro, $2.99 once, with a 14-day free trial and no card: https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/
 
 **Threads** (topic: Apple Watch)
-> If scoring from your wrist is the thing you care about, the free tiers differ. As of this month (US): 18Birdies' App Store listing includes Apple Watch scoring in its free features. TheGrint keeps watch GPS free but scoring on the watch needs Pro. Golfshot's listing puts watch scoring under Pro too. In my app, Golf Caddie, watch scoring is part of a one-time Pro purchase. Table in replies.
+> If you want to keep score from your Apple Watch, check where the paywall sits before you download. TheGrint's own page says any score tracking on the watch requires Pro, $59.99 a year in the US. In Golf Caddie, the app I make, the watch app is part of Pro: $2.99 once, after a 14-day free trial with no card. Strokes, putts, penalties, all from your wrist. Price table in replies.
 
 **Instagram / TikTok caption**
-> Want to keep score on your Apple Watch without paying every year? Here's what I found this month (US). 18Birdies includes Apple Watch scoring in its free tier. TheGrint and Golfshot put it in their paid plans. In Golf Caddie, the app I make, watch scoring is part of Pro, which you buy once. Pick the one that fits how you play. Full comparison in bio.
+> Want to keep score on your Apple Watch? Check where the paywall is first. TheGrint, for example, needs Pro for any scoring on the watch, $59.99 a year in the US. In Golf Caddie, the Apple Watch app is part of Pro: $2.99 once, after a 14-day free trial with no card. Tap strokes, putts, and penalties from your wrist and leave your phone in the bag. Price comparison in bio.
 >
-> #golf #applewatch #golfapp #applewatchgolf
+> #golf #applewatch #applewatchgolf #golfapp
 
 **Video hook**
-- **First 3 seconds:** close-up of your wrist as you tap a stroke on the watch. Spoken: "Is this free?" On-screen text: "Apple Watch scoring: free or paid?"
-- **Outline (20 s):** three quick cards ("18Birdies: free", "TheGrint: Pro", "Golfshot: Pro") → "Golf Caddie: one-time Pro" → text: "Full table in bio".
+- **First 3 seconds:** close-up of your wrist as you tap a stroke on the watch. Spoken: "What does this cost per year?" On-screen text: "Apple Watch golf scoring".
+- **Outline (20 s):** "$59.99 a year" card → "$2.99 once" card → three taps on the watch (stroke, putt, next hole) → text: "14-day free trial. Link in bio".
 
 ---
 
 ## Sunday: an off-season job for your yardages
 
-**Angle:** the fill-in yardage table from the club distances guide. Soft app mention as the place to keep it.
+**Angle:** the fill-in yardage table from the club distances guide, ending on Golf Caddie's Club Distances.
 
 **X**
-> Off-season job for one range session: fill in carry for every club, and total for driver and woods. Then keep it where you'll look before each shot. Mine lives one tap from my scorecard. Fill-in table: https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
+> Off-season job for one range session: fill in carry for every club, total for driver and woods. Then put it in Golf Caddie, free on iPhone: 14 clubs pre-loaded, one tap from the scorecard. Fill-in table: https://carlos231.github.io/apps/golf-caddie/guides/how-to-find-your-club-distances/
 
 **Threads** (topic: Golf)
-> One range session this winter, one job: fill in a yardage table. Carry for irons and wedges, total for driver and woods, and a half-swing number for your sand wedge, because that's the one everyone forgets. Keep it somewhere you'll actually look. A card in the bag works. In the app I make, it's one tap from the scorecard and on the watch. Table in replies.
+> One range session this winter, one job: fill in a yardage table. Carry for irons and wedges, total for driver and woods, and a half-swing sand wedge number, because that's the one everyone forgets. Then put it in Golf Caddie. The 14 standard clubs are pre-loaded, you tap each one to add your yardage, and it's one tap from the scorecard next season. Free on iPhone. Table in replies.
 
 **Instagram / TikTok caption**
-> One range session, one job: write down your real club distances. Carry for irons and wedges, total for driver and woods. Add a half-swing sand wedge number too. Then keep the list where you'll see it before each shot, on a card in your bag or in your phone. I keep mine in Golf Caddie, one tap from the scorecard. Fill-in table and the full routine in bio.
+> One range session, one job: write down your real club distances. Carry for irons and wedges, total for driver and woods, and a half-swing sand wedge. Then put them in Golf Caddie. The 14 standard clubs are already there, so you just tap and type. Next season they're one tap from the scorecard, free on iPhone, and on your Apple Watch with Pro. Fill-in table and routine in bio.
 >
 > #golf #golfpractice #golftips #drivingrange
 
 **Video hook**
 - **First 3 seconds:** a blank yardage table on your phone at the range. Spoken: "Fill this in once." On-screen text: "Your real club distances".
-- **Outline (25 s):** hit a few shots per club → type the numbers into the table → open the Club Distances cheat sheet from the scorecard in Golf Caddie → text: "Table and routine in bio".
+- **Outline (25 s):** hit a few shots per club → open Settings → Club Distances in Golf Caddie and type the numbers → start a round and open the cheat sheet from the scorecard → text: "Free on iPhone. Link in bio".
