@@ -54,6 +54,8 @@ Yes, with a scorecard app that supports Siri. {{ gc.short_name }} has 8 Siri com
 
 Every command needs "in {{ gc.short_name }}" at the end, so Siri knows which app to use. The table above lists each phrase exactly as the app understands it, with the variations it also accepts.
 
+{% include download-cta.html text="Keep score by voice with Siri on iPhone and Apple Watch." %}
+
 ## How do you start a round with Siri?
 
 Say "Start a quick round in {{ gc.short_name }}" to start an 18-hole round with every hole set to par 4. For nine holes, say "Start a front 9 holes round in {{ gc.short_name }}" or "Start a back 9 holes round in {{ gc.short_name }}". Siri confirms the round has started and wishes you good luck.

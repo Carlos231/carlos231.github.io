@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v8
-**Last updated:** 2026-11-02
+**Document version:** v9
+**Last updated:** 2026-11-08
 
 ## Product Overview
 **One-liner:** The simple golf scorecard for iPhone and Apple Watch. No account, no GPS, no subscription.
@@ -154,6 +154,7 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-11-08 | Every guide sells Golf Caddie: lead the answer and tables with it and put a download button (`_includes/download-cta.html`) near the top of every guide. Within the skills' limits: keep competitor facts accurate, keep a short honest "who should stay with them" section (competitors skill), put competitor links in a sources line at the end, and keep about 2 of 7 weekly social posts as pure tips with no app pitch (social skill) | Owner: "written in a way so that user wants to download my app and not marketing for others"; goal is more clicks and referrals. Owner asked to follow the skills where they conflict, as they're more proven | Guides, comparison pages, social, weekly-marketing runs | active |
 | 2026-10-22 | Publish customer-facing pages (people choosing an app: no subscription, battery, Siri, comparisons) before informational guides | Owner decision: the first four guides were mostly informational; downloads come from buyer-intent pages | content-backlog.md order, weekly-marketing runs | active |
 | 2026-10-18 | Verify feature gating and Siri phrases in the app source before stating them; memory and the listing disagreed (Watch club distances, Siri count/phrasing) | Code showed the whole Watch app is Pro and 8 shortcuts with "What is" phrasing | Site copy, guides, social, data file | active |
 | 2026-10-18 | Don't claim uniqueness on "no subscription" or "no GPS"; lead with the Watch + Siri + Live Activity + no-account combination | Phase 4 research found SwipeScore, Memo Score, GolfRSS in the same niche | All copy, comparison pages, social | active |
@@ -161,6 +162,7 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v9 (2026-11-08) — Learnings: content sells Golf Caddie first, with an early download button; competitor facts stay accurate but brief (owner decision).
 - v8 (2026-11-02) — Competitive Landscape: TheGrint, 18Birdies, and Golfshot facts verified on official sites for the comparison guides; Golfshot watch-scoring tier flagged as conflicting.
 - v7 (2026-10-22) — Learnings: customer-facing topics before informational (owner decision).
 - v6 (2026-10-19) — v1.5.3 live on the App Store (CSV export, copy options, Back 9 copy fix); site flipped from hidden to visible.

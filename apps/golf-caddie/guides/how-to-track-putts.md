@@ -45,6 +45,8 @@ Count each stroke you make with the ball on the putting green and record it per 
 
 On a paper card, use a small box or a second number in each hole's square. In a scorecard app, putts usually have their own counter, so the app can total them for you.
 
+{% include download-cta.html text="Track putts on every hole, free on iPhone." %}
+
 ## Does a putt from the fringe count as a putt?
 
 Not under the usual convention. A putt is a stroke made while your ball is on the putting green. A stroke from the fringe, collar, or fairway counts toward your score but not as a putt, even if you use your putter. What matters most is consistency: pick a rule and keep it every round.

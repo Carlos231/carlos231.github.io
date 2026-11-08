@@ -48,6 +48,8 @@ cta_heading: "Score from your wrist without a subscription"
 
 TheGrint facts come from its [free vs Pro page](https://thegrint.com/features/free-vs-pro), its [Apple Watch page](https://thegrint.com/features/apple-watch), and its [App Store listing](https://apps.apple.com/us/app/thegrint-golf-gps-scorecard/id532085262), checked on November 2, 2026. Prices and plans change, so check them before you buy.
 
+{% include download-cta.html text="Keep score free on iPhone with no account. Pay once for Apple Watch scoring." %}
+
 ## Is TheGrint free?
 
 Mostly, yes. TheGrint is free for scoring on your phone, GPS on 40,000+ courses, headline stats, live leaderboards, and 6 games. A Pro membership, $59.99 a year in the US with a 7-day free trial, adds scoring on the watch, 50+ detailed stats, unlimited Green Maps, and 11 games.

@@ -51,6 +51,8 @@ Yes. Scorecard-first apps can work without sign-up because they don't need a ser
 
 Apps that do require an account usually need it for a reason, so it's worth knowing what those reasons are before deciding whether you need one.
 
+{% include download-cta.html text="Keep score with no account and no sign-up." %}
+
 ## Why do most golf apps ask you to sign up?
 
 Most popular golf apps are built around online services: handicap posting, friends and leaderboards, course maps and GPS data, and subscriptions that sync across devices. Each of those needs an account on the company's servers. If you only want to keep score, you're signing up for services you won't use.
