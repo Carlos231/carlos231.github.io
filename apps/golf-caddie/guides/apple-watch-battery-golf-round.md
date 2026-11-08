@@ -47,7 +47,7 @@ It depends on what's running. A round takes four hours or more, and the biggest 
 
 Apple's [battery page](https://www.apple.com/watch/battery/) lists tested battery life for each Apple Watch model, including outdoor workouts with GPS, and notes that results vary with use, settings, and signal. Your battery's age matters too: on the watch, open Settings, then Battery, to check its health.
 
-I built {{ gc.short_name }} because my own Apple Watch SE never made it through a full round with the big golf apps. Scoring with {{ gc.short_name }} on that same SE, it lasts all 18 holes. That's one golfer's watch, not a lab test, so your watch model, battery health, and settings will make a difference.
+I built {{ gc.short_name }} because my own Apple Watch SE never made it through a full round with the big golf apps. Scoring with {{ gc.short_name }} on that same SE, it lasts all 18 holes. Apple rates the Apple Watch SE 3 at up to 18 hours of battery, the shortest of its current watches, next to up to 24 hours for Series 12 and up to 50 hours for Ultra 4 ([Apple's battery page](https://www.apple.com/watch/battery/), November 2026). So a newer Series or Ultra has more battery to spare. That's still one golfer's watch, not a lab test: older watches and worn batteries can do worse.
 
 {% include download-cta.html text="Score from your Apple Watch with no GPS running." %}
 
