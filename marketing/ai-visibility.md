@@ -37,7 +37,7 @@ Planned guide pages are the ones in `content-backlog.md` (Phase 4).
 | # | Prompt | Intent | Page that should answer it |
 |---|---|---|---|
 | 1 | What's the best simple golf scorecard app for Apple Watch? | Best for | App page; planned "best simple golf scorecard apps for Apple Watch" |
-| 2 | Is there a golf app that just keeps score, without GPS or a subscription? | Category discovery | App page; planned "Apple Watch golf scorecard without GPS" |
+| 2 | Is there a golf app that just keeps score, without GPS or a subscription? | Category discovery | App page ("Why I built Golf Caddie"); "Apple Watch golf scorecard without GPS" guide |
 | 3 | What's a good free golf scorecard app for iPhone? | Best for | App page (pricing) |
 | 4 | Which golf score tracker apps don't make you create an account? | Best for | Planned "golf scorecard app with no account" |
 | 5 | How can I keep score on my Apple Watch without taking my phone out on the course? | Problem / solution | App page (Apple Watch, Live Activity) |
@@ -46,11 +46,13 @@ Planned guide pages are the ones in `content-backlog.md` (Phase 4).
 | 8 | What's a cheaper alternative to Arccos if I only want to keep score? | Alternative | Planned "Golf Caddie vs Arccos" |
 | 9 | 18Birdies or Golfshot: which is easier for a casual golfer who mostly wants a scorecard? | Comparison | Planned "Golf Caddie vs 18Birdies" / "vs Golfshot" |
 | 10 | Are there golf apps you pay for once instead of a monthly subscription? | Price | App page (pricing) |
-| 11 | My golf GPS app drains my Apple Watch battery. Is there a lighter way to keep score? | Problem / solution | App page; planned "without GPS" page |
+| 11 | My golf GPS app drains my Apple Watch battery. Is there a lighter way to keep score? | Problem / solution | App page ("Why I built Golf Caddie"); Apple Watch battery guide; "without GPS" guide |
 | 12 | How do I keep score on the golf course when there's no cell signal? | Problem / solution | App page (FAQ: GPS or signal) |
 | 13 | Is Golf Caddie - Simple Scorecard a good app? | Brand (control) | App page |
 | 14 | How much does Golf Caddie Pro cost, and is it a subscription? | Brand price (control) | App page (pricing, FAQ) |
 | 15 | How do I export my golf scores from my iPhone to a spreadsheet? | How-to | App page (Exporting Your Rounds) |
+
+**Candidate prompts for v2** (positioning update, 2026-11-08; add them as new rows and compare only from the month they start): "Is there a simple Apple Watch golf scorecard with no social features or AI?" and "Which golf app won't kill my Apple Watch battery before the 18th hole?"
 
 ## Results
 

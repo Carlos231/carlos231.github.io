@@ -8,6 +8,10 @@ Search potential is a judgment call (no paid keyword tools). Re-score once Searc
 
 **Last updated:** 2026-11-08
 
+**Positioning (owner, 2026-11-08):** the core buyer is an Apple Watch golfer whose watch dies mid-round with the big GPS apps and who wants only a scorecard: no social feed, rangefinder, AI, subscription, or complicated tracking. Score topics for that buyer first (customer impact), and tell the founder's first-hand story where it fits (Apple Watch SE lasts all 18 holes). See `.agents/product-marketing.md`.
+
+**Keyword map (avoid cannibalization, seo-audit skill):** the app page (`/apps/golf-caddie/`) owns "simple golf scorecard app" and "golf scorecard app for apple watch". Don't create a guide targeting those. #3 (best simple scorecard apps) targets the roundup query "best golf scorecard app for apple watch", a different intent; link it to the app page.
+
 ## Backlog
 
 | # | Topic | Target query | Intent | Angle (what we add) | Score | Status | Page |
@@ -36,7 +40,7 @@ Search potential is a judgment call (no paid keyword tools). Re-score once Searc
 | 4 | Golf scorecard app with no account | golf scorecard app no account | Commercial | What sign-up-free means in practice (where rounds are stored, backup, export, privacy) and how to check any app before downloading | 7.5 | published | /apps/golf-caddie/guides/golf-scorecard-app-no-account/ |
 | 5 | How to track putts | how to track putts in golf | Informational | What counts as a putt (fringe, chips with putter), putts per round and per GIR benchmarks from cited sources, and a simple per-hole tracking routine | 7.1 | published | /apps/golf-caddie/guides/how-to-track-putts/ |
 
-**Next up:** customer-facing 21 (Watch without iPhone), then 22 (Hole19), then 6 once the owner confirms Golfshot's watch-scoring tier in the app. Verify competitor facts on their own sites the week they're written. #3 jumps to the front once the owner has tested the apps. Then informational: 13, 17, 18, 7, 20, 10, 23.
+**Next up:** customer-facing 21 (Watch without iPhone; fits the core buyer), then 22 (Hole19; frame it around battery and no-bloat scoring), then 6 once the owner confirms Golfshot's watch-scoring tier in the app. Verify competitor facts on their own sites the week they're written. #3 jumps to the front once the owner has tested the apps. Then informational: 17 (watch workout and battery; core buyer), 13, 18, 7, 20, 10, 23.
 
 ## Topic details
 
@@ -46,7 +50,7 @@ Target query first, then related queries the page should also answer (AI search 
 - **Related queries:** golf app that doesn't drain apple watch battery; keep score on apple watch without phone; golf scorecard no signal.
 - **Information gain:** a first-hand, honest "who should skip GPS" decision guide. Current results are App Store listings and generic "best GPS app" roundups.
 - **Score:** impact 8, fit 10, search 5, resources 9.
-- **Evidence to gather:** battery behavior of our Watch app (owner's own observation, stated as such, no invented percentages).
+- **Evidence (owner-confirmed 2026-11-08):** on the owner's Apple Watch SE, Golf Caddie lasts all 18 holes; the reason for building it was that the big apps never lasted a round on that watch. State it as first-hand experience, no percentages. Follow-up: add it to this live guide (body copy change, show before → after).
 - **AI visibility prompts:** #2, #5, #11, #12.
 
 ### 2. How to keep score in golf
@@ -129,6 +133,7 @@ Target query first, then related queries the page should also answer (AI search 
 - **Related queries:** golf app drains apple watch battery; apple watch low power mode golf.
 - **Information gain:** a settings-by-settings explanation using the app's own wording (Save Summary "no battery impact"; Full Session "the most impact on battery life") plus Apple's documented Low Power Mode behavior. Cite Apple Support for any Watch battery claims; no invented percentages.
 - **Score:** impact 6, fit 8, search 5, resources 7.
+- **Refreshed 2026-11-08:** answer and first section now include the owner's Apple Watch SE experience (lasts all 18 holes with Golf Caddie), labeled as one golfer's watch, not a lab test.
 
 ### 15. Golf scorecard app without a subscription
 - **Related queries:** golf app one time purchase; golf gps app without subscription; free golf scorecard app no ads.

@@ -21,7 +21,7 @@ git config core.hooksPath .githooks
 Go through this list for anything you changed:
 
 - [ ] **Facts are real.** Every app fact (price, features, free vs Pro, requirements, links) comes from [_data/golf_caddie.yml](_data/golf_caddie.yml). No invented stats, reviews, ratings, or testimonials. No `aggregateRating`.
-- [ ] **Facts changed? Edit only the data file.** Pages, schema, and `llms.txt` update from it. Three spots still hardcode $2.99 and need a manual edit: the app page's `description:` front matter, the `09-price.webp` alt text, and `.agents/product-marketing.md`.
+- [ ] **Facts changed? Edit only the data file.** Pages, schema, and `llms.txt` update from it. Two spots still hardcode $2.99 and need a manual edit: the `09-price.webp` alt text and `.agents/product-marketing.md`.
 - [ ] **Unreleased features are hidden.** Anything not live on the App Store yet has `since: "<version>"` in the data file and its page copy is wrapped in `{% unless upcoming == "<version>" %}...{% endunless %}`, with `upcoming_version` set. The hook prints the live version.
 - [ ] **Rewrote existing copy?** You have the before → after and it fits the voice in [.agents/product-marketing.md](.agents/product-marketing.md).
 - [ ] **Campaign link untouched.** Download buttons use `{{ gc.urls.download }}` (`pt=128660093&ct=Website`).
