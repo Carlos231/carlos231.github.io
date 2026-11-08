@@ -116,6 +116,8 @@ Copy this into your notes and fill it in:
 | Sand wedge | | | Half swing: |
 | Lob wedge | | | |
 
+{% include download-cta.html text="Keep your yardages one tap from your scorecard, free on iPhone." %}
+
 ## Can you check your yardages during a round?
 
 Yes. The Rules of Golf (Rule 4.3a) allow "information that was gathered before the round (such as playing information from previous rounds, swing tips or club recommendations)." A yardage card, a note on your phone, or a list in an app all count, as long as the numbers came from before the round.
@@ -124,10 +126,10 @@ What you can't do during a round is work out new club advice from this round's s
 
 ## Where should you keep your club distances?
 
-Wherever you'll actually look before a shot. A card in your bag works, and so does a note on your phone. In {{ gc.short_name }}, you enter them once under **Settings → Club Distances**, and they're one tap from the scorecard during a round. The 14 standard clubs come pre-loaded, and you can add your own, like a hybrid or a 60° wedge.
+Wherever you'll look before a shot. A card in your bag works, and so does a note on your phone. In {{ gc.short_name }}, you enter them once under **Settings → Club Distances**, and they're one tap from the scorecard during a round. The 14 standard clubs come pre-loaded, and you can add your own, like a hybrid or a 60° wedge.
 
 {% include screenshot.html file="07-club-distances" alt="Golf Caddie scorecard on iPhone with the Club Distances cheat sheet open, listing Driver 225, 3 Wood 205, 5 Iron 160, 7 Iron 140, 9 Iron 115, Pitching Wedge 105, and Sand Wedge 90 yards" caption="Golf Caddie's Club Distances cheat sheet opens from the scorecard. Clubs without a distance are hidden." %}
 
 Club distances on iPhone are free. With Pro (one-time ${{ gc.pricing.pro_price }}), the same list shows on your Apple Watch, so you can check it without taking your phone out. {{ gc.short_name }} stores one number per club in yards, so pick carry or total for each club and stick with it.
 
-If you'd rather not measure by hand, shot-tracking systems like Arccos build club distances from your tracked shots. Our [Golf Caddie vs Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/) guide compares the costs. And if you're keeping score for the first time, start with [how to keep score in golf](/apps/golf-caddie/guides/how-to-keep-score-in-golf/).
+Keeping score for the first time? Start with [how to keep score in golf](/apps/golf-caddie/guides/how-to-keep-score-in-golf/). Thinking about a shot tracker to measure distances for you? See what one costs in [Golf Caddie vs Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
