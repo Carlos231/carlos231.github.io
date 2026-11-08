@@ -1,0 +1,11 @@
+{%- comment -%}
+  Inline download box for guide pages, so readers don't have to scroll to the bottom CTA.
+  Usage: {% include download-cta.html %} or {% include download-cta.html text="…" %}
+  The default text renders from _data/golf_caddie.yml; don't hardcode prices in `text`.
+{%- endcomment -%}
+{%- assign gc = site.data.golf_caddie -%}
+<aside class="cta cta-inline">
+  <p><strong>{{ include.text | default: "Keep score free on iPhone. Add Apple Watch, Siri, and Lock Screen scoring for a one-time price." }}</strong></p>
+  <p>Free, unlimited rounds. Pro is ${{ gc.pricing.pro_price }} once after a {{ gc.pricing.trial_days }}-day free trial, no card. No account, no subscription.</p>
+  <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download {{ gc.short_name }}</a>
+</aside>

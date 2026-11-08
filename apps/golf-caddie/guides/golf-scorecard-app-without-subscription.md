@@ -50,6 +50,8 @@ Yes. Several scorecard-first apps sell a one-time upgrade instead of a subscript
 
 Many golf GPS apps sell their premium features as a subscription, often monthly or yearly. That model makes sense when the app keeps delivering a service, like course maps or shot analysis. A scorecard doesn't need one: once it's on your phone, it works. For real examples with prices checked in November 2026, see [{{ gc.short_name }} vs TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/) and [{{ gc.short_name }} vs 18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/).
 
+{% include download-cta.html %}
+
 ## What's the difference between a one-time purchase and a subscription?
 
 A one-time purchase is paid once and stays on your Apple ID: you keep it through updates and restore it on new devices. A subscription charges you every week, month, or year until you cancel it. Deleting the app doesn't cancel a subscription; you cancel it in your Apple ID settings.

@@ -47,6 +47,8 @@ cta_heading: "Just want a scorecard? Open and play."
 
 18Birdies facts come from its [Premium page](https://18birdies.com/premium/), its [help center article on Premium](https://help.18birdies.com/article/661-premium-features), and its [App Store listing](https://apps.apple.com/us/app/18birdies-golf-gps-tracker/id892700751), checked on November 2, 2026. Prices and plans change, so check them before you buy.
 
+{% include download-cta.html text="Keep score free on iPhone with no account. Pay once for Apple Watch scoring." %}
+
 ## Is 18Birdies free?
 
 Yes, and the free tier is generous. 18Birdies' help center says you can "use its core GPS, scoring, handicap, stats, shot tracking, and community features for free." That includes GPS distances to the green and hazards, a digital scorecard, handicap tracking, round history, multi-player scoring, side games, leagues, and core Apple Watch features.

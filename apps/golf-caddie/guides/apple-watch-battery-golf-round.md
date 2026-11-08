@@ -47,6 +47,8 @@ It depends on what's running. A round takes four hours or more, and the biggest 
 
 Apple's [battery page](https://www.apple.com/watch/battery/) lists tested battery life for each Apple Watch model, including outdoor workouts with GPS, and notes that results vary with use, settings, and signal. Your battery's age matters too: on the watch, open Settings, then Battery, to check its health.
 
+{% include download-cta.html text="Score from your Apple Watch with no GPS running." %}
+
 ## What uses the most battery during a round of golf?
 
 Location tracking and workout sessions use the most. Golf GPS apps check your position constantly to show yardages, and a workout keeps the heart rate sensor measuring. Always On Display, a bright screen, and cellular connections add more. Tapping in your score is a small cost by comparison.

@@ -51,6 +51,8 @@ Yes. Scorecard-only apps don't need GPS, because they never measure distance. Yo
 
 On the Watch, that means a small screen with a few buttons per hole and nothing to wait for. There's no course to download and no satellite fix to find before the first tee. You start a round and tap.
 
+{% include download-cta.html text="Keep score on your Apple Watch without GPS." %}
+
 ## Why would you skip GPS on your Apple Watch?
 
 Most golfers skip GPS for battery, speed, or simplicity. A GPS app tracks your location all round, which costs battery. It also needs the right course map, and often an account and a subscription. If you only want an accurate score, a scorecard-only app is faster to start and has less to go wrong.

@@ -48,6 +48,8 @@ Count every stroke from the tee until the ball is in the hole, add any penalty s
 
 The basic version of golf, stroke play, is simply the lowest total wins. The [Rules of Golf (Rule 3.3)](https://www.randa.org/rog/the-rules-of-golf/rule-3) describe your score for a hole as the strokes you made plus any penalty strokes. Everything else on a scorecard is detail around that one number.
 
+{% include download-cta.html text="Let an app do the adding: strokes, putts, and penalties, free on iPhone." %}
+
 ## What counts as a stroke?
 
 A stroke is any forward swing you make to hit the ball, whether you hit it well, top it, or miss it completely. Tee shots, chips, bunker shots, and putts all count. Practice swings don't, because you weren't trying to hit the ball. That's the [definition of "stroke"](https://www.randa.org/rog/definitions) in the Rules.
