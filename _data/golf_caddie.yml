@@ -69,7 +69,7 @@ features:
     detail: Save each round to Apple Health as a Golf workout when you end it. Live heart rate and calories during the round need the Apple Watch app (Pro).
   - name: Apple Watch app (scoring and club distances)
     tier: pro
-    detail: Score strokes, putts, and penalties from your wrist and check your club distances, in sync with your iPhone.
+    detail: Score strokes, putts, and penalties from your wrist and check your club distances, in sync with your iPhone. It runs no GPS, so it's light on battery.
   - name: Siri voice scoring
     tier: pro
     detail: 8 Siri shortcuts on iPhone and Apple Watch, e.g. "Add a stroke in Golf Caddie" or "What is my round score in Golf Caddie?"

@@ -4,14 +4,14 @@ html_title: "Apple Watch Battery for a Round of Golf | Golf Caddie"
 description: "Will your Apple Watch last 18 holes? What drains the battery during a round of golf, how Low Power Mode helps, and app settings that make it last longer."
 permalink: /apps/golf-caddie/guides/apple-watch-battery-golf-round/
 date: 2026-10-27
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-08
 
 answer: >-
-  An Apple Watch can usually last a full round, but GPS and workout tracking
-  drain it fastest. A golf GPS app tracks your location for four hours or more,
-  and a workout session keeps the heart rate sensor busy. A scorecard-only app
-  that never uses location is light by comparison. Low Power Mode stretches the
-  battery further.
+  An Apple Watch can last a full round if GPS isn't running the whole time.
+  Golf GPS apps track your location for four hours or more, and workout
+  sessions keep the heart rate sensor busy. A scorecard-only app is light by
+  comparison: on my Apple Watch SE, scoring with Golf Caddie lasts all 18
+  holes.
 
 faq:
   - q: "Does Golf Caddie use GPS on my Apple Watch?"
@@ -46,6 +46,8 @@ cta_heading: "Score 18 holes without draining your watch"
 It depends on what's running. A round takes four hours or more, and the biggest drains are GPS location and workout tracking, which run the whole time. A scorecard app that never uses location, with workout tracking off, uses little battery. Apple publishes battery figures for each model, and they vary with use.
 
 Apple's [battery page](https://www.apple.com/watch/battery/) lists tested battery life for each Apple Watch model, including outdoor workouts with GPS, and notes that results vary with use, settings, and signal. Your battery's age matters too: on the watch, open Settings, then Battery, to check its health.
+
+I built {{ gc.short_name }} because my own Apple Watch SE never made it through a full round with the big golf apps. Scoring with {{ gc.short_name }} on that same SE, it lasts all 18 holes. That's one golfer's watch, not a lab test, so your watch model, battery health, and settings will make a difference.
 
 {% include download-cta.html text="Score from your Apple Watch with no GPS running." %}
 
