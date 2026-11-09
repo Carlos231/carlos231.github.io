@@ -26,6 +26,8 @@ faq:
 related:
   - title: "What golf apps cost in 2026"
     url: /apps/golf-caddie/guides/golf-app-prices-compared/
+  - title: "Golf Caddie vs Golfshot"
+    url: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
   - title: "How to find your club distances"
     url: /apps/golf-caddie/guides/how-to-find-your-club-distances/
   - title: "Golf scorecard app without a subscription"

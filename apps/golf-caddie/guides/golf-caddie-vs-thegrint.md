@@ -30,6 +30,8 @@ related:
     url: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
   - title: "Golf Caddie vs 18Birdies"
     url: /apps/golf-caddie/guides/golf-caddie-vs-18birdies/
+  - title: "Golf Caddie vs Golfshot"
+    url: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
 
 cta_heading: "Score from your wrist without a subscription"
 ---
