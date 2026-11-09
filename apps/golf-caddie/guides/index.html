@@ -1,0 +1,114 @@
+---
+layout: null
+title: "Golf Scorecard and Golf App Guides | Golf Caddie"
+description: "Golf guides from the maker of Golf Caddie: keeping score, putts, club distances, Apple Watch battery, Siri, and honest golf app comparisons and prices."
+permalink: /apps/golf-caddie/guides/
+last_modified_at: 2026-11-08
+seo:
+  type: CollectionPage
+---
+{%- include golf-caddie-vars.html -%}
+{%- comment -%}
+  Guides index. Topic groups list guide slugs; any guide not in a group shows under "More guides",
+  so new guides appear here automatically.
+{%- endcomment -%}
+{%- assign all_guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | sort: "date" | reverse -%}
+{%- assign group_names = "Choosing a golf app|Apple Watch golf|Golf scoring basics" | split: "|" -%}
+{%- assign group_slugs = "golf-app-prices-compared golf-caddie-vs-thegrint golf-caddie-vs-golfshot golf-caddie-vs-18birdies golf-caddie-vs-arccos golf-scorecard-app-without-subscription golf-scorecard-app-no-account|apple-watch-golf-scorecard-without-gps apple-watch-golf-without-iphone apple-watch-battery-golf-round keep-score-in-golf-with-siri|how-to-keep-score-in-golf how-to-track-putts how-to-find-your-club-distances" | split: "|" -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{% include head-meta.html %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": {{ site.title | jsonify }}, "item": "{{ site.url }}/" },
+    { "@type": "ListItem", "position": 2, "name": {{ gc.short_name | jsonify }}, "item": "{{ site.url }}{{ gc.urls.page }}" },
+    { "@type": "ListItem", "position": 3, "name": "Guides", "item": "{{ site.url }}{{ page.url }}" }
+  ]
+}
+</script>
+
+<style>
+    body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; background: #fafaf8; color: #1a1a1a; line-height: 1.6; margin: 0; }
+    .wrap { max-width: 720px; margin: 0 auto; padding: 32px 20px 64px; }
+    a { color: #2d6a4f; }
+    .breadcrumb ol { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 0 0 28px; font-size: 14px; color: #6b7280; }
+    .breadcrumb li + li::before { content: "›"; margin-right: 6px; color: #9ca3af; }
+    .breadcrumb a { text-decoration: none; }
+    h1 { font-size: 36px; line-height: 1.2; margin: 0 0 12px; }
+    .intro { font-size: 18px; margin: 0 0 32px; }
+    h2 { font-size: 24px; margin: 40px 0 14px; }
+    ul.list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 12px; }
+    ul.list li { background: white; border: 1px solid #e5e7eb; border-radius: 12px; padding: 16px 20px; }
+    ul.list a { font-weight: 600; text-decoration: none; }
+    ul.list a:hover { text-decoration: underline; }
+    ul.list span { display: block; color: #6b7280; font-size: 15px; margin-top: 4px; }
+    .cta { margin: 48px 0 0; padding: 28px 24px; background: white; border: 1px solid #e5e7eb; border-radius: 16px; text-align: center; }
+    .cta h2 { margin-top: 0; }
+    .btn-primary { display: inline-block; background: #007aff; color: white; font-size: 17px; font-weight: 600; padding: 14px 32px; border-radius: 12px; text-decoration: none; margin-top: 8px; }
+    .btn-primary:hover { background: #0062cc; }
+    footer { text-align: center; padding: 40px 20px 60px; font-size: 14px; color: #666; }
+</style>
+</head>
+
+<body>
+<div class="wrap">
+  <nav class="breadcrumb" aria-label="Breadcrumb">
+    <ol>
+      <li><a href="/">{{ site.title }}</a></li>
+      <li><a href="{{ gc.urls.page }}">{{ gc.short_name }}</a></li>
+      <li aria-current="page">Guides</li>
+    </ol>
+  </nav>
+  <main>
+    <h1>Golf scorecard and golf app guides</h1>
+    <p class="intro">Practical guides to keeping score, tracking putts, and knowing your club distances, plus honest comparisons of what golf apps cost. Written by {{ gc.developer }}, {{ gc.developer_bio }} and makes {{ gc.short_name }}, a simple scorecard for iPhone and Apple Watch.</p>
+
+    {%- assign listed = "" -%}
+    {%- for name in group_names %}
+    {%- assign slugs = group_slugs[forloop.index0] | split: " " %}
+    <h2>{{ name }}</h2>
+    <ul class="list">
+      {%- for slug in slugs %}
+      {%- assign url = "/apps/golf-caddie/guides/" | append: slug | append: "/" -%}
+      {%- assign g = all_guides | where: "url", url | first -%}
+      {%- if g %}
+      <li><a href="{{ g.url }}">{{ g.title | escape }}</a><span>{{ g.description | escape }}</span></li>
+      {%- assign listed = listed | append: "|" | append: g.url -%}
+      {%- endif %}
+      {%- endfor %}
+    </ul>
+    {%- endfor %}
+
+    {%- capture more -%}
+      {%- for g in all_guides -%}
+      {%- assign key = "|" | append: g.url -%}
+      {%- unless listed contains key %}
+      <li><a href="{{ g.url }}">{{ g.title | escape }}</a><span>{{ g.description | escape }}</span></li>
+      {%- endunless -%}
+      {%- endfor -%}
+    {%- endcapture -%}
+    {%- if more != "" %}
+    <h2>More guides</h2>
+    <ul class="list">{{ more }}
+    </ul>
+    {%- endif %}
+
+    <section class="cta">
+      <h2>Keep score the simple way</h2>
+      <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch, built to last all 18 holes on your watch. Pro is a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
+      <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+    </section>
+  </main>
+</div>
+<footer>
+  <a href="/">{{ site.title }}</a> · <a href="{{ gc.urls.page }}">{{ gc.short_name }}</a> · <a href="{{ gc.urls.privacy }}">Privacy Policy</a> · <a href="mailto:{{ gc.support_email }}">Support</a>
+</footer>
+</body>
+</html>

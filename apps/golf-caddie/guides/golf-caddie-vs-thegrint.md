@@ -30,6 +30,8 @@ related:
     url: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
   - title: "Golf Caddie vs 18Birdies"
     url: /apps/golf-caddie/guides/golf-caddie-vs-18birdies/
+  - title: "Golf Caddie vs Golfshot"
+    url: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
 
 cta_heading: "Score from your wrist without a subscription"
 ---
@@ -90,7 +92,7 @@ What you get in {{ gc.short_name }}:
 
 As of November 2026, TheGrint Pro costs $59.99 a year in the US, so three seasons of watch scoring cost about $180 if the price stays the same. {{ gc.short_name }} Pro is ${{ gc.pricing.pro_price }} once (US price) and keeps working through updates. TheGrint Pro also includes much more than watch scoring.
 
-That last point matters. The fair comparison isn't price alone: TheGrint Pro buys GPS maps, detailed stats, and games, and {{ gc.short_name }} Pro buys only ways to score without your phone in hand. If you'd use TheGrint's extras, its yearly price can be worth it. Our guide to [one-time purchase vs subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/) explains how to check any golf app's in-app purchases before you download.
+That last point matters. The fair comparison isn't price alone: TheGrint Pro buys GPS maps, detailed stats, and games, and {{ gc.short_name }} Pro buys only ways to score without your phone in hand. If you'd use TheGrint's extras, its yearly price can be worth it. Our guide to [one-time purchase vs subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/) explains how to check any golf app's in-app purchases before you download. To see TheGrint next to Golfshot, 18Birdies, and Arccos, read [what golf apps cost in 2026](/apps/golf-caddie/guides/golf-app-prices-compared/).
 
 ## How do the privacy labels compare?
 

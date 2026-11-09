@@ -1,6 +1,6 @@
 ---
 title: "What golf apps cost in 2026, and how to keep score without a subscription"
-html_title: "Golf App Prices Compared (2026): Free vs Paid"
+html_title: "Golf App Prices Compared (2026): Free vs Paid | Golf Caddie"
 description: "Golf app prices checked November 2026: TheGrint, Golfshot, 18Birdies, and Arccos cost $59.99 to $199.99 a year. Golf Caddie is free with a one-time Pro upgrade."
 permalink: /apps/golf-caddie/guides/golf-app-prices-compared/
 date: 2026-11-08
@@ -41,7 +41,7 @@ cta_heading: "Keep score without a subscription"
 |---|---|---|---|---|
 | **{{ gc.short_name }}** | **Pro ${{ gc.pricing.pro_price }} once** | **No** | **{{ gc.pricing.trial_days }} days, no card** | **Pro (one-time)** |
 | TheGrint | Pro $59.99 a year | Yes | 7 days | Pro |
-| Golfshot | Pro $79.99 a year, Champions $99.99 a year | Yes | 7 days (Pro) | Pro, per its App Store listing |
+| Golfshot | Pro $79.99 a year, Champions $99.99 a year | Yes | 7 days (Pro) | Free, per Golfshot's blog (its App Store listing still says Pro) |
 | 18Birdies | Premium $99.99 a year | Yes | 7 days | Free |
 | Arccos | $199.99 a year after the first year, which comes with Arccos hardware ($249.99 to $349.99) | Yes | First year included with hardware | Works with Apple Watch |
 
@@ -87,9 +87,9 @@ What you'd pay for in {{ gc.short_name }} is the convenience of not taking your 
 
 ## What does Apple Watch scoring cost?
 
-It depends on the app, and it's often where the paywall sits. As of November 2026, TheGrint says "any score tracking requires Pro" on the watch ($59.99 a year), and Golfshot's App Store listing puts Apple Watch scoring in Pro ($79.99 a year). In {{ gc.short_name }}, watch scoring is part of Pro, which costs ${{ gc.pricing.pro_price }} once.
+It depends on the app, and it's often where the paywall sits. As of November 2026, TheGrint says "any score tracking requires Pro" on the watch ($59.99 a year). Golfshot's [October 2026 blog](https://golfshot.com/blog/do-you-need-a-golf-watch-or-just-a-golf-app) says watch scoring is free, and its Pro ($79.99 a year) adds automatic shot tracking. In {{ gc.short_name }}, watch scoring is part of Pro, which costs ${{ gc.pricing.pro_price }} once.
 
-18Birdies lists Apple Watch scoring in its free tier. Golfshot's facts page lists "Apple Watch support" under Free, which reads differently from its App Store listing, so check in the app during a trial if you're deciding on Golfshot.
+18Birdies also lists Apple Watch scoring in its free tier. One caveat on Golfshot: its App Store listing still puts "Apple Watch scoring" under Pro, so check in the app if you're deciding on Golfshot.
 
 {% include screenshot.html file="watch-1" watch=true alt="Golf Caddie on Apple Watch showing hole 6, par 3, with strokes, putts, and penalties counters and the round total of 81, plus 10 vs par" caption="Scoring from your wrist in Golf Caddie: part of a one-time Pro upgrade." %}
 
@@ -105,6 +105,6 @@ If you do keep a subscription, a monthly plan is cheaper than yearly when you pl
 | Golfshot ($14.99 a month) | $59.96 | $74.95 | $89.94 | $79.99 (Pro) |
 | {{ gc.short_name }} Pro | ${{ gc.pricing.pro_price }} | ${{ gc.pricing.pro_price }} | ${{ gc.pricing.pro_price }} | ${{ gc.pricing.pro_price }}, once |
 
-Monthly plans renew until you cancel in **Settings → your name → Subscriptions** on iPhone. Our guide to [golf apps without a subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/) shows how to spot a subscription on any App Store page before you download. For a side-by-side with a single app, see {{ gc.short_name }} vs [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
+Monthly plans renew until you cancel in **Settings → your name → Subscriptions** on iPhone. Our guide to [golf apps without a subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/) shows how to spot a subscription on any App Store page before you download. For a side-by-side with a single app, see {{ gc.short_name }} vs [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), [Golfshot](/apps/golf-caddie/guides/golf-caddie-vs-golfshot/), [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
 
-<small>Sources, checked November 8, 2026 (US): TheGrint [free vs Pro](https://thegrint.com/features/free-vs-pro) and [Apple Watch](https://thegrint.com/features/apple-watch) pages; Golfshot [get Pro](https://golfshot.com/get-pro) and [facts](https://golfshot.com/facts-about-golfshot) pages and [App Store listing](https://apps.apple.com/us/app/golfshot-golf-gps-range-finder/id622851626); 18Birdies [Premium page](https://18birdies.com/premium/) and [App Store listing](https://apps.apple.com/us/app/18birdies-golf-gps-tracker/id892700751); Arccos [membership page](https://www.arccosgolf.com/pages/members) and [home page](https://www.arccosgolf.com/). Prices change, so check before you buy.</small>
+<small>Sources, checked November 8, 2026 (US): TheGrint [free vs Pro](https://thegrint.com/features/free-vs-pro) and [Apple Watch](https://thegrint.com/features/apple-watch) pages; Golfshot [get Pro](https://golfshot.com/get-pro) and [facts](https://golfshot.com/facts-about-golfshot) pages, its blog post ["Do you need a golf watch, or just a golf app?"](https://golfshot.com/blog/do-you-need-a-golf-watch-or-just-a-golf-app) (October 8, 2026), and [App Store listing](https://apps.apple.com/us/app/golfshot-golf-gps-range-finder/id622851626); 18Birdies [Premium page](https://18birdies.com/premium/) and [App Store listing](https://apps.apple.com/us/app/18birdies-golf-gps-tracker/id892700751); Arccos [membership page](https://www.arccosgolf.com/pages/members) and [home page](https://www.arccosgolf.com/). Prices change, so check before you buy.</small>

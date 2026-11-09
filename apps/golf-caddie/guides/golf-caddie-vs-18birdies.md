@@ -59,7 +59,7 @@ Premium is a subscription: $99.99 a year or $19.99 a month with a 7-day free tri
 
 Yes. 18Birdies' App Store listing puts "APPLE WATCH: Distances, scoring, and shot tracking" in its free features, and its help center says core watch features don't need Premium. On the watch, Map View, Green Maps, Plays Like Distances, Auto Swing Detection, and Smart Tracking need Premium.
 
-That's a real point in 18Birdies' favor. In {{ gc.short_name }}, the Apple Watch app is part of Pro, a one-time ${{ gc.pricing.pro_price }} (US price) after a {{ gc.pricing.trial_days }}-day free trial with no card. If free watch scoring with GPS is what you want, 18Birdies already gives you that.
+That's a real point in 18Birdies' favor. In {{ gc.short_name }}, the Apple Watch app is part of Pro, a one-time ${{ gc.pricing.pro_price }} (US price) after a {{ gc.pricing.trial_days }}-day free trial with no card. If free watch scoring with GPS is what you want, 18Birdies already gives you that. For how 18Birdies' Premium price compares with TheGrint, Golfshot, and Arccos, see [what golf apps cost in 2026](/apps/golf-caddie/guides/golf-app-prices-compared/).
 
 ## Should you switch from 18Birdies to {{ gc.short_name }}?
 

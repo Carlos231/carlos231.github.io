@@ -89,7 +89,9 @@ A quick checklist:
 
 ## When is a golf app subscription worth paying for?
 
-A subscription can be worth it when the app keeps delivering something that costs money to run: GPS course maps, shot tracking from sensors, handicap services, or detailed analysis. If you use those every round, a yearly fee can make sense. If you mainly want an accurate score, a free scorecard or a one-time upgrade covers it.
+A subscription can be worth it when the app keeps delivering something that costs money to run: GPS course maps, [shot tracking from sensors](/apps/golf-caddie/guides/golf-caddie-vs-arccos/), handicap services, or detailed analysis. If you use those every round, a yearly fee can make sense. If you mainly want an accurate score, a free scorecard or a one-time upgrade covers it.
+
+For current prices side by side, see [what golf apps cost in 2026](/apps/golf-caddie/guides/golf-app-prices-compared/), with each app's yearly price and three-season total.
 
 It helps to be honest about what you'd actually use. Our guide to [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/) covers what you give up without GPS and the simple ways around it.
 
