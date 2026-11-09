@@ -1,6 +1,6 @@
 # Product Marketing Context
 
-**Document version:** v10
+**Document version:** v12
 **Last updated:** 2026-11-08
 
 ## Product Overview
@@ -65,17 +65,15 @@ Not applicable (single-user B2C purchase).
 **Indirect:** Paper scorecard, Notes app, a tally counter. Fall short because they're slow, error-prone, and don't track putts, penalties, or trends.
 
 ## Differentiation
-**Key differentiators:**
-- Lasts the whole round on Apple Watch: no GPS running, scoring only (owner's Apple Watch SE lasts all 18 holes)
-- Nothing you didn't ask for: no social feed, no rangefinder, no AI features, no complicated stat tracking
-- No account, no GPS, no course database: open and play anywhere
-- Score from the wrist (Apple Watch), by voice (Siri), or from the Lock Screen (Live Activity)
-- One-time $2.99 Pro, never a subscription; core iPhone app is free with unlimited rounds
-- Privacy: data stays in the user's iCloud; no analytics or tracking
-- Light on battery
+**Key differentiators** (ranked by how strongly they win golfers over the big apps):
+1. **Lasts the whole round on Apple Watch.** No GPS running. Built because the developer's Apple Watch SE never lasted a round with the big golf apps; on that SE it lasts all 18 holes. The SE has the shortest rated battery of Apple's current watches (apple.com/watch/battery, checked 2026-11-08), so newer Series and Ultra models have more to spare.
+2. **Just a scorecard.** No social feed, no GPS maps or rangefinder, no AI features, no complicated stat tracking. Open it and start a round in seconds (Quick Start).
+3. **Pay once.** Free on iPhone with unlimited rounds; Pro (Apple Watch, Siri, Live Activity) is a one-time $2.99 (US) after a 14-day trial with no card. Nothing renews.
+4. **Hands-free scoring.** From the wrist on Apple Watch, by voice with 8 Siri shortcuts, or from the Lock Screen with a Live Activity.
+5. **Private.** No account, App Store label "Data Not Collected," rounds in the golfer's own iCloud, CSV export anytime.
 **How we do it differently:** Scoring is the whole product. Everything else (stats, club distances, Health, export) supports the scorecard and stays out of the way.
 **Why that's better:** Faster scoring, less phone time, no recurring cost, works without signal.
-**Why customers choose us:** It's the simplest way to keep score, and Pro costs less than one month of most golf app subscriptions. *(Verify competitor pricing before publishing this comparison.)*
+**Why customers choose us:** Their Apple Watch lasts the whole round, and the app does nothing but keep score. Pro costs less than one month of most golf app subscriptions (as of November 2026: 18Birdies $19.99/mo, Golfshot $14.99/mo, vs $2.99 once).
 **What's actually distinctive (vs indie scorecards too):** the combination of no account + Apple Watch scoring + Siri voice scoring + Lock Screen Live Activity, all syncing, plus free CSV export and Apple Health. Lead with the combination, not with "no subscription" alone. Never claim to be the only no-subscription or no-GPS scorecard.
 
 ## Objections
@@ -159,6 +157,7 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-11-08 | Say each strong point once per page. The founder story appears only in the app page's "Why I built" section and the guide author box. Body copy and answer boxes use only the strong point that matches the topic. Download boxes carry the offer plus at most one strong point | Owner correction: the full list in every box read as redundant | Guides, app page, download boxes, social, App Store listing | active |
 | 2026-11-08 | Lead with why the app exists: an Apple Watch scorecard that lasts all 18 holes, with no social feed, GPS, AI, subscription, or complicated tracking. Tell it as the founder's first-hand story (Apple Watch SE). The app page targets "simple golf scorecard app"; don't create a separate page for that query (seo-audit: no cannibalization; product page is the right format) | Owner: "This is what people are probably searching for and are the main customers that will download and buy" | App page, home, llms.txt, guides, social | active |
 | 2026-11-08 | Every guide sells Golf Caddie: lead the answer and tables with it and put a download button (`_includes/download-cta.html`) near the top of every guide. Within the skills' limits: keep competitor facts accurate, keep a short honest "who should stay with them" section (competitors skill), put competitor links in a sources line at the end, and keep about 2 of 7 weekly social posts as pure tips with no app pitch (social skill) | Owner: "written in a way so that user wants to download my app and not marketing for others"; goal is more clicks and referrals. Owner asked to follow the skills where they conflict, as they're more proven | Guides, comparison pages, social, weekly-marketing runs | active |
 | 2026-10-22 | Publish customer-facing pages (people choosing an app: no subscription, battery, Siri, comparisons) before informational guides | Owner decision: the first four guides were mostly informational; downloads come from buyer-intent pages | content-backlog.md order, weekly-marketing runs | active |
@@ -168,6 +167,8 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v12 (2026-11-08) — Moved the ranked strong points into Differentiation and the say-it-once rule into Learnings, per the product-marketing skill's structure; removed the separate Strong points section added in v11; Why customers choose us now cites verified prices.
+- v11 (2026-11-08) — Added ranked "Strong points" at the top with a say-it-once usage map, after the owner found the site repeating the full list in every box.
 - v10 (2026-11-08) — Positioning: founder story (watch battery, no social/GPS/AI/subscription/complex tracking) becomes the core problem and first differentiator; new objection on free watch scoring elsewhere (owner decision).
 - v9 (2026-11-08) — Learnings: content sells Golf Caddie first, with an early download button; competitor facts stay accurate but brief (owner decision).
 - v8 (2026-11-02) — Competitive Landscape: TheGrint, 18Birdies, and Golfshot facts verified on official sites for the comparison guides; Golfshot watch-scoring tier flagged as conflicting.

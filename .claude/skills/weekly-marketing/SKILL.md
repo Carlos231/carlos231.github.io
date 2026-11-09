@@ -58,8 +58,8 @@ Take the top 2–3 `open` topics and write each as a guide:
 3. Body: each H2 is a question phrased the way golfers ask it, followed by a 40–60 word direct answer, then detail (steps, examples, tables).
 4. `facts` table where it helps (rules, scoring values, comparisons). `faq` with 3–5 real follow-up questions.
 5. SEO format (seo-audit skill, on-page rules): `html_title` 50–60 characters, query first and brand last (see `.claude/skills/seo-audit/references/title-tags.md`); `description` includes the query and a reason to click; query in the first 100 words; no target query that another page already owns (keyword map in `content-backlog.md`).
-6. Positioning: tie the page back to why Golf Caddie exists where it fits (watch scorecard that lasts all 18 holes; no social feed, GPS, AI, subscription, or complicated tracking), and put `{% include download-cta.html %}` after the first section.
-7. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there.
+6. Strong points: use the ranked Key differentiators (Differentiation) and the say-it-once Learning in `.agents/product-marketing.md`. Use the one that matches the page's topic in the body; the layout's author box already tells the founder story, so don't repeat it. Put `{% include download-cta.html %}` after the first section.
+7. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there. Add the new slug to a topic group in `apps/golf-caddie/guides/index.html` (the guides hub); until then it shows under "More guides".
 8. Mention Golf Caddie where it genuinely helps the reader. The guide must stand on its own without the app.
 
 Facts and evidence:

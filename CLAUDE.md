@@ -13,7 +13,7 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Never add `aggregateRating` or review markup to schema.
 - The app's source code is at `/Users/carlos/Projects/GolfStrokeCounter` (read-only). Check app facts in its `README.md` and `REQUIREMENTS.md` first. Open the source only when the docs are silent or conflict with the data file (e.g. the README lists Apple Health under Pro, but Save Summary workouts are free per the source, checked 2026-10-18).
 - Battery: state it only as the developer's first-hand experience. Golf Caddie lasts all 18 holes on the owner's Apple Watch SE (owner-confirmed 2026-11-08), and it runs no GPS. You may add that the SE has the shortest rated battery of Apple's current watches (SE 3 up to 18 hours, Series 12 up to 24, Ultra 4 up to 50, per apple.com/watch/battery, checked 2026-11-08), so newer Series and Ultra models have more to spare. Don't say it lasts longer on every watch: older models and worn batteries can do worse. No battery percentages or lab-style claims.
-- Positioning: lead with why the app exists (a watch scorecard that lasts the round, with no social feed, GPS, AI, subscription, or complicated tracking). Details and the founder story are in `.agents/product-marketing.md`.
+- Positioning: use the ranked Key differentiators in `.agents/product-marketing.md` (Differentiation) and its say-it-once Learning. Every marketing skill reads that file first.
 - Keep the App Store campaign link exactly as it is in the data file (`pt=128660093&ct=Website`). Don't change the token or the case of `ct`.
 
 ## Release gating

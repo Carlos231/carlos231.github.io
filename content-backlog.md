@@ -8,7 +8,7 @@ Search potential is a judgment call (no paid keyword tools). Re-score once Searc
 
 **Last updated:** 2026-11-08
 
-**Positioning (owner, 2026-11-08):** the core buyer is an Apple Watch golfer whose watch dies mid-round with the big GPS apps and who wants only a scorecard: no social feed, rangefinder, AI, subscription, or complicated tracking. Score topics for that buyer first (customer impact), and tell the founder's first-hand story where it fits (Apple Watch SE lasts all 18 holes). See `.agents/product-marketing.md`.
+**Positioning (owner, 2026-11-08):** the core buyer is an Apple Watch golfer whose watch dies mid-round with the big GPS apps and who wants only a scorecard: no social feed, rangefinder, AI, subscription, or complicated tracking. Score topics for that buyer first (customer impact), and tell the founder's first-hand story where it fits (Apple Watch SE lasts all 18 holes). See `.agents/product-marketing.md`. Every guide carries the founder story once, in the layout's "Why I built Golf Caddie" author box; in the body, use only the strong point that matches the topic (ranked Key differentiators and the say-it-once Learning in the product-marketing doc). Apple Watch SE owners are the sharpest niche (the shortest-rated battery of Apple's current watches); the battery guide has an SE section.
 
 **Keyword map (avoid cannibalization, seo-audit skill):** the app page (`/apps/golf-caddie/`) owns "simple golf scorecard app" and "golf scorecard app for apple watch". Don't create a guide targeting those. #3 (best simple scorecard apps) targets the roundup query "best golf scorecard app for apple watch", a different intent; link it to the app page.
 
@@ -194,7 +194,7 @@ Target query first, then related queries the page should also answer (AI search 
 - **Scoring on iPhone and Apple Watch** (product, commercial): #1 without GPS, #4 no account, #3 best apps. Links to the app page and to each other.
 - **Alternatives** (comparison): #16 TheGrint and #9 18Birdies (published 2026-11-03), #8 Arccos and #19 prices (drafted 2026-11-08; #19 links to all vs pages), #6 Golfshot, #22 Hole19. Follow-up: once #8 and #19 are live, add a link to #19 from the TheGrint and 18Birdies guides (body copy change, show before → after). Each links to #3 once it exists, and to the app page. Once 2 or more are published, add an "alternatives" section to #3.
 - **Golf scoring basics** (informational): #2 keep score, #5 track putts, #10 Stableford, #7 handicap. #2 is the hub: it links to #5, #10, and #7, and each links back to #2. Mention Golf Caddie in a short "track it in an app" section, never as the point of the page.
-- **Guides hub:** once 3 guides are live, add a `/apps/golf-caddie/guides/` index page and a "Guides" breadcrumb level (see the layout notes).
+- **Guides hub:** live at `/apps/golf-caddie/guides/` (added 2026-11-08, SEO audit), with a "Guides" breadcrumb level on every guide. New guides land under "More guides" until their slug is added to a topic group in `apps/golf-caddie/guides/index.html`.
 
 ## Done
 
