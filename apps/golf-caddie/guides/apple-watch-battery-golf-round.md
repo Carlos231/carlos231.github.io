@@ -60,6 +60,8 @@ If you golf with an SE, these help the most:
 - **Check battery health** in Settings, then Battery, on the watch, and start the round fully charged.
 - **Turn on Low Power Mode** if your battery is older (see below).
 
+You can also leave your iPhone in the golf bag and score on the watch: see [keep score on Apple Watch with your iPhone in the golf bag](/apps/golf-caddie/guides/apple-watch-golf-without-iphone/).
+
 {% include download-cta.html text="Score from your Apple Watch with no GPS running." %}
 
 ## What uses the most battery during a round of golf?

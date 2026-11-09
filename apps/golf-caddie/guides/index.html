@@ -14,7 +14,7 @@ seo:
 {%- endcomment -%}
 {%- assign all_guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | sort: "date" | reverse -%}
 {%- assign group_names = "Choosing a golf app|Apple Watch golf|Golf scoring basics" | split: "|" -%}
-{%- assign group_slugs = "golf-app-prices-compared golf-caddie-vs-thegrint golf-caddie-vs-18birdies golf-caddie-vs-arccos golf-scorecard-app-without-subscription golf-scorecard-app-no-account|apple-watch-golf-scorecard-without-gps apple-watch-battery-golf-round keep-score-in-golf-with-siri|how-to-keep-score-in-golf how-to-track-putts how-to-find-your-club-distances" | split: "|" -%}
+{%- assign group_slugs = "golf-app-prices-compared golf-caddie-vs-thegrint golf-caddie-vs-18birdies golf-caddie-vs-arccos golf-scorecard-app-without-subscription golf-scorecard-app-no-account|apple-watch-golf-scorecard-without-gps apple-watch-golf-without-iphone apple-watch-battery-golf-round keep-score-in-golf-with-siri|how-to-keep-score-in-golf how-to-track-putts how-to-find-your-club-distances" | split: "|" -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>

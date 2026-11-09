@@ -94,6 +94,8 @@ A round in Golf Caddie, step by step:
 
 With Pro you can also score with your voice ("Add a putt in Golf Caddie") or from the iPhone Lock Screen without unlocking. See every phrase in [keep score in golf with Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
+Your iPhone can stay in the golf bag while you score on the watch. See [keep score on Apple Watch with your iPhone in the golf bag](/apps/golf-caddie/guides/apple-watch-golf-without-iphone/) for what works on the watch alone and how scores sync.
+
 ## Does a scorecard-only app work without cell signal?
 
 Yes. Scoring doesn't need the internet: there's no course data to download and nothing to look up mid-round. Golf Caddie keeps your Watch and iPhone in sync over Bluetooth, so poor reception on the course doesn't matter. Your rounds are saved to iCloud whenever you're back online.
