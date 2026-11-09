@@ -1,6 +1,6 @@
 ---
 title: "What golf apps cost in 2026, and how to keep score without a subscription"
-html_title: "Golf App Prices Compared (2026): Free vs Paid"
+html_title: "Golf App Prices Compared (2026): Free vs Paid | Golf Caddie"
 description: "Golf app prices checked November 2026: TheGrint, Golfshot, 18Birdies, and Arccos cost $59.99 to $199.99 a year. Golf Caddie is free with a one-time Pro upgrade."
 permalink: /apps/golf-caddie/guides/golf-app-prices-compared/
 date: 2026-11-08

@@ -68,6 +68,8 @@ Common reasons:
 
 You give up distances: yardages to the green and hazards, shot tracking, course maps, and the advanced stats that come from knowing where every shot landed. If you use those to choose clubs or analyze your game shot by shot, a GPS app or sensor system does more. A scorecard-only app is for golfers who mostly want the score.
 
+Your own club distances cover a lot of what yardages are for: see [how to find your club distances](/apps/golf-caddie/guides/how-to-find-your-club-distances/).
+
 {% include screenshot.html file="watch-2" watch=true alt="Golf Caddie club distances on Apple Watch: Driver 225 yards, 3 Wood 205 yards, 5 Iron 160 yards" caption="No GPS yardages, but your own club distances are one tap away on the Watch (Pro)." %}
 
 There are simple ways to get yardages without GPS on your wrist:

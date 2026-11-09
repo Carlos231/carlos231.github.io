@@ -492,19 +492,19 @@ last_modified_at: 2026-11-08
   <h2>A simple golf scorecard for iPhone and Apple Watch</h2>
   <div class="feature-grid">
     <div class="feature"><strong>Simple Scorecard</strong><br>Track strokes, putts, and penalties per hole with one tap.</div>
-    <div class="feature"><strong>Score vs Par</strong><br>Birdie, Bogey, Eagle and more — see how you stack up every hole.</div>
-    <div class="feature"><strong>Quick Start</strong><br>Front 9, Back 9, or 18 holes — start scoring in seconds, no setup needed.</div>
+    <div class="feature"><strong>Score vs Par</strong><br>Birdie, Bogey, Eagle and more. See how you stack up every hole.</div>
+    <div class="feature"><strong>Quick Start</strong><br>Front 9, Back 9, or 18 holes. Start scoring in seconds, no setup needed.</div>
     <div class="feature"><strong>Custom Pars</strong><br>Set par for any course layout, any hole.</div>
     <div class="feature"><strong>Front 9 / Back 9</strong><br>Play just the front or back nine. Holes, par, and score all adjust automatically.</div>
     <div class="feature"><strong>Share Scorecard</strong><br>Share a classic scorecard image, with circles for birdies and squares for bogeys.</div>
     <div class="feature"><strong>Apple Watch</strong><span class="pro-badge">Pro</span><br>Lightweight scoring from your wrist, with no GPS running. Built to last all 18 holes.</div>
     <div class="feature"><strong>Siri</strong><span class="pro-badge">Pro</span><br>Add strokes, advance holes, and check your score hands-free.</div>
-    <div class="feature"><strong>Live Activity</strong><span class="pro-badge">Pro</span><br>Score from the Lock Screen and Dynamic Island — no need to unlock your phone.</div>
+    <div class="feature"><strong>Live Activity</strong><span class="pro-badge">Pro</span><br>Score from the Lock Screen and Dynamic Island. No need to unlock your phone.</div>
     <div class="feature"><strong>Club Distances</strong><br>Set your yardages once and check them mid-round on iPhone or Apple Watch.</div>
     <div class="feature"><strong>Apple Health</strong><br>Log rounds as a Golf workout, with optional live heart rate and calories on your Watch.</div>
     <div class="feature"><strong>Your Game Stats</strong><br>Scoring averages and trends across your rounds, right on the home screen.</div>
     <div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>
-    <div class="feature"><strong>Free {{ gc.pricing.trial_days }}-Day Trial</strong><br>Try Pro free — no credit card required. Unlock forever for just ${{ gc.pricing.pro_price }}.</div>
+    <div class="feature"><strong>Free {{ gc.pricing.trial_days }}-Day Trial</strong><br>Try Pro free. No credit card required. Unlock forever for just ${{ gc.pricing.pro_price }}.</div>
   </div>
 </div>
 
@@ -594,7 +594,7 @@ last_modified_at: 2026-11-08
   </div>
 </div>
 
-{%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | sort: "date" | reverse %}
+{%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | sort: "date" | reverse %}
 {%- if guides.size > 0 %}
 
 <div class="section" id="guides">
@@ -604,6 +604,7 @@ last_modified_at: 2026-11-08
     <li><a href="{{ g.url }}">{{ g.title | escape }}</a><span>{{ g.description | escape }}</span></li>
     {%- endfor %}
   </ul>
+  <p><a href="/apps/golf-caddie/guides/">All guides by topic</a></p>
 </div>
 {%- endif %}
 
@@ -648,7 +649,7 @@ last_modified_at: 2026-11-08
         <li>Sort rounds by <strong>date</strong> or <strong>course name</strong> using the menu at the top.</li>
         <li>Swipe <strong>right</strong> to show the <strong>Copy</strong> and <strong>Rename</strong> buttons.</li>
         <li>Swipe <strong>left</strong> to show the <strong>Delete</strong> button.</li>
-        <li>Copying creates a new round with the same holes and pars — a Back 9 round copies as a Back 9.</li>
+        <li>Copying creates a new round with the same holes and pars. A Back 9 round copies as a Back 9.</li>
         <li>Copying an 18-hole round lets you choose <strong>18 Holes</strong>, <strong>Front 9</strong>, or <strong>Back 9</strong>.</li>
         <li>Deleting always shows a confirmation first.</li>
       </ul>
@@ -717,7 +718,7 @@ last_modified_at: 2026-11-08
         <li>Tap <strong>End Round</strong> on the last hole on iPhone, or on the page after the last hole on Apple Watch. Ending it on one ends it on both and closes the Live Activity.</li>
         <li>You can still make changes after finishing.</li>
         <li>Tap <strong>Card View</strong> in the summary to see a traditional scorecard layout.</li>
-        <li>Tap <strong>Share</strong> to export a high-res scorecard image — traditional golf marks included.</li>
+        <li>Tap <strong>Share</strong> to export a high-res scorecard image. Traditional golf marks included.</li>
         <li>Your rounds appear in the history on the home screen.</li>
       </ul>
     </div>
@@ -732,7 +733,7 @@ last_modified_at: 2026-11-08
         <li>Make sure Bluetooth is turned on.</li>
         <li>Restarting the watch app can help if things get stuck.</li>
         <li>If the watch shows <strong>No Active Round</strong>, start a round on your iPhone.</li>
-        <li>If the iPhone shows <strong>No Active Round</strong> after you reopen the app mid-round, your scores are safe — tap the round in the Rounds list, or add a stroke on your Watch, to pick it back up.</li>
+        <li>If the iPhone shows <strong>No Active Round</strong> after you reopen the app mid-round, your scores are safe. Tap the round in the Rounds list, or add a stroke on your Watch, to pick it back up.</li>
         <li>If you changed phones or watches, tap <strong>Restore Purchase</strong> in Settings.</li>
       </ul>
     </div>
@@ -743,14 +744,14 @@ last_modified_at: 2026-11-08
         <h3 class="help-card-title">Using Siri</h3>
       </div>
       <ul>
-        <li><strong>"Start a quick round"</strong> — starts an 18-hole Quick Start round. Say <strong>"Start a front 9 holes round"</strong> or <strong>"Start a back 9 holes round"</strong> for nine.</li>
-        <li><strong>"Add a stroke"</strong> — increments strokes on the current hole.</li>
-        <li><strong>"Add a putt"</strong> — increments putts on the current hole.</li>
-        <li><strong>"Add a penalty"</strong> — increments penalties on the current hole.</li>
-        <li><strong>"Next hole"</strong> — advances to the next hole and syncs to Watch.</li>
-        <li><strong>"What hole am I on?"</strong> — reports hole number, strokes, and score term.</li>
-        <li><strong>"What is my round score?"</strong> — reports gross total and over/under par.</li>
-        <li><strong>"What is my hole score?"</strong> — reports using golf terms (Eagle, Birdie, Bogey, etc.).</li>
+        <li><strong>"Start a quick round"</strong>: starts an 18-hole Quick Start round. Say <strong>"Start a front 9 holes round"</strong> or <strong>"Start a back 9 holes round"</strong> for nine.</li>
+        <li><strong>"Add a stroke"</strong>: increments strokes on the current hole.</li>
+        <li><strong>"Add a putt"</strong>: increments putts on the current hole.</li>
+        <li><strong>"Add a penalty"</strong>: increments penalties on the current hole.</li>
+        <li><strong>"Next hole"</strong>: advances to the next hole and syncs to Watch.</li>
+        <li><strong>"What hole am I on?"</strong>: reports hole number, strokes, and score term.</li>
+        <li><strong>"What is my round score?"</strong>: reports gross total and over/under par.</li>
+        <li><strong>"What is my hole score?"</strong>: reports using golf terms (Eagle, Birdie, Bogey, etc.).</li>
         <li>Siri works in the background without opening the app, and updates your scorecard, Watch, and Live Activity right away.</li>
         <li>Requires active Pro trial or purchase.</li>
       </ul>
@@ -763,8 +764,8 @@ last_modified_at: 2026-11-08
       </div>
       <ul>
         <li>Apple Watch, Siri, and Live Activity are part of Golf Caddie Pro.</li>
-        <li>On first launch you'll see a welcome sheet — tap <strong>Start</strong> to begin your <strong>free {{ gc.pricing.trial_days }}-day trial</strong>, no credit card required.</li>
-        <li>If you're not ready, tap <strong>Not Now</strong> — you can start it anytime from the home screen banner, and you'll be re-offered after a week.</li>
+        <li>On first launch you'll see a welcome sheet. Tap <strong>Start</strong> to begin your <strong>free {{ gc.pricing.trial_days }}-day trial</strong>, no credit card required.</li>
+        <li>If you're not ready, tap <strong>Not Now</strong>. You can start it anytime from the home screen banner, and you'll be re-offered after a week.</li>
         <li>After the trial, unlock Pro forever for a <strong>one-time ${{ gc.pricing.pro_price }}</strong>. No subscription, ever.</li>
         <li>Restore purchases anytime from Settings.</li>
       </ul>
@@ -777,7 +778,7 @@ last_modified_at: 2026-11-08
       </div>
       <ul>
         <li>Once a round starts, it appears on your <strong>Lock Screen</strong> and in the <strong>Dynamic Island</strong>.</li>
-        <li>Tap +/– right there to update strokes, putts, or penalties — no unlock needed.</li>
+        <li>Tap +/– right there to update strokes, putts, or penalties. No unlock needed.</li>
         <li>Strokes lock once you enter a putt, matching the scorecard rules.</li>
         <li>The <strong>next hole</strong> button advances your scorecard, Live Activity, and Watch together.</li>
         <li>Every tap is saved and sent to your Watch right away, even with your phone locked.</li>
@@ -792,7 +793,7 @@ last_modified_at: 2026-11-08
         <h3 class="help-card-title">Club Distances</h3>
       </div>
       <ul>
-        <li>Set up yardages once in <strong>Settings</strong> — 14 standard clubs are pre-seeded, or add your own.</li>
+        <li>Set up yardages once in <strong>Settings</strong>: 14 standard clubs are pre-seeded, or add your own. Not sure of your numbers? See <a href="/apps/golf-caddie/guides/how-to-find-your-club-distances/">how to find your club distances</a>.</li>
         <li>Check them mid-round from the scorecard toolbar on iPhone, or the totals row on Apple Watch.</li>
         <li>It's a read-only cheat sheet, so it never gets in the way of scoring.</li>
       </ul>
@@ -804,7 +805,7 @@ last_modified_at: 2026-11-08
         <h3 class="help-card-title">Apple Health</h3>
       </div>
       <ul>
-        <li>Turn it on in <strong>Settings</strong> on your iPhone — off by default. Your Apple Watch follows the same setting.</li>
+        <li>Turn it on in <strong>Settings</strong> on your iPhone. It's off by default. Your Apple Watch follows the same setting.</li>
         <li><strong>Save Summary</strong> writes a Golf workout to Health when your round ends, whether you end it on iPhone or Apple Watch.</li>
         <li><strong>Full Session</strong> runs a live Watch workout while your round is active, tracking heart rate, calories, and steps (<a href="/apps/golf-caddie/guides/apple-watch-battery-golf-round/">what it means for battery</a>).</li>
         <li>The first time you use Full Session, your Watch asks for permission to save workouts to Health.</li>
@@ -818,7 +819,7 @@ last_modified_at: 2026-11-08
       </div>
       <ul>
         <li>The Rounds tab shows your scoring averages and trends over time.</li>
-        <li>Updates automatically as you finish more rounds — no setup needed.</li>
+        <li>Updates automatically as you finish more rounds. No setup needed.</li>
       </ul>
     </div>
 
@@ -828,10 +829,10 @@ last_modified_at: 2026-11-08
         <h3 class="help-card-title">Exporting Your Rounds</h3>
       </div>
       <ul>
-        <li>Go to <strong>Settings → Your Data → Export Rounds (CSV)</strong> and choose where to send it — Files, Mail, AirDrop, or another app.</li>
+        <li>Go to <strong>Settings → Your Data → Export Rounds (CSV)</strong> and choose where to send it: Files, Mail, AirDrop, or another app.</li>
         <li>The spreadsheet has one row per hole: date, start and end time, course, Front 9 / Back 9 / 18 Holes, par, strokes, putts, penalties, and score vs par.</li>
         <li>Open it in <strong>Numbers</strong>, <strong>Excel</strong>, or <strong>Google Sheets</strong>, or give it to an AI assistant and ask how to improve your game.</li>
-        <li>Free for everyone — no Pro needed. The file only goes where you send it.</li>
+        <li>Free for everyone. No Pro needed. The file only goes where you send it.</li>
       </ul>
     </div>
 

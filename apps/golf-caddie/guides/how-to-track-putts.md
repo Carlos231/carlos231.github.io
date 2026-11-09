@@ -1,6 +1,6 @@
 ---
 title: "How to track putts in golf (and what the numbers tell you)"
-html_title: "How to Track Putts in Golf | Golf Caddie"
+html_title: "How to Track Putts in Golf: What Counts | Golf Caddie"
 description: "How to track putts in golf: what counts as a putt, the fringe question, what to record on each hole, and how to read your putting numbers to find lost strokes."
 permalink: /apps/golf-caddie/guides/how-to-track-putts/
 date: 2026-10-19
