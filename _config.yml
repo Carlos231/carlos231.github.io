@@ -13,7 +13,7 @@ plugins:
 # Privacy-friendly analytics (GoatCounter: no cookies). Leave empty to load nothing.
 # TODO(owner): sign up at https://www.goatcounter.com, then put your site code here
 # (the MYCODE part of MYCODE.goatcounter.com).
-goatcounter_code: ""
+goatcounter_code: "carlosapps"
 
 # jekyll-redirect-from: skip the redirects.json file (only GitHub's own tooling reads it).
 redirect_from:
