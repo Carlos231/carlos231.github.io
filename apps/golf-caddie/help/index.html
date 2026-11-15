@@ -1,0 +1,292 @@
+---
+title: "Golf Caddie help: how to use the app"
+html_title: "Golf Caddie Help: How to Use the Scorecard App"
+description: "How to use Golf Caddie: start a round, score on iPhone and Apple Watch, Siri phrases, the Lock Screen, syncing, club distances, exporting rounds, and support."
+permalink: /apps/golf-caddie/help/
+image: /assets/og/help.png
+last_modified_at: 2026-11-14
+---
+{%- include golf-caddie-vars.html -%}
+{%- comment -%}
+  Help page. Job: how-to and support for people who already have the app (moved off the product page
+  on 2026-11-14 so that page can sell). Keep sales copy off this page.
+{%- endcomment -%}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  {% include head-meta.html %}
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": {{ site.title | jsonify }}, "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": {{ gc.short_name | jsonify }}, "item": "{{ site.url }}{{ gc.urls.page }}" },
+      { "@type": "ListItem", "position": 3, "name": "Help", "item": "{{ site.url }}{{ page.url }}" }
+    ]
+  }
+  </script>
+  {% include site-css.html %}
+</head>
+
+<body>
+{% include site-nav.html %}
+
+<main>
+<section style="padding-top:8px">
+  <div class="wrap">
+    <nav aria-label="Breadcrumb">
+      <ol class="crumbs">
+        <li><a href="/">{{ site.title }}</a></li>
+        <li><a href="{{ gc.urls.page }}">{{ gc.short_name }}</a></li>
+        <li aria-current="page">Help</li>
+      </ol>
+    </nav>
+    <h1 style="font-size:34px; margin-top:22px">How to use {{ gc.short_name }}</h1>
+    <p class="lead">Short answers for each part of the app. Can't find yours? <a href="#support">Email support</a>.</p>
+
+    <div class="help-grid">
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">⚡</span>
+        <h3 class="help-card-title">Quick Start Rounds</h3>
+      </div>
+      <ul>
+        <li>Start a round instantly with all holes set to <strong>Par 4</strong>.</li>
+        <li>Choose <strong>Front 9</strong> (holes 1–9), <strong>18 Holes</strong>, or <strong>Back 9</strong> (holes 10–18).</li>
+        <li>Quick Start is available on both iPhone and Apple Watch.</li>
+        <li>You can also say <strong>"Start a back 9 holes round in Golf Caddie"</strong> to Siri.</li>
+        <li>Perfect for casual rounds or when you don't want to enter course details.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">🏁</span>
+        <h3 class="help-card-title">Starting a Round</h3>
+      </div>
+      <ul>
+        <li>Tap <strong>Start Round</strong> on the home screen.</li>
+        <li>Enter the course name and choose 9 or 18 holes.</li>
+        <li>Your round saves automatically as you play.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">📋</span>
+        <h3 class="help-card-title">Managing Rounds</h3>
+      </div>
+      <ul>
+        <li>From the home screen, manage any saved round.</li>
+        <li>Sort rounds by <strong>date</strong> or <strong>course name</strong> using the menu at the top.</li>
+        <li>Swipe <strong>right</strong> to show the <strong>Copy</strong> and <strong>Rename</strong> buttons.</li>
+        <li>Swipe <strong>left</strong> to show the <strong>Delete</strong> button.</li>
+        <li>Copying creates a new round with the same holes and pars. A Back 9 round copies as a Back 9.</li>
+        <li>Copying an 18-hole round lets you choose <strong>18 Holes</strong>, <strong>Front 9</strong>, or <strong>Back 9</strong>.</li>
+        <li>Deleting always shows a confirmation first.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">✏️</span>
+        <h3 class="help-card-title">Tracking Your Score</h3>
+      </div>
+      <ul>
+        <li>New to scoring? Start with <a href="/apps/golf-caddie/guides/how-to-keep-score-in-golf/">how to keep score in golf</a>.</li>
+        <li><strong>Strokes</strong> are full swings before the green.</li>
+        <li><strong>Putts</strong> are strokes taken on the green (<a href="/apps/golf-caddie/guides/how-to-track-putts/">how to track putts</a>).</li>
+        <li><strong>Penalties</strong> include lost balls, OB, water hazards, etc.</li>
+        <li>You can change any score at any time.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">⌚</span>
+        <h3 class="help-card-title">Using the Apple Watch</h3>
+      </div>
+      <ul>
+        <li>Swipe left or right to move between holes.</li>
+        <li>Tap +/– to update strokes, putts, or penalties.</li>
+        <li>Once you add your first putt, strokes lock to prevent mistakes.</li>
+        <li>Your watch and phone stay in sync as you play.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">🔄</span>
+        <h3 class="help-card-title">How Syncing Works</h3>
+      </div>
+      <ul>
+        <li>Your iPhone, Apple Watch, Live Activity, and Siri all score the same round and update each other automatically.</li>
+        <li>Whichever one you used most recently updates the others.</li>
+        <li>Changing holes on one moves the others to the same hole.</li>
+        <li>If something looks out of sync, opening the iPhone app usually fixes it.</li>
+        <li>New rounds may take a moment to appear on the watch.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">🕐</span>
+        <h3 class="help-card-title">Editing Previous Holes</h3>
+      </div>
+      <ul>
+        <li>Go back and fix any hole at any time.</li>
+        <li>Helpful if you forgot a penalty or mis‑counted.</li>
+        <li>The watch may show a small reminder if you're editing an older hole.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">✅</span>
+        <h3 class="help-card-title">Finishing a Round</h3>
+      </div>
+      <ul>
+        <li>A round is complete once all holes have scores.</li>
+        <li>Tap <strong>End Round</strong> on the last hole on iPhone, or on the page after the last hole on Apple Watch. Ending it on one ends it on both and closes the Live Activity.</li>
+        <li>You can still make changes after finishing.</li>
+        <li>Tap <strong>Card View</strong> in the summary to see a traditional scorecard layout.</li>
+        <li>Tap <strong>Share</strong> to export a high-res scorecard image. Traditional golf marks included.</li>
+        <li>Your rounds appear in the history on the home screen.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">⚠️</span>
+        <h3 class="help-card-title">Troubleshooting</h3>
+      </div>
+      <ul>
+        <li>If the watch doesn't update, open the iPhone app.</li>
+        <li>Make sure Bluetooth is turned on.</li>
+        <li>Restarting the watch app can help if things get stuck.</li>
+        <li>If the watch shows <strong>No Active Round</strong>, start a round on your iPhone.</li>
+        <li>If the iPhone shows <strong>No Active Round</strong> after you reopen the app mid-round, your scores are safe. Tap the round in the Rounds list, or add a stroke on your Watch, to pick it back up.</li>
+        <li>If you changed phones or watches, tap <strong>Restore Purchase</strong> in Settings.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">🎙️</span>
+        <h3 class="help-card-title">Using Siri</h3>
+      </div>
+      <ul>
+        <li><strong>"Start a quick round"</strong>: starts an 18-hole Quick Start round. Say <strong>"Start a front 9 holes round"</strong> or <strong>"Start a back 9 holes round"</strong> for nine.</li>
+        <li><strong>"Add a stroke"</strong>: increments strokes on the current hole.</li>
+        <li><strong>"Add a putt"</strong>: increments putts on the current hole.</li>
+        <li><strong>"Add a penalty"</strong>: increments penalties on the current hole.</li>
+        <li><strong>"Next hole"</strong>: advances to the next hole and syncs to Watch.</li>
+        <li><strong>"What hole am I on?"</strong>: reports hole number, strokes, and score term.</li>
+        <li><strong>"What is my round score?"</strong>: reports gross total and over/under par.</li>
+        <li><strong>"What is my hole score?"</strong>: reports using golf terms (Eagle, Birdie, Bogey, etc.).</li>
+        <li>Siri works in the background without opening the app, and updates your scorecard, Watch, and Live Activity right away.</li>
+        <li>Requires active Pro trial or purchase.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">💳</span>
+        <h3 class="help-card-title">Purchases & Trial</h3>
+      </div>
+      <ul>
+        <li>Apple Watch, Siri, and Live Activity are part of Golf Caddie Pro.</li>
+        <li>On first launch you'll see a welcome sheet. Tap <strong>Start</strong> to begin your <strong>free {{ gc.pricing.trial_days }}-day trial</strong>, no credit card required.</li>
+        <li>If you're not ready, tap <strong>Not Now</strong>. You can start it anytime from the home screen banner, and you'll be re-offered after a week.</li>
+        <li>After the trial, unlock Pro forever for a <strong>one-time ${{ gc.pricing.pro_price }}</strong>. No subscription, ever.</li>
+        <li>Restore purchases anytime from Settings.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">🔒</span>
+        <h3 class="help-card-title">Live Activity <span class="pro-badge">Pro</span></h3>
+      </div>
+      <ul>
+        <li>Once a round starts, it appears on your <strong>Lock Screen</strong> and in the <strong>Dynamic Island</strong>.</li>
+        <li>Tap +/– right there to update strokes, putts, or penalties. No unlock needed.</li>
+        <li>Strokes lock once you enter a putt, matching the scorecard rules.</li>
+        <li>The <strong>next hole</strong> button advances your scorecard, Live Activity, and Watch together.</li>
+        <li>Every tap is saved and sent to your Watch right away, even with your phone locked.</li>
+        <li>Scores and hole changes made on your Watch show up on the Live Activity too.</li>
+        <li>The Live Activity closes automatically when the round ends.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">⛳</span>
+        <h3 class="help-card-title">Club Distances</h3>
+      </div>
+      <ul>
+        <li>Set up yardages once in <strong>Settings</strong>: 14 standard clubs are pre-seeded, or add your own. Not sure of your numbers? See <a href="/apps/golf-caddie/guides/how-to-find-your-club-distances/">how to find your club distances</a>.</li>
+        <li>Check them mid-round from the scorecard toolbar on iPhone, or the totals row on Apple Watch.</li>
+        <li>It's a read-only cheat sheet, so it never gets in the way of scoring.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">❤️</span>
+        <h3 class="help-card-title">Apple Health</h3>
+      </div>
+      <ul>
+        <li>Turn it on in <strong>Settings</strong> on your iPhone. It's off by default. Your Apple Watch follows the same setting.</li>
+        <li><strong>Save Summary</strong> writes a Golf workout to Health when your round ends, whether you end it on iPhone or Apple Watch.</li>
+        <li><strong>Full Session</strong> runs a live Watch workout while your round is active, tracking heart rate, calories, and steps (<a href="/apps/golf-caddie/guides/apple-watch-battery-golf-round/">what it means for battery</a>).</li>
+        <li>The first time you use Full Session, your Watch asks for permission to save workouts to Health.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">📊</span>
+        <h3 class="help-card-title">Your Game Stats</h3>
+      </div>
+      <ul>
+        <li>The Rounds tab shows your scoring averages and trends over time.</li>
+        <li>Updates automatically as you finish more rounds. No setup needed.</li>
+      </ul>
+    </div>
+
+    <div class="help-card">
+      <div class="help-card-header">
+        <span class="help-card-icon" aria-hidden="true">📤</span>
+        <h3 class="help-card-title">Exporting Your Rounds</h3>
+      </div>
+      <ul>
+        <li>Go to <strong>Settings → Your Data → Export Rounds (CSV)</strong> and choose where to send it: Files, Mail, AirDrop, or another app.</li>
+        <li>The spreadsheet has one row per hole: date, start and end time, course, Front 9 / Back 9 / 18 Holes, par, strokes, putts, penalties, and score vs par.</li>
+        <li>Open it in <strong>Numbers</strong>, <strong>Excel</strong>, or <strong>Google Sheets</strong>, or give it to an AI assistant and ask how to improve your game.</li>
+        <li>Free for everyone. No Pro needed. The file only goes where you send it.</li>
+      </ul>
+    </div>
+
+  </div>
+  </div>
+</section>
+
+<section class="band final" id="support">
+  <div class="wrap">
+    <h2>Still stuck?</h2>
+    <p>Have a question, found a bug, or want to suggest something? Email me and I'll reply.</p>
+    <a class="btn" href="mailto:{{ gc.support_email }}?subject=Golf%20Caddie%20Feedback&body=Hi%2C%0A%0A%5BDescribe%20your%20question%2C%20bug%2C%20or%20suggestion%20here%5D%0A%0AApp%20version%3A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0A%0AThanks%21">Contact support</a>
+    <p style="margin-top:22px; font-size:15px">Want to try new versions early? <a href="mailto:{{ gc.support_email }}?subject=Golf%20Caddie%20Beta%20Access%20Request&body=Hi%2C%0A%0AI%27d%20love%20to%20join%20the%20Golf%20Caddie%20beta.%20Here%27s%20a%20bit%20about%20me%3A%0A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0AHow%20often%20I%20golf%3A%20%28e.g.%20weekly%2C%20a%20few%20times%20a%20month%29%0AAnything%20specific%20I%27d%20like%20to%20test%3A%0A%0AThanks%21">Request beta access</a>. Don't have the app yet? <a href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer" data-goatcounter-click="app-store-help" data-goatcounter-title="{{ page.url }}">Get it on the App Store</a>.</p>
+  </div>
+</section>
+</main>
+
+{% include site-footer.html %}
+</body>
+</html>

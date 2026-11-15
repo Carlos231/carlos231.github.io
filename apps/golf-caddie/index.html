@@ -1,12 +1,34 @@
 ---
 title: "Golf Caddie - Simple Scorecard"
 html_title: "Simple Golf Scorecard App for Apple Watch | Golf Caddie"
-description: "Simple golf scorecard app for iPhone and Apple Watch, built to last all 18 holes. No GPS, social feed, AI, or subscription. Free to download; Pro is one-time."
-last_modified_at: 2026-11-08
+description: "Simple golf scorecard app for Apple Watch and iPhone. Score from your wrist, with Siri, or from the Lock Screen. No account or GPS. Pay once, no subscription."
+image: /assets/og/golf-caddie.png
+last_modified_at: 2026-11-14
+# FAQ: rendered on the page and as FAQPage JSON-LD. %price%, %trial%, and %ios% are filled from _data/golf_caddie.yml.
+faq:
+  - q: "Is Golf Caddie free?"
+    a: "Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, CSV export, and club distances. Scoring on Apple Watch, with Siri, and from the Lock Screen is part of Golf Caddie Pro, a one-time $%price% purchase after a %trial%-day free trial."
+  - q: "Is there a subscription?"
+    a: "No. Pro is a single $%price% in-app purchase that unlocks forever. The %trial%-day trial doesn't need a credit card, and when it ends, everything free stays free. More in [golf scorecard app without a subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/)."
+  - q: "Can I leave my iPhone in the bag and score on the watch?"
+    a: "Yes, with Pro. Start a round on the watch, score each hole there, and your scores sync to your iPhone. See [what works on the watch alone](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/#can-you-leave-your-iphone-in-the-golf-bag)."
+  - q: "Does Golf Caddie need GPS or a signal?"
+    a: "No. Golf Caddie doesn't use GPS or a course database. You enter strokes, putts, and penalties yourself, so it works on any course, even with no signal."
+  - q: "Do I need to create an account?"
+    a: "No. There's no sign-up. Your rounds are stored in your own iCloud account, and the developer collects no personal data. See the [privacy policy](/apps/golf-caddie/privacy)."
+  - q: "What do I need to use it?"
+    a: "An iPhone running iOS %ios% or later. An Apple Watch is optional. Golf Caddie is only available on iPhone and Apple Watch."
 ---
 {%- include golf-caddie-vars.html -%}
+{%- comment -%}
+  Product page. Job: the Apple Watch and pay-once pitch, plus pricing. Target queries: simple golf scorecard
+  app, golf scorecard app for Apple Watch. The quick iPhone stroke-counter pitch lives on the home page, and
+  how-to help lives on /apps/golf-caddie/help/. Say pricing once (hero line, pricing table, FAQ).
+{%- endcomment -%}
 {%- assign free_features = live_features | where: "tier", "free" | map: "name" -%}
 {%- assign pro_features = live_features | where: "tier", "pro" | map: "name" -%}
+{%- assign price = gc.pricing.pro_price | append: "" -%}
+{%- assign trial = gc.pricing.trial_days | append: "" -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,6 +36,7 @@ last_modified_at: 2026-11-08
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
   {% include head-meta.html %}
+  <link rel="preload" as="image" href="/assets/hero-phone.png">
 
   {%- capture free_offer -%}Free download. Includes: {{ free_features | join: "; " }}.{%- endcapture -%}
   {%- capture pro_offer -%}One-time in-app purchase, not a subscription. Unlocks: {{ pro_features | join: "; " }}. {{ gc.pricing.trial_days }}-day free trial, no credit card required.{%- endcapture %}
@@ -25,7 +48,7 @@ last_modified_at: 2026-11-08
     "@id": "{{ site.url }}{{ gc.urls.page }}#app",
     "name": {{ gc.name | jsonify }},
     "alternateName": {{ gc.short_name | jsonify }},
-    "description": "A simple golf scorecard for iPhone and Apple Watch, built to last a full round on the watch. Track strokes, putts, and penalties with no account, no GPS, no social feed, no AI features, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase.",
+    "description": "A simple golf scorecard for iPhone and Apple Watch. Track strokes, putts, and penalties with no account, no GPS, and no subscription. Score from your wrist, with Siri, or from the Lock Screen with Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase.",
     "url": "{{ site.url }}{{ gc.urls.page }}",
     "image": "{{ site.url }}/assets/golf-caddie-icon-512.png",
     "screenshot": [
@@ -67,803 +90,235 @@ last_modified_at: 2026-11-08
     ]
   }
   </script>
+  {%- comment -%} No aggregateRating or review markup: see CLAUDE.md. {%- endcomment %}
 
-  <style>
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      color: #1a1a1a;
-      line-height: 1.6;
-      background: linear-gradient(180deg, #f5f7fa 0%, #ffffff 50%, #f5f7fa 100%);
-    }
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": {{ site.title | jsonify }}, "item": "{{ site.url }}/" },
+      { "@type": "ListItem", "position": 2, "name": {{ gc.short_name | jsonify }}, "item": "{{ site.url }}{{ gc.urls.page }}" }
+    ]
+  }
+  </script>
 
-    header {
-      padding: 80px 20px 60px;
-      text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 42px;
-      margin-bottom: 20px;
-      font-weight: 700;
-    }
-
-    h2 {
-      font-size: 28px;
-      margin-top: 60px;
-      margin-bottom: 20px;
-      font-weight: 600;
-      text-align: center;
-    }
-
-    p {
-      max-width: 700px;
-      margin: 0 auto 20px;
-      font-size: 20px;
-    }
-
-    .section {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .feature-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(260px, 100%), 1fr));
-      gap: 30px;
-      margin-top: 40px;
-    }
-
-    .feature {
-      background: rgba(255, 255, 255, 0.7);
-      backdrop-filter: blur(6px);
-      -webkit-backdrop-filter: blur(6px);
-      padding: 25px;
-      border-radius: 12px;
-      font-size: 18px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-    }
-
-    .cta {
-      margin-top: 30px;
-      font-size: 22px;
-      font-weight: 600;
-    }
-
-    .header-actions {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 14px;
-      margin-top: 30px;
-    }
-
-    .btn-primary {
-      display: inline-block;
-      background: #007aff;
-      color: white;
-      font-size: 17px;
-      font-weight: 600;
-      padding: 14px 32px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-
-    .btn-primary:hover {
-      background: #0062cc;
-      color: white;
-      transform: translateY(-1px);
-    }
-
-    .btn-secondary {
-      display: inline-block;
-      background: transparent;
-      color: #007aff;
-      font-size: 15px;
-      font-weight: 500;
-      padding: 11px 28px;
-      border-radius: 12px;
-      border: 1.5px solid #007aff;
-      text-decoration: none;
-      transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
-    }
-
-    .btn-secondary:hover {
-      background: #007aff;
-      color: white;
-      transform: translateY(-1px);
-    }
-
-    a {
-      color: #007aff;
-      text-decoration: none;
-    }
-
-    .screenshot-row {
-      display: flex;
-      justify-content: center;
-      gap: 25px;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .screenshot {
-      width: 260px;
-      height: 563px;
-      border-radius: 22px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-      object-fit: cover;
-    }
-
-    .screenshot.watch {
-      width: 180px;
-      height: auto;
-      border-radius: 28px;
-    }
-
-    .help-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr));
-      gap: 20px;
-      margin-top: 32px;
-    }
-
-    .help-card {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 20px 22px;
-    }
-
-    .help-card-header {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      margin-bottom: 12px;
-    }
-
-    .help-card-icon {
-      font-size: 18px;
-      line-height: 1;
-      flex-shrink: 0;
-    }
-
-    .help-card-title {
-      font-size: 16px;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    .help-card ul {
-      margin: 0;
-      padding-left: 18px;
-      display: flex;
-      flex-direction: column;
-      gap: 6px;
-    }
-
-    .help-card li {
-      font-size: 14px;
-      color: #374151;
-      line-height: 1.5;
-    }
-
-    .support-block {
-      max-width: 700px;
-      margin: 48px auto 0;
-      text-align: center;
-    }
-
-    .support-block p {
-      font-size: 16px;
-      color: #6b7280;
-      margin-bottom: 16px;
-    }
-
-    .support-btn {
-      display: inline-block;
-      background: #007aff;
-      color: white;
-      font-size: 16px;
-      font-weight: 600;
-      padding: 14px 32px;
-      border-radius: 12px;
-      text-decoration: none;
-      transition: background 0.15s ease, transform 0.15s ease;
-    }
-
-    .support-btn:hover {
-      background: #0062cc;
-      color: white;
-      transform: translateY(-1px);
-    }
-
-    .pro-badge {
-      display: inline-block;
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: 0.04em;
-      color: #7c3aed;
-      background: #ede9fe;
-      border-radius: 5px;
-      padding: 2px 6px;
-      margin-left: 6px;
-      vertical-align: middle;
-      text-transform: uppercase;
-    }
-
-    .siri-block {
-      background: linear-gradient(135deg, #f0f0ff 0%, #f5f0ff 100%);
-      border: 1px solid #d4c5f9;
-      border-radius: 20px;
-      padding: 48px 32px;
-      text-align: center;
-      max-width: 700px;
-      margin: 0 auto;
-    }
-
-    .siri-icon {
-      font-size: 40px;
-      margin-bottom: 16px;
-    }
-
-    .siri-block h2 {
-      font-size: 26px;
-      margin-top: 0;
-      margin-bottom: 10px;
-      color: #1a1a1a;
-    }
-
-    .siri-sub {
-      color: #6b7280;
-      font-size: 16px;
-      margin-bottom: 28px !important;
-    }
-
-    .siri-commands {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      margin-bottom: 24px;
-    }
-
-    .siri-cmd {
-      background: white;
-      border: 1px solid #d4c5f9;
-      border-radius: 10px;
-      padding: 12px 20px;
-      font-size: 15px;
-      font-style: italic;
-      color: #1a1a1a;
-    }
-
-    .siri-note {
-      font-size: 13px;
-      color: #9ca3af;
-      margin: 0 !important;
-    }
-
-    .pricing-intro {
-      font-size: 17px;
-      color: #374151;
-      text-align: center;
-    }
-
-    .pricing-table {
-      width: 100%;
-      max-width: 760px;
-      margin: 24px auto 0;
-      border-collapse: collapse;
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      overflow: hidden;
-      font-size: 15px;
-    }
-
-    .pricing-table th,
-    .pricing-table td {
-      padding: 12px 16px;
-      text-align: left;
-      border-bottom: 1px solid #e5e7eb;
-      vertical-align: top;
-    }
-
-    .pricing-table thead th {
-      background: #f9fafb;
-      font-weight: 600;
-    }
-
-    .pricing-table tr:last-child th,
-    .pricing-table tr:last-child td {
-      border-bottom: none;
-    }
-
-    .pricing-table tbody th {
-      font-weight: 500;
-      color: #374151;
-    }
-
-    .pricing-note {
-      font-size: 13px;
-      color: #6b7280;
-      text-align: center;
-      margin-top: 12px;
-    }
-
-    .faq {
-      max-width: 760px;
-      margin: 0 auto;
-    }
-
-    .faq h3 {
-      font-size: 19px;
-      margin: 32px 0 8px;
-    }
-
-    .faq p {
-      font-size: 17px;
-      color: #374151;
-      margin: 0;
-      max-width: none;
-    }
-
-    .guide-list {
-      list-style: none;
-      max-width: 760px;
-      margin: 0 auto;
-      padding: 0;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .guide-list li {
-      background: white;
-      border: 1px solid #e5e7eb;
-      border-radius: 14px;
-      padding: 16px 20px;
-    }
-
-    .guide-list a {
-      font-size: 17px;
-      font-weight: 600;
-    }
-
-    .guide-list span {
-      display: block;
-      font-size: 14px;
-      color: #6b7280;
-      margin-top: 4px;
-    }
-
-    .final-cta {
-      text-align: center;
-    }
-
-    .final-cta p {
-      font-size: 17px;
-      color: #374151;
-    }
-
-    footer {
-      text-align: center;
-      padding: 60px 20px;
-      font-size: 14px;
-      color: #666;
-    }
-
-    footer nav {
-      margin-bottom: 8px;
-    }
-
-    footer p {
-      font-size: 14px;
-    }
-  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {%- for item in page.faq %}
+      {%- assign a = item.a | replace: "%price%", price | replace: "%trial%", trial | replace: "%ios%", gc.min_ios %}
+      {
+        "@type": "Question",
+        "name": {{ item.q | jsonify }},
+        "acceptedAnswer": { "@type": "Answer", "text": {{ a | markdownify | strip_html | strip | jsonify }} }
+      }{% unless forloop.last %},{% endunless %}
+      {%- endfor %}
+    ]
+  }
+  </script>
+  {% include site-css.html %}
 </head>
 
 <body>
-
-<header>
-  <h1>Golf Caddie - Simple Scorecard</h1>
-  <p>Keep your head in the game, not your phone. A simple golf scorecard light enough to last all 18 holes on Apple Watch. Score on iPhone, from your wrist, or with just your voice.</p>
-  <p style="font-size:16px; color:#6b7280; margin-top:-8px;">No account. No GPS. No social feed. No AI. No subscription. Just open and play.</p>
-  <div class="header-actions">
-    <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-    <a class="btn-secondary" href="mailto:carlosbuilds@icloud.com?subject=Golf%20Caddie%20Beta%20Access%20Request&body=Hi%2C%0A%0AI%27d%20love%20to%20join%20the%20Golf%20Caddie%20beta.%20Here%27s%20a%20bit%20about%20me%3A%0A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0AHow%20often%20I%20golf%3A%20%28e.g.%20weekly%2C%20a%20few%20times%20a%20month%29%0AAnything%20specific%20I%27d%20like%20to%20test%3A%0A%0AThanks%21">Request Beta Access</a>
-  </div>
-</header>
+{% include site-nav.html %}
 
 <main>
-
-<div class="section" id="why">
-  <h2>Why I built Golf Caddie</h2>
-  <p>Some big golf apps include Apple Watch scoring for free, but my Apple Watch SE never made it through a full round with them. I also didn't want GPS maps, a social feed, AI features, a subscription, or a complicated scorecard. So I built Golf Caddie to do one thing: let me tap my score and get back to golf. On that same SE, it lasts all 18 holes. The SE has the shortest rated battery life of Apple's current watches, so a newer Series or Ultra has even more to spare.</p>
-  <p style="font-size:15px; color:#6b7280;">{{ gc.developer }}, {{ gc.developer_bio }} and makes {{ gc.short_name }}</p>
-</div>
-
-<div class="section">
-  <h2>A simple golf scorecard for iPhone and Apple Watch</h2>
-  <div class="feature-grid">
-    <div class="feature"><strong>Simple Scorecard</strong><br>Track strokes, putts, and penalties per hole with one tap.</div>
-    <div class="feature"><strong>Score vs Par</strong><br>Birdie, Bogey, Eagle and more. See how you stack up every hole.</div>
-    <div class="feature"><strong>Quick Start</strong><br>Front 9, Back 9, or 18 holes. Start scoring in seconds, no setup needed.</div>
-    <div class="feature"><strong>Custom Pars</strong><br>Set par for any course layout, any hole.</div>
-    <div class="feature"><strong>Front 9 / Back 9</strong><br>Play just the front or back nine. Holes, par, and score all adjust automatically.</div>
-    <div class="feature"><strong>Share Scorecard</strong><br>Share a classic scorecard image, with circles for birdies and squares for bogeys.</div>
-    <div class="feature"><strong>Apple Watch</strong><span class="pro-badge">Pro</span><br>Lightweight scoring from your wrist, with no GPS running. Built to last all 18 holes.</div>
-    <div class="feature"><strong>Siri</strong><span class="pro-badge">Pro</span><br>Add strokes, advance holes, and check your score hands-free.</div>
-    <div class="feature"><strong>Live Activity</strong><span class="pro-badge">Pro</span><br>Score from the Lock Screen and Dynamic Island. No need to unlock your phone.</div>
-    <div class="feature"><strong>Club Distances</strong><br>Set your yardages once and check them mid-round on iPhone or Apple Watch.</div>
-    <div class="feature"><strong>Apple Health</strong><br>Log rounds as a Golf workout, with optional live heart rate and calories on your Watch.</div>
-    <div class="feature"><strong>Your Game Stats</strong><br>Scoring averages and trends across your rounds, right on the home screen.</div>
-    <div class="feature"><strong>Export Your Rounds</strong><br>Download every round as a spreadsheet. Open it in Numbers or Excel, or hand it to an AI to analyze your game.</div>
-    <div class="feature"><strong>Free {{ gc.pricing.trial_days }}-Day Trial</strong><br>Try Pro free. No credit card required. Unlock forever for just ${{ gc.pricing.pro_price }}.</div>
-  </div>
-</div>
-
-<div class="section">
-  <div class="siri-block">
-    <div class="siri-icon" aria-hidden="true">🎙️</div>
-    <h2>Score hands-free with Siri</h2>
-    <p class="siri-sub">No need to take your phone out. Just say it.</p>
-    <div class="siri-commands">
-      <div class="siri-cmd">"Start a quick round in Golf Caddie"</div>
-      <div class="siri-cmd">"Add a stroke in Golf Caddie"</div>
-      <div class="siri-cmd">"Add a putt in Golf Caddie"</div>
-      <div class="siri-cmd">"Add a penalty in Golf Caddie"</div>
-      <div class="siri-cmd">"Next hole in Golf Caddie"</div>
-      <div class="siri-cmd">"What hole am I on in Golf Caddie?"</div>
-      <div class="siri-cmd">"What is my round score in Golf Caddie?"</div>
-      <div class="siri-cmd">"What is my hole score in Golf Caddie?"</div>
+<div class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <h1>The simple golf scorecard for Apple Watch. Pay once, not every year.</h1>
+      <p class="sub">Score strokes, putts, and penalties from your wrist, by voice with Siri, or from your Lock Screen. No account, no GPS, no subscription.</p>
+      <div class="hero-cta">
+        {% include app-store-badge.html placement="app-hero" %}
+        <div class="qr"><img src="/assets/golf-caddie-qr.png" alt="QR code that opens Golf Caddie on the App Store" width="84" height="84" loading="lazy"><span>On a computer? Scan with your iPhone camera.</span></div>
+      </div>
+      <p class="facts"><strong>Free on iPhone.</strong> Pro is ${{ gc.pricing.pro_price }} once, after a {{ gc.pricing.trial_days }}-day free trial with no card. App Store privacy label: Data Not Collected.</p>
     </div>
-    <p class="siri-note">Works on iPhone and Apple Watch · Requires active Pro trial or purchase · <a href="/apps/golf-caddie/guides/keep-score-in-golf-with-siri/">Every Siri phrase explained</a></p>
+    {%- comment -%}
+      TODO(owner): replace hero-phone.png and the watch image with sharp, current screenshots in Apple's official
+      device frames (Apple Design Resources). hero-phone.png is cut from the 296px App Store image, so it looks
+      soft on Retina screens, and the watch frame here is plain CSS, not an Apple bezel.
+    {%- endcomment %}
+    <div class="devices">
+      <img class="phone" src="/assets/hero-phone.png" alt="Golf Caddie on iPhone: hole 6, par 3, with plus and minus buttons for strokes, putts, and penalties, and the round total with score vs par" width="224" height="428" fetchpriority="high">
+      <div class="watch"><img src="/apps/golf-caddie/images/watch-1.webp" alt="Golf Caddie on Apple Watch: hole 6 with strokes, putts, and penalties counters and score vs par" width="302" height="360"></div>
+    </div>
   </div>
 </div>
 
-<div class="section">
-  <h2>iPhone Screenshots</h2>
-  <div class="screenshot-row">
-    <img class="screenshot" src="images/01-live-activity.webp" alt="Golf Caddie Live Activity on the Lock Screen" width="296" height="640">
-    <img class="screenshot" src="images/02-siri-watch.webp" alt="Golf Caddie hands-free scoring with Siri and Apple Watch" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/03-share.webp" alt="Golf Caddie traditional scorecard share" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/04-just-golf.webp" alt="Golf Caddie simple scorecard, no account or GPS" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/05-quick-start.webp" alt="Golf Caddie Quick Start rounds" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/06-your-game.webp" alt="Golf Caddie Your Game stats dashboard" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/07-club-distances.webp" alt="Golf Caddie Club Distances cheat sheet" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/08-watch-battery.webp" alt="Golf Caddie Apple Watch battery-friendly scoring" width="296" height="640" loading="lazy">
-    <img class="screenshot" src="images/09-price.webp" alt="Golf Caddie Pro is a one-time $2.99, not a subscription" width="296" height="640" loading="lazy">
+<section>
+  <div class="wrap">
+    <h2>Three ways to score without your phone in your hand</h2>
+    <p class="lead">Scoring on iPhone is free. {{ gc.short_name }} Pro adds these three, and they all stay in sync.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>From your wrist</h3>
+        <p>Tap + for strokes, putts, and penalties on Apple Watch and swipe to the next hole. Your iPhone can stay in the bag.</p>
+      </div>
+      <div class="card">
+        <h3>By voice</h3>
+        <p>Say “Add a stroke in {{ gc.short_name }}” or “Next hole in {{ gc.short_name }}” to Siri. See <a href="/apps/golf-caddie/guides/keep-score-in-golf-with-siri/">every phrase that works</a>.</p>
+      </div>
+      <div class="card">
+        <h3>From the Lock Screen</h3>
+        <p>A Live Activity puts + and – buttons on your Lock Screen and Dynamic Island, so you can count a stroke without unlocking.</p>
+      </div>
+    </div>
   </div>
+</section>
 
-  <h2>Apple Watch Screenshots</h2>
-  <div class="screenshot-row">
-    <img class="screenshot watch" src="images/watch-1.webp" alt="Golf Caddie Apple Watch scoring screen" width="302" height="360" loading="lazy">
-    <img class="screenshot watch" src="images/watch-2.webp" alt="Golf Caddie Apple Watch club distances" width="302" height="360" loading="lazy">
-    <img class="screenshot watch" src="images/watch-3.webp" alt="Golf Caddie Apple Watch Quick Start" width="302" height="360" loading="lazy">
+<section class="band">
+  <div class="wrap">
+    <h2>How it works</h2>
+    <ol class="steps">
+      <li>
+        <h3>Start on your watch or iPhone</h3>
+        <p>Quick Start a full 18, the Front 9, or the Back 9. There's no sign-up and no course to download.</p>
+      </li>
+      <li>
+        <h3>Score each hole your way</h3>
+        <p>Tap on your wrist, ask Siri, or use the Lock Screen. Every device shows the same hole and the same score vs par.</p>
+      </li>
+      <li>
+        <h3>Finish and look back</h3>
+        <p>End the round to see your summary, share a classic scorecard, and follow your scoring trends on iPhone.</p>
+      </li>
+    </ol>
   </div>
-</div>
+</section>
 
-<div class="section" id="pricing">
-  <h2>Pricing: free, with a one-time ${{ gc.pricing.pro_price }} Pro unlock</h2>
-  <p class="pricing-intro">Golf Caddie is free to download with unlimited rounds. Golf Caddie Pro adds the Apple Watch app, Siri, and Live Activity for a one-time ${{ gc.pricing.pro_price }}. Every new user gets a {{ gc.pricing.trial_days }}-day Pro trial with no credit card required. There is no subscription. {{ gc.pricing.trial_note }}</p>
-  <table class="pricing-table">
-    <thead>
-      <tr>
-        <th scope="col">Feature</th>
-        <th scope="col">Free</th>
-        <th scope="col">Pro (${{ gc.pricing.pro_price }} once)</th>
-      </tr>
-    </thead>
-    <tbody>
-      {%- for f in live_features %}
-      {%- if f.tier == "free" or f.tier == "pro" %}
-      <tr><th scope="row">{{ f.name }}</th><td>{% if f.tier == "free" %}Yes{% else %}{{ gc.pricing.trial_days }}-day trial{% endif %}</td><td>Yes</td></tr>
-      {%- endif %}
-      {%- endfor %}
-    </tbody>
-  </table>
-  <p class="pricing-note">{{ gc.pricing.price_note }}</p>
-</div>
-
-<div class="section" id="faq">
-  <h2>Frequently asked questions</h2>
-  <div class="faq">
-    <h3>Is Golf Caddie free?</h3>
-    <p>Yes. The iPhone scorecard is free with unlimited rounds, including stats, scorecard sharing, CSV export, and club distances. Scoring on Apple Watch, Siri, and the Lock Screen Live Activity are part of Golf Caddie Pro, a one-time ${{ gc.pricing.pro_price }} purchase after a {{ gc.pricing.trial_days }}-day free trial.</p>
-
-    <h3>Is there a subscription?</h3>
-    <p>No. Pro is a single ${{ gc.pricing.pro_price }} in-app purchase that unlocks forever. The {{ gc.pricing.trial_days }}-day trial doesn't need a credit card. {{ gc.pricing.trial_note }} More in <a href="/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/">golf scorecard app without a subscription</a>.</p>
-
-    <h3>Does Golf Caddie need GPS or a signal?</h3>
-    <p>No. Golf Caddie doesn't use GPS or a course database. You enter strokes, putts, and penalties yourself, so it works on any course, even with no signal, and it's light on battery.</p>
-
-    <h3>Do I need to create an account?</h3>
-    <p>No. There's no sign-up. Your rounds are stored in your own iCloud account, and the developer collects no personal data. See the <a href="/apps/golf-caddie/privacy">privacy policy</a>, or <a href="/apps/golf-caddie/guides/golf-scorecard-app-no-account/">how a golf scorecard app works without an account</a>.</p>
-
-    <h3>Can I keep score on my Apple Watch?</h3>
-    <p>Yes, with Pro. The Watch app scores strokes, putts, and penalties, shows your club distances, and stays in sync with your iPhone and Live Activity as you play. Try it free for {{ gc.pricing.trial_days }} days.</p>
-
-    <h3>What do I need to use it?</h3>
-    <p>An iPhone running iOS {{ gc.min_ios }} or later. An Apple Watch is optional. Golf Caddie is only available on iPhone and Apple Watch.</p>
+<section>
+  <div class="wrap">
+    <h2>{{ gc.short_name }} vs subscription golf apps</h2>
+    <p class="lead">Subscription golf apps charge every year for GPS maps, shot tracking, and handicap tools. If you use those every round, they can be worth it. If you just want your score, you don't need to pay yearly.</p>
+    <div class="table-scroll">
+      <table class="grid">
+        <thead>
+          <tr><th scope="col"></th><th scope="col">{{ gc.short_name }}</th><th scope="col">Subscription golf apps</th></tr>
+        </thead>
+        <tbody>
+          <tr><th scope="row">Paid tier</th><td class="us">${{ gc.pricing.pro_price }} once</td><td>$59.99 to $99.99 a year</td></tr>
+          <tr><th scope="row">Cost over three seasons</th><td class="us">${{ gc.pricing.pro_price }}</td><td>About $180 to $300</td></tr>
+          <tr><th scope="row">Renews automatically</th><td class="us">No</td><td>Yes, until you cancel</td></tr>
+          <tr><th scope="row">Keeping score on iPhone</th><td class="us">Free, unlimited rounds</td><td>Free in the apps we checked</td></tr>
+          <tr><th scope="row">GPS yardages and shot tracking</th><td class="us">No. It's a scorecard.</td><td>Yes</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Subscription prices are the US yearly prices of TheGrint Pro, Golfshot Pro, and 18Birdies Premium, checked November 8, 2026. {{ gc.pricing.price_note }} See the <a href="/apps/golf-caddie/guides/golf-app-prices-compared/">full price comparison</a>, or {{ gc.short_name }} next to <a href="/apps/golf-caddie/guides/golf-caddie-vs-thegrint/">TheGrint</a>, <a href="/apps/golf-caddie/guides/golf-caddie-vs-golfshot/">Golfshot</a>, <a href="/apps/golf-caddie/guides/golf-caddie-vs-18birdies/">18Birdies</a>, and <a href="/apps/golf-caddie/guides/golf-caddie-vs-arccos/">Arccos</a>.</p>
   </div>
-</div>
+</section>
 
-{%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | sort: "date" | reverse %}
-{%- if guides.size > 0 %}
+<section class="band">
+  <div class="wrap">
+    <h2>See it on iPhone and Apple Watch</h2>
+    {%- comment -%}
+      TODO(owner): these are the App Store screenshots at 296px wide. Replace with sharper exports when you
+      next update the listing. 08-watch-battery ("Lasts your whole round") is left out on purpose until there
+      is a measured battery test to back it.
+    {%- endcomment %}
+    <div class="shots" tabindex="0" role="region" aria-label="App screenshots, scroll sideways">
+      <img src="images/04-just-golf.webp" alt="Golf Caddie scoring screen with strokes, putts, and penalties counters" width="296" height="640" loading="lazy">
+      <img class="w" src="images/watch-1.webp" alt="Golf Caddie Apple Watch scoring screen" width="302" height="360" loading="lazy">
+      <img src="images/01-live-activity.webp" alt="Golf Caddie Live Activity on the Lock Screen with plus and minus buttons" width="296" height="640" loading="lazy">
+      <img src="images/02-siri-watch.webp" alt="Siri request Add a stroke in Golf Caddie, with the Apple Watch scorecard" width="296" height="640" loading="lazy">
+      <img src="images/05-quick-start.webp" alt="Golf Caddie Quick Start with 18 Holes, Front 9, and Back 9" width="296" height="640" loading="lazy">
+      <img class="w" src="images/watch-3.webp" alt="Golf Caddie Quick Start on Apple Watch" width="302" height="360" loading="lazy">
+      <img src="images/03-share.webp" alt="Golf Caddie shareable scorecard with circles for birdies and squares for bogeys" width="296" height="640" loading="lazy">
+      <img src="images/06-your-game.webp" alt="Golf Caddie Your Game stats with scoring averages and trends" width="296" height="640" loading="lazy">
+      <img src="images/07-club-distances.webp" alt="Golf Caddie Club Distances cheat sheet" width="296" height="640" loading="lazy">
+      <img class="w" src="images/watch-2.webp" alt="Golf Caddie club distances on Apple Watch" width="302" height="360" loading="lazy">
+      <img src="images/09-price.webp" alt="Golf Caddie Pro is a one-time ${{ gc.pricing.pro_price }}, not a subscription" width="296" height="640" loading="lazy">
+    </div>
+  </div>
+</section>
 
-<div class="section" id="guides">
-  <h2>Golf scoring guides</h2>
-  <ul class="guide-list">
-    {%- for g in guides %}
-    <li><a href="{{ g.url }}">{{ g.title | escape }}</a><span>{{ g.description | escape }}</span></li>
+<section id="pricing">
+  <div class="wrap narrow">
+    <h2>What's free and what Pro adds</h2>
+    <p class="lead">Every new user gets a {{ gc.pricing.trial_days }}-day Pro trial with no credit card. {{ gc.pricing.trial_note }}</p>
+    <div class="table-scroll">
+      <table class="grid">
+        <thead>
+          <tr>
+            <th scope="col">Feature</th>
+            <th scope="col">Free</th>
+            <th scope="col">Pro (${{ gc.pricing.pro_price }} once)</th>
+          </tr>
+        </thead>
+        <tbody>
+          {%- for f in live_features %}
+          {%- if f.tier == "free" or f.tier == "pro" %}
+          <tr><th scope="row">{{ f.name }}</th><td>{% if f.tier == "free" %}Yes{% else %}{{ gc.pricing.trial_days }}-day trial{% endif %}</td><td>Yes</td></tr>
+          {%- endif %}
+          {%- endfor %}
+        </tbody>
+      </table>
+    </div>
+    <p class="note">{{ gc.pricing.price_note }}</p>
+    <p style="margin-top:22px"><a class="btn" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer" data-goatcounter-click="app-store-app-pricing" data-goatcounter-title="{{ page.url }}">Try it free on the App Store</a></p>
+  </div>
+</section>
+
+<section class="band">
+  <div class="wrap narrow">
+    <h2>Made by a golfer, not a subscription business</h2>
+    {%- comment -%}
+      TODO(owner): add a photo of yourself here (about 96px, square) for trust.
+      TODO(owner): battery. If you want to say how long Apple Watch lasts with Golf Caddie, run a real test
+      first (watch model, watchOS version, start and end battery level, round length, Workout Tracking setting)
+      and add the result here with the date. No battery claims on this page until then.
+      TODO(owner): user quotes. Add real App Store reviews here with the reviewer's name and date, once you
+      have permission to quote them. Never invent reviews or ratings.
+    {%- endcomment %}
+    <div class="maker" style="margin-top:18px">
+      <div>
+        <p>I built {{ gc.short_name }} because I wanted to keep score without GPS maps, a social feed, AI features, a subscription, or a complicated scorecard. It's a scorecard and nothing else. If something is missing or broken, <a href="mailto:{{ gc.support_email }}">email me</a>. Your feedback shapes every update.</p>
+        <p class="who">{{ gc.developer }}, {{ gc.developer_bio }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="faq" id="faq">
+  <div class="wrap narrow">
+    <h2>Frequently asked questions</h2>
+    {%- for item in page.faq %}
+    {%- assign a = item.a | replace: "%price%", price | replace: "%trial%", trial | replace: "%ios%", gc.min_ios %}
+    <h3>{{ item.q }}</h3>
+    {{ a | markdownify }}
     {%- endfor %}
-  </ul>
-  <p><a href="/apps/golf-caddie/guides/">All guides by topic</a></p>
-</div>
+    <p style="margin-top:26px">Looking for how-to steps? See <a href="/apps/golf-caddie/help/">{{ gc.short_name }} help</a>.</p>
+  </div>
+</section>
+
+{%- assign guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | where_exp: "p", "p.layout == 'guide'" | sort: "date" | reverse %}
+{%- if guides.size > 0 %}
+<section class="band" id="guides">
+  <div class="wrap">
+    <h2>Golf scoring guides</h2>
+    <ul class="links">
+      {%- for g in guides %}
+      <li><a href="{{ g.url }}">{{ g.title | escape }}</a></li>
+      {%- endfor %}
+    </ul>
+    <p style="margin-top:18px"><a href="/apps/golf-caddie/guides/">All guides by topic</a></p>
+  </div>
+</section>
 {%- endif %}
 
-<div class="section">
-  <h2>How to use Golf Caddie</h2>
-
-  <div class="help-grid">
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">⚡</span>
-        <h3 class="help-card-title">Quick Start Rounds</h3>
-      </div>
-      <ul>
-        <li>Start a round instantly with all holes set to <strong>Par 4</strong>.</li>
-        <li>Choose <strong>Front 9</strong> (holes 1–9), <strong>18 Holes</strong>, or <strong>Back 9</strong> (holes 10–18).</li>
-        <li>Quick Start is available on both iPhone and Apple Watch.</li>
-        <li>You can also say <strong>"Start a back 9 holes round in Golf Caddie"</strong> to Siri.</li>
-        <li>Perfect for casual rounds or when you don't want to enter course details.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">🏁</span>
-        <h3 class="help-card-title">Starting a Round</h3>
-      </div>
-      <ul>
-        <li>Tap <strong>Start Round</strong> on the home screen.</li>
-        <li>Enter the course name and choose 9 or 18 holes.</li>
-        <li>Your round saves automatically as you play.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">📋</span>
-        <h3 class="help-card-title">Managing Rounds</h3>
-      </div>
-      <ul>
-        <li>From the home screen, manage any saved round.</li>
-        <li>Sort rounds by <strong>date</strong> or <strong>course name</strong> using the menu at the top.</li>
-        <li>Swipe <strong>right</strong> to show the <strong>Copy</strong> and <strong>Rename</strong> buttons.</li>
-        <li>Swipe <strong>left</strong> to show the <strong>Delete</strong> button.</li>
-        <li>Copying creates a new round with the same holes and pars. A Back 9 round copies as a Back 9.</li>
-        <li>Copying an 18-hole round lets you choose <strong>18 Holes</strong>, <strong>Front 9</strong>, or <strong>Back 9</strong>.</li>
-        <li>Deleting always shows a confirmation first.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">✏️</span>
-        <h3 class="help-card-title">Tracking Your Score</h3>
-      </div>
-      <ul>
-        <li>New to scoring? Start with <a href="/apps/golf-caddie/guides/how-to-keep-score-in-golf/">how to keep score in golf</a>.</li>
-        <li><strong>Strokes</strong> are full swings before the green.</li>
-        <li><strong>Putts</strong> are strokes taken on the green (<a href="/apps/golf-caddie/guides/how-to-track-putts/">how to track putts</a>).</li>
-        <li><strong>Penalties</strong> include lost balls, OB, water hazards, etc.</li>
-        <li>You can change any score at any time.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">⌚</span>
-        <h3 class="help-card-title">Using the Apple Watch</h3>
-      </div>
-      <ul>
-        <li>Swipe left or right to move between holes.</li>
-        <li>Tap +/– to update strokes, putts, or penalties.</li>
-        <li>Once you add your first putt, strokes lock to prevent mistakes.</li>
-        <li>Your watch and phone stay in sync as you play.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">🔄</span>
-        <h3 class="help-card-title">How Syncing Works</h3>
-      </div>
-      <ul>
-        <li>Your iPhone, Apple Watch, Live Activity, and Siri all score the same round and update each other automatically.</li>
-        <li>Whichever one you used most recently updates the others.</li>
-        <li>Changing holes on one moves the others to the same hole.</li>
-        <li>If something looks out of sync, opening the iPhone app usually fixes it.</li>
-        <li>New rounds may take a moment to appear on the watch.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">🕐</span>
-        <h3 class="help-card-title">Editing Previous Holes</h3>
-      </div>
-      <ul>
-        <li>Go back and fix any hole at any time.</li>
-        <li>Helpful if you forgot a penalty or mis‑counted.</li>
-        <li>The watch may show a small reminder if you're editing an older hole.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">✅</span>
-        <h3 class="help-card-title">Finishing a Round</h3>
-      </div>
-      <ul>
-        <li>A round is complete once all holes have scores.</li>
-        <li>Tap <strong>End Round</strong> on the last hole on iPhone, or on the page after the last hole on Apple Watch. Ending it on one ends it on both and closes the Live Activity.</li>
-        <li>You can still make changes after finishing.</li>
-        <li>Tap <strong>Card View</strong> in the summary to see a traditional scorecard layout.</li>
-        <li>Tap <strong>Share</strong> to export a high-res scorecard image. Traditional golf marks included.</li>
-        <li>Your rounds appear in the history on the home screen.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">⚠️</span>
-        <h3 class="help-card-title">Troubleshooting</h3>
-      </div>
-      <ul>
-        <li>If the watch doesn't update, open the iPhone app.</li>
-        <li>Make sure Bluetooth is turned on.</li>
-        <li>Restarting the watch app can help if things get stuck.</li>
-        <li>If the watch shows <strong>No Active Round</strong>, start a round on your iPhone.</li>
-        <li>If the iPhone shows <strong>No Active Round</strong> after you reopen the app mid-round, your scores are safe. Tap the round in the Rounds list, or add a stroke on your Watch, to pick it back up.</li>
-        <li>If you changed phones or watches, tap <strong>Restore Purchase</strong> in Settings.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">🎙️</span>
-        <h3 class="help-card-title">Using Siri</h3>
-      </div>
-      <ul>
-        <li><strong>"Start a quick round"</strong>: starts an 18-hole Quick Start round. Say <strong>"Start a front 9 holes round"</strong> or <strong>"Start a back 9 holes round"</strong> for nine.</li>
-        <li><strong>"Add a stroke"</strong>: increments strokes on the current hole.</li>
-        <li><strong>"Add a putt"</strong>: increments putts on the current hole.</li>
-        <li><strong>"Add a penalty"</strong>: increments penalties on the current hole.</li>
-        <li><strong>"Next hole"</strong>: advances to the next hole and syncs to Watch.</li>
-        <li><strong>"What hole am I on?"</strong>: reports hole number, strokes, and score term.</li>
-        <li><strong>"What is my round score?"</strong>: reports gross total and over/under par.</li>
-        <li><strong>"What is my hole score?"</strong>: reports using golf terms (Eagle, Birdie, Bogey, etc.).</li>
-        <li>Siri works in the background without opening the app, and updates your scorecard, Watch, and Live Activity right away.</li>
-        <li>Requires active Pro trial or purchase.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">💳</span>
-        <h3 class="help-card-title">Purchases & Trial</h3>
-      </div>
-      <ul>
-        <li>Apple Watch, Siri, and Live Activity are part of Golf Caddie Pro.</li>
-        <li>On first launch you'll see a welcome sheet. Tap <strong>Start</strong> to begin your <strong>free {{ gc.pricing.trial_days }}-day trial</strong>, no credit card required.</li>
-        <li>If you're not ready, tap <strong>Not Now</strong>. You can start it anytime from the home screen banner, and you'll be re-offered after a week.</li>
-        <li>After the trial, unlock Pro forever for a <strong>one-time ${{ gc.pricing.pro_price }}</strong>. No subscription, ever.</li>
-        <li>Restore purchases anytime from Settings.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">🔒</span>
-        <h3 class="help-card-title">Live Activity <span class="pro-badge">Pro</span></h3>
-      </div>
-      <ul>
-        <li>Once a round starts, it appears on your <strong>Lock Screen</strong> and in the <strong>Dynamic Island</strong>.</li>
-        <li>Tap +/– right there to update strokes, putts, or penalties. No unlock needed.</li>
-        <li>Strokes lock once you enter a putt, matching the scorecard rules.</li>
-        <li>The <strong>next hole</strong> button advances your scorecard, Live Activity, and Watch together.</li>
-        <li>Every tap is saved and sent to your Watch right away, even with your phone locked.</li>
-        <li>Scores and hole changes made on your Watch show up on the Live Activity too.</li>
-        <li>The Live Activity closes automatically when the round ends.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">⛳</span>
-        <h3 class="help-card-title">Club Distances</h3>
-      </div>
-      <ul>
-        <li>Set up yardages once in <strong>Settings</strong>: 14 standard clubs are pre-seeded, or add your own. Not sure of your numbers? See <a href="/apps/golf-caddie/guides/how-to-find-your-club-distances/">how to find your club distances</a>.</li>
-        <li>Check them mid-round from the scorecard toolbar on iPhone, or the totals row on Apple Watch.</li>
-        <li>It's a read-only cheat sheet, so it never gets in the way of scoring.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">❤️</span>
-        <h3 class="help-card-title">Apple Health</h3>
-      </div>
-      <ul>
-        <li>Turn it on in <strong>Settings</strong> on your iPhone. It's off by default. Your Apple Watch follows the same setting.</li>
-        <li><strong>Save Summary</strong> writes a Golf workout to Health when your round ends, whether you end it on iPhone or Apple Watch.</li>
-        <li><strong>Full Session</strong> runs a live Watch workout while your round is active, tracking heart rate, calories, and steps (<a href="/apps/golf-caddie/guides/apple-watch-battery-golf-round/">what it means for battery</a>).</li>
-        <li>The first time you use Full Session, your Watch asks for permission to save workouts to Health.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">📊</span>
-        <h3 class="help-card-title">Your Game Stats</h3>
-      </div>
-      <ul>
-        <li>The Rounds tab shows your scoring averages and trends over time.</li>
-        <li>Updates automatically as you finish more rounds. No setup needed.</li>
-      </ul>
-    </div>
-
-    <div class="help-card">
-      <div class="help-card-header">
-        <span class="help-card-icon" aria-hidden="true">📤</span>
-        <h3 class="help-card-title">Exporting Your Rounds</h3>
-      </div>
-      <ul>
-        <li>Go to <strong>Settings → Your Data → Export Rounds (CSV)</strong> and choose where to send it: Files, Mail, AirDrop, or another app.</li>
-        <li>The spreadsheet has one row per hole: date, start and end time, course, Front 9 / Back 9 / 18 Holes, par, strokes, putts, penalties, and score vs par.</li>
-        <li>Open it in <strong>Numbers</strong>, <strong>Excel</strong>, or <strong>Google Sheets</strong>, or give it to an AI assistant and ask how to improve your game.</li>
-        <li>Free for everyone. No Pro needed. The file only goes where you send it.</li>
-      </ul>
-    </div>
-
+<section class="final">
+  <div class="wrap">
+    <h2>Score your next round from your wrist</h2>
+    <p>Free on the App Store. Try Pro free for {{ gc.pricing.trial_days }} days, then keep it for a one-time ${{ gc.pricing.pro_price }}.</p>
+    <a class="btn" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer" data-goatcounter-click="app-store-app-final" data-goatcounter-title="{{ page.url }}">Get {{ gc.short_name }} on the App Store</a>
   </div>
-
-  <div class="support-block">
-    <p>Have a question, found a bug, or want to suggest something?</p>
-    <a class="support-btn" href="mailto:carlosbuilds@icloud.com?subject=Golf%20Caddie%20Feedback&body=Hi%2C%0A%0A%5BDescribe%20your%20question%2C%20bug%2C%20or%20suggestion%20here%5D%0A%0AApp%20version%3A%0ADevice%3A%20%28e.g.%20iPhone%2015%2C%20Apple%20Watch%20Series%209%29%0A%0AThanks%21">Contact Support</a>
-  </div>
-</div>
-
-<div class="section">
-  <h2>Privacy</h2>
-  <p>We collect no personal data. View the full privacy policy:</p>
-  <p><a href="/apps/golf-caddie/privacy">Privacy Policy</a></p>
-</div>
-
-<div class="section final-cta">
-  <h2>Start scoring your next round</h2>
-  <p>Free on the App Store. Try Pro free for {{ gc.pricing.trial_days }} days, then keep it for a one-time ${{ gc.pricing.pro_price }}.</p>
-  <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
-</div>
-
+</section>
 </main>
 
-<footer>
-  <nav aria-label="Footer">
-    <a href="/">Carlos Apps</a> · <a href="/apps/golf-caddie/privacy">Privacy Policy</a> · <a href="mailto:carlosbuilds@icloud.com">Support</a> · <a href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">App Store</a>
-  </nav>
-  <p>© 2026 Golf Caddie</p>
-</footer>
-
+{% include site-footer.html %}
 </body>
 </html>

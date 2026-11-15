@@ -1,0 +1,142 @@
+{%- comment -%}
+  Shared styles for the landing pages (home, app page, help). Inlined so each page is one request.
+  Mobile-first; system fonts; one brand colour (#2d6a4f, 6.1:1 on the page background).
+{%- endcomment -%}
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #1a1a1a;
+    background: #fafaf8;
+    line-height: 1.6;
+    font-size: 17px;
+  }
+  img { max-width: 100%; height: auto; }
+  a { color: #2d6a4f; }
+  h1, h2, h3 { line-height: 1.2; margin: 0; }
+  p { margin: 0; }
+  .wrap { max-width: 1040px; margin: 0 auto; padding: 0 20px; }
+  .narrow { max-width: 720px; }
+  .muted { color: #4b5563; }
+
+  /* Top bar */
+  .nav { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 12px 20px; max-width: 1040px; margin: 0 auto; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; color: #1a1a1a; text-decoration: none; font-size: 17px; }
+  .brand img { border-radius: 8px; }
+  .nav-links { display: flex; align-items: center; gap: 18px; font-size: 15px; }
+  .nav-links a { text-decoration: none; font-weight: 500; }
+  .nav-links .hide-s { display: none; }
+
+  /* Buttons */
+  .btn { display: inline-block; background: #2d6a4f; color: #fff; font-weight: 600; font-size: 17px; padding: 13px 26px; border-radius: 12px; text-decoration: none; }
+  .btn:hover { background: #24573f; }
+  .badge-link { display: inline-block; line-height: 0; padding: 12px 12px 12px 0; }
+  .badge-link img { height: 48px; width: auto; }
+
+  /* Hero */
+  .hero { background: #f7f5f0; border-bottom: 1px solid #ebe8e0; overflow: hidden; }
+  .hero-grid { display: grid; gap: 8px; padding-top: 28px; }
+  .hero h1 { font-size: 32px; letter-spacing: -0.02em; }
+  .hero .sub { font-size: 18px; color: #374151; margin-top: 14px; }
+  .hero-cta { margin-top: 12px; display: flex; align-items: center; gap: 18px; flex-wrap: wrap; }
+  .hero .facts { font-size: 15px; color: #4b5563; margin-top: 2px; }
+  .hero .facts strong { color: #1a1a1a; }
+  .qr { display: none; }
+  .devices { position: relative; display: flex; justify-content: center; align-items: flex-end; margin-top: 20px; min-height: 300px; }
+  .devices .phone { display: block; width: 224px; height: auto; margin-bottom: -4px; clip-path: inset(6px 6px 0 6px round 40px 40px 0 0); }
+  .watch { position: absolute; right: calc(50% - 168px); bottom: 26px; width: 128px; padding: 9px; background: #1c1c1e; border-radius: 34px; box-shadow: 0 10px 30px rgba(0,0,0,0.25); line-height: 0; }
+  .watch img { border-radius: 25px; width: 100%; height: auto; }
+
+  /* Sections */
+  section { padding: 52px 0; }
+  section h2 { font-size: 27px; letter-spacing: -0.01em; }
+  section .lead { color: #4b5563; margin-top: 10px; max-width: 640px; }
+  .cards { display: grid; gap: 16px; margin-top: 26px; }
+  .card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 20px 22px; }
+  .card h3 { font-size: 19px; }
+  .card p { color: #374151; margin-top: 8px; font-size: 16px; }
+  .tag { display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: #2d6a4f; background: #e8f5ee; border-radius: 6px; padding: 2px 8px; margin-left: 6px; vertical-align: middle; }
+
+  .steps { list-style: none; counter-reset: step; padding: 0; margin: 26px 0 0; display: grid; gap: 16px; }
+  .steps li { counter-increment: step; position: relative; padding: 0 0 0 54px; }
+  .steps li::before { content: counter(step); position: absolute; left: 0; top: 0; width: 38px; height: 38px; border-radius: 50%; background: #2d6a4f; color: #fff; font-weight: 700; display: flex; align-items: center; justify-content: center; }
+  .steps h3 { font-size: 19px; padding-top: 6px; }
+  .steps p { color: #374151; margin-top: 6px; font-size: 16px; }
+
+  .band { background: #fff; border-top: 1px solid #e5e7eb; border-bottom: 1px solid #e5e7eb; }
+
+  /* Tables */
+  .table-scroll { overflow-x: auto; margin-top: 24px; }
+  table.grid { width: 100%; border-collapse: collapse; background: #fff; border: 1px solid #e5e7eb; border-radius: 12px; font-size: 15px; }
+  table.grid th, table.grid td { text-align: left; padding: 12px 14px; border-bottom: 1px solid #eef0f2; vertical-align: top; }
+  table.grid thead th { font-size: 14px; background: #f3f4f1; }
+  table.grid tbody tr:last-child th, table.grid tbody tr:last-child td { border-bottom: 0; }
+  table.grid th[scope=row] { font-weight: 600; }
+  table.grid .us { background: #f0f7f3; font-weight: 600; }
+  .note { font-size: 14px; color: #4b5563; margin-top: 12px; }
+
+  /* Screenshot strip */
+  .shots { display: flex; gap: 14px; overflow-x: auto; padding: 4px 2px 14px; margin-top: 24px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .shots img { flex: 0 0 auto; width: 222px; height: 480px; border-radius: 18px; border: 1px solid #e5e7eb; scroll-snap-align: start; background: #f7f5f0; }
+  .shots img.w { width: 151px; height: 180px; border-radius: 26px; align-self: center; border: 6px solid #1c1c1e; }
+
+  /* FAQ */
+  .faq h3 { font-size: 18px; margin-top: 26px; }
+  .faq p { color: #374151; margin-top: 6px; }
+
+  /* Maker note and quotes */
+  .maker { display: flex; gap: 16px; align-items: flex-start; }
+  .maker p { color: #374151; }
+  .maker .who { font-size: 15px; color: #4b5563; margin-top: 8px; }
+
+  /* Link lists */
+  .links { list-style: none; padding: 0; margin: 20px 0 0; display: grid; gap: 10px; }
+  .links a { font-weight: 500; text-decoration: none; }
+  .links a:hover { text-decoration: underline; }
+
+  /* Final call to action */
+  .final { text-align: center; }
+  .final p { color: #374151; margin: 10px auto 20px; max-width: 560px; }
+
+  /* Help cards */
+  .help-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(300px, 100%), 1fr)); gap: 16px; margin-top: 26px; }
+  .help-card { background: #fff; border: 1px solid #e5e7eb; border-radius: 14px; padding: 20px 22px; }
+  .help-card-header { display: flex; align-items: center; gap: 10px; margin-bottom: 12px; }
+  .help-card-icon { font-size: 18px; line-height: 1; flex-shrink: 0; }
+  .help-card-title { font-size: 16px; font-weight: 600; margin: 0; }
+  .help-card ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 6px; }
+  .help-card li { font-size: 15px; color: #374151; line-height: 1.5; }
+
+  .crumbs { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin: 20px 0 0; font-size: 14px; color: #4b5563; }
+  .crumbs li + li::before { content: "›"; margin-right: 6px; color: #6b7280; }
+  .crumbs a { text-decoration: none; }
+
+  footer { padding: 34px 20px 48px; text-align: center; font-size: 14px; color: #4b5563; }
+  footer nav { display: flex; flex-wrap: wrap; justify-content: center; gap: 6px 16px; margin-bottom: 10px; }
+  footer a { text-decoration: none; }
+
+  @media (min-width: 720px) {
+    body { font-size: 18px; }
+    .nav-links .hide-s { display: inline; }
+    .hero h1 { font-size: 44px; }
+    .hero .sub { font-size: 20px; }
+    section { padding: 72px 0; }
+    section h2 { font-size: 32px; }
+    .cards { grid-template-columns: repeat(3, 1fr); }
+    .steps { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .links { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (min-width: 960px) {
+    .hero-grid { grid-template-columns: 1.15fr 0.85fr; align-items: end; gap: 40px; padding-top: 56px; }
+    .hero-copy { padding-bottom: 64px; }
+    .hero h1 { font-size: 50px; }
+    .devices { margin-top: 0; min-height: 430px; }
+    .devices .phone { width: 248px; }
+    .watch { right: calc(50% - 190px); bottom: 40px; width: 140px; }
+    /* Desktop visitors can't install from here, so show a QR code next to the badge. */
+    .qr { display: flex; align-items: center; gap: 12px; font-size: 14px; color: #4b5563; max-width: 250px; line-height: 1.4; }
+    .qr img { width: 84px; height: 84px; border-radius: 8px; border: 1px solid #e5e7eb; background: #fff; padding: 4px; }
+  }
+</style>
