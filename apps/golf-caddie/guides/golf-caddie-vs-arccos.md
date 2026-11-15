@@ -3,8 +3,9 @@ title: "Arccos alternative without a membership: Golf Caddie vs Arccos"
 html_title: "Arccos Alternative Without a Membership | Golf Caddie"
 description: "Want an Arccos alternative without sensors or a $199.99 yearly fee? Golf Caddie keeps score on iPhone free, with Apple Watch scoring for a one-time price."
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-arccos/
+image: /assets/og/golf-caddie-vs-arccos.png
 date: 2026-11-08
-last_modified_at: 2026-11-08
+last_modified_at: 2026-11-14
 
 answer: >-
   If you want to keep score without buying sensors or paying a yearly
@@ -72,9 +73,9 @@ See how other golf apps compare in [what golf apps cost in 2026](/apps/golf-cadd
 
 A scorecard you can use in seconds, without hardware or an account. Tap to add strokes, putts, and penalties on iPhone and see your score vs par after every hole. With Pro, score from your wrist on Apple Watch, by voice with Siri, or from the Lock Screen without unlocking your phone.
 
-- **Free on iPhone:** unlimited rounds, strokes, putts, penalties, score vs par, stats, a shareable scorecard, CSV export, club distances, and Apple Health golf workouts.
-- **Pro, one-time ${{ gc.pricing.pro_price }}:** the Apple Watch app, 8 [Siri voice commands](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/) like "Add a stroke in {{ gc.short_name }}", and a Lock Screen Live Activity.
-- **Try Pro free:** {{ gc.pricing.trial_days }} days, no card. {{ gc.pricing.trial_note }}
+Scoring on iPhone is free with unlimited rounds, and Pro is a one-time ${{ gc.pricing.pro_price }} for the Apple Watch app, Siri, and the Lock Screen. See [what's free and what Pro adds]({{ gc.urls.page }}#pricing).
+
+Try Pro free: {{ gc.pricing.trial_days }} days, no card. {{ gc.pricing.trial_note }}
 
 {% include screenshot.html file="watch-1" watch=true alt="Golf Caddie on Apple Watch showing hole 6, par 3, with strokes, putts, and penalties counters and the round total of 81, plus 10 vs par" caption="Scoring a hole on Apple Watch in Golf Caddie. Nothing to clip onto your clubs." %}
 

@@ -3,8 +3,9 @@ title: "Apple Watch battery for 18 holes: what drains it and how to make it last
 html_title: "Apple Watch Battery for a Round of Golf | Golf Caddie"
 description: "Will your Apple Watch last 18 holes? What drains the battery during a round of golf, how Low Power Mode helps, and app settings that make it last longer."
 permalink: /apps/golf-caddie/guides/apple-watch-battery-golf-round/
+image: /assets/og/apple-watch-battery-golf-round.png
 date: 2026-10-27
-last_modified_at: 2026-11-08
+last_modified_at: 2026-11-14
 
 answer: >-
   An Apple Watch can last a full round if GPS isn't running the whole time.
@@ -49,6 +50,13 @@ Apple's [battery page](https://www.apple.com/watch/battery/) lists tested batter
 
 ## Will an Apple Watch SE last 18 holes of golf?
 
+{% comment %}
+TODO(owner): battery test. The statements below are your first-hand experience on one Apple Watch SE.
+Replace them with a measured test when you can: watch model and age, watchOS version, battery health,
+Workout Tracking setting, battery level at the first tee and after the 18th, and round length, with the date.
+Until then, keep battery out of headlines and download boxes elsewhere on the site.
+{% endcomment %}
+
 It can, if GPS isn't running all round. Apple rates the Apple Watch SE 3 at up to 18 hours of battery, the shortest of its current watches, and a golf GPS app tracks your location for the whole four-plus hours. With a scorecard-only app and no GPS, my own SE lasts all 18 holes.
 
 For comparison, Apple rates Series 12 at up to 24 hours and Ultra 4 at up to 50 hours ([Apple's battery page](https://www.apple.com/watch/battery/), November 2026), so a newer Series or Ultra has more battery to spare. That's still one golfer's watch, not a lab test: older watches and worn batteries can do worse.
@@ -60,7 +68,7 @@ If you golf with an SE, these help the most:
 - **Check battery health** in Settings, then Battery, on the watch, and start the round fully charged.
 - **Turn on Low Power Mode** if your battery is older (see below).
 
-You can also leave your iPhone in the golf bag and score on the watch: see [keep score on Apple Watch with your iPhone in the golf bag](/apps/golf-caddie/guides/apple-watch-golf-without-iphone/).
+You can also leave your iPhone in the golf bag and score on the watch: see [keep score on Apple Watch with your iPhone in the golf bag](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/#can-you-leave-your-iphone-in-the-golf-bag).
 
 {% include download-cta.html text="Score from your Apple Watch with no GPS running." %}
 

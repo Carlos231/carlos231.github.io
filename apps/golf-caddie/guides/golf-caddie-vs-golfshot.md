@@ -3,8 +3,9 @@ title: "Golf Caddie vs Golfshot: do you need GPS and shot tracking, or just your
 html_title: "Golfshot Alternative for Simple Scoring | Golf Caddie"
 description: "Golf Caddie vs Golfshot, checked November 2026: what Golfshot's free tier covers, what Pro costs, ads and privacy labels, and who only needs a scorecard."
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
+image: /assets/og/golf-caddie-vs-golfshot.png
 date: 2026-11-08
-last_modified_at: 2026-11-08
+last_modified_at: 2026-11-14
 
 answer: >-
   Stay with Golfshot if you use its GPS yardages, shot tracking, or handicap
@@ -80,9 +81,9 @@ If you'd use Strokes Gained and automatic tracking to plan your practice, Pro bu
 
 When the score is all you want from a golf app. {{ gc.short_name }} opens straight to Quick Start, with no account, no ads, no GPS, and no course search. You tap strokes, putts, and penalties, and see your score vs par after every hole, on iPhone, on your wrist, by voice, or from the Lock Screen.
 
-- **Free on iPhone:** unlimited rounds, strokes, putts, penalties, score vs par, stats, a shareable scorecard, CSV export, club distances, and Apple Health golf workouts.
-- **Pro, one-time ${{ gc.pricing.pro_price }}:** the Apple Watch app, 8 [Siri voice commands](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/), and a Lock Screen Live Activity. Nothing renews.
-- **No ads.** Not in the free version, and not as a reason to upgrade.
+Scoring on iPhone is free with unlimited rounds, and Pro is a one-time ${{ gc.pricing.pro_price }} for the Apple Watch app, Siri, and the Lock Screen. See [what's free and what Pro adds]({{ gc.urls.page }}#pricing).
+
+{{ gc.short_name }} has no ads, not in the free version and not as a reason to upgrade.
 
 {% include screenshot.html file="05-quick-start" alt="Golf Caddie Quick Start sheet on iPhone with buttons for 18 Holes, Front 9, and Back 9, with no sign-in screen" caption="Golf Caddie opens straight to Quick Start. There's no sign-up screen." %}
 

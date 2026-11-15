@@ -3,8 +3,11 @@ title: "Apple Watch golf scorecard without GPS: how it works and who it's for"
 html_title: "Apple Watch Golf Scorecard Without GPS | Golf Caddie"
 description: "Keep score on your Apple Watch without GPS: how scorecard-only apps work, why golfers skip GPS, what you give up, and how scoring a hole looks on the wrist."
 permalink: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
+image: /assets/og/apple-watch-golf-scorecard-without-gps.png
 date: 2026-10-18
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-14
+redirect_from:
+  - /apps/golf-caddie/guides/apple-watch-golf-without-iphone/
 
 answer: >-
   Yes, you can keep score on an Apple Watch without GPS. A scorecard-only app
@@ -94,7 +97,21 @@ A round in Golf Caddie, step by step:
 
 With Pro you can also score with your voice ("Add a putt in Golf Caddie") or from the iPhone Lock Screen without unlocking. See every phrase in [keep score in golf with Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
-Your iPhone can stay in the golf bag while you score on the watch. See [keep score on Apple Watch with your iPhone in the golf bag](/apps/golf-caddie/guides/apple-watch-golf-without-iphone/) for what works on the watch alone and how scores sync.
+## Can you leave your iPhone in the golf bag?
+
+Yes. Start the round on the watch or on your iPhone, score each hole on the watch, and your scores sync to the iPhone as you play. If the watch loses its connection, the changes wait on the watch and sync when it is back in range. Your iPhone can stay in the golf bag.
+
+A few things still happen on the iPhone. Here is what to do there and where:
+
+| Task | Where |
+|---|---|
+| Start the free Pro trial or buy Pro | iPhone |
+| Enter club distances | iPhone (shown on the watch) |
+| Change a hole's par | iPhone (shown on the watch) |
+| Settings, like Workout Tracking | iPhone (the watch follows) |
+| Stats, sharing, and CSV export | iPhone |
+
+You don't need a cellular Apple Watch or a signal on the course.
 
 ## Does a scorecard-only app work without cell signal?
 

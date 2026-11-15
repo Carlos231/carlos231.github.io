@@ -3,6 +3,7 @@ title: "Keep score in golf with Siri: the exact phrases that work"
 html_title: "Keep Score in Golf With Siri (Exact Phrases) | Golf Caddie"
 description: "Can Siri keep score in golf? Yes, with Golf Caddie. The exact Siri phrases for strokes, putts, penalties, and your score, hands-free on iPhone and Apple Watch."
 permalink: /apps/golf-caddie/guides/keep-score-in-golf-with-siri/
+image: /assets/og/keep-score-in-golf-with-siri.png
 date: 2026-10-27
 last_modified_at: 2026-10-27
 

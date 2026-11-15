@@ -3,8 +3,9 @@ title: "Golf Caddie vs TheGrint: which golf app do you actually need?"
 html_title: "TheGrint Alternative for Apple Watch Scoring | Golf Caddie"
 description: "Golf Caddie vs TheGrint, checked November 2026: what's free, what Apple Watch scoring costs, handicaps, GPS, and privacy, and which golfers need which app."
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-thegrint/
+image: /assets/og/golf-caddie-vs-thegrint.png
 date: 2026-11-02
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-14
 
 answer: >-
   Choose TheGrint if you want GPS yardages, an official USGA Handicap ID,
@@ -80,11 +81,9 @@ If any of these is why you play with an app, TheGrint is the better pick:
 
 When you mainly want to keep your own score with as little app as possible. {{ gc.short_name }} opens straight to a round with no account, scores from your wrist, by voice with Siri, or from the Lock Screen, and keeps your rounds in your own iCloud. Its App Store privacy label says "Data Not Collected."
 
-What you get in {{ gc.short_name }}:
+Scoring on iPhone is free with unlimited rounds, and Pro is a one-time ${{ gc.pricing.pro_price }} for the Apple Watch app, Siri, and the Lock Screen. See [what's free and what Pro adds]({{ gc.urls.page }}#pricing).
 
-- **Free on iPhone:** unlimited rounds, strokes, putts, penalties, score vs par, stats, a shareable scorecard, CSV export, club distances, and Apple Health golf workouts.
-- **Pro, one-time ${{ gc.pricing.pro_price }}:** the Apple Watch app, 8 [Siri voice commands](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/) like "Add a stroke in {{ gc.short_name }}", and a Lock Screen Live Activity.
-- **No account:** you never sign up. See [golf scorecard app with no account](/apps/golf-caddie/guides/golf-scorecard-app-no-account/) for where your rounds are stored.
+No account: you never sign up. See [golf scorecard app with no account](/apps/golf-caddie/guides/golf-scorecard-app-no-account/) for where your rounds are stored.
 
 {% include screenshot.html file="05-quick-start" alt="Golf Caddie Quick Start sheet on iPhone with buttons for 18 Holes, Front 9, and Back 9, with no sign-in screen" caption="Golf Caddie opens straight to Quick Start. There's no sign-up screen." %}
 

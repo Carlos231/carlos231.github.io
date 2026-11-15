@@ -3,6 +3,7 @@ title: "How to keep score in golf: a hole-by-hole guide for beginners"
 html_title: "How to Keep Score in Golf (With Examples) | Golf Caddie"
 description: "How to keep score in golf: what counts as a stroke, how penalty strokes work, how to fill in a scorecard, and what birdie, par, and bogey mean, with examples."
 permalink: /apps/golf-caddie/guides/how-to-keep-score-in-golf/
+image: /assets/og/how-to-keep-score-in-golf.png
 date: 2026-10-19
 last_modified_at: 2026-10-27
 

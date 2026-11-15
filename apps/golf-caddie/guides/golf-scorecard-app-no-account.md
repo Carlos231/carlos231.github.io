@@ -3,6 +3,7 @@ title: "Golf scorecard app with no account: how it works and what to check"
 html_title: "Golf Scorecard App With No Account | Golf Caddie"
 description: "Want a golf scorecard app with no sign-up? Where your scores are stored without an account, what happens when you switch phones, and how to check any app first."
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-no-account/
+image: /assets/og/golf-scorecard-app-no-account.png
 date: 2026-10-19
 last_modified_at: 2026-10-27
 

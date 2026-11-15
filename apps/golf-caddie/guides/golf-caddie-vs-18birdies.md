@@ -3,8 +3,9 @@ title: "Golf Caddie vs 18Birdies: do you need to switch?"
 html_title: "18Birdies Alternative for Simple Scoring | Golf Caddie"
 description: "Golf Caddie vs 18Birdies, checked November 2026: what 18Birdies gives you free, what Premium costs, privacy labels, and when a scorecard-only app fits better."
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-18birdies/
+image: /assets/og/golf-caddie-vs-18birdies.png
 date: 2026-11-02
-last_modified_at: 2026-11-02
+last_modified_at: 2026-11-14
 
 answer: >-
   You may not need to switch. As of November 2026, 18Birdies' free tier
@@ -91,7 +92,7 @@ GPS uses more battery than a scorecard. 18Birdies' App Store listing carries App
 
 How long your watch lasts still depends on your model, its battery health, and whether a workout or Always On Display is running. Our [Apple Watch battery guide](/apps/golf-caddie/guides/apple-watch-battery-golf-round/) covers what drains it during a round and the settings that help.
 
-{% include screenshot.html file="08-watch-battery" alt="Golf Caddie Quick Start on Apple Watch with buttons for 18 Holes, Front 9, and Back 9, under the caption Lasts your whole round" caption="Golf Caddie on Apple Watch never uses location, so scoring stays light on battery." %}
+{% include screenshot.html file="watch-3" watch=true alt="Golf Caddie Quick Start on Apple Watch with buttons for 18 Holes, Front 9, and Back 9" caption="Golf Caddie on Apple Watch never uses location, so scoring stays light on battery." %}
 
 ## Which should you choose?
 
