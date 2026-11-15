@@ -24,7 +24,7 @@ Go through this list for anything you changed:
 - [ ] **Facts changed? Edit only the data file.** Pages, schema, and `llms.txt` update from it. Two spots still hardcode $2.99 and need a manual edit: the `09-price.webp` alt text and `.agents/product-marketing.md`.
 - [ ] **Unreleased features are hidden.** Anything not live on the App Store yet has `since: "<version>"` in the data file and its page copy is wrapped in `{% unless upcoming == "<version>" %}...{% endunless %}`, with `upcoming_version` set. The hook prints the live version.
 - [ ] **Rewrote existing copy?** You have the before → after and it fits the voice in [.agents/product-marketing.md](.agents/product-marketing.md).
-- [ ] **Campaign link untouched.** Download buttons use `{{ gc.urls.download }}` (`pt=128660093&ct=Website`).
+- [ ] **Campaign links untouched.** Download buttons use `{{ gc.urls.download }}` (`pt=128660093&ct=Website`), or `{{ gc.urls.download_guides }}` (`ct=Guides`) on guide pages.
 - [ ] **New working file or folder?** Add it to `exclude:` in [_config.yml](_config.yml), or Jekyll will publish it.
 
 For a **new guide** (copy [apps/golf-caddie/guides/_template.md](apps/golf-caddie/guides/_template.md)):

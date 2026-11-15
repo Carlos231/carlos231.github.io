@@ -1,7 +1,7 @@
 # Product Marketing Context
 
-**Document version:** v14
-**Last updated:** 2026-11-08
+**Document version:** v15
+**Last updated:** 2026-11-14
 
 ## Product Overview
 **One-liner:** The simple golf scorecard for iPhone and Apple Watch, built to last all 18 holes. No account, no GPS, no social feed, no AI, no subscription.
@@ -66,15 +66,17 @@ Not applicable (single-user B2C purchase).
 **Indirect:** Paper scorecard, Notes app, a tally counter. Fall short because they're slow, error-prone, and don't track putts, penalties, or trends.
 
 ## Differentiation
-**Key differentiators** (ranked by how strongly they win golfers over the big apps):
-1. **Lasts the whole round on Apple Watch.** No GPS running. Built because the developer's Apple Watch SE never lasted a round with the big golf apps; on that SE it lasts all 18 holes. The SE has the shortest rated battery of Apple's current watches (apple.com/watch/battery, checked 2026-11-08), so newer Series and Ultra models have more to spare.
-2. **Just a scorecard.** No social feed, no GPS maps or rangefinder, no AI features, no complicated stat tracking. Open it and start a round in seconds (Quick Start).
+**Key differentiators** (ranked; re-ranked 2026-11-14 after the owner said battery is not a strong point):
+1. **Just a scorecard.** A simple stroke and putt counter with score vs par. No social feed, no GPS maps or rangefinder, no AI features, no complicated stat tracking. Open it and start a round in seconds (Quick Start).
+2. **Score without your phone in your hand.** From the wrist on Apple Watch, by voice with 8 Siri shortcuts, or from the Lock Screen with a Live Activity. The one App Store review so far praises the Lock Screen.
 3. **Pay once.** Free on iPhone with unlimited rounds; Pro (Apple Watch, Siri, Live Activity) is a one-time $2.99 (US) after a 14-day trial with no card. Nothing renews.
-4. **Hands-free scoring.** From the wrist on Apple Watch, by voice with 8 Siri shortcuts, or from the Lock Screen with a Live Activity.
-5. **Private.** No account, App Store label "Data Not Collected," rounds in the golfer's own iCloud, CSV export anytime.
+4. **Private.** No account, App Store label "Data Not Collected," rounds in the golfer's own iCloud, CSV export anytime.
+5. **Reuse a course.** Copy a past round and its pars carry over, as the full 18, the Front 9, or the Back 9 (v1.5.3).
+
+**Battery is a supporting detail, not a lead.** The app runs no GPS, and the owner's Apple Watch SE lasts 18 holes with it, but there is no measured test yet. Keep battery to the battery guide until the owner runs one (TODO in that guide).
 **How we do it differently:** Scoring is the whole product. Everything else (stats, club distances, Health, export) supports the scorecard and stays out of the way.
 **Why that's better:** Faster scoring, less phone time, no recurring cost, works without signal.
-**Why customers choose us:** Their Apple Watch lasts the whole round, and the app does nothing but keep score. Pro costs less than one month of most golf app subscriptions (as of November 2026: 18Birdies $19.99/mo, Golfshot $14.99/mo, vs $2.99 once).
+**Why customers choose us:** The app does nothing but keep score, and they can do it from the wrist, by voice, or from the Lock Screen. Pro costs less than one month of most golf app subscriptions (as of November 2026: 18Birdies $19.99/mo, Golfshot $14.99/mo, vs $2.99 once).
 **What's actually distinctive (vs indie scorecards too):** the combination of no account + Apple Watch scoring + Siri voice scoring + Lock Screen Live Activity, all syncing, plus free CSV export and Apple Health. Lead with the combination, not with "no subscription" alone. Never claim to be the only no-subscription or no-GPS scorecard.
 
 ## Objections
@@ -105,8 +107,8 @@ Not applicable (single-user B2C purchase).
 **How they describe the problem:**
 - *None collected yet. Add verbatim phrases from App Store reviews, support emails, and Reddit threads as they come in. Do not invent quotes.*
 **How they describe us:**
-- *None collected yet.*
-**Words to use:** lasts all 18 holes, light on battery, no AI, nothing you didn't ask for, simple, scorecard, keep score, strokes, putts, penalties, score vs par, from your wrist, hands-free, Lock Screen, one-time, no subscription, no account, no GPS, open and play, head in the game, yours to keep, nothing to cancel, solo developer who plays
+- "Great app for simply keeping score during your round. Love being able to edit the score using the lock screen so I can count my strokes accurately during play. Recommended!" (App Store review, Oct 19, 2026, reviewer 899DA; supplied by the owner. Ask before quoting it publicly.)
+**Words to use:** stroke counter, putt counter, no AI, nothing you didn't ask for, simple, scorecard, keep score, strokes, putts, penalties, score vs par, from your wrist, hands-free, Lock Screen, one-time, no subscription, no account, no GPS, open and play, head in the game, yours to keep, nothing to cancel, solo developer who plays
 **Words to avoid:** "platform," "AI-powered," "revolutionary," "ultimate," "best" (unless sourced), anything that implies GPS or handicap features the app doesn't have
 **Glossary:**
 | Term | Meaning |
@@ -158,8 +160,11 @@ Not applicable. No paid ads.
 *Decisions and tested lessons. Newest first. Keep it to about 20 active entries.*
 | Date | Learning | Evidence | Applies to | Status |
 |------|----------|----------|------------|--------|
+| 2026-11-14 | Battery is not a lead point. Lead with simple scoring (stroke and putt counter), scoring without the phone in hand (Watch, Siri, Lock Screen), and pay once. No battery claims outside the battery guide until there is a measured test | Owner: "I don't think the battery is a strong point"; the one App Store review praises simplicity and the Lock Screen | All pages, App Store listing, social, outreach | active |
+| 2026-11-14 | The home page and the app page have different jobs: home is the iPhone stroke and putt counter pitch; the app page is the Apple Watch and pay-once pitch; how-to help lives on its own page | Audit 2026-11-14 found both pages competing for the same queries and 800 words of help on the sales page | index.html, apps/golf-caddie/, apps/golf-caddie/help/ | active |
+| 2026-11-14 | Stop adding look-alike guides while Google reports most pages as crawled but not indexed; consolidate, earn links, and publish at most one first-hand guide every two weeks | Audit 2026-11-14: 14 templated guides in four weeks on a new subdomain with almost no backlinks | weekly-marketing runs, content-backlog.md | active |
 | 2026-11-08 | Say each strong point once per page. The founder story appears only in the app page's "Why I built" section and the guide author box. Body copy and answer boxes use only the strong point that matches the topic. Download boxes carry the offer plus at most one strong point | Owner correction: the full list in every box read as redundant | Guides, app page, download boxes, social, App Store listing | active |
-| 2026-11-08 | Lead with why the app exists: an Apple Watch scorecard that lasts all 18 holes, with no social feed, GPS, AI, subscription, or complicated tracking. Tell it as the founder's first-hand story (Apple Watch SE). The app page targets "simple golf scorecard app"; don't create a separate page for that query (seo-audit: no cannibalization; product page is the right format) | Owner: "This is what people are probably searching for and are the main customers that will download and buy" | App page, home, llms.txt, guides, social | active |
+| 2026-11-08 | Lead with why the app exists: an Apple Watch scorecard that lasts all 18 holes, with no social feed, GPS, AI, subscription, or complicated tracking. Tell it as the founder's first-hand story (Apple Watch SE). The app page targets "simple golf scorecard app"; don't create a separate page for that query (seo-audit: no cannibalization; product page is the right format) | Owner: "This is what people are probably searching for and are the main customers that will download and buy" | App page, home, llms.txt, guides, social | retired 2026-11-14: the owner said battery is not a strong point (see the 2026-11-14 rows) |
 | 2026-11-08 | Every guide sells Golf Caddie: lead the answer and tables with it and put a download button (`_includes/download-cta.html`) near the top of every guide. Within the skills' limits: keep competitor facts accurate, keep a short honest "who should stay with them" section (competitors skill), put competitor links in a sources line at the end, and keep about 2 of 7 weekly social posts as pure tips with no app pitch (social skill) | Owner: "written in a way so that user wants to download my app and not marketing for others"; goal is more clicks and referrals. Owner asked to follow the skills where they conflict, as they're more proven | Guides, comparison pages, social, weekly-marketing runs | active |
 | 2026-10-22 | Publish customer-facing pages (people choosing an app: no subscription, battery, Siri, comparisons) before informational guides | Owner decision: the first four guides were mostly informational; downloads come from buyer-intent pages | content-backlog.md order, weekly-marketing runs | active |
 | 2026-10-18 | Verify feature gating and Siri phrases in the app source before stating them; memory and the listing disagreed (Watch club distances, Siri count/phrasing) | Code showed the whole Watch app is Pro and 8 shortcuts with "What is" phrasing | Site copy, guides, social, data file | active (updated 2026-11-08: check the app's README/REQUIREMENTS first, source only if they're silent or conflict) |
@@ -168,6 +173,7 @@ Not applicable. No paid ads.
 
 ## Changelog
 *Newest first. One line per revision: what changed and why.*
+- v15 (2026-11-14) — Differentiation re-ranked (simple scoring first, battery demoted to a supporting detail pending a measured test); first customer quote added; Learnings on page jobs and pausing look-alike guides (owner decisions after the 2026-11-14 audit).
 - v14 (2026-11-08) — Competitive Landscape: Golfshot watch scoring treated as free (its Oct 2026 blog and facts page), with the App Store listing discrepancy noted; owner supplied the blog post.
 - v13 (2026-11-08) — Facts: watch scores with the iPhone in the bag and syncs (owner-confirmed); out-of-range changes queue and sync on reconnect (app docs).
 - v12 (2026-11-08) — Moved the ranked strong points into Differentiation and the say-it-once rule into Learnings, per the product-marketing skill's structure; removed the separate Strong points section added in v11; Why customers choose us now cites verified prices.
