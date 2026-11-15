@@ -1,0 +1,12 @@
+{%- assign gc = site.data.golf_caddie -%}
+<footer>
+  <nav aria-label="Footer">
+    <a href="/">{{ site.title }}</a>
+    <a href="{{ gc.urls.page }}">{{ gc.short_name }} for Apple Watch</a>
+    <a href="/apps/golf-caddie/guides/">Guides</a>
+    <a href="/apps/golf-caddie/help/">Help</a>
+    <a href="{{ gc.urls.privacy }}">Privacy Policy</a>
+    <a href="mailto:{{ gc.support_email }}">Support</a>
+  </nav>
+  <p>Made by {{ gc.developer }}, {{ gc.developer_bio }}. © {{ site.time | date: "%Y" }} {{ gc.short_name }}</p>
+</footer>

@@ -24,3 +24,29 @@ Queries with impressions: "carlos app" (4, pos 4.8), "18birdies" (4, pos 6), "ho
 - Pages report (data through 2026-10-22): 5 indexed, 3 "Crawled - currently not indexed": the no-account guide, the putts guide (both crawled 2026-10-19), and `sitemap.xml` itself (normal; a sitemap isn't a page). Both guides now have impressions, so they're indexed; the report lags. Validation started.
 - Sitemaps: `/sitemap.xml` shows "Sitemap could not be read", last read 2026-10-27, 0 discovered. The live sitemap returns 200, `application/xml`, and is valid XML (checked 2026-11-08). Owner: remove and resubmit it, and test it with URL Inspection → Test live URL. URL Inspection (2026-11-08) shows the sitemap was fetched successfully on 2026-10-30, so the error is likely stale from the 10-27 read. Google also lists `sitemap.xml` as an indexed page; that's harmless, and GitHub Pages can't send the header that would stop it.
 - New pages to request indexing for once (after they deploy): golf-caddie-vs-arccos, golf-app-prices-compared, how-to-find-your-club-distances, and the guides index `/apps/golf-caddie/guides/`.
+
+## After the landing redesign (branch `landing-redesign`, 2026-11-14)
+
+Changes that affect measurement: new home page (iPhone stroke counter) and app page (Apple Watch, pay once), a new help page, the without-iPhone guide merged into the without-GPS guide (old URL redirects), trimmed prices and comparison guides, and a second campaign token (`ct=Guides`) on guide pages. This resets the 2026-11-08 baseline for the home and app pages.
+
+**Request indexing once each, after deploy** (URL Inspection, in this order):
+1. `https://carlos231.github.io/` (rewritten)
+2. `https://carlos231.github.io/apps/golf-caddie/` (rewritten)
+3. `https://carlos231.github.io/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/` (now holds the merged content)
+4. `https://carlos231.github.io/apps/golf-caddie/help/` (new)
+5. `https://carlos231.github.io/apps/golf-caddie/guides/golf-app-prices-compared/` (trimmed)
+
+Also inspect the old URL `/apps/golf-caddie/guides/apple-watch-golf-without-iphone/` once, to confirm Google sees the redirect and canonical.
+
+**Measure for 4 to 8 weeks** (check every two weeks; first check 2026-11-28, decide on 2026-12-12 to 2027-01-09):
+
+| What | Where | Baseline (2026-11-08 to 11-14) | Looking for |
+|---|---|---|---|
+| Pages indexed vs "Crawled - currently not indexed" | Search Console → Indexing → Pages | Owner: most pages not indexed. TODO(owner): record the two counts on deploy day | Indexed count rising; the five URLs above indexed |
+| Impressions and clicks per page | Search Console → Performance → Pages | About 80 impressions and 2 clicks in 3 months | Home page showing for "stroke counter" and "putt counter" queries; app page for "scorecard" and "apple watch" queries, without the two swapping |
+| Taps on App Store links per page | GoatCounter events (`app-store-*`), once `goatcounter_code` is set | None (no analytics before) | Which page and which button placement gets taps; tap rate per page view |
+| Downloads from the site | App Store Connect → Analytics → Acquisition → Campaigns (`Website`, `Guides`) | "Not Enough Data" | Either campaign passing Apple's 5-download threshold |
+| Product page conversion | App Store Connect → Analytics → Acquisition | 69 first-time downloads from 408 product page views in the period shared 2026-11-08 | Conversion holding or rising as site traffic grows |
+| Referring sites | Search Console → Links; GoatCounter referrers | App Store listing only | Each directory or forum post that sends a visitor |
+
+Decision rule: if indexed pages have not grown by the 8-week mark, the cause is authority, not content. Stop editing pages and put all effort into links.

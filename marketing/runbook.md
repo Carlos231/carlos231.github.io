@@ -46,6 +46,13 @@ The commit hook says "v<version> is live on the App Store" once it's time. Last 
 - **Before it ships** (optional, so the site is ready): **"Prepare the site for v1.6 with these release notes: …"**. New features are added hidden (`since: "1.6"`, `upcoming_version: "1.6"`) and can merge right away.
 - **When it's live:** **"v1.6 is live, run release-update"** for the flip, then **After every merge**.
 
+## Current focus (set 2026-11-14)
+
+- New guides are paused while most pages are not indexed. See the publishing pause in [content-backlog.md](../content-backlog.md).
+- Each week: post or reply once from [backlink-drafts.md](backlink-drafts.md), and note it in [seo-tracking.md](seo-tracking.md).
+- Every two weeks: run the checks in seo-tracking.md ("After the landing redesign").
+- Open `TODO(owner)` items: `grep -rn "TODO(owner)" .`
+
 ## Weekly (pick a day, e.g. Monday, about 30–45 minutes of your time)
 
 1. **"Run the weekly"**. Claude reviews the SEO check results, refills [content-backlog.md](../content-backlog.md), drafts 2–3 guides, writes `social/week-NN.md`, and opens a pull request.

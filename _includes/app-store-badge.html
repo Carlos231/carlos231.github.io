@@ -1,0 +1,7 @@
+{%- comment -%}
+  Official "Download on the App Store" badge (Apple artwork, unmodified, 48px high; Apple's minimum is 40px).
+  Apple's guidelines ask for one badge per layout, so use it once per page and text buttons elsewhere.
+  Usage: {% include app-store-badge.html placement="hero" %}  (optional href= for a different campaign link)
+{%- endcomment -%}
+{%- assign gc = site.data.golf_caddie -%}
+<a class="badge-link" href="{{ include.href | default: gc.urls.download }}" target="_blank" rel="noopener noreferrer" data-goatcounter-click="app-store-{{ include.placement | default: 'badge' }}" data-goatcounter-title="{{ page.url }}"><img src="/assets/app-store-badge.svg" alt="Download on the App Store" width="144" height="48"></a>

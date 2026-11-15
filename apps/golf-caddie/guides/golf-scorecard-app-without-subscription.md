@@ -3,6 +3,7 @@ title: "Golf scorecard app without a subscription: what you get and what to chec
 html_title: "Golf Scorecard App Without a Subscription | Golf Caddie"
 description: "Looking for a golf scorecard app without a subscription? One-time purchase vs subscription, what's free in Golf Caddie, and how to check any app before you buy."
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-without-subscription/
+image: /assets/og/golf-scorecard-app-without-subscription.png
 date: 2026-10-22
 last_modified_at: 2026-10-27
 

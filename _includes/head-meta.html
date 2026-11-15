@@ -1,5 +1,13 @@
+{%- assign gc_meta = site.data.golf_caddie -%}
+{%- if page.url contains '/guides/' -%}{%- assign banner_ct = gc_meta.campaign.guides_token -%}{%- else -%}{%- assign banner_ct = gc_meta.campaign.site_token -%}{%- endif -%}
 <title>{{ page.html_title | default: page.title }}</title>
 {% seo title=false %}
-<meta name="apple-itunes-app" content="app-id={{ site.data.golf_caddie.app_id }}">
+{%- comment -%}
+  Smart App Banner (Safari on iPhone and iPad). Apple's campaign-links help page says campaign and
+  provider tokens can be added to the banner; the affiliate-data form below is the commonly used syntax.
+  TODO(owner): confirm banner installs show up under these campaigns in App Analytics.
+{%- endcomment %}
+<meta name="apple-itunes-app" content="app-id={{ gc_meta.app_id }}, affiliate-data=pt={{ gc_meta.campaign.provider_token }}&amp;ct={{ banner_ct }}">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+{% include analytics.html %}

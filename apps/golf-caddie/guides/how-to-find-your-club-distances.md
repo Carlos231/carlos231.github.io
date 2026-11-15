@@ -3,6 +3,7 @@ title: "How to find your club distances (your own, not a chart's)"
 html_title: "How to Find Your Golf Club Distances | Golf Caddie"
 description: "How far should you hit each golf club? Measure your own typical carry on the range and the course, fill in a simple yardage table, and use it within the Rules."
 permalink: /apps/golf-caddie/guides/how-to-find-your-club-distances/
+image: /assets/og/how-to-find-your-club-distances.png
 date: 2026-11-08
 last_modified_at: 2026-11-08
 

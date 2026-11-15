@@ -3,7 +3,8 @@ layout: null
 title: "Golf Scorecard and Golf App Guides | Golf Caddie"
 description: "Golf guides from the maker of Golf Caddie: keeping score, putts, club distances, Apple Watch battery, Siri, and honest golf app comparisons and prices."
 permalink: /apps/golf-caddie/guides/
-last_modified_at: 2026-11-08
+image: /assets/og/guides.png
+last_modified_at: 2026-11-14
 seo:
   type: CollectionPage
 ---
@@ -12,9 +13,9 @@ seo:
   Guides index. Topic groups list guide slugs; any guide not in a group shows under "More guides",
   so new guides appear here automatically.
 {%- endcomment -%}
-{%- assign all_guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | sort: "date" | reverse -%}
+{%- assign all_guides = site.pages | where_exp: "p", "p.url contains '/apps/golf-caddie/guides/'" | where_exp: "p", "p.url != '/apps/golf-caddie/guides/'" | where_exp: "p", "p.layout == 'guide'" | sort: "date" | reverse -%}
 {%- assign group_names = "Choosing a golf app|Apple Watch golf|Golf scoring basics" | split: "|" -%}
-{%- assign group_slugs = "golf-app-prices-compared golf-caddie-vs-thegrint golf-caddie-vs-golfshot golf-caddie-vs-18birdies golf-caddie-vs-arccos golf-scorecard-app-without-subscription golf-scorecard-app-no-account|apple-watch-golf-scorecard-without-gps apple-watch-golf-without-iphone apple-watch-battery-golf-round keep-score-in-golf-with-siri|how-to-keep-score-in-golf how-to-track-putts how-to-find-your-club-distances" | split: "|" -%}
+{%- assign group_slugs = "golf-app-prices-compared golf-caddie-vs-thegrint golf-caddie-vs-golfshot golf-caddie-vs-18birdies golf-caddie-vs-arccos golf-scorecard-app-without-subscription golf-scorecard-app-no-account|apple-watch-golf-scorecard-without-gps apple-watch-battery-golf-round keep-score-in-golf-with-siri|how-to-keep-score-in-golf how-to-track-putts how-to-find-your-club-distances" | split: "|" -%}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -51,8 +52,8 @@ seo:
     ul.list span { display: block; color: #6b7280; font-size: 15px; margin-top: 4px; }
     .cta { margin: 48px 0 0; padding: 28px 24px; background: white; border: 1px solid #e5e7eb; border-radius: 16px; text-align: center; }
     .cta h2 { margin-top: 0; }
-    .btn-primary { display: inline-block; background: #007aff; color: white; font-size: 17px; font-weight: 600; padding: 14px 32px; border-radius: 12px; text-decoration: none; margin-top: 8px; }
-    .btn-primary:hover { background: #0062cc; }
+    .btn-primary { display: inline-block; background: #2d6a4f; color: white; font-size: 17px; font-weight: 600; padding: 14px 32px; border-radius: 12px; text-decoration: none; margin-top: 8px; }
+    .btn-primary:hover { background: #24573f; }
     footer { text-align: center; padding: 40px 20px 60px; font-size: 14px; color: #666; }
 </style>
 </head>
@@ -102,8 +103,8 @@ seo:
 
     <section class="cta">
       <h2>Keep score the simple way</h2>
-      <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch, built to last all 18 holes on your watch. Pro is a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
-      <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+      <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch, with no account and no subscription. Pro is a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
+      <a class="btn-primary" href="{{ gc.urls.download_guides }}" target="_blank" rel="noopener noreferrer" data-goatcounter-click="app-store-guides-index" data-goatcounter-title="{{ page.url }}">Get {{ gc.short_name }} on the App Store</a>
     </section>
   </main>
 </div>
