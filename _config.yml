@@ -8,6 +8,16 @@ author: Carlos Lopez-Molina
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Privacy-friendly analytics (GoatCounter: no cookies). Leave empty to load nothing.
+# TODO(owner): sign up at https://www.goatcounter.com, then put your site code here
+# (the MYCODE part of MYCODE.goatcounter.com).
+goatcounter_code: ""
+
+# jekyll-redirect-from: skip the redirects.json file (only GitHub's own tooling reads it).
+redirect_from:
+  json: false
 
 # App facts (IDs, URLs, price, features) live in _data/golf_caddie.yml.
 

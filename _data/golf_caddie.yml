@@ -25,9 +25,18 @@ urls:
   # Campaign link for every download button. Keep pt and ct exactly as is
   # (ct is case-sensitive in App Analytics).
   download: https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Website&mt=8
+  # Same link with its own campaign token, for download buttons on guide pages.
+  # App Analytics shows a campaign only after 5 first-time downloads in the date range.
+  download_guides: https://apps.apple.com/app/apple-store/id6760603837?pt=128660093&ct=Guides&mt=8
   # Clean links for schema and llms.txt (no campaign tracking).
   app_store: https://apps.apple.com/us/app/golf-caddie-simple-scorecard/id6760603837
   install: https://apps.apple.com/app/id6760603837
+
+# Campaign tokens for the Smart App Banner (head-meta.html). Keep pt exactly as is.
+campaign:
+  provider_token: "128660093"
+  site_token: Website
+  guides_token: Guides
 
 pricing:
   currency: USD
@@ -69,7 +78,7 @@ features:
     detail: Save each round to Apple Health as a Golf workout when you end it. Live heart rate and calories during the round need the Apple Watch app (Pro).
   - name: Apple Watch app (scoring and club distances)
     tier: pro
-    detail: Score strokes, putts, and penalties from your wrist and check your club distances, in sync with your iPhone. It runs no GPS, so it's light on battery.
+    detail: Score strokes, putts, and penalties from your wrist and check your club distances, in sync with your iPhone. It runs no GPS.
   - name: Siri voice scoring
     tier: pro
     detail: 8 Siri shortcuts on iPhone and Apple Watch, e.g. "Add a stroke in Golf Caddie" or "What is my round score in Golf Caddie?"

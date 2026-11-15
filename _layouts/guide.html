@@ -174,7 +174,7 @@
 
     .btn-primary {
       display: inline-block;
-      background: #007aff;
+      background: #2d6a4f;
       color: white;
       font-size: 17px;
       font-weight: 600;
@@ -184,7 +184,11 @@
       margin-top: 8px;
     }
 
-    .btn-primary:hover { background: #0062cc; }
+    .btn-primary:hover { background: #24573f; }
+
+    .badge-link { display: inline-block; line-height: 0; padding: 12px; }
+
+    .badge-link img { height: 48px; width: auto; }
 
     .cta .note {
       font-size: 13px;
@@ -200,9 +204,7 @@
       border-radius: 8px;
     }
 
-    .author h2 { font-size: 19px; margin: 0 0 8px; }
-
-    .author p { margin: 0; font-size: 16px; color: #374151; }
+        .author p { margin: 0; font-size: 16px; color: #374151; }
 
     .related ul { padding-left: 20px; }
 
@@ -265,15 +267,18 @@
       {%- endif %}
     </article>
 
+    {%- comment -%}
+      TODO(owner): user quotes. A real App Store review (with the reviewer's name and date, and their OK)
+      could sit above this note. Never invent reviews or ratings.
+    {%- endcomment %}
     <aside class="author" aria-label="About the author">
-      <h2>Why I built {{ gc.short_name }}</h2>
-      <p>I'm {{ gc.developer }}, {{ gc.developer_bio }}. I built {{ gc.short_name }} because my Apple Watch SE never made it through a full round with the big golf apps, and I didn't want GPS maps, a social feed, AI features, or a subscription. It's a scorecard and nothing else, and on my SE it lasts all 18 holes.</p>
+      <p><strong>About the author.</strong> I'm {{ gc.developer }}, {{ gc.developer_bio }}. I make {{ gc.short_name }}, a scorecard app with no GPS maps, no social feed, and no subscription.</p>
     </aside>
 
     <section class="cta">
       <h2>{{ page.cta_heading | default: "Keep score the simple way" }}</h2>
       <p>{{ gc.short_name }} is a free golf scorecard for iPhone and Apple Watch. The Apple Watch app, Siri, and Live Activity are a one-time ${{ gc.pricing.pro_price }} after a {{ gc.pricing.trial_days }}-day free trial.</p>
-      <a class="btn-primary" href="{{ gc.urls.download }}" target="_blank" rel="noopener noreferrer">Download on the App Store</a>
+      {% include app-store-badge.html placement="guide-bottom" href=gc.urls.download_guides %}
       <p class="note">{{ gc.pricing.price_note }}</p>
     </section>
 
