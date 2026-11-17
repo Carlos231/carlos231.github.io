@@ -5,7 +5,7 @@ description: "Golf Caddie vs 18Birdies, checked November 2026: what 18Birdies gi
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-18birdies/
 image: /assets/og/golf-caddie-vs-18birdies.png
 date: 2026-11-02
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-16
 
 answer: >-
   You may not need to switch. As of November 2026, 18Birdies' free tier
@@ -31,6 +31,8 @@ related:
     url: /apps/golf-caddie/guides/golf-scorecard-app-no-account/
   - title: "Apple Watch battery for a round of golf"
     url: /apps/golf-caddie/guides/apple-watch-battery-golf-round/
+  - title: "Golf Caddie vs Hole19"
+    url: /apps/golf-caddie/guides/golf-caddie-vs-hole19/
 
 cta_heading: "Just want a scorecard? Open and play."
 ---

@@ -5,7 +5,7 @@ description: "Golf Caddie vs TheGrint, checked November 2026: what's free, what 
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-thegrint/
 image: /assets/og/golf-caddie-vs-thegrint.png
 date: 2026-11-02
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-16
 
 answer: >-
   Choose TheGrint if you want GPS yardages, an official USGA Handicap ID,
@@ -33,6 +33,8 @@ related:
     url: /apps/golf-caddie/guides/golf-caddie-vs-18birdies/
   - title: "Golf Caddie vs Golfshot"
     url: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
+  - title: "Golf Caddie vs Hole19"
+    url: /apps/golf-caddie/guides/golf-caddie-vs-hole19/
 
 cta_heading: "Score from your wrist without a subscription"
 ---

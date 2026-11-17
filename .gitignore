@@ -20,3 +20,7 @@ secrets.txt
 
 # Log files
 *.log
+
+# Local screenshots and Search Console exports (working files; keep out of the public repo)
+marketing/screenshots/
+marketing/https___*/

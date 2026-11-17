@@ -5,7 +5,7 @@ description: "Can Siri keep score in golf? Yes, with Golf Caddie. The exact Siri
 permalink: /apps/golf-caddie/guides/keep-score-in-golf-with-siri/
 image: /assets/og/keep-score-in-golf-with-siri.png
 date: 2026-10-27
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-16
 
 answer: >-
   Siri can keep score in golf with Golf Caddie Pro. Say "Add a stroke in Golf
@@ -15,7 +15,7 @@ answer: >-
 
 faq:
   - q: "Do I need to open the app first?"
-    a: "No. Siri updates your scorecard in the background, and the change shows up on your iPhone, Apple Watch, and Lock Screen Live Activity right away. You do need a round in progress; if there isn't one, Siri tells you to start a round first."
+    a: "No. Siri updates your scorecard in the background, and the change shows up on your iPhone, Apple Watch, and [Lock Screen Live Activity](/apps/golf-caddie/guides/golf-scorecard-lock-screen/) right away. You do need a round in progress; if there isn't one, Siri tells you to start a round first."
   - q: "Does Siri scoring work in the free version?"
     a: "Siri scoring is part of Golf Caddie Pro, and it's included in the free 14-day trial. Without Pro, Siri replies: \"Siri shortcuts require Golf Caddie Pro. Upgrade in the Settings tab.\""
   - q: "Can I say it differently?"
@@ -59,7 +59,7 @@ Every command needs "in {{ gc.short_name }}" at the end, so Siri knows which app
 
 ## How do you start a round with Siri?
 
-Say "Start a quick round in {{ gc.short_name }}" to start an 18-hole round with every hole set to par 4. For nine holes, say "Start a front 9 holes round in {{ gc.short_name }}" or "Start a back 9 holes round in {{ gc.short_name }}". Siri confirms the round has started and wishes you good luck.
+Say "Start a quick round in {{ gc.short_name }}" to start an 18-hole round with every hole set to par 4. For [nine holes](/apps/golf-caddie/guides/golf-scorecard-app-9-holes/), say "Start a front 9 holes round in {{ gc.short_name }}" or "Start a back 9 holes round in {{ gc.short_name }}". Siri confirms the round has started and wishes you good luck.
 
 Quick Start rounds are named "Quick Round". If you want the course name and exact pars from the first hole, start the round in the app instead, then use Siri for the scoring.
 

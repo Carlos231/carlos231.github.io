@@ -4,34 +4,36 @@ Working file, never published (excluded in `_config.yml`). Maintained by the `we
 Scoring (content-strategy skill), each 1–10: customer impact ×0.4, content-market fit ×0.3, search potential ×0.2, resources ×0.1.
 Search potential is a judgment call (no paid keyword tools). Re-score once Search Console has impressions data.
 
-**Order rule (owner decision, 2026-10-22):** customer-facing topics first (Commercial and Comparison intent: people choosing an app), then how-to and informational topics. Within each group, higher score first. The table is in that order; `#` is a stable topic ID, not the rank. The weekly run drafts the top 2–3 `open` rows.
+**Order rule (owner decision, 2026-11-16):** rank by how close the searcher is to downloading. First, searches for an app or one of its features (Commercial, Comparison, and feature how-tos that only an app can answer). Then informational golf topics, which bring readers but few downloads. Within each group, higher score first. The table is in that order; `#` is a stable topic ID, not the rank. The weekly run drafts the top 2–3 `open` rows, three at most.
 
-**Last updated:** 2026-11-14
+**Last updated:** 2026-11-16
 
 **Positioning (owner, 2026-11-14):** lead with simple scoring (a stroke and putt counter), scoring without the phone in hand (Apple Watch, Siri, Lock Screen), and pay once. Battery is not a lead point and stays inside the battery guide until there is a measured test. See Differentiation in `.agents/product-marketing.md`.
 
-**Publishing pause (2026-11-14):** Search Console reports most pages as "Crawled - currently not indexed". No new look-alike guides until indexing improves. Publish at most one guide every two weeks, and only one that carries something first-hand (your own screenshots, a real scorecard, a measured test). Spend the time on links (`marketing/backlink-drafts.md`) instead.
+**Publishing (owner, 2026-11-16):** the pause set on 2026-11-14 is lifted. After the redesign the owner saw clearly more search and site activity and asked for new pages. Keep it to three pages a run, each answering a search no existing page answers, built from the template and checked with `marketing/tools/`. Keep working on links (`marketing/backlink-drafts.md`) alongside.
 
-**Keyword map (one page per query):** the home page (`/`) owns "golf stroke counter app", "putt counter", and "golf score tracker for iPhone". The app page (`/apps/golf-caddie/`) owns "simple golf scorecard app" and "golf scorecard app for Apple Watch". The help page owns "Golf Caddie help / how to use". Don't create a guide targeting any of those. #3 (best simple scorecard apps) targets the roundup query "best golf scorecard app for apple watch", a different intent; link it to the app page.
+**Keyword map (one page per query):** the home page (`/`) owns "golf stroke counter app", "putt counter", and "golf score tracker for iPhone". The app page (`/apps/golf-caddie/`) owns "simple golf scorecard app" and "golf scorecard app for Apple Watch". The help page owns "Golf Caddie help / how to use". Each guide owns its own target query in the table below; the newest: #24 "golf scorecard lock screen", #25 "golf scorecard app 9 holes", #22 "hole19 alternative". Don't create a guide targeting a query that's already owned. #3 (best simple scorecard apps) targets the roundup query "best golf scorecard app for apple watch", a different intent; link it to the app page.
 
 ## Backlog
 
 | # | Topic | Target query | Intent | Angle (what we add) | Score | Status | Page |
 |---|---|---|---|---|---|---|---|
-| 8 | Golf Caddie vs Arccos | arccos alternative without subscription | Comparison | Arccos is a sensor-and-subscription system and Golf Caddie is a scorecard. Who needs which, with total first-year cost compared honestly | 6.1 | drafted | /apps/golf-caddie/guides/golf-caddie-vs-arccos/ |
-| 19 | What golf apps cost in 2026 | golf app subscription cost | Comparison | One dated table of free vs paid features and US prices for TheGrint, 18Birdies, Golfshot, and Arccos, taken from each official pricing page, including which ones charge for Apple Watch scoring | 6.6 | drafted | /apps/golf-caddie/guides/golf-app-prices-compared/ |
+| 24 | Keep golf score from your iPhone Lock Screen | golf scorecard lock screen | Commercial | What the Live Activity shows and what you can and can't do from the Lock Screen, straight from the app's own behaviour; no current result explains this for golf | 7.8 | drafted | /apps/golf-caddie/guides/golf-scorecard-lock-screen/ |
+| 25 | Golf scorecard app for 9 holes | golf scorecard app 9 holes | Commercial | Front 9 vs Back 9 hole numbering, four ways to start nine holes, and copying an 18-hole round as either nine so pars carry over | 7.6 | drafted | /apps/golf-caddie/guides/golf-scorecard-app-9-holes/ |
+| 22 | Golf Caddie vs Hole19 | hole19 alternative | Comparison | Hole19's free tier has GPS, a social network, and live leaderboards; full watch scoring is Premium. An honest who-needs-which for golfers who only want their score, with facts checked and dated | 6.1 | drafted | /apps/golf-caddie/guides/golf-caddie-vs-hole19/ |
 | 3 | Best simple golf scorecard apps for Apple Watch (2026) | best golf scorecard app for apple watch | Commercial | Criteria-based roundup of scoring-first apps tested hands-on: names the big apps first, says honestly what each does well, and includes indie no-GPS options | 7.7 | waiting (owner hands-on testing) | /apps/golf-caddie/guides/best-simple-golf-scorecard-apps-apple-watch/ |
-| 21 | Keep score on Apple Watch without your iPhone | keep score on apple watch without phone | Commercial | What actually works on the watch when the iPhone is left in the bag or out of range, what syncs later, and what still needs the phone, from the app's docs, instead of the generic "leave your phone in the cart" tips | 7.5 | merged | /apps/golf-caddie/guides/apple-watch-golf-without-iphone/ (merged into the without-GPS guide on 2026-11-14; old URL redirects) |
-| 6 | Golf Caddie vs Golfshot | golfshot alternative | Comparison | For golfers who mainly want to score on Apple Watch: what Golfshot's free tier vs Pro covers today, side by side with a one-time $2.99 option. Golfshot's watch scoring is free per its Oct 2026 blog (its App Store listing still says Pro; note it once), so the angle is battery and no-bloat scoring vs a GPS-and-tracking app | 6.8 | drafted | /apps/golf-caddie/guides/golf-caddie-vs-golfshot/ |
-| 22 | Golf Caddie vs Hole19 | hole19 alternative | Comparison | Hole19 is one of the apps AI engines name for "no subscription" and "battery" prompts; an honest who-needs-which with its free vs Premium tiers checked and dated | 6.1 | open | /apps/golf-caddie/guides/golf-caddie-vs-hole19/ |
-| 11 | How to find your club distances | how far should i hit each golf club | Informational | A routine to measure your own carry distances (range vs course, typical shot, not your best one) and a simple table to fill in, instead of generic distance charts | 7.2 | drafted | /apps/golf-caddie/guides/how-to-find-your-club-distances/ |
 | 13 | Export golf scores to a spreadsheet and analyze them with AI | export golf scores to excel | Informational | A column-by-column guide to the CSV export plus example questions to ask an AI assistant about your rounds | 7.0 | open | /apps/golf-caddie/guides/export-golf-scores-spreadsheet/ |
 | 17 | Log golf as a workout on Apple Watch | apple watch golf workout | Informational | How golf rounds get into Apple Health (Workout app vs a scorecard app's Health setting), what each records, and the battery cost of each, using Apple's docs and the app's own settings | 6.8 | open | /apps/golf-caddie/guides/apple-watch-golf-workout/ |
 | 18 | What circles and squares mean on a golf scorecard | golf scorecard circles and squares | Informational | An annotated real scorecard (circles for birdies, squares for bogeys, double marks) that most explanations describe only in text | 6.4 | open | /apps/golf-caddie/guides/golf-scorecard-circles-and-squares/ |
-| 7 | How a golf handicap is calculated | how is golf handicap calculated | Informational | A worked World Handicap System example with real numbers (score differential, best 8 of 20, caps), sourced from the USGA Rules of Handicapping | 6.3 | open | /apps/golf-caddie/guides/how-golf-handicap-is-calculated/ |
 | 20 | How to keep score in a golf scramble | how to keep score in a scramble | Informational | A worked 4-person scramble card (one team ball, one score per hole, drive-count rules) that most results describe only in text, plus how to score it as one card in any app | 6.2 | open | /apps/golf-caddie/guides/how-to-score-a-golf-scramble/ |
 | 10 | Stableford scoring explained | stableford scoring explained | Informational | Points table, handicap strokes by stroke index, and a worked 18-hole example converted from an ordinary stroke-play scorecard | 5.9 | open | /apps/golf-caddie/guides/stableford-scoring-explained/ |
 | 23 | How to read a golf scorecard | how to read a golf scorecard | Informational | An annotated card explaining every row golfers skip (tees, yardage, stroke index, course rating and slope) and how each is used, where most results only explain the score boxes | 5.9 | open | /apps/golf-caddie/guides/how-to-read-a-golf-scorecard/ |
+| 7 | How a golf handicap is calculated | how is golf handicap calculated | Informational | A worked World Handicap System example with real numbers (score differential, best 8 of 20, caps), sourced from the USGA Rules of Handicapping | 6.3 | open | /apps/golf-caddie/guides/how-golf-handicap-is-calculated/ |
+| 8 | Golf Caddie vs Arccos | arccos alternative without subscription | Comparison | Arccos is a sensor-and-subscription system and Golf Caddie is a scorecard. Who needs which, with total first-year cost compared honestly | 6.1 | published | /apps/golf-caddie/guides/golf-caddie-vs-arccos/ |
+| 19 | What golf apps cost in 2026 | golf app subscription cost | Comparison | One dated table of free vs paid features and US prices for TheGrint, 18Birdies, Golfshot, and Arccos, taken from each official pricing page, including which ones charge for Apple Watch scoring | 6.6 | published | /apps/golf-caddie/guides/golf-app-prices-compared/ |
+| 6 | Golf Caddie vs Golfshot | golfshot alternative | Comparison | For golfers who mainly want to score on Apple Watch: what Golfshot's free tier vs Pro covers today, side by side with a one-time $2.99 option. Golfshot's watch scoring is free per its Oct 2026 blog (its App Store listing still says Pro; note it once), so the angle is battery and no-bloat scoring vs a GPS-and-tracking app | 6.8 | published | /apps/golf-caddie/guides/golf-caddie-vs-golfshot/ |
+| 11 | How to find your club distances | how far should i hit each golf club | Informational | A routine to measure your own carry distances (range vs course, typical shot, not your best one) and a simple table to fill in, instead of generic distance charts | 7.2 | published | /apps/golf-caddie/guides/how-to-find-your-club-distances/ |
+| 21 | Keep score on Apple Watch without your iPhone | keep score on apple watch without phone | Commercial | What actually works on the watch when the iPhone is left in the bag or out of range, what syncs later, and what still needs the phone, from the app's docs, instead of the generic "leave your phone in the cart" tips | 7.5 | merged | /apps/golf-caddie/guides/apple-watch-golf-without-iphone/ (merged into the without-GPS guide on 2026-11-14; old URL redirects) |
 | 16 | Golf Caddie vs TheGrint | thegrint alternative | Comparison | TheGrint is built around handicaps, social rounds, and GPS; an honest who-needs-which for golfers who mainly want to score, with TheGrint's strengths acknowledged and its pricing checked and dated | 6.1 | published | /apps/golf-caddie/guides/golf-caddie-vs-thegrint/ |
 | 9 | Golf Caddie vs 18Birdies | 18birdies alternative | Comparison | 18Birdies' free tier is generous (GPS, scorecard, handicap). Golf Caddie is the pick only if you want no account, no GPS, and wrist or Siri scoring | 6.1 | published | /apps/golf-caddie/guides/golf-caddie-vs-18birdies/ |
 | 15 | Golf scorecard app without a subscription | golf app no subscription | Commercial | One-time purchase vs subscription for golf apps, exactly what's free and what Pro costs in Golf Caddie (from the data file), and how to check any app's in-app purchases on the App Store before downloading. No competitor prices unless verified and dated | 8.3 | published | /apps/golf-caddie/guides/golf-scorecard-app-without-subscription/ |
@@ -42,7 +44,7 @@ Search potential is a judgment call (no paid keyword tools). Re-score once Searc
 | 4 | Golf scorecard app with no account | golf scorecard app no account | Commercial | What sign-up-free means in practice (where rounds are stored, backup, export, privacy) and how to check any app before downloading | 7.5 | published | /apps/golf-caddie/guides/golf-scorecard-app-no-account/ |
 | 5 | How to track putts | how to track putts in golf | Informational | What counts as a putt (fringe, chips with putter), putts per round and per GIR benchmarks from cited sources, and a simple per-hole tracking routine | 7.1 | published | /apps/golf-caddie/guides/how-to-track-putts/ |
 
-**Next up (after the publishing pause; none of these overlap an existing page's query):** (1) new: keep golf score from the iPhone Lock Screen (query: golf scorecard lock screen / Live Activity; the one App Store review praises this); (2) #18 circles and squares on a scorecard (golf scorecard symbols), with a real shared card; (3) #20 how to score a scramble; (4) #10 Stableford scoring; (5) #13 export golf scores to a spreadsheet. Hold #22 (Hole19) and #3 until indexing recovers: more comparison pages add to the sameness problem.
+**Next up (ranked by download intent):** #3 best simple scorecard apps for Apple Watch (highest intent of all; waiting on the owner's hands-on testing of the other apps), then #13 export golf scores to a spreadsheet, then #17 log golf as an Apple Watch workout. After those, the informational group: #18, #20, #10, #23, #7. Candidates from Search Console queries seen 2026-11-13/14 (see `marketing/seo-tracking.md`): alternatives pages for "Caddie HQ" and "Scoring Zone" (verify what each app is first), and a sharper answer to "what features justify paying for a premium golf scoring app?" on the page that already ranks for it. New ideas worth scoring: "golf scorecard app for iPad" only if the app supports it (check the listing), and "golf score counter for beginners" only if it doesn't overlap the home page.
 
 ## Topic details
 
@@ -185,13 +187,26 @@ Target query first, then related queries the page should also answer (AI search 
 - **Related queries:** hole19 premium worth it; hole19 apple watch free; hole19 subscription cost.
 - **Information gain:** Hole19 was named by AI engines for prompts #2 and #11 in the October baseline; a dated free vs Premium breakdown with its strengths acknowledged.
 - **Score:** impact 6, fit 7, search 5, resources 6.
-- **Careful:** nothing verified yet. Check hole19golf.com and its US App Store listing the week it's written.
+- **Checked 2026-11-16 (hole19golf.com, its Premium and Apple devices pages, US App Store listing id794462227, v7.0.1):** free: GPS distances on 42,000+ courses, digital scorecard, course preview, Apple Watch GPS, LivePlay leaderboards, social network. Premium: shot tracker, handicap calculator, stats, club recommendation, "Watch Scoring: Full input on your wrist", maps on watch, ad-free. "Simple Scoring" on the watch is marked free. Intelligence tier: Otto AI caddie, auto shot detection, Strokes Gained. Site prices are in euros (Premium €69.99/yr, €14.99/mo; Intelligence €99.99/yr); **US prices not verified**, so the page quotes euros and says so. 14-day trial. Requires iOS 18.0+. Account requirement and privacy label not verified, so not claimed.
+- **Drafted 2026-11-16** as /apps/golf-caddie/guides/golf-caddie-vs-hole19/. Re-check prices each January, and add the US price if the owner confirms it in the App Store.
 
 ### 23. How to read a golf scorecard
 - **Related queries:** what is stroke index on a golf scorecard; what do course rating and slope mean; golf scorecard abbreviations.
 - **Information gain:** one annotated card covering every row (tees, yardages, par, stroke index/handicap row, rating and slope), where most results only explain the score boxes.
 - **Score:** impact 5, fit 6, search 7, resources 7.
 - **Evidence:** WHS / USGA Rules of Handicapping for rating, slope, and stroke index. Links to #2 (keep score) and #18 (circles and squares); keep the penalty table on #2 and don't repeat it.
+
+### 24. Keep golf score from your iPhone Lock Screen
+- **Related queries:** golf live activity app; keep golf score without unlocking iphone; golf scorecard dynamic island.
+- **Information gain:** exactly what the Live Activity shows, which tasks work from the Lock Screen and which need the app, and how it syncs with Apple Watch. From the app's help text and REQUIREMENTS 2.6.
+- **Score:** impact 8, fit 10, search 4, resources 9.
+- **Drafted 2026-11-16** as /apps/golf-caddie/guides/golf-scorecard-lock-screen/. TODO(owner) in the page: a real Lock Screen photo, a Dynamic Island screenshot, and the App Store review that praises this feature (with permission).
+
+### 25. Golf scorecard app for 9 holes
+- **Related queries:** how to keep score for 9 holes; front 9 back 9 scorecard app; do 9 hole scores count for handicap.
+- **Information gain:** why to pick the nine you're actually playing (hole numbers), four ways to start nine holes, and copying an 18-hole round as the Front 9 or Back 9 with pars carried over.
+- **Score:** impact 7, fit 10, search 5, resources 9.
+- **Drafted 2026-11-16** as /apps/golf-caddie/guides/golf-scorecard-app-9-holes/. Handicap line from R&A Rule 2.1 only; the 2024 nine-hole conversion method could not be verified (USGA pages blocked), so the page doesn't describe it. TODO(owner): screenshot of the Copy options.
 
 ## Topic clusters and internal links
 
@@ -204,6 +219,10 @@ Target query first, then related queries the page should also answer (AI search 
 
 | Topic | Page | Published |
 |---|---|---|
+| Golf Caddie vs Golfshot | /apps/golf-caddie/guides/golf-caddie-vs-golfshot/ | 2026-11-15 |
+| Golf Caddie vs Arccos | /apps/golf-caddie/guides/golf-caddie-vs-arccos/ | 2026-11-09 |
+| What golf apps cost in 2026 | /apps/golf-caddie/guides/golf-app-prices-compared/ | 2026-11-09 |
+| How to find your club distances | /apps/golf-caddie/guides/how-to-find-your-club-distances/ | 2026-11-09 |
 | Golf Caddie vs TheGrint | /apps/golf-caddie/guides/golf-caddie-vs-thegrint/ | 2026-11-03 |
 | Golf Caddie vs 18Birdies | /apps/golf-caddie/guides/golf-caddie-vs-18birdies/ | 2026-11-03 |
 | Apple Watch battery for a round of golf | /apps/golf-caddie/guides/apple-watch-battery-golf-round/ | 2026-10-27 |

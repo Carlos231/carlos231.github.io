@@ -46,16 +46,17 @@ The commit hook says "v<version> is live on the App Store" once it's time. Last 
 - **Before it ships** (optional, so the site is ready): **"Prepare the site for v1.6 with these release notes: …"**. New features are added hidden (`since: "1.6"`, `upcoming_version: "1.6"`) and can merge right away.
 - **When it's live:** **"v1.6 is live, run release-update"** for the flip, then **After every merge**.
 
-## Current focus (set 2026-11-14)
+## Current focus (set 2026-11-16)
 
-- New guides are paused while most pages are not indexed. See the publishing pause in [content-backlog.md](../content-backlog.md).
+- New pages are back on: up to three a week, ranked by download intent in [content-backlog.md](../content-backlog.md), each built from the guide template and checked with [marketing/tools/](tools/README.md).
 - Each week: post or reply once from [backlink-drafts.md](backlink-drafts.md), and note it in [seo-tracking.md](seo-tracking.md).
-- Every two weeks: run the checks in seo-tracking.md ("After the landing redesign").
+- Every two weeks: run the checks in seo-tracking.md ("After the landing redesign"). First check: 2026-11-28.
+- Social posts stay off until you decide to start posting.
 - Open `TODO(owner)` items: `grep -rn "TODO(owner)" .`
 
 ## Weekly (pick a day, e.g. Monday, about 30–45 minutes of your time)
 
-1. **"Run the weekly"**. Claude reviews the SEO check results, refills [content-backlog.md](../content-backlog.md), drafts 2–3 guides, writes `social/week-NN.md`, and opens a pull request.
+1. **"Run the weekly"**. Claude reviews the SEO check results, refills [content-backlog.md](../content-backlog.md), drafts up to 3 guides on the branch you created, builds and screenshots them, and gives you the pull request link. Social posts are skipped until you start posting.
 2. Review the pull request: facts, competitor claims, and whether it sounds like you. Ask for changes or edit directly.
 3. Merge → **After every merge**.
 4. Post one social post a day from `social/week-NN.md` (X, Threads, Instagram/TikTok). Film the video hook when it's a good golf day. Reply to comments.
