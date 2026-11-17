@@ -24,11 +24,13 @@ Jekyll site on GitHub Pages (https://carlos231.github.io) marketing the iOS + wa
 - Never show a feature that isn't live on the App Store. Check the live version first: `https://itunes.apple.com/lookup?id=6760603837&country=us`.
 - Unreleased features stay hidden behind `upcoming_version` in `_data/golf_caddie.yml`: tag data features with `since: "<version>"` and wrap page copy in `{% unless upcoming == "<version>" %}`. With that in place, `main` can merge before the release. Release day is a one-line flip (see `marketing/runbook.md`).
 - Never push to `main`; push feature branches only, and only when asked. The user merges.
+- The owner creates and switches branches. Work on the branch that's checked out; if it's `main`, ask for one before editing.
 
 ## Working style
 - Format every page with the `seo-audit` skill's on-page rules: title 50–60 characters with the query first and brand last (`.claude/skills/seo-audit/references/title-tags.md`), meta description 150–160 characters with the query and a reason to click, one H1, query in the first 100 words, and one page per query (keyword map in `content-backlog.md`).
-- Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`).
-- Commits: one concise single-line message per logical change. Commit only when asked. Running the `weekly-marketing` skill counts as asking to commit and push its `weekly/` branch and open a PR (never merge).
+- New pages start from `apps/golf-caddie/guides/_template.md` and follow the new-guide checklist in `CONTRIBUTING.md`: one page per search, one inline download box, a social image, `TODO(owner)` markers for real content, at least 3 links in from other guides, and a slot in the guides index.
+- Before committing, follow `CONTRIBUTING.md` (checklist + pre-commit hook in `.githooks/`), and build, check, and screenshot with `marketing/tools/` (`check-site.py` must report 0 failures; look at the phone and desktop screenshots).
+- Commits: one concise single-line message per logical change. Commit only when asked. Running the `weekly-marketing` skill counts as asking to commit and push the checked-out weekly branch and open a PR (never merge).
 - When reporting changes, summarize each file and link it. Don't paste full file contents into chat. Files themselves must always be complete (no "..." placeholders).
 - Show before → after for any existing page copy you rewrite, before rewriting it.
 - No mass-generated pages. Every page must be genuinely useful to a golfer.

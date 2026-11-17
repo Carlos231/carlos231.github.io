@@ -15,8 +15,8 @@ Budget: aim to finish in one session. Quality beats volume. If only one page mee
 
 1. Read `CLAUDE.md`, `CONTRIBUTING.md`, `.agents/product-marketing.md` (voice, objections, Learnings), and `_data/golf_caddie.yml` (the only source for app facts).
 2. Read `content-backlog.md`, the existing guides in `apps/golf-caddie/guides/`, and the latest `social/week-NN.md`, so you don't duplicate topics or posts.
-3. Pick the branch base: `main` (pull it first). If `main` doesn't have `_layouts/guide.html` yet, the SEO setup hasn't merged: stop and point the user to "Merge day" in `marketing/runbook.md`.
-4. Create the branch `weekly/YYYY-MM-DD` (the run date). Never work on `main`.
+3. Branch: work on the branch the owner has checked out. If it's `main`, stop and ask them to create one (suggest `git switch -c weekly-YYYY-MM-DD`). Never create, switch, or delete branches yourself. If `main` doesn't have `_layouts/guide.html` yet, the SEO setup hasn't merged: stop and point the user to "Merge day" in `marketing/runbook.md`.
+4. Read `marketing/seo-tracking.md` for the current measurement window and anything the owner asked to hold.
 5. Check the live App Store version (`https://itunes.apple.com/lookup?id=6760603837&country=us`). Only write about features in that version. Features with `since:` equal to `_data/golf_caddie.yml` `upcoming_version` are unreleased: don't mention them in guides or social posts. If the live version equals `upcoming_version`, tell the user the release-day flip is due (release-update skill).
 
 ## Step 1: Review the latest SEO checks
@@ -51,16 +51,21 @@ Backlog table format:
 
 ## Step 3: Draft the next 2–3 pages
 
-Take the top 2–3 `open` topics and write each as a guide:
+Take the top 2–3 `open` topics and write each as a guide. Three is the ceiling: each page must answer a search no existing page answers, and look and read unlike its neighbours. If only one topic clears that bar, ship one.
 
-1. Copy `apps/golf-caddie/guides/_template.md` to `apps/golf-caddie/guides/<slug>.md`. Fill in all front matter: `permalink: /apps/golf-caddie/guides/<slug>/`, `description` of 150–160 characters, and `date` and `last_modified_at` set to today.
+Before writing, check the **keyword map** in `content-backlog.md`. The home page owns the stroke and putt counter searches, the app page owns "simple golf scorecard app" and "golf scorecard app for Apple Watch", and each guide owns its own query. If a topic overlaps an existing page, improve that page instead (and use `redirect_from:` if you merge two).
+
+1. Copy `apps/golf-caddie/guides/_template.md` to `apps/golf-caddie/guides/<slug>.md` and follow the rules in its header. Fill in all front matter: `permalink: /apps/golf-caddie/guides/<slug>/`, `image: /assets/og/<slug>.png`, `description` of 150–160 characters, and `date` and `last_modified_at` set to today.
 2. `answer`: a direct 40–60 word answer to the target query.
 3. Body: each H2 is a question phrased the way golfers ask it, followed by a 40–60 word direct answer, then detail (steps, examples, tables).
 4. `facts` table where it helps (rules, scoring values, comparisons). `faq` with 3–5 real follow-up questions.
 5. SEO format (seo-audit skill, on-page rules): `html_title` 50–60 characters, query first and brand last (see `.claude/skills/seo-audit/references/title-tags.md`); `description` includes the query and a reason to click; query in the first 100 words; no target query that another page already owns (keyword map in `content-backlog.md`).
-6. Strong points: use the ranked Key differentiators (Differentiation) and the say-it-once Learning in `.agents/product-marketing.md`. Use the one that matches the page's topic in the body; the layout's author box already tells the founder story, so don't repeat it. Put `{% include download-cta.html %}` after the first section.
-7. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Every guide is listed automatically in the app page's "Golf scoring guides" section (newest first), so no manual listing is needed there. Add the new slug to a topic group in `apps/golf-caddie/guides/index.html` (the guides hub); until then it shows under "More guides".
+6. Strong points: use the ranked Key differentiators (Differentiation) and the say-it-once Learning in `.agents/product-marketing.md`. Use the one that matches the page's topic in the body; the layout's author note already tells the product story, so don't repeat it. No battery claims outside the battery guide. Put exactly one `{% include download-cta.html text="…" %}` after the first section (no prices in `text`); the layout adds the App Store badge at the bottom, and both use the guides campaign link.
+7. Internal links: to the app page and to 1–3 related guides (in the body and in `related`). Only link to pages that exist. Then link the new guide **in**: from at least 3 other guides (add a link to words that are already there where you can, and show the owner each before → after), and add its slug to a topic group in `apps/golf-caddie/guides/index.html`.
 8. Mention Golf Caddie where it genuinely helps the reader. The guide must stand on its own without the app.
+9. Owner content: wherever a real screenshot, a user quote, or a measured test would make the page first-hand, add a `{% comment %}TODO(owner): …{% endcomment %}` block saying exactly what's needed. Never fill the gap with invented material.
+10. Comparisons: don't paste the free and Pro feature lists. Use one sentence and link to `{{ gc.urls.page }}#pricing`. End the page with a dated `<small>Sources, checked …</small>` line; keep competitor links there, not in the tables.
+11. Social image: run `node marketing/tools/og-image.mjs` (it makes `assets/og/<slug>.png` from the title).
 
 Facts and evidence:
 - App facts come only from `_data/golf_caddie.yml`. In the body, use `{{ site.data.golf_caddie.pricing.pro_price }}` and similar variables instead of typing values. Front matter can't use variables, so keep prices out of `answer` and `faq` where you can.
@@ -71,6 +76,8 @@ Facts and evidence:
 Mark each drafted topic `drafted` in the backlog with its URL.
 
 ## Step 4: Draft 7 social posts (social skill)
+
+**Skip this step unless the owner says they're posting on social.** As of 2026-11-16 they aren't, so don't create a `social/week-NN.md` file; say in the report that the step was skipped.
 
 Use the **social** skill. Create `social/week-NN.md`, where `NN` is one more than the highest existing week file (`week-01` if none). One post per day, Monday to Sunday, mostly promoting this week's pages, with the app as the natural next step.
 
@@ -88,16 +95,16 @@ The user posts these manually. Don't schedule or publish anything.
 
 ## Step 5: Check, commit, push, open the PR
 
-1. Run the checklist in `CONTRIBUTING.md` for the new pages.
+1. Run the checklist in `CONTRIBUTING.md` for the new pages, then build and check locally (`marketing/tools/README.md`): `build-local.sh`, `check-site.py` (must report 0 failures), and `screenshots.mjs` for each new or changed page. Look at the phone and desktop screenshots yourself before committing, and give the owner the paths.
 2. Commit in logical single-line commits, staging specific files (the pre-commit hook runs; fix any ✖). For example:
    - `Fix broken links from weekly SEO check`
    - `Refill content backlog`
    - `Add <topic> guide` (one commit per page)
    - `Draft week NN social posts`
-3. Push the weekly branch only: `git push -u origin weekly/YYYY-MM-DD`. Never push to `main`.
+3. Push the checked-out weekly branch only: `git push -u origin <branch>`. Never push to `main`.
 4. Open a pull request against the base from "Before you start":
-   - With `gh`: `gh pr create --base <base> --title "Weekly marketing YYYY-MM-DD" --body-file <file>`
-   - Without `gh`: give the user the compare link `https://github.com/Carlos231/carlos231.github.io/compare/<base>...weekly/YYYY-MM-DD?expand=1` and the PR body to paste.
+   - With `gh`: `gh pr create --base main --title "Weekly marketing YYYY-MM-DD" --body-file <file>`
+   - Without `gh`: give the user the compare link `https://github.com/Carlos231/carlos231.github.io/compare/main...<branch>?expand=1` and the PR body to paste.
 5. **Never merge.** The user reviews and merges.
 
 PR body:
