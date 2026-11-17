@@ -50,3 +50,42 @@ Also inspect the old URL `/apps/golf-caddie/guides/apple-watch-golf-without-ipho
 | Referring sites | Search Console → Links; GoatCounter referrers | App Store listing only | Each directory or forum post that sends a visitor |
 
 Decision rule: if indexed pages have not grown by the 8-week mark, the cause is authority, not content. Stop editing pages and put all effort into links.
+
+## New guides, 2026-11-16 (branch `rules-and-new-guides`)
+
+Three new pages: Lock Screen scoring, 9-hole rounds, and Golf Caddie vs Hole19. After deploy, request indexing once each:
+1. `https://carlos231.github.io/apps/golf-caddie/guides/golf-scorecard-lock-screen/`
+2. `https://carlos231.github.io/apps/golf-caddie/guides/golf-scorecard-app-9-holes/`
+3. `https://carlos231.github.io/apps/golf-caddie/guides/golf-caddie-vs-hole19/`
+
+Owner's read on 2026-11-16: clearly more search and site activity. The figures they pasted that day are below. In GoatCounter, watch `app-store-guide-inline` and `app-store-guide-bottom` taps on the three new pages against their page views.
+
+### Starting figures (pasted by the owner, 2026-11-16)
+
+**GoatCounter** (live since 2026-11-15; about two days of data): 10 counted items = 7 page views + 3 download taps.
+
+| Item | Count |
+|---|---|
+| `app-store-guide-inline` taps (the inline download box in guides; one came from the no-account guide) | 3 |
+| /apps/golf-caddie/guides/golf-scorecard-app-no-account/ | 2 views |
+| Home, club distances, 18Birdies, no-subscription, keep-score guides | 1 view each |
+
+Referrers: Google 4, unknown 6 (taps are counted without a referrer). Devices: iOS 4, macOS 3, Windows 1, Linux 1. Countries: France 3, Austria 2, Canada 2, United Kingdom 1, United States 1. Too few to draw a rate from, but the inline box is being tapped and no bottom-badge taps showed yet.
+
+**Search Console** (2026-11-13 to 11-14 only, so mostly from before the redesign went live late on 11-14; top 10 of 18 queries):
+
+| Query | Impressions | Position |
+|---|---|---|
+| what features justify paying for a premium golf scoring app? | 23 | 4.0 |
+| caddie hq alternatives | 8 | 9.3 |
+| scoring zone alternatives | 5 | 7.2 |
+| arccos alternative | 3 | 36.0 |
+| which golf apps offer statistics on approach shots and putting? pricing | 2 | 7.5 |
+| which golf apps offer advanced statistics without extra hardware? | 2 | 10.5 |
+| which golf apps let me try advanced features before subscribing? | 1 | 1.0 |
+| apple watch golf app | 1 | 2.0 |
+
+No clicks on these queries in that window. Notes for the 11-28 check:
+- The long question-style queries read like the follow-up searches AI answers run. The site shows for them because the guides answer questions under question headings.
+- "what features justify paying for a premium golf scoring app?" at position 4 with 23 impressions is the first striking-distance query with real volume. Find which page ranks (Performance → Pages with that query filtered) before changing anything; the no-subscription guide's "When is a golf app subscription worth paying for?" section is the likely one.
+- "caddie hq alternatives" and "scoring zone alternatives" are searches for alternatives to other apps. Check what those apps are before adding either as a topic.
