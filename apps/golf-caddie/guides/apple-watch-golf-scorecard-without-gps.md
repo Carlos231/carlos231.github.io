@@ -5,7 +5,7 @@ description: "Keep score on your Apple Watch without GPS: how scorecard-only app
 permalink: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
 image: /assets/og/apple-watch-golf-scorecard-without-gps.png
 date: 2026-10-18
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-16
 redirect_from:
   - /apps/golf-caddie/guides/apple-watch-golf-without-iphone/
 
@@ -19,7 +19,7 @@ faq:
   - q: "Will a scorecard app drain my Apple Watch battery?"
     a: "A scorecard-only app is lighter than a GPS app because it doesn't track your location. Golf Caddie doesn't run GPS at all. Its optional Apple Health setting has two modes: **Save Summary** logs the round when you end it, with no battery impact, while **Full Session** runs a live Watch workout for heart rate and calories, which uses the most battery."
   - q: "Do I need my iPhone on the course?"
-    a: "Keep your iPhone in your bag or cart. With Golf Caddie, the Watch and iPhone score the same round and sync over Bluetooth as you play. With Pro, the round also shows on your iPhone Lock Screen."
+    a: "Keep your iPhone in your bag or cart. With Golf Caddie, the Watch and iPhone score the same round and sync over Bluetooth as you play. With Pro, the round also shows on your [iPhone Lock Screen](/apps/golf-caddie/guides/golf-scorecard-lock-screen/)."
   - q: "Can I use a rangefinder or GPS watch alongside it?"
     a: "Yes. Golf Caddie only keeps score, so it doesn't compete with a laser rangefinder or another device for distances. Many golfers use a rangefinder for yardages and their Apple Watch for the scorecard."
   - q: "Does it work on any course?"
@@ -89,7 +89,7 @@ Open the app, add strokes, putts, and penalties with the + and – buttons, then
 
 A round in Golf Caddie, step by step:
 
-1. **Start a round.** Use Quick Start on the Watch or iPhone: Front 9, Back 9, or 18 holes, every hole set to par 4. Or start on the iPhone with the course name and your own pars.
+1. **Start a round.** Use Quick Start on the Watch or iPhone: [Front 9, Back 9](/apps/golf-caddie/guides/golf-scorecard-app-9-holes/), or 18 holes, every hole set to par 4. Or start on the iPhone with the course name and your own pars.
 2. **Score each shot.** Tap + under strokes for each shot before the green, then + under putts once you're on it. Add a penalty for a lost ball, out of bounds, or water.
 3. **Move on.** Swipe left or right to change holes. After your first putt, strokes lock so a stray tap can't change them.
 4. **Check your clubs.** Your club distances are in the totals row on the Watch.

@@ -5,7 +5,7 @@ description: "Golf app prices checked November 2026: TheGrint, Golfshot, 18Birdi
 permalink: /apps/golf-caddie/guides/golf-app-prices-compared/
 image: /assets/og/golf-app-prices-compared.png
 date: 2026-11-08
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-16
 
 answer: >-
   As of November 2026, the big golf apps charge $59.99 to $99.99 a year in
@@ -93,6 +93,6 @@ Yes, if you play five months or fewer a year. As of November 2026, 18Birdies is 
 | 18Birdies ($19.99 a month) | $79.96 | $99.95 | $119.94 | $99.99 |
 | Golfshot ($14.99 a month) | $59.96 | $74.95 | $89.94 | $79.99 (Pro) |
 
-Monthly plans renew until you cancel in **Settings → your name → Subscriptions** on iPhone. For how one-time purchases differ from subscriptions, see [golf scorecard app without a subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/). For a side-by-side with a single app, see {{ gc.short_name }} vs [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), [Golfshot](/apps/golf-caddie/guides/golf-caddie-vs-golfshot/), [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
+Monthly plans renew until you cancel in **Settings → your name → Subscriptions** on iPhone. For how one-time purchases differ from subscriptions, see [golf scorecard app without a subscription](/apps/golf-caddie/guides/golf-scorecard-app-without-subscription/). For a side-by-side with a single app, see {{ gc.short_name }} vs [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), [Golfshot](/apps/golf-caddie/guides/golf-caddie-vs-golfshot/), [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), [Hole19](/apps/golf-caddie/guides/golf-caddie-vs-hole19/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
 
 <small>Sources, checked November 8, 2026 (US): TheGrint [free vs Pro](https://thegrint.com/features/free-vs-pro) and [Apple Watch](https://thegrint.com/features/apple-watch) pages; Golfshot [get Pro](https://golfshot.com/get-pro) and [facts](https://golfshot.com/facts-about-golfshot) pages, its blog post ["Do you need a golf watch, or just a golf app?"](https://golfshot.com/blog/do-you-need-a-golf-watch-or-just-a-golf-app) (October 8, 2026), and [App Store listing](https://apps.apple.com/us/app/golfshot-golf-gps-range-finder/id622851626); 18Birdies [Premium page](https://18birdies.com/premium/) and [App Store listing](https://apps.apple.com/us/app/18birdies-golf-gps-tracker/id892700751); Arccos [membership page](https://www.arccosgolf.com/pages/members) and [home page](https://www.arccosgolf.com/). Prices change, so check before you buy.</small>

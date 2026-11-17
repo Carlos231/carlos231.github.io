@@ -5,7 +5,7 @@ description: "How to keep score in golf: what counts as a stroke, how penalty st
 permalink: /apps/golf-caddie/guides/how-to-keep-score-in-golf/
 image: /assets/og/how-to-keep-score-in-golf.png
 date: 2026-10-19
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-16
 
 answer: >-
   To keep score in golf, count every stroke you make on a hole, add any penalty
@@ -78,6 +78,8 @@ Lost ball and out of bounds are often called **stroke and distance**: you add a 
 
 Write one number per hole: your strokes plus penalties. Many golfers also note putts and penalties in small boxes, so the card shows where strokes went. Total the front nine, the back nine, and the round. Compare the total to the course par to get your score over or under par.
 
+Playing only nine? The card works the same way for the front nine or the back nine: see [scoring a 9-hole round](/apps/golf-caddie/guides/golf-scorecard-app-9-holes/).
+
 Here's a worked example on three holes:
 
 | Hole | Par | What happened | Strokes | Putts | Penalties | Hole score | vs par |
@@ -109,4 +111,4 @@ Yes. A scorecard app does the adding for you and shows your score against par af
 
 {% include screenshot.html file="04-just-golf" alt="Golf Caddie on iPhone showing hole 6, par 3, with strokes, putts, and penalties counters and the round total with score vs par" caption="Golf Caddie on iPhone: strokes, putts, and penalties per hole, totaled for you." %}
 
-When you finish, you can share a classic scorecard image, with circles for birdies and squares for bogeys. With Pro you can also score from your Apple Watch, by voice with [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/), or from the iPhone Lock Screen. See [how {{ gc.short_name }} works]({{ gc.urls.page }}) or [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).
+When you finish, you can share a classic scorecard image, with circles for birdies and squares for bogeys. With Pro you can also score from your Apple Watch, by voice with [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/), or from the [iPhone Lock Screen](/apps/golf-caddie/guides/golf-scorecard-lock-screen/). See [how {{ gc.short_name }} works]({{ gc.urls.page }}) or [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).

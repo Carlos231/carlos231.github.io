@@ -5,7 +5,7 @@ description: "Golf Caddie vs Golfshot, checked November 2026: what Golfshot's fr
 permalink: /apps/golf-caddie/guides/golf-caddie-vs-golfshot/
 image: /assets/og/golf-caddie-vs-golfshot.png
 date: 2026-11-08
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-16
 
 answer: >-
   Stay with Golfshot if you use its GPS yardages, shot tracking, or handicap
@@ -103,6 +103,6 @@ If your watch is older, or your battery health has dropped, that difference matt
 
 Stay with Golfshot if you use its GPS yardages, automatic shot tracking, Strokes Gained, or GHIN posting. Choose {{ gc.short_name }} if you only want your score, with no ads, no account, no GPS, and one payment instead of a yearly plan. Try {{ gc.short_name }} Pro free for {{ gc.pricing.trial_days }} days: there's nothing to cancel.
 
-Comparing more apps? See {{ gc.short_name }} vs [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
+Comparing more apps? See {{ gc.short_name }} vs [18Birdies](/apps/golf-caddie/guides/golf-caddie-vs-18birdies/), [TheGrint](/apps/golf-caddie/guides/golf-caddie-vs-thegrint/), [Hole19](/apps/golf-caddie/guides/golf-caddie-vs-hole19/), or [Arccos](/apps/golf-caddie/guides/golf-caddie-vs-arccos/).
 
 <small>Sources, checked November 8, 2026 (US): Golfshot's [get Pro](https://golfshot.com/get-pro) and [facts](https://golfshot.com/facts-about-golfshot) pages, its blog post ["Do you need a golf watch, or just a golf app?"](https://golfshot.com/blog/do-you-need-a-golf-watch-or-just-a-golf-app) (October 8, 2026), and its [US App Store listing](https://apps.apple.com/us/app/golfshot-golf-gps-range-finder/id622851626). Prices change, so check before you buy.</small>
