@@ -5,7 +5,7 @@ description: "Playing nine holes? How to keep score for the front 9 or back 9 in
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-9-holes/
 image: /assets/og/golf-scorecard-app-9-holes.png
 date: 2026-11-16
-last_modified_at: 2026-11-16
+last_modified_at: 2026-11-24
 
 answer: >-
   Yes. A golf scorecard app should let you score nine holes as a round of its
@@ -94,4 +94,4 @@ In {{ gc.short_name }}, the running score vs par updates after every hole, so yo
 
 They can. Under the [Rules of Handicapping (Rule 2.1)](https://www.randa.org/en/roh/the-rules-of-handicapping/rule-2), a score is acceptable when the round is played "over at least the minimum number of holes required for either a 9-hole or an 18-hole score." Your national association sets the details, and scores are posted through your club or association.
 
-{{ gc.short_name }} doesn't calculate or post handicaps. It keeps the hole-by-hole record, which you can read off the round summary when you post your score, or [export as a spreadsheet](/apps/golf-caddie/help/) for your own records.
+{{ gc.short_name }} doesn't calculate or post handicaps. It keeps the hole-by-hole record, which you can read off the round summary when you post your score, or [export as a spreadsheet](/apps/golf-caddie/guides/export-golf-scores-spreadsheet/) for your own records.

@@ -5,7 +5,7 @@ description: "Want a golf scorecard app with no sign-up? Where your scores are s
 permalink: /apps/golf-caddie/guides/golf-scorecard-app-no-account/
 image: /assets/og/golf-scorecard-app-no-account.png
 date: 2026-10-19
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-24
 
 answer: >-
   Yes, some golf scorecard apps work without an account. Golf Caddie has no
@@ -99,4 +99,4 @@ A quick checklist for any golf app:
 
 Yes. Your rounds are already backed up in iCloud, and you can also export them yourself. In {{ gc.short_name }}, go to Settings → Your Data → Export Rounds (CSV) and send the file to Files, Mail, or AirDrop. The spreadsheet has one row per hole: date, course, par, strokes, putts, penalties, and score vs par.
 
-The export is free and the file only goes where you send it. You can open it in Numbers, Excel, or Google Sheets, or share it with an AI assistant and ask where you're losing strokes. Want to know what to look for? See [how to track putts](/apps/golf-caddie/guides/how-to-track-putts/).
+The export is free and the file only goes where you send it. You can [open it in Numbers, Excel, or Google Sheets](/apps/golf-caddie/guides/export-golf-scores-spreadsheet/), or share it with an AI assistant and ask where you're losing strokes. Want to know what to look for? See [how to track putts](/apps/golf-caddie/guides/how-to-track-putts/).
