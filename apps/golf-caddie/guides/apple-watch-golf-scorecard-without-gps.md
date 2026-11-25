@@ -5,7 +5,7 @@ description: "Keep score on your Apple Watch without GPS: how scorecard-only app
 permalink: /apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/
 image: /assets/og/apple-watch-golf-scorecard-without-gps.png
 date: 2026-10-18
-last_modified_at: 2026-11-16
+last_modified_at: 2026-11-24
 redirect_from:
   - /apps/golf-caddie/guides/apple-watch-golf-without-iphone/
 
@@ -93,7 +93,7 @@ A round in Golf Caddie, step by step:
 2. **Score each shot.** Tap + under strokes for each shot before the green, then + under putts once you're on it. Add a penalty for a lost ball, out of bounds, or water.
 3. **Move on.** Swipe left or right to change holes. After your first putt, strokes lock so a stray tap can't change them.
 4. **Check your clubs.** Your club distances are in the totals row on the Watch.
-5. **Finish.** End the round on the last hole (on the Watch, the page after it). The iPhone has the full scorecard and a shareable card view.
+5. **Finish.** End the round on the last hole (on the Watch, the page after it). The iPhone has the full scorecard and a [shareable card view](/apps/golf-caddie/guides/golf-scorecard-circles-and-squares/).
 
 With Pro you can also score with your voice ("Add a putt in Golf Caddie") or from the iPhone Lock Screen without unlocking. See every phrase in [keep score in golf with Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
@@ -108,7 +108,7 @@ A few things still happen on the iPhone. Here is what to do there and where:
 | Start the free Pro trial or buy Pro | iPhone |
 | Enter club distances | iPhone (shown on the watch) |
 | Change a hole's par | iPhone (shown on the watch) |
-| Settings, like Workout Tracking | iPhone (the watch follows) |
+| Settings, like [Workout Tracking](/apps/golf-caddie/guides/apple-watch-golf-workout/) | iPhone (the watch follows) |
 | Stats, sharing, and CSV export | iPhone |
 
 You don't need a cellular Apple Watch or a signal on the course.

@@ -5,7 +5,7 @@ description: "How to keep score in golf: what counts as a stroke, how penalty st
 permalink: /apps/golf-caddie/guides/how-to-keep-score-in-golf/
 image: /assets/og/how-to-keep-score-in-golf.png
 date: 2026-10-19
-last_modified_at: 2026-11-16
+last_modified_at: 2026-11-24
 
 answer: >-
   To keep score in golf, count every stroke you make on a hole, add any penalty
@@ -111,4 +111,4 @@ Yes. A scorecard app does the adding for you and shows your score against par af
 
 {% include screenshot.html file="04-just-golf" alt="Golf Caddie on iPhone showing hole 6, par 3, with strokes, putts, and penalties counters and the round total with score vs par" caption="Golf Caddie on iPhone: strokes, putts, and penalties per hole, totaled for you." %}
 
-When you finish, you can share a classic scorecard image, with circles for birdies and squares for bogeys. With Pro you can also score from your Apple Watch, by voice with [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/), or from the [iPhone Lock Screen](/apps/golf-caddie/guides/golf-scorecard-lock-screen/). See [how {{ gc.short_name }} works]({{ gc.urls.page }}) or [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).
+When you finish, you can share a classic scorecard image, with [circles for birdies and squares for bogeys](/apps/golf-caddie/guides/golf-scorecard-circles-and-squares/). With Pro you can also score from your Apple Watch, by voice with [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/), or from the [iPhone Lock Screen](/apps/golf-caddie/guides/golf-scorecard-lock-screen/). See [how {{ gc.short_name }} works]({{ gc.urls.page }}) or [keeping score on an Apple Watch without GPS](/apps/golf-caddie/guides/apple-watch-golf-scorecard-without-gps/).

@@ -5,7 +5,7 @@ description: "How to track putts in golf: what counts as a putt, the fringe ques
 permalink: /apps/golf-caddie/guides/how-to-track-putts/
 image: /assets/og/how-to-track-putts.png
 date: 2026-10-19
-last_modified_at: 2026-10-27
+last_modified_at: 2026-11-24
 
 answer: >-
   To track putts, count every stroke you make once your ball is on the putting
@@ -118,8 +118,8 @@ Tap + under putts each time you putt on a hole. {{ gc.short_name }} adds putts t
 
 More ways to log putts:
 
-- **The share card** shows putts for every hole and the round total.
-- **Export your rounds:** the spreadsheet has putts for every hole, so you can see trends across rounds in Numbers, Excel, or Google Sheets.
+- **The [share card](/apps/golf-caddie/guides/golf-scorecard-circles-and-squares/)** shows putts for every hole and the round total.
+- **[Export your rounds](/apps/golf-caddie/guides/export-golf-scores-spreadsheet/):** the spreadsheet has putts for every hole, so you can see trends across rounds in Numbers, Excel, or Google Sheets.
 - **With Pro:** add putts from your Apple Watch, from the iPhone Lock Screen, or say "Add a putt in {{ gc.short_name }}" to [Siri](/apps/golf-caddie/guides/keep-score-in-golf-with-siri/).
 
 {{ gc.short_name }} doesn't record first-putt distance or greens in regulation, so jot those on the card (or in your notes) if you want them. New to scoring? Start with [how to keep score in golf](/apps/golf-caddie/guides/how-to-keep-score-in-golf/).

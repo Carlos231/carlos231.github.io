@@ -5,7 +5,7 @@ description: "Will your Apple Watch last 18 holes? What drains the battery durin
 permalink: /apps/golf-caddie/guides/apple-watch-battery-golf-round/
 image: /assets/og/apple-watch-battery-golf-round.png
 date: 2026-10-27
-last_modified_at: 2026-11-14
+last_modified_at: 2026-11-24
 
 answer: >-
   An Apple Watch can last a full round if GPS isn't running the whole time.
@@ -97,7 +97,7 @@ Apple also notes that other notifications may be delayed and emergency alerts ma
 
 ## How do you set up {{ gc.short_name }} for the longest battery life?
 
-{{ gc.short_name }} never uses location, so the main choice is its Apple Health setting. Its Workout Tracking setting (on your iPhone) has three options: Off, Save Summary, and Full Session. Save Summary logs the round as a Golf workout when you end it, with no battery impact. Full Session runs a live Watch workout and uses the most battery.
+{{ gc.short_name }} never uses location, so the main choice is its Apple Health setting. Its [Workout Tracking setting](/apps/golf-caddie/guides/apple-watch-golf-workout/) (on your iPhone) has three options: Off, Save Summary, and Full Session. Save Summary logs the round as a Golf workout when you end it, with no battery impact. Full Session runs a live Watch workout and uses the most battery.
 
 {% include screenshot.html file="08-watch-battery" alt="Golf Caddie Quick Start on Apple Watch with buttons for 18 Holes, Front 9, and Back 9, under the caption Lasts your whole round" caption="Golf Caddie on Apple Watch never uses location, so scoring stays light on battery." %}
 
