@@ -14,8 +14,20 @@ if [ ! -f "$GEMS/bin/jekyll" ]; then
   echo "Installing Jekyll into $GEMS (first run only)..." >&2
   "$RUBY_BIN/gem" install --no-document --install-dir "$GEMS" 'jekyll:~>3.10' kramdown-parser-gfm webrick >/dev/null
   "$RUBY_BIN/gem" install --no-document --ignore-dependencies --install-dir "$GEMS" \
-    jekyll-seo-tag jekyll-sitemap jekyll-redirect-from base64 ostruct mutex_m observer drb fiddle >/dev/null
+    jekyll-seo-tag jekyll-sitemap jekyll-redirect-from \
+    base64 bigdecimal csv logger ostruct mutex_m observer drb fiddle >/dev/null
 fi
+# Ruby gems that newer Rubies no longer bundle; install any that are missing (cheap when present).
+for g in base64 bigdecimal csv logger ostruct mutex_m observer drb fiddle; do
+  ls "$GEMS/gems" | grep -q "^$g-[0-9]" || "$RUBY_BIN/gem" install --no-document --install-dir "$GEMS" "$g" >/dev/null
+done
 cd "$REPO"
-"$RUBY_BIN/ruby" "$GEMS/bin/jekyll" build -s . -d "$OUT" 2>&1 | grep -v "warning:" | grep -i -E "error|done" >&2
+rm -rf "$OUT"
+LOG="$TMP/build.log"
+if ! "$RUBY_BIN/ruby" "$GEMS/bin/jekyll" build -s . -d "$OUT" >"$LOG" 2>&1 || [ ! -f "$OUT/index.html" ]; then
+  grep -v "warning:" "$LOG" | tail -20 >&2
+  echo "BUILD FAILED (full log: $LOG)" >&2
+  exit 1
+fi
+grep -v "warning:" "$LOG" | grep -i -E "error|done" >&2
 echo "$OUT"

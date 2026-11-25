@@ -13,6 +13,9 @@ import json, os, re, sys
 root = sys.argv[1].rstrip('/')
 G = '/apps/golf-caddie/guides/'
 pages = [os.path.join(d, f) for d, _, fs in os.walk(root) for f in fs if f.endswith('.html')]
+if not pages:
+    print('FAIL: no HTML pages found in', root, '(did the build fail?)')
+    sys.exit(1)
 html = {p: open(p, encoding='utf-8').read() for p in pages}
 ids = {p: set(re.findall(r'id="([^"]+)"', t)) for p, t in html.items()}
 
